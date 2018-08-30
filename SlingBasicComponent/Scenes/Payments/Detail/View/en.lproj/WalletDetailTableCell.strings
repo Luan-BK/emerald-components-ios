@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Visa Débito"; ObjectID = "99V-Zq-HGj"; */
+"99V-Zq-HGj.text" = "Visa Debit";
+
+/* Class = "UILabel"; text = "+"; ObjectID = "HIL-ev-fDl"; */
+"HIL-ev-fDl.text" = "+";
+
+/* Class = "UILabel"; text = "R$ 8.888.480,00"; ObjectID = "kih-1R-HEQ"; */
+"kih-1R-HEQ.text" = "$ 8.888.480,00";

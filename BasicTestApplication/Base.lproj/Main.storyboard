@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z4I-Ad-INf">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Basic Components-->
+        <scene sceneID="0SE-dx-Xi6">
+            <objects>
+                <tableViewController storyboardIdentifier="MainViewController" title="Basic Components" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oqJ-1i-WjN" customClass="MainViewController" customModule="BasicTestApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="69w-vQ-KOU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="nVU-9Q-I0W" userLabel="Footer View">
+                            <rect key="frame" x="0.0" y="249" width="320" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="eFN-D5-Dyz">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="88b-Ve-I2p" style="IBUITableViewCellStyleDefault" id="4Wa-wi-R1Y">
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Wa-wi-R1Y" id="4KO-h1-qgB">
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="88b-Ve-I2p">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nhe-Au-4iq" kind="show" id="j3Q-3K-XhO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="A4y-rz-2WJ" style="IBUITableViewCellStyleDefault" id="Okw-5N-AY2">
+                                        <rect key="frame" x="0.0" y="79" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Okw-5N-AY2" id="qK3-4g-e2e">
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Input" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A4y-rz-2WJ">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="g7T-RS-MXS" kind="show" id="2Ds-hB-ElV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="hGg-7m-vjI" style="IBUITableViewCellStyleDefault" id="C6Y-k8-dUe">
+                                        <rect key="frame" x="0.0" y="123" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C6Y-k8-dUe" id="FsG-v2-JTS">
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hGg-7m-vjI">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="2AK-de-yjU" kind="show" id="GRu-7o-QzI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PNu-ol-gRX" style="IBUITableViewCellStyleDefault" id="Yio-lU-8oY">
+                                        <rect key="frame" x="0.0" y="167" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yio-lU-8oY" id="fMA-RT-UWv">
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Date Range Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PNu-ol-gRX">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="T9o-gW-C9R" kind="show" id="oud-IA-Tdl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="oqJ-1i-WjN" id="era-Xs-UxY"/>
+                            <outlet property="delegate" destination="oqJ-1i-WjN" id="TcZ-RM-TfR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Basic Components" id="iVf-Ot-3On">
+                        <barButtonItem key="backBarButtonItem" title="Components" id="go2-uQ-0QV"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8I-8k-OwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="833"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vxe-Ct-Evp">
+            <objects>
+                <navigationController id="Z4I-Ad-INf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="uQ9-T4-nKf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="93"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oqJ-1i-WjN" kind="relationship" relationship="rootViewController" id="GPF-HH-6m3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hq-hx-au5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-282" y="833"/>
+        </scene>
+        <!--Buttons-->
+        <scene sceneID="Hms-pR-aXB">
+            <objects>
+                <viewController storyboardIdentifier="Buttons" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nhe-Au-4iq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NZS-eZ-ZqC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELo-11-mgL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQB-3w-r4N" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="569.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xgR-bK-oyQ">
+                                                <rect key="frame" x="32.5" y="20" width="256" height="529.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZK-OL-uHV" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                        <rect key="frame" x="0.0" y="0.0" width="256" height="44.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="ZC3-8L-c4S"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Aceitar">
+                                                            <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFJ-TF-afH" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                        <rect key="frame" x="0.0" y="48.5" width="256" height="44.5"/>
+                                                        <state key="normal" title="Aceitar"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD5-B7-mln" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                        <rect key="frame" x="0.0" y="97" width="256" height="44.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Aceitar">
+                                                            <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-Ab-kKo" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                        <rect key="frame" x="0.0" y="145.5" width="256" height="44.5"/>
+                                                        <state key="normal" title="Confirmar"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hot-6a-Bdh" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                        <rect key="frame" x="0.0" y="194" width="256" height="44.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Confirmar">
+                                                            <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-bT-VR1" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                        <rect key="frame" x="0.0" y="242.5" width="256" height="44.5"/>
+                                                        <state key="normal" title="Confirmar"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoE-6v-tKZ" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                        <rect key="frame" x="0.0" y="291" width="256" height="44.5"/>
+                                                        <state key="normal" title="Cancelar"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37n-k6-Us8" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                        <rect key="frame" x="0.0" y="339.5" width="256" height="44.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Cancelar">
+                                                            <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk2-Lc-W8k" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                        <rect key="frame" x="0.0" y="388" width="256" height="44.5"/>
+                                                        <state key="normal" title="Cancelar"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JS2-nX-UPY" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                        <rect key="frame" x="0.0" y="436.5" width="256" height="44.5"/>
+                                                        <state key="normal" title="Mais detalhes"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es1-vB-VOz" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                        <rect key="frame" x="0.0" y="485" width="256" height="44.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Editar">
+                                                            <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="xgR-bK-oyQ" firstAttribute="centerX" secondItem="IQB-3w-r4N" secondAttribute="centerX" id="AJw-IS-1P0"/>
+                                            <constraint firstItem="xgR-bK-oyQ" firstAttribute="top" secondItem="IQB-3w-r4N" secondAttribute="top" constant="20" id="LUT-z2-Jr5"/>
+                                            <constraint firstItem="xgR-bK-oyQ" firstAttribute="width" secondItem="IQB-3w-r4N" secondAttribute="width" multiplier="0.8" id="bwM-Xb-XQe"/>
+                                            <constraint firstAttribute="bottom" secondItem="xgR-bK-oyQ" secondAttribute="bottom" constant="20" id="ifN-GY-YhT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="IQB-3w-r4N" secondAttribute="bottom" id="8sS-fa-iLv"/>
+                                    <constraint firstItem="IQB-3w-r4N" firstAttribute="top" secondItem="ELo-11-mgL" secondAttribute="top" id="Clg-1e-PyX"/>
+                                    <constraint firstItem="IQB-3w-r4N" firstAttribute="height" secondItem="ELo-11-mgL" secondAttribute="height" priority="750" id="VW9-oo-V1w"/>
+                                    <constraint firstItem="IQB-3w-r4N" firstAttribute="width" secondItem="ELo-11-mgL" secondAttribute="width" id="Y69-Se-xS4"/>
+                                    <constraint firstItem="IQB-3w-r4N" firstAttribute="leading" secondItem="ELo-11-mgL" secondAttribute="leading" id="e6h-ba-m9E"/>
+                                    <constraint firstAttribute="trailing" secondItem="IQB-3w-r4N" secondAttribute="trailing" id="fiI-a2-kuZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ELo-11-mgL" firstAttribute="top" secondItem="NZS-eZ-ZqC" secondAttribute="top" id="3pH-bg-4Dq"/>
+                            <constraint firstAttribute="trailing" secondItem="ELo-11-mgL" secondAttribute="trailing" id="CYJ-Sh-OYU"/>
+                            <constraint firstItem="ELo-11-mgL" firstAttribute="leading" secondItem="NZS-eZ-ZqC" secondAttribute="leading" id="Ftl-ZQ-vQR"/>
+                            <constraint firstItem="4jA-h6-CRv" firstAttribute="bottom" secondItem="ELo-11-mgL" secondAttribute="bottom" id="ySP-DS-vYa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4jA-h6-CRv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Buttons" largeTitleDisplayMode="never" id="Vfx-9J-oQD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ang-M4-RRC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="362"/>
+        </scene>
+        <!--Inputs-->
+        <scene sceneID="uPC-U2-F66">
+            <objects>
+                <viewController storyboardIdentifier="InputViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g7T-RS-MXS" customClass="InputViewController" customModule="BasicTestApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X3O-kK-F0i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99n-mk-bgf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BcK-F2-iWO" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKZ-D5-Cu5" customClass="SlingInput" customModule="SlingBasicComponent">
+                                                <rect key="frame" x="32" y="20" width="256" height="76"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password Input"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="This is a guidance text"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Or3-Un-QkC" customClass="SlingInput" customModule="SlingBasicComponent">
+                                                <rect key="frame" x="32" y="104" width="256" height="51"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="CPF Input"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lt8-Lu-T52" customClass="SlingInput" customModule="SlingBasicComponent">
+                                                <rect key="frame" x="32" y="163" width="256" height="51"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="CNPJ Input"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGj-nz-O7j" customClass="SlingInput" customModule="SlingBasicComponent">
+                                                <rect key="frame" x="32.5" y="222" width="256" height="51"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="CEP Input"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3h-su-CZ4" customClass="SlingInput" customModule="SlingBasicComponent">
+                                                <rect key="frame" x="32" y="281" width="256" height="76"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Disabled Input"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="Just numbers"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="dGj-nz-O7j" firstAttribute="top" secondItem="Lt8-Lu-T52" secondAttribute="bottom" constant="8" id="2Nr-wM-kdr"/>
+                                            <constraint firstItem="Lt8-Lu-T52" firstAttribute="centerX" secondItem="BcK-F2-iWO" secondAttribute="centerX" id="2ti-Oi-ChW"/>
+                                            <constraint firstItem="w3h-su-CZ4" firstAttribute="top" secondItem="dGj-nz-O7j" secondAttribute="bottom" constant="8" id="7mt-fs-dGM"/>
+                                            <constraint firstItem="Or3-Un-QkC" firstAttribute="centerX" secondItem="BcK-F2-iWO" secondAttribute="centerX" id="Dyk-FX-5EJ"/>
+                                            <constraint firstItem="w3h-su-CZ4" firstAttribute="width" secondItem="dGj-nz-O7j" secondAttribute="width" id="FuD-Dx-IUW"/>
+                                            <constraint firstItem="dGj-nz-O7j" firstAttribute="width" secondItem="jKZ-D5-Cu5" secondAttribute="width" id="ISG-px-X9Q"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="w3h-su-CZ4" secondAttribute="bottom" constant="20" id="PPo-s2-Iz2"/>
+                                            <constraint firstItem="dGj-nz-O7j" firstAttribute="centerX" secondItem="BcK-F2-iWO" secondAttribute="centerX" id="Q63-Dq-Y7y"/>
+                                            <constraint firstItem="jKZ-D5-Cu5" firstAttribute="top" secondItem="BcK-F2-iWO" secondAttribute="top" constant="20" id="Qqh-fe-UME"/>
+                                            <constraint firstItem="Or3-Un-QkC" firstAttribute="width" secondItem="jKZ-D5-Cu5" secondAttribute="width" id="XVI-jS-2iC"/>
+                                            <constraint firstItem="Lt8-Lu-T52" firstAttribute="top" secondItem="Or3-Un-QkC" secondAttribute="bottom" constant="8" id="bzg-8q-BYx"/>
+                                            <constraint firstItem="Or3-Un-QkC" firstAttribute="top" secondItem="jKZ-D5-Cu5" secondAttribute="bottom" constant="8" id="feD-nA-goH"/>
+                                            <constraint firstItem="jKZ-D5-Cu5" firstAttribute="width" secondItem="BcK-F2-iWO" secondAttribute="width" multiplier="0.8" id="pHs-al-1Fm"/>
+                                            <constraint firstItem="jKZ-D5-Cu5" firstAttribute="centerX" secondItem="BcK-F2-iWO" secondAttribute="centerX" id="uLh-e5-Uvx"/>
+                                            <constraint firstItem="w3h-su-CZ4" firstAttribute="centerX" secondItem="BcK-F2-iWO" secondAttribute="centerX" id="vqg-ph-h11"/>
+                                            <constraint firstItem="Lt8-Lu-T52" firstAttribute="width" secondItem="jKZ-D5-Cu5" secondAttribute="width" id="zNe-P6-FPR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BcK-F2-iWO" secondAttribute="trailing" id="AAT-49-5Jz"/>
+                                    <constraint firstAttribute="bottom" secondItem="BcK-F2-iWO" secondAttribute="bottom" id="K63-4E-dwd"/>
+                                    <constraint firstItem="BcK-F2-iWO" firstAttribute="height" secondItem="99n-mk-bgf" secondAttribute="height" priority="750" id="dTe-87-bMP"/>
+                                    <constraint firstItem="BcK-F2-iWO" firstAttribute="width" secondItem="99n-mk-bgf" secondAttribute="width" id="nQr-kE-bIp"/>
+                                    <constraint firstItem="BcK-F2-iWO" firstAttribute="leading" secondItem="99n-mk-bgf" secondAttribute="leading" id="whX-i0-rp1"/>
+                                    <constraint firstItem="BcK-F2-iWO" firstAttribute="top" secondItem="99n-mk-bgf" secondAttribute="top" id="zLo-Wj-SVF"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="99n-mk-bgf" firstAttribute="leading" secondItem="X3O-kK-F0i" secondAttribute="leading" id="HOY-eb-DjN"/>
+                            <constraint firstItem="99n-mk-bgf" firstAttribute="top" secondItem="X3O-kK-F0i" secondAttribute="top" id="WqG-Ia-9kY"/>
+                            <constraint firstItem="chv-Sh-kR2" firstAttribute="bottom" secondItem="99n-mk-bgf" secondAttribute="bottom" id="shc-q0-tuF"/>
+                            <constraint firstAttribute="trailing" secondItem="99n-mk-bgf" secondAttribute="trailing" id="tgk-aH-UlJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="chv-Sh-kR2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inputs" largeTitleDisplayMode="never" id="9Pc-b4-aqG"/>
+                    <connections>
+                        <outlet property="cepInput" destination="dGj-nz-O7j" id="Dfa-Y2-6Y5"/>
+                        <outlet property="cnpjInput" destination="Lt8-Lu-T52" id="WIb-5c-VyQ"/>
+                        <outlet property="cpfInput" destination="Or3-Un-QkC" id="dl1-bD-D2L"/>
+                        <outlet property="noMaskInput" destination="jKZ-D5-Cu5" id="hIX-mL-1nC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JuN-0G-xde" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2213" y="697"/>
+        </scene>
+        <!--Picker-->
+        <scene sceneID="XnS-Oo-aEB">
+            <objects>
+                <viewController storyboardIdentifier="PickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2AK-de-yjU" customClass="PickerViewController" customModule="BasicTestApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bsL-v3-OPP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGt-K0-4zj" customClass="SlingPicker" customModule="SlingBasicComponent">
+                                <rect key="frame" x="32" y="84" width="256" height="76"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Banco"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="Usado para depósitos de crédito"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLT-3i-wvH" customClass="SlingPicker" customModule="SlingBasicComponent">
+                                <rect key="frame" x="32" y="180" width="256" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Banco Principal"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wLT-3i-wvH" firstAttribute="width" secondItem="qGt-K0-4zj" secondAttribute="width" id="2xJ-0i-AMT"/>
+                            <constraint firstItem="qGt-K0-4zj" firstAttribute="width" secondItem="bsL-v3-OPP" secondAttribute="width" multiplier="0.8" id="Leb-WW-ub4"/>
+                            <constraint firstItem="wLT-3i-wvH" firstAttribute="top" secondItem="qGt-K0-4zj" secondAttribute="bottom" constant="20" id="T7h-zY-lt6"/>
+                            <constraint firstItem="wLT-3i-wvH" firstAttribute="centerX" secondItem="bsL-v3-OPP" secondAttribute="centerX" id="WZo-Ip-XD9"/>
+                            <constraint firstItem="qGt-K0-4zj" firstAttribute="top" secondItem="9YF-rd-wl5" secondAttribute="top" constant="20" id="szy-Mn-oaL"/>
+                            <constraint firstItem="qGt-K0-4zj" firstAttribute="centerX" secondItem="bsL-v3-OPP" secondAttribute="centerX" id="ynv-xp-5Mn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9YF-rd-wl5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Picker" largeTitleDisplayMode="never" id="Taf-tw-6JH"/>
+                    <connections>
+                        <outlet property="firstPicker" destination="qGt-K0-4zj" id="W7c-Tc-jzI"/>
+                        <outlet property="secondPicker" destination="wLT-3i-wvH" id="vTM-MN-hSE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wGP-HL-GIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1584" y="1183"/>
+        </scene>
+        <!--DateRangePicker-->
+        <scene sceneID="xxr-fe-Hjc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DateRangePicker" bundleIdentifier="br.com.stoneco.SlingBasicComponent" id="KXp-MN-XUA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LwK-hv-0Rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="1806"/>
+        </scene>
+        <!--Date Range Picker View Controller-->
+        <scene sceneID="O3w-eP-ScP">
+            <objects>
+                <viewController storyboardIdentifier="DateRangePickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T9o-gW-C9R" customClass="DateRangePickerViewController" customModule="BasicTestApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JOw-pf-J8y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7n-Bj-uhT" customClass="SlingButton" customModule="SlingBasicComponent">
+                                <rect key="frame" x="111.5" y="261" width="97" height="46"/>
+                                <state key="normal" title="Filtrar"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="KXp-MN-XUA" kind="show" id="5JQ-of-F3B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Período selecionado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7p-bh-PMY">
+                                <rect key="frame" x="82.5" y="171" width="155" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc6-bN-90c">
+                                <rect key="frame" x="148.5" y="216" width="23.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.16078431369999999" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I7n-Bj-uhT" firstAttribute="centerX" secondItem="JOw-pf-J8y" secondAttribute="centerX" id="E60-MC-YZ3"/>
+                            <constraint firstItem="I7n-Bj-uhT" firstAttribute="top" secondItem="cc6-bN-90c" secondAttribute="bottom" constant="24" id="PKZ-Rq-50k"/>
+                            <constraint firstItem="cc6-bN-90c" firstAttribute="top" secondItem="W7p-bh-PMY" secondAttribute="bottom" constant="24" id="W5W-S0-yYZ"/>
+                            <constraint firstItem="W7p-bh-PMY" firstAttribute="centerX" secondItem="JOw-pf-J8y" secondAttribute="centerX" id="YD4-au-ZVL"/>
+                            <constraint firstItem="I7n-Bj-uhT" firstAttribute="centerY" secondItem="JOw-pf-J8y" secondAttribute="centerY" id="iOw-3l-Xad"/>
+                            <constraint firstItem="cc6-bN-90c" firstAttribute="centerX" secondItem="JOw-pf-J8y" secondAttribute="centerX" id="pyJ-Vw-hCd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MlH-7Y-SBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="periodLabel" destination="cc6-bN-90c" id="eiT-5Y-3ND"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bW9-Vy-Koe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="1807"/>
+        </scene>
+    </scenes>
+</document>

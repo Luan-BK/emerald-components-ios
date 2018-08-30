@@ -1,0 +1,18 @@
+disabled_rules:
+  - colon
+  - comma
+  - control_statement
+  - trailing_whitespace
+  - nesting
+  - line_length
+  - force_try
+  - redundant_optional_initialization
+opt_in_rules:
+  - empty_count
+included:
+  - SlingBasicComponent
+  - SlingBasicComponentTests
+excluded:
+  - fastlane
+  - Pods
+  - build

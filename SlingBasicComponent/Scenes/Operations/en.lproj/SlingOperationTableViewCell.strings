@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "R$ 120,00"; ObjectID = "48K-3t-Vh3"; */
+"48K-3t-Vh3.text" = "$ 120.00";
+
+/* Class = "UILabel"; text = "Débito"; ObjectID = "5ap-7e-iUd"; */
+"5ap-7e-iUd.text" = "Debit";
+
+/* Class = "UILabel"; text = "Venda"; ObjectID = "anC-Jb-IZo"; */
+"anC-Jb-IZo.text" = "Sale";
+
+/* Class = "UILabel"; text = "12/04 às 13:16"; ObjectID = "eIC-53-DiS"; */
+"eIC-53-DiS.text" = "12 Apr 13PM";
+
+/* Class = "UILabel"; text = "Pago"; ObjectID = "me1-3a-Tbr"; */
+"me1-3a-Tbr.text" = "Paid";

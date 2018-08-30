@@ -1,0 +1,99 @@
+fastlane documentation
+================
+# Installation
+
+Make sure you have the latest version of the Xcode command line tools installed:
+
+```
+xcode-select --install
+```
+
+Install _fastlane_ using
+```
+[sudo] gem install fastlane -NV
+```
+or alternatively using `brew cask install fastlane`
+
+# Available Actions
+## iOS
+### ios test
+```
+fastlane ios test
+```
+Run tests
+### ios release
+```
+fastlane ios release
+```
+Deploy a new version
+### ios projet_version
+```
+fastlane ios projet_version
+```
+set target to get version number
+### ios github_release
+```
+fastlane ios github_release
+```
+release new github version
+### ios push
+```
+fastlane ios push
+```
+Do git push
+### ios version_podspec
+```
+fastlane ios version_podspec
+```
+Increment or set the version in a podspec file
+### ios pod_publish
+```
+fastlane ios pod_publish
+```
+Push podfile
+### ios changelog
+```
+fastlane ios changelog
+```
+Create changelog
+### ios lint
+```
+fastlane ios lint
+```
+Run swiftlint
+### ios coverage
+```
+fastlane ios coverage
+```
+Get coverage percentage, remove framework's coverage and generate HTML page with coverage data
+### ios increment_version_minor
+```
+fastlane ios increment_version_minor
+```
+Increment minor version
+### ios increment_version_patch
+```
+fastlane ios increment_version_patch
+```
+Increment path version
+### ios increment_version
+```
+fastlane ios increment_version
+```
+Increment version number
+### ios increment_version_custom
+```
+fastlane ios increment_version_custom
+```
+Increment custom version
+### ios increment_build
+```
+fastlane ios increment_build
+```
+Increment build
+
+----
+
+This README.md is auto-generated and will be re-generated every time [fastlane](https://fastlane.tools) is run.
+More information about fastlane can be found on [fastlane.tools](https://fastlane.tools).
+The documentation of fastlane can be found on [docs.fastlane.tools](https://docs.fastlane.tools).

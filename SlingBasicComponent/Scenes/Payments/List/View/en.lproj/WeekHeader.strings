@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Sab"; ObjectID = "45U-gG-5gd"; */
+"45U-gG-5gd.text" = "Sat";
+
+/* Class = "UILabel"; text = "Qui"; ObjectID = "849-oz-O9f"; */
+"849-oz-O9f.text" = "Thu";
+
+/* Class = "UILabel"; text = "Sex"; ObjectID = "SXl-pp-rDn"; */
+"SXl-pp-rDn.text" = "Fri";
+
+/* Class = "UILabel"; text = "Dom"; ObjectID = "Tot-s9-T7b"; */
+"Tot-s9-T7b.text" = "Sun";
+
+/* Class = "UILabel"; text = "Qua"; ObjectID = "bW4-io-YTr"; */
+"bW4-io-YTr.text" = "Wed";
+
+/* Class = "UILabel"; text = "Seg"; ObjectID = "uXS-QR-clN"; */
+"uXS-QR-clN.text" = "Mon";
+
+/* Class = "UILabel"; text = "Ter"; ObjectID = "xJq-sl-dA1"; */
+"xJq-sl-dA1.text" = "Tue";

@@ -1,0 +1,60 @@
+
+/* Class = "UIButton"; normalTitle = "Cancelar"; ObjectID = "37n-k6-Us8"; */
+"37n-k6-Us8.normalTitle" = "Cancelar";
+
+/* Class = "UILabel"; text = "Button"; ObjectID = "88b-Ve-I2p"; */
+"88b-Ve-I2p.text" = "Button";
+
+/* Class = "UINavigationItem"; title = "Inputs"; ObjectID = "9Pc-b4-aqG"; */
+"9Pc-b4-aqG.title" = "Inputs";
+
+/* Class = "UILabel"; text = "Input"; ObjectID = "A4y-rz-2WJ"; */
+"A4y-rz-2WJ.text" = "Input";
+
+/* Class = "UIButton"; normalTitle = "Editar"; ObjectID = "Es1-vB-VOz"; */
+"Es1-vB-VOz.normalTitle" = "Editar";
+
+/* Class = "UIButton"; normalTitle = "Confirmar"; ObjectID = "Hot-6a-Bdh"; */
+"Hot-6a-Bdh.normalTitle" = "Confirmar";
+
+/* Class = "UIButton"; normalTitle = "Mais detalhes"; ObjectID = "JS2-nX-UPY"; */
+"JS2-nX-UPY.normalTitle" = "Mais detalhes";
+
+/* Class = "UIButton"; normalTitle = "Aceitar"; ObjectID = "QZK-OL-uHV"; */
+"QZK-OL-uHV.normalTitle" = "Aceitar";
+
+/* Class = "UINavigationItem"; title = "Picker"; ObjectID = "Taf-tw-6JH"; */
+"Taf-tw-6JH.title" = "Picker";
+
+/* Class = "UINavigationItem"; title = "Buttons"; ObjectID = "Vfx-9J-oQD"; */
+"Vfx-9J-oQD.title" = "Buttons";
+
+/* Class = "UIButton"; normalTitle = "Aceitar"; ObjectID = "XFJ-TF-afH"; */
+"XFJ-TF-afH.normalTitle" = "Aceitar";
+
+/* Class = "UIButton"; normalTitle = "Cancelar"; ObjectID = "XoE-6v-tKZ"; */
+"XoE-6v-tKZ.normalTitle" = "Cancelar";
+
+/* Class = "UIBarButtonItem"; title = "Components"; ObjectID = "go2-uQ-0QV"; */
+"go2-uQ-0QV.title" = "Components";
+
+/* Class = "UILabel"; text = "Picker"; ObjectID = "hGg-7m-vjI"; */
+"hGg-7m-vjI.text" = "Picker";
+
+/* Class = "UINavigationItem"; title = "Basic Components"; ObjectID = "iVf-Ot-3On"; */
+"iVf-Ot-3On.title" = "Basic Components";
+
+/* Class = "UIButton"; normalTitle = "Confirmar"; ObjectID = "ofP-Ab-kKo"; */
+"ofP-Ab-kKo.normalTitle" = "Confirmar";
+
+/* Class = "UIButton"; normalTitle = "Confirmar"; ObjectID = "oiW-bT-VR1"; */
+"oiW-bT-VR1.normalTitle" = "Confirmar";
+
+/* Class = "UITableViewController"; title = "Basic Components"; ObjectID = "oqJ-1i-WjN"; */
+"oqJ-1i-WjN.title" = "Basic Components";
+
+/* Class = "UIButton"; normalTitle = "Cancelar"; ObjectID = "qk2-Lc-W8k"; */
+"qk2-Lc-W8k.normalTitle" = "Cancelar";
+
+/* Class = "UIButton"; normalTitle = "Aceitar"; ObjectID = "rD5-B7-mln"; */
+"rD5-B7-mln.normalTitle" = "Aceitar";
