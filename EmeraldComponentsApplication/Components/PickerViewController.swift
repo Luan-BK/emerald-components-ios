@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SlingBasicComponent
+import EmeraldComponents
 
 class PickerViewController: UIViewController {
 
@@ -60,7 +60,5 @@ extension PickerViewController: SlingPickerDelegate, SlingPickerDataSource {
             return []
         }
     }
-    
-    
     
 }

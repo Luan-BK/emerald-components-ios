@@ -1,6 +1,6 @@
 //
 //  SlingInput+Delegate.swift
-//  SlingBasicComponent
+//  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 20/06/2018.
 //  Copyright © 2018 StoneCo. All rights reserved.

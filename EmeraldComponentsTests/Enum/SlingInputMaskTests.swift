@@ -1,13 +1,13 @@
 //
 //  SlingInputMaskTests.swift
-//  SlingBasicComponentTests
+//  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 15/06/2018.
 //  Copyright © 2018 StoneCo. All rights reserved.
 //
 
 import XCTest
-@testable import SlingBasicComponent
+@testable import EmeraldComponents
 @testable import InputMask
 
 class SlingInputMaskTests: XCTestCase {

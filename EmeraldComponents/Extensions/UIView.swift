@@ -1,6 +1,6 @@
 //
 //  UIView.swift
-//  SlingBasicComponent
+//  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 19/03/2018.
 //  Copyright © 2018 StoneCo. All rights reserved.

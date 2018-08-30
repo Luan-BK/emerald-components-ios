@@ -1,6 +1,6 @@
 //
 //  CalendarCollectionCustomViewCell.swift
-//  SlingBasicComponent
+//  EmeraldComponents
 //
 //  Created by João Mendes | Stone on 26/04/18.
 //  Copyright © 2018 StoneCo. All rights reserved.

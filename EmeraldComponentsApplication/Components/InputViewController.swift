@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SlingBasicComponent
+import EmeraldComponents
 
 class InputViewController: UIViewController {
 

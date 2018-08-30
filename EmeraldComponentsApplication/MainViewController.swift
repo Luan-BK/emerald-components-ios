@@ -20,6 +20,4 @@ class MainViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

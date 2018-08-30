@@ -69,7 +69,6 @@
 		37E1298F20DC5A1100B45C5A /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E1298E20DC5A1100B45C5A /* UIResponder.swift */; };
 		37EEED2B21248A6B00469F01 /* SlingCustomDateRangePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEED2A21248A6B00469F01 /* SlingCustomDateRangePickerTests.swift */; };
 		37EEED2E2124987E00469F01 /* UINavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEED2D2124987E00469F01 /* UINavigationControllerTests.swift */; };
-		87DDD99C4B6681BEE97E1C76 /* Pods_SlingBasicComponentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42BF9E2BFCB588F3CEE071A /* Pods_SlingBasicComponentTests.framework */; };
 		A2098DC020D2E9AB006A10BA /* SearchListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2098DBF20D2E9AB006A10BA /* SearchListDelegate.swift */; };
 		A21D2A5020502EF8004CCA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21F0C46202B6FBE00C91077 /* Assets.xcassets */; };
 		A24685E820912BBB00D934BE /* WeekHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24685E720912BBB00D934BE /* WeekHeader.swift */; };
@@ -140,7 +139,7 @@
 		372395E520DD50FF0018BB46 /* SlingInput+DelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SlingInput+DelegateTests.swift"; sourceTree = "<group>"; };
 		372395E720DD56AE0018BB46 /* SlingPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingPickerTests.swift; sourceTree = "<group>"; };
 		372395E920DD6A640018BB46 /* SlingSearchListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingSearchListTests.swift; sourceTree = "<group>"; };
-		372832E320DABEE800D607D4 /* BasicTestApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicTestApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		372832E320DABEE800D607D4 /* EmeraldComponentsApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmeraldComponentsApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		372832E520DABEE800D607D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		372832E720DABEE800D607D4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		372832EA20DABEE800D607D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -273,7 +272,6 @@
 			files = (
 				A250F7F52052F3500013C05D /* EmeraldComponents.framework in Frameworks */,
 				DB29B9AD3AE97FAB9306B334 /* (null) in Frameworks */,
-				87DDD99C4B6681BEE97E1C76 /* Pods_SlingBasicComponentTests.framework in Frameworks */,
 				E557098DD4758F8A5DFD254C /* Pods_EmeraldComponentsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,7 +566,7 @@
 			children = (
 				A270033620179EF1008FBB2E /* EmeraldComponents.framework */,
 				A27003612017A8D8008FBB2E /* EmeraldComponentsTests.xctest */,
-				372832E320DABEE800D607D4 /* BasicTestApplication.app */,
+				372832E320DABEE800D607D4 /* EmeraldComponentsApplication.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -752,9 +750,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		372832E220DABEE800D607D4 /* BasicTestApplication */ = {
+		372832E220DABEE800D607D4 /* EmeraldComponentsApplication */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 372832F420DABEE900D607D4 /* Build configuration list for PBXNativeTarget "BasicTestApplication" */;
+			buildConfigurationList = 372832F420DABEE900D607D4 /* Build configuration list for PBXNativeTarget "EmeraldComponentsApplication" */;
 			buildPhases = (
 				372832DF20DABEE800D607D4 /* Sources */,
 				372832E020DABEE800D607D4 /* Frameworks */,
@@ -766,9 +764,9 @@
 			dependencies = (
 				372832F820DAC33000D607D4 /* PBXTargetDependency */,
 			);
-			name = BasicTestApplication;
+			name = EmeraldComponentsApplication;
 			productName = BasicTestApplication;
-			productReference = 372832E320DABEE800D607D4 /* BasicTestApplication.app */;
+			productReference = 372832E320DABEE800D607D4 /* EmeraldComponentsApplication.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A270033520179EF1008FBB2E /* EmeraldComponents */ = {
@@ -852,7 +850,7 @@
 			targets = (
 				A270033520179EF1008FBB2E /* EmeraldComponents */,
 				A27003602017A8D8008FBB2E /* EmeraldComponentsTests */,
-				372832E220DABEE800D607D4 /* BasicTestApplication */,
+				372832E220DABEE800D607D4 /* EmeraldComponentsApplication */,
 			);
 		};
 /* End PBXProject section */
@@ -1159,10 +1157,10 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q54VRJ624;
-				INFOPLIST_FILE = BasicTestApplication/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EmeraldComponentsApplication/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Stone.BasicTestApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = Stone.EmeraldComponentsApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1177,10 +1175,10 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q54VRJ624;
-				INFOPLIST_FILE = BasicTestApplication/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EmeraldComponentsApplication/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Stone.BasicTestApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = Stone.EmeraldComponentsApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1374,9 +1372,9 @@
 				CURRENT_PROJECT_VERSION = 0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8Q54VRJ624;
-				INFOPLIST_FILE = SlingBasicComponentTests/Info.plist;
+				INFOPLIST_FILE = EmeraldComponentsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.stoneco.SlingBasicComponentTests;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.stoneco.EmeraldComponentsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -1393,9 +1391,9 @@
 				CURRENT_PROJECT_VERSION = 0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8Q54VRJ624;
-				INFOPLIST_FILE = SlingBasicComponentTests/Info.plist;
+				INFOPLIST_FILE = EmeraldComponentsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.stoneco.SlingBasicComponentTests;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.stoneco.EmeraldComponentsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1405,7 +1403,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		372832F420DABEE900D607D4 /* Build configuration list for PBXNativeTarget "BasicTestApplication" */ = {
+		372832F420DABEE900D607D4 /* Build configuration list for PBXNativeTarget "EmeraldComponentsApplication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				372832F220DABEE900D607D4 /* Debug */,

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for SlingComponent.
+//! Project version number for EmeraldComponents.
 FOUNDATION_EXPORT double EmeraldComponentsVersionNumber;
 
 //! Project version string for EmeraldComponents.

@@ -19,7 +19,7 @@
 ### CI/CD
 
 - We're using [Bitrise](http://bitrise.io) as a service because it is optimized for mobile applications and we already have a license.
-- We also use Fastlane, you can find `Fastfile` [here](https://github.com/stone-payments/sling-swift-sdk/blob/master/fastlane/Fastfile).
+- We also use Fastlane, you can find `Fastfile` [here](https://github.com/stone-payments/emerald-components-ios/blob/master/fastlane/Fastfile).
 
 ### Workflow
 
@@ -39,7 +39,7 @@
 ### Linter
 
 - We use [swiflint](https://github.com/realm/SwiftLint) do keep sure the code won't be structural problems or some bad practice.
-- You can find our `lint file` [here](https://github.com/stone-payments/sling-swift-sdk/blob/master/.swiftlint-ci.yml).
+- You can find our `lint file` [here](https://github.com/stone-payments/emerald-components-ios/blob/master/.swiftlint-ci.yml).
 - **DO NOT** If your PR has `lint file` edition, we won't accept it.
 
 ### Commit messages 

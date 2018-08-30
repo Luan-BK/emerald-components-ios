@@ -1,6 +1,6 @@
 //
 //  ThemeManager.swift
-//  SlingBasicComponent
+//  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 04/05/2018.
 //  Copyright © 2018 StoneCo. All rights reserved.
@@ -10,7 +10,7 @@ import UIKit
 
 public struct ThemeManager {
     
-    internal static let currentThemeKey = "SlingBasicComponentTheme"
+    internal static let currentThemeKey = "EmeraldComponentsTheme"
     
     public static func currentTheme() -> SlingTheme {
         guard let storedTheme = UserDefaults.standard.value(forKey: ThemeManager.currentThemeKey) as? Int else {

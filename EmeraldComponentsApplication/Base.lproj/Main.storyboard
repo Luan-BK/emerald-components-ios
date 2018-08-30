@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z4I-Ad-INf">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,11 +12,11 @@
             <objects>
                 <tableViewController storyboardIdentifier="MainViewController" title="Basic Components" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oqJ-1i-WjN" customClass="MainViewController" customModule="BasicTestApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="69w-vQ-KOU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="nVU-9Q-I0W" userLabel="Footer View">
-                            <rect key="frame" x="0.0" y="249" width="320" height="0.0"/>
+                            <rect key="frame" x="0.0" y="249" width="600" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -28,14 +24,14 @@
                             <tableViewSection id="eFN-D5-Dyz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="88b-Ve-I2p" style="IBUITableViewCellStyleDefault" id="4Wa-wi-R1Y">
-                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Wa-wi-R1Y" id="4KO-h1-qgB">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="562" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="88b-Ve-I2p">
-                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="542" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -48,14 +44,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="A4y-rz-2WJ" style="IBUITableViewCellStyleDefault" id="Okw-5N-AY2">
-                                        <rect key="frame" x="0.0" y="79" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="79" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Okw-5N-AY2" id="qK3-4g-e2e">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="562" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Input" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A4y-rz-2WJ">
-                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="542" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -68,14 +64,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="hGg-7m-vjI" style="IBUITableViewCellStyleDefault" id="C6Y-k8-dUe">
-                                        <rect key="frame" x="0.0" y="123" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="123" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C6Y-k8-dUe" id="FsG-v2-JTS">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="562" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hGg-7m-vjI">
-                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="542" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -88,14 +84,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PNu-ol-gRX" style="IBUITableViewCellStyleDefault" id="Yio-lU-8oY">
-                                        <rect key="frame" x="0.0" y="167" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="167" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yio-lU-8oY" id="fMA-RT-UWv">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="562" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Date Range Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PNu-ol-gRX">
-                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="542" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -144,20 +140,20 @@
             <objects>
                 <viewController storyboardIdentifier="Buttons" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nhe-Au-4iq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NZS-eZ-ZqC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELo-11-mgL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQB-3w-r4N" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="569.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="569.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xgR-bK-oyQ">
-                                                <rect key="frame" x="32.5" y="20" width="256" height="529.5"/>
+                                                <rect key="frame" x="60.5" y="20" width="480" height="529.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZK-OL-uHV" customClass="SlingButton" customModule="SlingBasicComponent">
-                                                        <rect key="frame" x="0.0" y="0.0" width="256" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="480" height="44.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="ZC3-8L-c4S"/>
                                                         </constraints>
@@ -175,7 +171,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFJ-TF-afH" customClass="SlingButton" customModule="SlingBasicComponent">
-                                                        <rect key="frame" x="0.0" y="48.5" width="256" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="48.5" width="480" height="44.5"/>
                                                         <state key="normal" title="Aceitar"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
@@ -187,7 +183,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD5-B7-mln" customClass="SlingButton" customModule="SlingBasicComponent">
-                                                        <rect key="frame" x="0.0" y="97" width="256" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="97" width="480" height="44.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Aceitar">
                                                             <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -202,7 +198,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-Ab-kKo" customClass="SlingButton" customModule="SlingBasicComponent">
-                                                        <rect key="frame" x="0.0" y="145.5" width="256" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="145.5" width="480" height="44.5"/>
                                                         <state key="normal" title="Confirmar"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
@@ -214,7 +210,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hot-6a-Bdh" customClass="SlingButton" customModule="SlingBasicComponent">
-                                                        <rect key="frame" x="0.0" y="194" width="256" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="194" width="480" height="44.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Confirmar">
                                                             <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -229,7 +225,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-bT-VR1" customClass="SlingButton" customModule="SlingBasicComponent">
-                                                        <rect key="frame" x="0.0" y="242.5" width="256" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="242.5" width="480" height="44.5"/>
                                                         <state key="normal" title="Confirmar"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
@@ -241,7 +237,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoE-6v-tKZ" customClass="SlingButton" customModule="SlingBasicComponent">
-                                                        <rect key="frame" x="0.0" y="291" width="256" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="291" width="480" height="44.5"/>
                                                         <state key="normal" title="Cancelar"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
@@ -253,7 +249,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37n-k6-Us8" customClass="SlingButton" customModule="SlingBasicComponent">
-                                                        <rect key="frame" x="0.0" y="339.5" width="256" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="339.5" width="480" height="44.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Cancelar">
                                                             <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -268,7 +264,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk2-Lc-W8k" customClass="SlingButton" customModule="SlingBasicComponent">
-                                                        <rect key="frame" x="0.0" y="388" width="256" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="388" width="480" height="44.5"/>
                                                         <state key="normal" title="Cancelar"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
@@ -280,7 +276,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JS2-nX-UPY" customClass="SlingButton" customModule="SlingBasicComponent">
-                                                        <rect key="frame" x="0.0" y="436.5" width="256" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="436.5" width="480" height="44.5"/>
                                                         <state key="normal" title="Mais detalhes"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
@@ -292,7 +288,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es1-vB-VOz" customClass="SlingButton" customModule="SlingBasicComponent">
-                                                        <rect key="frame" x="0.0" y="485" width="256" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="485" width="480" height="44.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Editar">
                                                             <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -348,25 +344,25 @@
             <objects>
                 <viewController storyboardIdentifier="InputViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g7T-RS-MXS" customClass="InputViewController" customModule="BasicTestApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3O-kK-F0i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99n-mk-bgf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BcK-F2-iWO" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKZ-D5-Cu5" customClass="SlingInput" customModule="SlingBasicComponent">
-                                                <rect key="frame" x="32" y="20" width="256" height="76"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKZ-D5-Cu5" customClass="SlingInput" customModule="SlingBasicComponent">
+                                                <rect key="frame" x="60" y="20" width="480" height="76"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password Input"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="This is a guidance text"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Or3-Un-QkC" customClass="SlingInput" customModule="SlingBasicComponent">
-                                                <rect key="frame" x="32" y="104" width="256" height="51"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Or3-Un-QkC" customClass="SlingInput" customModule="SlingBasicComponent">
+                                                <rect key="frame" x="60" y="104" width="480" height="51"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="CPF Input"/>
@@ -375,8 +371,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lt8-Lu-T52" customClass="SlingInput" customModule="SlingBasicComponent">
-                                                <rect key="frame" x="32" y="163" width="256" height="51"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lt8-Lu-T52" customClass="SlingInput" customModule="SlingBasicComponent">
+                                                <rect key="frame" x="60" y="163" width="480" height="51"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="CNPJ Input"/>
@@ -385,8 +381,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGj-nz-O7j" customClass="SlingInput" customModule="SlingBasicComponent">
-                                                <rect key="frame" x="32.5" y="222" width="256" height="51"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGj-nz-O7j" customClass="SlingInput" customModule="SlingBasicComponent">
+                                                <rect key="frame" x="60.5" y="222" width="480" height="51"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="CEP Input"/>
@@ -395,8 +391,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3h-su-CZ4" customClass="SlingInput" customModule="SlingBasicComponent">
-                                                <rect key="frame" x="32" y="281" width="256" height="76"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3h-su-CZ4" customClass="SlingInput" customModule="SlingBasicComponent">
+                                                <rect key="frame" x="60" y="281" width="480" height="76"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Disabled Input"/>
@@ -464,19 +460,19 @@
             <objects>
                 <viewController storyboardIdentifier="PickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2AK-de-yjU" customClass="PickerViewController" customModule="BasicTestApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bsL-v3-OPP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGt-K0-4zj" customClass="SlingPicker" customModule="SlingBasicComponent">
-                                <rect key="frame" x="32" y="84" width="256" height="76"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGt-K0-4zj" customClass="SlingPicker" customModule="SlingBasicComponent">
+                                <rect key="frame" x="60" y="84" width="480" height="76"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Banco"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="Usado para depósitos de crédito"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLT-3i-wvH" customClass="SlingPicker" customModule="SlingBasicComponent">
-                                <rect key="frame" x="32" y="180" width="256" height="51"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLT-3i-wvH" customClass="SlingPicker" customModule="SlingBasicComponent">
+                                <rect key="frame" x="60" y="180" width="480" height="51"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Banco Principal"/>
@@ -507,7 +503,7 @@
         <!--DateRangePicker-->
         <scene sceneID="xxr-fe-Hjc">
             <objects>
-                <viewControllerPlaceholder storyboardName="DateRangePicker" bundleIdentifier="br.com.stoneco.SlingBasicComponent" id="KXp-MN-XUA" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="DateRangePicker" bundleIdentifier="br.com.stoneco.EmeraldComponents" id="KXp-MN-XUA" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwK-hv-0Rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1412" y="1806"/>
@@ -517,11 +513,11 @@
             <objects>
                 <viewController storyboardIdentifier="DateRangePickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T9o-gW-C9R" customClass="DateRangePickerViewController" customModule="BasicTestApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JOw-pf-J8y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7n-Bj-uhT" customClass="SlingButton" customModule="SlingBasicComponent">
-                                <rect key="frame" x="111.5" y="261" width="97" height="46"/>
+                                <rect key="frame" x="276.5" y="283" width="47" height="34"/>
                                 <state key="normal" title="Filtrar"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
@@ -536,13 +532,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Período selecionado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7p-bh-PMY">
-                                <rect key="frame" x="82.5" y="171" width="155" height="21"/>
+                                <rect key="frame" x="222.5" y="193" width="155" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc6-bN-90c">
-                                <rect key="frame" x="148.5" y="216" width="23.5" height="21"/>
+                                <rect key="frame" x="288.5" y="238" width="23.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.16078431369999999" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

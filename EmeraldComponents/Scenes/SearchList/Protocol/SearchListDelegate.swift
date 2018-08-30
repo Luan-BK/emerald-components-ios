@@ -1,6 +1,6 @@
 //
 //  SearchListDelegate.swift
-//  SlingBasicComponent
+//  EmeraldComponents
 //
 //  Created by João Mendes | Stone on 14/06/18.
 //  Copyright © 2018 StoneCo. All rights reserved.

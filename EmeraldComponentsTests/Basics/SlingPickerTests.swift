@@ -1,13 +1,13 @@
 //
 //  SlingPickerTests.swift
-//  SlingBasicComponentTests
+//  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 22/06/2018.
 //  Copyright © 2018 StoneCo. All rights reserved.
 //
 
 import XCTest
-@testable import SlingBasicComponent
+@testable import EmeraldComponents
 
 class SlingPickerTests: XCTestCase {
 

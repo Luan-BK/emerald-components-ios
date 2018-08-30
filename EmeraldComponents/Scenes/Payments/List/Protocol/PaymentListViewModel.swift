@@ -1,6 +1,6 @@
 //
 //  PaymentListViewModel.swift
-//  SlingBasicComponent
+//  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 08/05/2018.
 //  Copyright © 2018 StoneCo. All rights reserved.

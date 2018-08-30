@@ -1,13 +1,13 @@
 //
 //  HUDTests.swift
-//  SlingBasicComponentTests
+//  EmeraldComponentsTests
 //
 //  Created by João Mendes | Stone on 16/04/18.
 //  Copyright © 2018 StoneCo. All rights reserved.
 //
 
 import XCTest
-@testable import SlingBasicComponent
+@testable import EmeraldComponents
 
 class HUDTests: XCTestCase {
     
