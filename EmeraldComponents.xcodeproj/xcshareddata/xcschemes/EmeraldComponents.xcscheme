@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A270033520179EF1008FBB2E"
-               BuildableName = "SlingBasicComponent.framework"
-               BlueprintName = "SlingBasicComponent"
-               ReferencedContainer = "container:SlingBasicComponent.xcodeproj">
+               BuildableName = "EmeraldComponents.framework"
+               BlueprintName = "EmeraldComponents"
+               ReferencedContainer = "container:EmeraldComponents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A270033520179EF1008FBB2E"
-            BuildableName = "SlingBasicComponent.framework"
-            BlueprintName = "SlingBasicComponent"
-            ReferencedContainer = "container:SlingBasicComponent.xcodeproj">
+            BuildableName = "EmeraldComponents.framework"
+            BlueprintName = "EmeraldComponents"
+            ReferencedContainer = "container:EmeraldComponents.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -44,9 +44,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A27003602017A8D8008FBB2E"
-               BuildableName = "SlingBasicComponentTests.xctest"
-               BlueprintName = "SlingBasicComponentTests"
-               ReferencedContainer = "container:SlingBasicComponent.xcodeproj">
+               BuildableName = "EmeraldComponentsTests.xctest"
+               BlueprintName = "EmeraldComponentsTests"
+               ReferencedContainer = "container:EmeraldComponents.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,9 +54,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A270033520179EF1008FBB2E"
-            BuildableName = "SlingBasicComponent.framework"
-            BlueprintName = "SlingBasicComponent"
-            ReferencedContainer = "container:SlingBasicComponent.xcodeproj">
+            BuildableName = "EmeraldComponents.framework"
+            BlueprintName = "EmeraldComponents"
+            ReferencedContainer = "container:EmeraldComponents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A270033520179EF1008FBB2E"
-            BuildableName = "SlingBasicComponent.framework"
-            BlueprintName = "SlingBasicComponent"
-            ReferencedContainer = "container:SlingBasicComponent.xcodeproj">
+            BuildableName = "EmeraldComponents.framework"
+            BlueprintName = "EmeraldComponents"
+            ReferencedContainer = "container:EmeraldComponents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A270033520179EF1008FBB2E"
-            BuildableName = "SlingBasicComponent.framework"
-            BlueprintName = "SlingBasicComponent"
-            ReferencedContainer = "container:SlingBasicComponent.xcodeproj">
+            BuildableName = "EmeraldComponents.framework"
+            BlueprintName = "EmeraldComponents"
+            ReferencedContainer = "container:EmeraldComponents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
