@@ -1,5 +1,5 @@
 //
-//  SlingElementState.swift
+//  EmeraldElementState.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 14/06/2018.
@@ -9,7 +9,7 @@
 import Foundation
 
 /// An enum representing the possible visual states for basic components.
-public enum SlingElementState: Int {
+public enum EmeraldElementState: Int {
     case regular = 0
     case focus
     case inactive

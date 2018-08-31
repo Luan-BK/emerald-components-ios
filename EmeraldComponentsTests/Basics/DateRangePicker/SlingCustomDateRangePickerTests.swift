@@ -1,5 +1,5 @@
 //
-//  SlingCustomDateRangePickerTests.swift
+//  EmeraldCustomDateRangePickerTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 15/08/2018.
@@ -10,12 +10,12 @@ import XCTest
 @testable import EmeraldComponents
 
 //swiftlint:disable force_cast
-class SlingCustomDateRangePickerTests: XCTestCase {
+class EmeraldCustomDateRangePickerTests: XCTestCase {
     
-    var viewController: SlingCustomDateRangePicker!
+    var viewController: EmeraldCustomDateRangePicker!
     private var startDate: Date?
     private var finalDate: Date?
-    private var period: SlingDateRangePicker.SlingDatePeriod?
+    private var period: EmeraldDateRangePicker.EmeraldDatePeriod?
     
     override func setUp() {
         super.setUp()
@@ -24,7 +24,7 @@ class SlingCustomDateRangePickerTests: XCTestCase {
         self.finalDate = nil
         self.period = nil
         
-        self.viewController = UIStoryboard(name: "DateRangePicker", bundle: Bundle.basic).instantiateViewController(withIdentifier: "SlingCustomDateRangePicker") as! SlingCustomDateRangePicker
+        self.viewController = UIStoryboard(name: "DateRangePicker", bundle: Bundle.basic).instantiateViewController(withIdentifier: "EmeraldCustomDateRangePicker") as! EmeraldCustomDateRangePicker
         self.viewController.delegate = self
         _ = self.viewController.view
     }
@@ -135,9 +135,9 @@ class SlingCustomDateRangePickerTests: XCTestCase {
     
 }
 
-extension SlingCustomDateRangePickerTests: SlingDateRangePickerDelegate {
+extension EmeraldCustomDateRangePickerTests: EmeraldDateRangePickerDelegate {
     
-    func didChooseDateRange(start: Date?, end: Date?, range: SlingDateRangePicker.SlingDatePeriod) {
+    func didChooseDateRange(start: Date?, end: Date?, range: EmeraldDateRangePicker.EmeraldDatePeriod) {
         self.startDate = start
         self.finalDate = end
         self.period = range

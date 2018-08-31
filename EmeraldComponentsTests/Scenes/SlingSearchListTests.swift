@@ -1,5 +1,5 @@
 //
-//  SlingSearchListTests.swift
+//  EmeraldSearchListTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 22/06/2018.
@@ -10,11 +10,11 @@ import XCTest
 @testable import EmeraldComponents
 
 //swiftlint:disable force_cast
-class SlingSearchListTests: XCTestCase {
+class EmeraldSearchListTests: XCTestCase {
     
     private let expectationTimeout = 10.0
 
-    internal var searchList: SlingSearchList!
+    internal var searchList: EmeraldSearchList!
     internal let storyboard = UIStoryboard(name: "SearchList", bundle: Bundle.basic)
     
     internal var selectedExpectation: XCTestExpectation?
@@ -24,7 +24,7 @@ class SlingSearchListTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.searchList = storyboard.instantiateInitialViewController() as! SlingSearchList
+        self.searchList = storyboard.instantiateInitialViewController() as! EmeraldSearchList
         _ = self.searchList.view
     }
     
@@ -129,7 +129,7 @@ class SlingSearchListTests: XCTestCase {
     }
 }
 
-extension SlingSearchListTests: SearchListDelegate {
+extension EmeraldSearchListTests: SearchListDelegate {
 
     var dataList: [PickerData] {
         return ["option 1", "option 2", "option 3"]

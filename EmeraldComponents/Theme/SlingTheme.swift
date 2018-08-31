@@ -1,5 +1,5 @@
 //
-//  SlingTheme.swift
+//  EmeraldTheme.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 04/05/2018.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-public enum SlingTheme: Int {
+public enum EmeraldTheme: Int {
     case stone
 }
 
-extension SlingTheme {
+extension EmeraldTheme {
     
     public var tintColor: UIColor {
         return UIColor.primaryColor(for: ThemeManager.currentTheme())

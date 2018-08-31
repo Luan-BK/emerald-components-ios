@@ -152,7 +152,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xgR-bK-oyQ">
                                                 <rect key="frame" x="60.5" y="20" width="480" height="529.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZK-OL-uHV" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZK-OL-uHV" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                                         <rect key="frame" x="0.0" y="0.0" width="480" height="44.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="ZC3-8L-c4S"/>
@@ -170,7 +170,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFJ-TF-afH" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFJ-TF-afH" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                                         <rect key="frame" x="0.0" y="48.5" width="480" height="44.5"/>
                                                         <state key="normal" title="Aceitar"/>
                                                         <userDefinedRuntimeAttributes>
@@ -182,7 +182,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD5-B7-mln" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD5-B7-mln" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                                         <rect key="frame" x="0.0" y="97" width="480" height="44.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Aceitar">
@@ -197,7 +197,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-Ab-kKo" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-Ab-kKo" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                                         <rect key="frame" x="0.0" y="145.5" width="480" height="44.5"/>
                                                         <state key="normal" title="Confirmar"/>
                                                         <userDefinedRuntimeAttributes>
@@ -209,7 +209,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hot-6a-Bdh" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hot-6a-Bdh" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                                         <rect key="frame" x="0.0" y="194" width="480" height="44.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Confirmar">
@@ -224,7 +224,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-bT-VR1" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-bT-VR1" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                                         <rect key="frame" x="0.0" y="242.5" width="480" height="44.5"/>
                                                         <state key="normal" title="Confirmar"/>
                                                         <userDefinedRuntimeAttributes>
@@ -236,7 +236,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoE-6v-tKZ" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoE-6v-tKZ" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                                         <rect key="frame" x="0.0" y="291" width="480" height="44.5"/>
                                                         <state key="normal" title="Cancelar"/>
                                                         <userDefinedRuntimeAttributes>
@@ -248,7 +248,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37n-k6-Us8" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37n-k6-Us8" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                                         <rect key="frame" x="0.0" y="339.5" width="480" height="44.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Cancelar">
@@ -263,7 +263,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk2-Lc-W8k" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk2-Lc-W8k" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                                         <rect key="frame" x="0.0" y="388" width="480" height="44.5"/>
                                                         <state key="normal" title="Cancelar"/>
                                                         <userDefinedRuntimeAttributes>
@@ -275,7 +275,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JS2-nX-UPY" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JS2-nX-UPY" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                                         <rect key="frame" x="0.0" y="436.5" width="480" height="44.5"/>
                                                         <state key="normal" title="Mais detalhes"/>
                                                         <userDefinedRuntimeAttributes>
@@ -287,7 +287,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es1-vB-VOz" customClass="SlingButton" customModule="SlingBasicComponent">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es1-vB-VOz" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                                         <rect key="frame" x="0.0" y="485" width="480" height="44.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Editar">
@@ -353,7 +353,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BcK-F2-iWO" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKZ-D5-Cu5" customClass="SlingInput" customModule="SlingBasicComponent">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKZ-D5-Cu5" customClass="EmeraldInput" customModule="SlingBasicComponent">
                                                 <rect key="frame" x="60" y="20" width="480" height="76"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
@@ -361,7 +361,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="This is a guidance text"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Or3-Un-QkC" customClass="SlingInput" customModule="SlingBasicComponent">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Or3-Un-QkC" customClass="EmeraldInput" customModule="SlingBasicComponent">
                                                 <rect key="frame" x="60" y="104" width="480" height="51"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
@@ -371,7 +371,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lt8-Lu-T52" customClass="SlingInput" customModule="SlingBasicComponent">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lt8-Lu-T52" customClass="EmeraldInput" customModule="SlingBasicComponent">
                                                 <rect key="frame" x="60" y="163" width="480" height="51"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
@@ -381,7 +381,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGj-nz-O7j" customClass="SlingInput" customModule="SlingBasicComponent">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGj-nz-O7j" customClass="EmeraldInput" customModule="SlingBasicComponent">
                                                 <rect key="frame" x="60.5" y="222" width="480" height="51"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
@@ -391,7 +391,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3h-su-CZ4" customClass="SlingInput" customModule="SlingBasicComponent">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3h-su-CZ4" customClass="EmeraldInput" customModule="SlingBasicComponent">
                                                 <rect key="frame" x="60" y="281" width="480" height="76"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
@@ -463,7 +463,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGt-K0-4zj" customClass="SlingPicker" customModule="SlingBasicComponent">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGt-K0-4zj" customClass="EmeraldPicker" customModule="SlingBasicComponent">
                                 <rect key="frame" x="60" y="84" width="480" height="76"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -471,7 +471,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="Usado para depósitos de crédito"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLT-3i-wvH" customClass="SlingPicker" customModule="SlingBasicComponent">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLT-3i-wvH" customClass="EmeraldPicker" customModule="SlingBasicComponent">
                                 <rect key="frame" x="60" y="180" width="480" height="51"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -516,7 +516,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7n-Bj-uhT" customClass="SlingButton" customModule="SlingBasicComponent">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7n-Bj-uhT" customClass="EmeraldButton" customModule="SlingBasicComponent">
                                 <rect key="frame" x="276.5" y="283" width="47" height="34"/>
                                 <state key="normal" title="Filtrar"/>
                                 <userDefinedRuntimeAttributes>

@@ -1,5 +1,5 @@
 //
-//  SlingInputTests.swift
+//  EmeraldInputTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 14/06/2018.
@@ -10,13 +10,13 @@ import XCTest
 @testable import EmeraldComponents
 @testable import InputMask
 
-class SlingInputTests: XCTestCase {
+class EmeraldInputTests: XCTestCase {
     
-    internal var input: SlingInput!
+    internal var input: EmeraldInput!
     
     override func setUp() {
         super.setUp()
-        self.input = SlingInput(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 60.0))
+        self.input = EmeraldInput(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 60.0))
     }
     
     override func tearDown() {
@@ -135,7 +135,7 @@ class SlingInputTests: XCTestCase {
     }
     
     func testSetState() {
-        let newState: SlingElementState = .error
+        let newState: EmeraldElementState = .error
         
         self.input.setState(newState)
         
@@ -143,7 +143,7 @@ class SlingInputTests: XCTestCase {
     }
     
     func testSetMask() {
-        let newMask: SlingInputMask = .cpf
+        let newMask: EmeraldInputMask = .cpf
         
         self.input.setMask(newMask)
         
@@ -151,7 +151,7 @@ class SlingInputTests: XCTestCase {
     }
     
     func testSetInput() {
-        let mask = SlingInputMask.phone
+        let mask = EmeraldInputMask.phone
         let text = "21123456789"
         
         self.input.setMask(mask)
@@ -196,7 +196,7 @@ class SlingInputTests: XCTestCase {
     }
     
     func testMaskDidChange() {
-        let newMask: SlingInputMask = .cpf
+        let newMask: EmeraldInputMask = .cpf
         
         self.input.maskDidChange(to: newMask)
         
@@ -206,7 +206,7 @@ class SlingInputTests: XCTestCase {
     }
     
     func testMaskDidChange_ToPassword() {
-        let newMask: SlingInputMask = .password
+        let newMask: EmeraldInputMask = .password
         
         self.input.maskDidChange(to: newMask)
         
@@ -215,8 +215,8 @@ class SlingInputTests: XCTestCase {
     }
     
     func testStateDidChange() {
-        let newState: SlingElementState = .success
-        let disabledState: SlingElementState = .disabled
+        let newState: EmeraldElementState = .success
+        let disabledState: EmeraldElementState = .disabled
         
         self.input.stateDidChange(newState)
         XCTAssertTrue(self.input.inputField.isUserInteractionEnabled)
@@ -228,7 +228,7 @@ class SlingInputTests: XCTestCase {
     // MARK: - Mask
     
     func testValidateInput_MaskNone() {
-        let maskNone = SlingInputMask.none
+        let maskNone = EmeraldInputMask.none
         
         let validation = self.input.validateInput(for: maskNone)
         
@@ -236,7 +236,7 @@ class SlingInputTests: XCTestCase {
     }
     
     func testValidateInput_MaskEmail() {
-        let maskEmail = SlingInputMask.email
+        let maskEmail = EmeraldInputMask.email
         let validEmail = "john_doe@mail.com"
         let invalidEmail = "john_doe@mail@.com"
         var validation: Bool = false
@@ -328,8 +328,8 @@ class SlingInputTests: XCTestCase {
     }
     
     func testSetInputIcon() {
-        let disabledRightButtonStates: [SlingElementState] = [.error, .success, .warning]
-        let enabledRightButtonStates: [SlingElementState] = [.regular, .focus, .inactive, .disabled]
+        let disabledRightButtonStates: [EmeraldElementState] = [.error, .success, .warning]
+        let enabledRightButtonStates: [EmeraldElementState] = [.regular, .focus, .inactive, .disabled]
         
         for state in disabledRightButtonStates {
             self.input.setInputIcon(for: state)
@@ -353,9 +353,9 @@ class SlingInputTests: XCTestCase {
     }
     
     func testSetKeyboardTypeForMask() {
-        let numbersMasks: [SlingInputMask] = [.phone, .cpf, .cnpj, .cep]
-        let defaultMaks: [SlingInputMask] = [.none, .custom(mask: "")]
-        let emailMask: SlingInputMask = .email
+        let numbersMasks: [EmeraldInputMask] = [.phone, .cpf, .cnpj, .cep]
+        let defaultMaks: [EmeraldInputMask] = [.none, .custom(mask: "")]
+        let emailMask: EmeraldInputMask = .email
         
         for mask in numbersMasks {
             self.input.setKeyboardType(for: mask)

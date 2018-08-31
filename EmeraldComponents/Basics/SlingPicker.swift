@@ -1,5 +1,5 @@
 //
-//  SlingPicker.swift
+//  EmeraldPicker.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 21/06/2018.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class SlingPicker: SlingInput {
+public class EmeraldPicker: EmeraldInput {
     
     /// The limit when the pickerView is replaced for the filter screen.
     fileprivate let optionsThreshold = 10
@@ -26,11 +26,11 @@ public class SlingPicker: SlingInput {
         return !self.inputText.isEmpty
     }
     
-    public weak var delegate: SlingPickerDelegate?
-    public weak var dataSource: SlingPickerDataSource?
+    public weak var delegate: EmeraldPickerDelegate?
+    public weak var dataSource: EmeraldPickerDataSource?
     
     override internal func commonInit(_ aClass: AnyClass) {
-        super.commonInit(SlingInput.self)
+        super.commonInit(EmeraldInput.self)
         
         let picker = UIPickerView(frame: CGRect.zero)
         picker.delegate = self
@@ -45,7 +45,7 @@ public class SlingPicker: SlingInput {
         self.inputField.becomeFirstResponder()
     }
     
-    override internal func setInputIcon(for state: SlingElementState) {
+    override internal func setInputIcon(for state: EmeraldElementState) {
         switch state {
         case .success, .error, .warning:
             super.setInputIcon(for: state)
@@ -72,13 +72,13 @@ public class SlingPicker: SlingInput {
 
 // MARK: - UITextFieldDelegate
 
-extension SlingPicker {
+extension EmeraldPicker {
     
     override public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         guard let dataSource = self.dataSource else { return false }
         
         guard dataSource.pickerOptions(for: self).count < self.optionsThreshold else {
-            if let searchController = UIStoryboard(name: "SearchList", bundle: Bundle.basic).instantiateInitialViewController() as? SlingSearchList {
+            if let searchController = UIStoryboard(name: "SearchList", bundle: Bundle.basic).instantiateInitialViewController() as? EmeraldSearchList {
                 searchController.delegate = self
                 searchController.selectedOption = self.selectedOption
                 self.parentViewController?.present(searchController, animated: true, completion: nil)
@@ -102,7 +102,7 @@ extension SlingPicker {
 
 // MARK: - SearchListDelegate
 
-extension SlingPicker: SearchListDelegate {
+extension EmeraldPicker: SearchListDelegate {
     
     public var dataList: [PickerData] {
         return self.dataSource?.pickerOptions(for: self) ?? []
@@ -125,7 +125,7 @@ extension SlingPicker: SearchListDelegate {
 
 // MARK: - UIPickerView
 
-extension SlingPicker: UIPickerViewDelegate, UIPickerViewDataSource {
+extension EmeraldPicker: UIPickerViewDelegate, UIPickerViewDataSource {
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

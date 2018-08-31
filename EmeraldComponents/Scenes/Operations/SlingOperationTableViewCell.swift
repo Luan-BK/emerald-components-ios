@@ -1,5 +1,5 @@
 //
-//  SlingOperationTableViewCell.swift
+//  EmeraldOperationTableViewCell.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 27/04/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SlingOperationTableViewCell: SlingTableViewCell {
+public class EmeraldOperationTableViewCell: EmeraldTableViewCell {
     
     @IBOutlet weak var cardBrandImageView: UIImageView!
     @IBOutlet weak var transactionTypeLabel: UILabel!
@@ -22,7 +22,7 @@ public class SlingOperationTableViewCell: SlingTableViewCell {
         clearAllFields()
     }
 
-    public func configure(_ model: SlingOperationCellViewModel) {
+    public func configure(_ model: EmeraldOperationCellViewModel) {
         clearAllFields()
         
         cardBrandImageView.image = model.cardBrandImage

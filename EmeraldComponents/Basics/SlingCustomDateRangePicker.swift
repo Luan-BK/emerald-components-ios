@@ -1,5 +1,5 @@
 //
-//  SlingCustomDateRangePicker.swift
+//  EmeraldCustomDateRangePicker.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 13/08/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SlingCustomDateRangePicker: UIViewController {
+public class EmeraldCustomDateRangePicker: UIViewController {
 
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var finalDateLabel: UILabel!
@@ -24,7 +24,7 @@ public class SlingCustomDateRangePicker: UIViewController {
             self.setUpPickers(startDate: customRange.start, finalDate: customRange.end)
         }
     }
-    public weak var delegate: SlingDateRangePickerDelegate?
+    public weak var delegate: EmeraldDateRangePickerDelegate?
     
     override public func viewDidLoad() {
         super.viewDidLoad()

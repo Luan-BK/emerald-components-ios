@@ -1,5 +1,5 @@
 //
-//  SlingTextField.swift
+//  EmeraldTextField.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 07/05/2018.
@@ -8,4 +8,4 @@
 
 import UIKit
 
-public class SlingTextField: UITextField { }
+public class EmeraldTextField: UITextField { }

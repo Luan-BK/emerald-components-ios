@@ -11,8 +11,8 @@ import EmeraldComponents
 
 class PickerViewController: UIViewController {
 
-    @IBOutlet weak var firstPicker: SlingPicker!
-    @IBOutlet weak var secondPicker: SlingPicker!
+    @IBOutlet weak var firstPicker: EmeraldPicker!
+    @IBOutlet weak var secondPicker: EmeraldPicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +26,9 @@ class PickerViewController: UIViewController {
 
 }
 
-extension PickerViewController: SlingInputDelegate {
+extension PickerViewController: EmeraldInputDelegate {
     
-    func inputDidChange(_ input: SlingInput, text: String, valid: Bool) {
+    func inputDidChange(_ input: EmeraldInput, text: String, valid: Bool) {
         print("\(input.title) has text: \(text) \nValid: \(valid)")
     }
     
@@ -40,17 +40,17 @@ extension String: PickerData {
     }
 }
 
-extension PickerViewController: SlingPickerDelegate, SlingPickerDataSource {
+extension PickerViewController: EmeraldPickerDelegate, EmeraldPickerDataSource {
     
-    func didDeselectOption(_ picker: SlingPicker, option: PickerData) {
+    func didDeselectOption(_ picker: EmeraldPicker, option: PickerData) {
         print("User deselected \(option.identifier) in \(picker.title)")
     }
     
-    func didSelectOption(_ picker: SlingPicker, option: PickerData) {
+    func didSelectOption(_ picker: EmeraldPicker, option: PickerData) {
         print("User selected \(option.identifier) in \(picker.title)")
     }
     
-    func pickerOptions(for picker: SlingPicker) -> [PickerData] {
+    func pickerOptions(for picker: EmeraldPicker) -> [PickerData] {
         switch picker {
         case self.firstPicker:
             return ["Banco do Brasil", "Itáu", "Unibanco", "Bradesco"]

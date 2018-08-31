@@ -11,7 +11,7 @@ import Foundation
 extension Bundle {
     
     public static var basic: Bundle {
-        return Bundle(for: SlingView.self)
+        return Bundle(for: EmeraldView.self)
     }
     
 }

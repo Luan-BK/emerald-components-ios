@@ -1,5 +1,5 @@
 //
-//  SlingSearchList.swift
+//  EmeraldSearchList.swift
 //  EmeraldComponents
 //
 //  Created by João Mendes | Stone on 13/06/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SlingSearchList: UIViewController {
+public class EmeraldSearchList: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -45,7 +45,7 @@ public class SlingSearchList: UIViewController {
     
 }
 
-extension SlingSearchList: UITableViewDelegate, UITableViewDataSource {
+extension EmeraldSearchList: UITableViewDelegate, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredData?.count ?? 0
@@ -80,7 +80,7 @@ extension SlingSearchList: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension SlingSearchList: UISearchBarDelegate {
+extension EmeraldSearchList: UISearchBarDelegate {
     
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         

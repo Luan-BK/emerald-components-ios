@@ -1,5 +1,5 @@
 //
-//  SlingOperationCellViewModel.swift
+//  EmeraldOperationCellViewModel.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 27/04/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol SlingOperationCellViewModel {
+public protocol EmeraldOperationCellViewModel {
     var cardBrandImage: UIImage? { get }
     var transactionType: String { get }
     var dateOperation: String { get }

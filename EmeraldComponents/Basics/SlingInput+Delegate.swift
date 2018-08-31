@@ -1,5 +1,5 @@
 //
-//  SlingInput+Delegate.swift
+//  EmeraldInput+Delegate.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 20/06/2018.
@@ -11,7 +11,7 @@ import InputMask
 
 // MARK: - MaskedTextFieldDelegateListener
 
-extension SlingInput: MaskedTextFieldDelegateListener {
+extension EmeraldInput: MaskedTextFieldDelegateListener {
     
     public func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {
         self.maskWasCompleted = complete
@@ -59,7 +59,7 @@ extension SlingInput: MaskedTextFieldDelegateListener {
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
-        let nextState: SlingElementState
+        let nextState: EmeraldElementState
         
         if textField.text?.isEmpty == true {
             nextState = .regular
@@ -76,7 +76,7 @@ extension SlingInput: MaskedTextFieldDelegateListener {
 
 // MARK: - UIGestureRecognizerDelegate
 
-extension SlingInput: UIGestureRecognizerDelegate {
+extension EmeraldInput: UIGestureRecognizerDelegate {
     
     @objc public func tapRecognized(_ gesture: UITapGestureRecognizer) {
         if gesture.state == .ended {

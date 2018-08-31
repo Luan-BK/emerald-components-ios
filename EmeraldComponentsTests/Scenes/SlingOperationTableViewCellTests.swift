@@ -1,5 +1,5 @@
 //
-//  SlingOperationTableViewCellTests.swift
+//  EmeraldOperationTableViewCellTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 27/04/2018.
@@ -9,15 +9,15 @@
 import XCTest
 @testable import EmeraldComponents
 
-class SlingOperationTableViewCellTests: XCTestCase {
+class EmeraldOperationTableViewCellTests: XCTestCase {
     
-    let bundle = Bundle(for: SlingOperationTableViewCell.self)
-    var cell: SlingOperationTableViewCell!
+    let bundle = Bundle(for: EmeraldOperationTableViewCell.self)
+    var cell: EmeraldOperationTableViewCell!
     
-    struct ViewModelMock: SlingOperationCellViewModel {
+    struct ViewModelMock: EmeraldOperationCellViewModel {
         var movementCategoryColor: UIColor = .black
         var settlementStatusColor: UIColor = .black
-        var cardBrandImage: UIImage? = UIImage(named: "brand_icon_visa", in: Bundle(for: SlingOperationTableViewCell.self), compatibleWith: nil)!
+        var cardBrandImage: UIImage? = UIImage(named: "brand_icon_visa", in: Bundle(for: EmeraldOperationTableViewCell.self), compatibleWith: nil)!
         var transactionType: String = "Crédito"
         var dateOperation: String = "14/05 às 11:23"
         var amount: String = "R$ 10,90"
@@ -28,11 +28,11 @@ class SlingOperationTableViewCellTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.cell = bundle.loadNibNamed("SlingOperationTableViewCell", owner: nil)?.first as? SlingOperationTableViewCell
+        self.cell = bundle.loadNibNamed("EmeraldOperationTableViewCell", owner: nil)?.first as? EmeraldOperationTableViewCell
     }
     
     func testClearCellFields() {
-        let image = UIImage(named: "mastercard", in: Bundle(for: SlingOperationTableViewCell.self), compatibleWith: nil)
+        let image = UIImage(named: "mastercard", in: Bundle(for: EmeraldOperationTableViewCell.self), compatibleWith: nil)
         
         self.cell.cardBrandImageView.image = image
         self.cell.transactionTypeLabel.text = "Débito"

@@ -1,5 +1,5 @@
 //
-//  SlingInputMask.swift
+//  EmeraldInputMask.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 15/06/2018.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-/// An enum representing the possible masks for SlingInput basic component.
-public enum SlingInputMask {
+/// An enum representing the possible masks for EmeraldInput basic component.
+public enum EmeraldInputMask {
     case none
     case email
     case phone
@@ -20,7 +20,7 @@ public enum SlingInputMask {
     case currency
     case custom(mask: String)
     
-    public static func getMaskFormat(for mask: SlingInputMask) -> String {
+    public static func getMaskFormat(for mask: EmeraldInputMask) -> String {
         let maskFormat: String
         
         switch mask {
@@ -37,9 +37,9 @@ public enum SlingInputMask {
     
 }
 
-extension SlingInputMask: Equatable {
+extension EmeraldInputMask: Equatable {
     
-    public static func == (lhs: SlingInputMask, rhs: SlingInputMask) -> Bool {
+    public static func == (lhs: EmeraldInputMask, rhs: EmeraldInputMask) -> Bool {
         switch (lhs, rhs) {
         case (.none, .none),
              (.email, .email),
