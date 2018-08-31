@@ -31,14 +31,19 @@ Deploy a new version
 fastlane ios projet_version
 ```
 set target to get version number
-### ios github_release
+### ios release_github
 ```
-fastlane ios github_release
+fastlane ios release_github
 ```
 release new github version
-### ios push
+### ios pod_spec_lint
 ```
-fastlane ios push
+fastlane ios pod_spec_lint
+```
+Cocoapods linter
+### ios release_cocoapods
+```
+fastlane ios release_cocoapods
 ```
 Do git push
 ### ios version_podspec
@@ -51,11 +56,11 @@ Increment or set the version in a podspec file
 fastlane ios pod_publish
 ```
 Push podfile
-### ios changelog
+### ios release_changelog
 ```
-fastlane ios changelog
+fastlane ios release_changelog
 ```
-Create changelog
+Create release changelog
 ### ios lint
 ```
 fastlane ios lint
