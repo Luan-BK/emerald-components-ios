@@ -1,0 +1,16 @@
+/* 
+  SlingBasicText.strings
+  EmeraldComponents
+
+  Created by Luan Kalume | Stone on 13/08/2018.
+  Copyright © 2018 StoneCo. All rights reserved.
+*/
+
+"DATE_PERIOD_TODAY" = "Today";
+"DATE_PERIOD_YESTERDAY" = "Yesterday";
+"DATE_PERIOD_LAST_7_DAYS" = "Last 7 days";
+"DATE_PERIOD_LAST_30_DAYS" = "Last 30 days";
+"DATE_PERIOD_THIS_MONTH" = "This month";
+"DATE_PERIOD_LAST_MONTH" = "Last month";
+"DATE_PERIOD_CUSTOM" = "Custom";
+"SEARCH_BAR_PLACEHOLDER" = "Search";

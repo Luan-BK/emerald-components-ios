@@ -14,7 +14,7 @@ platform :ios do
 	lane :test do
 		lint
 		scan(
-			scheme: "SlingBasicComponent", 
+			scheme: "EmeraldComponents", 
 			devices: "iPhone 8",
 			code_coverage: true,
 			clean: true
@@ -33,14 +33,14 @@ platform :ios do
     desc "set target to get version number"
     lane :projet_version do
         get_version_number(
-            target: "SlingBasicComponent"
+            target: "EmeraldComponents"
         )
     end
 
     desc "release new github version"
     lane :github_release do 
         github_release = set_github_release(
-            repository_name: "stone-payments/sling-ios-basic-component",
+            repository_name: "stone-payments/emerald-components-ios",
             api_token: ENV["GITHUB_API_TOKEN"],
             name: "[Deploy 🚀] Release new version - v#{projet_version}",
             tag_name: "#{projet_version}",
@@ -57,28 +57,28 @@ platform :ios do
 
     desc "Increment or set the version in a podspec file"
     lane :version_podspec do
-        version = version_bump_podspec(path: "SlingBasicComponent.podspec", version_number: "#{projet_version}")
+        version = version_bump_podspec(path: "EmeraldComponents.podspec", version_number: "#{projet_version}")
         increment_version_number(
             version_number: "#{projet_version}",
-            xcodeproj: "./SlingBasicComponent.xcodeproj"
+            xcodeproj: "./EmeraldComponents.xcodeproj"
         )
     end
 
     desc "Push podfile"
     lane :pod_publish do 
         pod_push(
-            path: "SlingBasicComponent.podspec",
+            path: "EmeraldComponents.podspec",
             repo: "stone-payments",
             allow_warnings: true,
             verbose: true
         )
-        git_commit(path: ["./SlingBasicComponent.podspec"], message: "🤖 Podspec #{version} [skip ci]") rescue "Without commit"
+        git_commit(path: ["./EmeraldComponents.podspec"], message: "🤖 Podspec #{version} [skip ci]") rescue "Without commit"
     end
 
     desc "Create changelog"
     lane :changelog do
         changelog = generate_changelog(
-            github_project: "stone-payments/sling-ios-basic-component",
+            github_project: "stone-payments/emerald-components-ios",
             github_api_token: ENV["GITHUB_API_TOKEN"],
             base_branch: "master",
             template_path: "fastlane/changelog_template.erb",
@@ -102,8 +102,8 @@ platform :ios do
 	desc "Get coverage percentage, remove framework's coverage and generate HTML page with coverage data"
 	lane :coverage do 
 		xcov(
-			workspace: "SlingBasicComponent.xcworkspace",
-  			scheme: "SlingBasicComponent",
+			workspace: "EmeraldComponents.xcworkspace",
+  			scheme: "EmeraldComponents",
 		 	output_directory: "xcov_output",
             minimum_coverage_percentage: 70.0
         )

@@ -10,8 +10,9 @@ disabled_rules:
 opt_in_rules:
   - empty_count
 included:
-  - SlingBasicComponent
-  - SlingBasicComponentTests
+  - EmeraldComponents
+  - EmeraldComponentsTests
+  - EmeraldComponentsApplication
 excluded:
   - fastlane
   - Pods
