@@ -25,9 +25,10 @@ platform :ios do
 	desc "Deploy a new version"
     lane :release do
         test
-        github_release
-        push
-        changelog
+        pod_spec_lint
+        release_changelog
+        release_github
+        release_cocoapods
     end
 
     desc "set target to get version number"
@@ -38,7 +39,7 @@ platform :ios do
     end
 
     desc "release new github version"
-    lane :github_release do 
+    lane :release_github do 
         github_release = set_github_release(
             repository_name: "stone-payments/emerald-components-ios",
             api_token: ENV["GITHUB_API_TOKEN"],
@@ -49,8 +50,17 @@ platform :ios do
         )
     end
 
+    desc "Cocoapods linter"
+    lane :pod_spec_lint do 
+        pod_lib_lint(
+            verbose: true,
+            allow_warnings: true,
+            fail_fast: true
+        )
+    end
+
     desc "Do git push"
-    lane :push do
+    lane :release_cocoapods do
         version_podspec
         pod_publish     
     end
@@ -72,20 +82,18 @@ platform :ios do
             allow_warnings: true,
             verbose: true
         )
-        git_commit(path: ["./EmeraldComponents.podspec"], message: "🤖 Podspec #{version} [skip ci]") rescue "Without commit"
     end
 
-    desc "Create changelog"
-    lane :changelog do
-        changelog = generate_changelog(
+    desc "Create release changelog"
+    lane :release_changelog do
+        v2_changelog = generate_release_changelog(
             github_project: "stone-payments/emerald-components-ios",
             github_api_token: ENV["GITHUB_API_TOKEN"],
             base_branch: "master",
             template_path: "fastlane/changelog_template.erb",
-            include_unreleased_section: true,
+            tag_a: "v#{projet_version}",
             output_path: "CHANGELOG.md"
         )
-        git_commit(path: ["./CHANGELOG.md"], message: "🤖 Updates changelog [skip ci]") rescue "Without commit"
     end
 
 	desc "Run swiftlint"
@@ -105,7 +113,9 @@ platform :ios do
 			workspace: "EmeraldComponents.xcworkspace",
   			scheme: "EmeraldComponents",
 		 	output_directory: "xcov_output",
-            minimum_coverage_percentage: 70.0
+            exclude_targets: "JTAppleCalendar.framework, 
+                              InputMask.framework",
+            minimum_coverage_percentage: 80.0
         )
     end
 
