@@ -1,5 +1,5 @@
 //
-//  SlingDateRangePicker.swift
+//  EmeraldDateRangePicker.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 13/08/2018.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-public protocol SlingDateRangePickerDelegate: class {
+public protocol EmeraldDateRangePickerDelegate: class {
     
-    func didChooseDateRange(start: Date?, end: Date?, range: SlingDateRangePicker.SlingDatePeriod)
+    func didChooseDateRange(start: Date?, end: Date?, range: EmeraldDateRangePicker.EmeraldDatePeriod)
     
 }
 
-public class SlingDateRangePicker: UITableViewController {
+public class EmeraldDateRangePicker: UITableViewController {
     
-    public enum SlingDatePeriod: Int {
+    public enum EmeraldDatePeriod: Int {
         case today
         case yesterday
         case last7Days
@@ -38,15 +38,15 @@ public class SlingDateRangePicker: UITableViewController {
         }
     }
     
-    private let cellIdentifier = "SlingDateRangePickerCell"
+    private let cellIdentifier = "EmeraldDateRangePickerCell"
     
-    internal var ranges: [SlingDatePeriod] = [.today, .yesterday, .last7Days, .last30Days,
+    internal var ranges: [EmeraldDatePeriod] = [.today, .yesterday, .last7Days, .last30Days,
                                               .thisMonth, .lastMonth, .custom]
     
     public var calendar: Calendar = Calendar.current
-    public var selectedPeriod: SlingDatePeriod = .today
+    public var selectedPeriod: EmeraldDatePeriod = .today
     
-    public weak var delegate: SlingDateRangePickerDelegate?
+    public weak var delegate: EmeraldDateRangePickerDelegate?
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +61,7 @@ public class SlingDateRangePicker: UITableViewController {
     
     override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.destination {
-        case let custom as SlingCustomDateRangePicker:
+        case let custom as EmeraldCustomDateRangePicker:
             custom.delegate = self.delegate
         default:
             break
@@ -70,7 +70,7 @@ public class SlingDateRangePicker: UITableViewController {
     
     // MARK: - Dates
     
-    internal func dateRange(for period: SlingDateRangePicker.SlingDatePeriod) -> (start: Date?, end: Date?) {
+    internal func dateRange(for period: EmeraldDateRangePicker.EmeraldDatePeriod) -> (start: Date?, end: Date?) {
         let today = Date()
         
         switch period {

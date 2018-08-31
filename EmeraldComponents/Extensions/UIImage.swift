@@ -27,7 +27,7 @@ extension UIImage {
         return self
     }
     
-    public static func inputImage(for state: SlingElementState) -> UIImage? {
+    public static func inputImage(for state: EmeraldElementState) -> UIImage? {
         let bundle = Bundle.basic
         
         switch state {

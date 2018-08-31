@@ -11,10 +11,10 @@ import EmeraldComponents
 
 class InputViewController: UIViewController {
 
-    @IBOutlet weak var noMaskInput: SlingInput!
-    @IBOutlet weak var cpfInput: SlingInput!
-    @IBOutlet weak var cnpjInput: SlingInput!
-    @IBOutlet weak var cepInput: SlingInput!
+    @IBOutlet weak var noMaskInput: EmeraldInput!
+    @IBOutlet weak var cpfInput: EmeraldInput!
+    @IBOutlet weak var cnpjInput: EmeraldInput!
+    @IBOutlet weak var cepInput: EmeraldInput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +35,9 @@ class InputViewController: UIViewController {
 
 }
 
-extension InputViewController: SlingInputDelegate {
+extension InputViewController: EmeraldInputDelegate {
     
-    func inputDidChange(_ input: SlingInput, text: String, valid: Bool) {
+    func inputDidChange(_ input: EmeraldInput, text: String, valid: Bool) {
         print("\(input.title) has text: \(text) \nValid: \(valid)")
     }
     

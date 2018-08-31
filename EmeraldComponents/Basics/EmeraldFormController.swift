@@ -1,5 +1,5 @@
 //
-//  SlingFormController.swift
+//  EmeraldFormController.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 15/06/2018.
@@ -12,7 +12,7 @@ public protocol InputField: class {
     var isValid: Bool { get }
 }
 
-public class SlingFormController {
+public class EmeraldFormController {
     
     public init() { }
     

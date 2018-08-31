@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sling Date Range Picker-->
+        <!--Emerald Date Range Picker-->
         <scene sceneID="AUg-Av-1Db">
             <objects>
-                <tableViewController storyboardIdentifier="SlingDateRangePicker" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tPL-ak-5ch" customClass="SlingDateRangePicker" customModule="SlingBasicComponent" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EmeraldDateRangePicker" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tPL-ak-5ch" customClass="EmeraldDateRangePicker" customModule="EmeraldComponents" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="rRe-Id-FPb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="4116" y="2121.5892053973016"/>
         </scene>
-        <!--Sling Custom Date Range Picker-->
+        <!--Emerald Custom Date Range Picker-->
         <scene sceneID="xYa-D8-njn">
             <objects>
-                <viewController storyboardIdentifier="SlingCustomDateRangePicker" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rcf-S0-Txw" customClass="SlingCustomDateRangePicker" customModule="SlingBasicComponent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmeraldCustomDateRangePicker" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rcf-S0-Txw" customClass="EmeraldCustomDateRangePicker" customModule="EmeraldComponents" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1lj-Av-Bug"/>
                         <viewControllerLayoutGuide type="bottom" id="cge-da-Ods"/>
@@ -347,7 +347,7 @@
                                     <constraint firstItem="ycD-nP-TF4" firstAttribute="leading" secondItem="YQq-Yx-QaQ" secondAttribute="leading" id="rua-5h-Loz"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afc-W2-VhI" customClass="SlingButton" customModule="SlingBasicComponent" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afc-W2-VhI" customClass="EmeraldButton" customModule="EmeraldComponents" customModuleProvider="target">
                                 <rect key="frame" x="16" y="450" width="288" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="6eu-BF-nbF"/>

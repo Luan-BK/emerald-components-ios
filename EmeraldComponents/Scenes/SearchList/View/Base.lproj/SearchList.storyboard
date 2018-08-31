@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sling Search List-->
+        <!--Emerald Search List-->
         <scene sceneID="Z91-yG-3dL">
             <objects>
-                <viewController storyboardIdentifier="SlingSearchList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="soX-9b-Djv" customClass="SlingSearchList" customModule="SlingBasicComponent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmeraldSearchList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="soX-9b-Djv" customClass="EmeraldSearchList" customModule="EmeraldComponents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oga-P3-Pdc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Lb3-oo-i6h"/>
-                                            <constraint firstAttribute="width" constant="80" id="quI-VZ-IAX"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="quI-VZ-IAX"/>
                                         </constraints>
                                         <state key="normal" title="Cancelar"/>
                                         <connections>
@@ -52,10 +52,11 @@
                                 <constraints>
                                     <constraint firstItem="c4B-JB-bh2" firstAttribute="leading" secondItem="1Ba-wz-SmO" secondAttribute="leading" id="0Ii-iz-n8Z"/>
                                     <constraint firstItem="cQ7-wS-8p3" firstAttribute="leading" secondItem="1Ba-wz-SmO" secondAttribute="leading" id="7YZ-wi-MqE"/>
+                                    <constraint firstAttribute="trailing" secondItem="D9b-67-CDb" secondAttribute="trailing" constant="240" id="8r4-oh-CJY"/>
                                     <constraint firstAttribute="height" constant="100" id="LRI-lI-Pio"/>
                                     <constraint firstItem="D9b-67-CDb" firstAttribute="top" secondItem="1Ba-wz-SmO" secondAttribute="top" id="Lmc-fa-eIt"/>
                                     <constraint firstAttribute="trailing" secondItem="c4B-JB-bh2" secondAttribute="trailing" id="MMb-EA-lzk"/>
-                                    <constraint firstItem="D9b-67-CDb" firstAttribute="leading" secondItem="1Ba-wz-SmO" secondAttribute="leading" id="NAO-Tv-3Lp"/>
+                                    <constraint firstItem="D9b-67-CDb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1Ba-wz-SmO" secondAttribute="leading" id="NAO-Tv-3Lp"/>
                                     <constraint firstAttribute="bottom" secondItem="cQ7-wS-8p3" secondAttribute="bottom" id="NKO-rZ-aiR"/>
                                     <constraint firstAttribute="bottom" secondItem="c4B-JB-bh2" secondAttribute="bottom" id="NMK-Wd-znS"/>
                                     <constraint firstAttribute="trailing" secondItem="cQ7-wS-8p3" secondAttribute="trailing" id="PQ8-DG-GvA"/>

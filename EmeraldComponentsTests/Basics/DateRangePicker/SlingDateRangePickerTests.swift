@@ -1,5 +1,5 @@
 //
-//  SlingDateRangePickerTests.swift
+//  EmeraldDateRangePickerTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 14/08/2018.
@@ -10,15 +10,15 @@ import XCTest
 @testable import EmeraldComponents
 
 //swiftlint:disable force_cast
-class SlingDateRangePickerTests: XCTestCase {
+class EmeraldDateRangePickerTests: XCTestCase {
     
-    var viewController: SlingDateRangePicker!
-    var selectedPeriod: SlingDateRangePicker.SlingDatePeriod?
+    var viewController: EmeraldDateRangePicker!
+    var selectedPeriod: EmeraldDateRangePicker.EmeraldDatePeriod?
     
     override func setUp() {
         super.setUp()
         
-        self.viewController = UIStoryboard(name: "DateRangePicker", bundle: Bundle.basic).instantiateViewController(withIdentifier: "SlingDateRangePicker") as! SlingDateRangePicker
+        self.viewController = UIStoryboard(name: "DateRangePicker", bundle: Bundle.basic).instantiateViewController(withIdentifier: "EmeraldDateRangePicker") as! EmeraldDateRangePicker
         self.viewController.delegate = self
         _ = self.viewController.view
         
@@ -30,7 +30,7 @@ class SlingDateRangePickerTests: XCTestCase {
             let cell = self.viewController.tableView(self.viewController.tableView, cellForRowAt: IndexPath(row: row, section: 0))
             
             XCTAssertNotNil(cell)
-            XCTAssertEqual(cell.textLabel?.text, SlingDateRangePicker.SlingDatePeriod(rawValue: row)?.description)
+            XCTAssertEqual(cell.textLabel?.text, EmeraldDateRangePicker.EmeraldDatePeriod(rawValue: row)?.description)
         }
     }
     
@@ -53,9 +53,9 @@ class SlingDateRangePickerTests: XCTestCase {
     
 }
 
-extension SlingDateRangePickerTests: SlingDateRangePickerDelegate {
+extension EmeraldDateRangePickerTests: EmeraldDateRangePickerDelegate {
     
-    func didChooseDateRange(start: Date?, end: Date?, range: SlingDateRangePicker.SlingDatePeriod) {
+    func didChooseDateRange(start: Date?, end: Date?, range: EmeraldDateRangePicker.EmeraldDatePeriod) {
         self.selectedPeriod = range
     }
     

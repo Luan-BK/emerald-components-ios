@@ -1,5 +1,5 @@
 //
-//  SlingView.swift
+//  EmeraldView.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 07/05/2018.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class SlingView: UIView {
+public class EmeraldView: UIView {
     
-    @IBOutlet var contentView: SlingView!
+    @IBOutlet var contentView: EmeraldView!
     
     override public init(frame: CGRect) {
         super.init(frame: frame)

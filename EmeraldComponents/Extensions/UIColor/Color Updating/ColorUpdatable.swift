@@ -1,6 +1,6 @@
 //
 //  ColorUpdatable.swift
-//  SlingComponent
+//  EmeraldComponent
 //
 //  Created by João Mendes | Stone on 29/01/18.
 //  Copyright © 2018 StoneCo. All rights reserved.

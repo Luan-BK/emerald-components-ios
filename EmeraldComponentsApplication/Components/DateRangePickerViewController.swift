@@ -13,7 +13,7 @@ class DateRangePickerViewController: UIViewController {
 
     @IBOutlet weak var periodLabel: UILabel!
     
-    private var selectedPeriod: SlingDateRangePicker.SlingDatePeriod?
+    private var selectedPeriod: EmeraldDateRangePicker.EmeraldDatePeriod?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class DateRangePickerViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.destination {
-        case let dateRangePicker as SlingDateRangePicker:
+        case let dateRangePicker as EmeraldDateRangePicker:
             dateRangePicker.delegate = self
             if let range = self.selectedPeriod {
                 dateRangePicker.selectedPeriod = range
@@ -43,9 +43,9 @@ class DateRangePickerViewController: UIViewController {
     
 }
 
-extension DateRangePickerViewController: SlingDateRangePickerDelegate {
+extension DateRangePickerViewController: EmeraldDateRangePickerDelegate {
     
-    func didChooseDateRange(start: Date?, end: Date?, range: SlingDateRangePicker.SlingDatePeriod) {
+    func didChooseDateRange(start: Date?, end: Date?, range: EmeraldDateRangePicker.EmeraldDatePeriod) {
         self.periodLabel.text = "\(self.dateStringWithSlashes(start!)) - \(self.dateStringWithSlashes(end!))"
         self.selectedPeriod = range
         

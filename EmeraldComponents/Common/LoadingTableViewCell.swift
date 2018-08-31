@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LoadingTableViewCell: SlingTableViewCell {
+public class LoadingTableViewCell: EmeraldTableViewCell {
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     

@@ -1,5 +1,5 @@
 //
-//  SlingInput.swift
+//  EmeraldInput.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 11/06/2018.
@@ -9,20 +9,20 @@
 import UIKit
 import InputMask
 
-public protocol SlingInputDelegate: class {
+public protocol EmeraldInputDelegate: class {
     /// Tells the delegate changes were made to the input.
     ///
     /// This method is called every time the input field content is changed.
     ///
     /// - parameters:
-    ///   - input: The SlingInput where the change happend.
+    ///   - input: The EmeraldInput where the change happend.
     ///   - text: The inputText after the change.
     ///   - valid: A boolean indicating whether the changes made the mask became valid.
-    ///            If the SlingInput mask was set to `.none` this parameter is always `true`.
-    func inputDidChange(_ input: SlingInput, text: String, valid: Bool)
+    ///            If the EmeraldInput mask was set to `.none` this parameter is always `true`.
+    func inputDidChange(_ input: EmeraldInput, text: String, valid: Bool)
 }
 
-@IBDesignable public class SlingInput: SlingView {
+@IBDesignable public class EmeraldInput: EmeraldView {
     
     // Elements
     @IBOutlet weak var inputField: UITextField!
@@ -38,7 +38,7 @@ public protocol SlingInputDelegate: class {
     internal var maskHandler: MaskedTextFieldDelegate!
     internal var maskWasCompleted: Bool = false
     
-    public weak var inputDelegate: SlingInputDelegate?
+    public weak var inputDelegate: EmeraldInputDelegate?
     
     // Lazy properties
     internal lazy var inputButton: UIButton = {
@@ -77,13 +77,13 @@ public protocol SlingInputDelegate: class {
     
     public var errorMessage: String?
     
-    internal private(set) var inputMask: SlingInputMask = .none {
+    internal private(set) var inputMask: EmeraldInputMask = .none {
         didSet {
             maskDidChange(to: self.inputMask)
         }
     }
     
-    internal private(set) var state: SlingElementState = .regular {
+    internal private(set) var state: EmeraldElementState = .regular {
         didSet {
             stateDidChange(self.state)
         }
@@ -138,7 +138,7 @@ public protocol SlingInputDelegate: class {
             return self.state.rawValue
         }
         set {
-            self.state = SlingElementState(rawValue: newValue) ?? .regular
+            self.state = EmeraldElementState(rawValue: newValue) ?? .regular
         }
     }
     
@@ -160,11 +160,11 @@ public protocol SlingInputDelegate: class {
         self.inputField.keyboardType = type
     }
     
-    public func setState(_ state: SlingElementState) {
+    public func setState(_ state: EmeraldElementState) {
         self.state = state
     }
     
-    public func setMask(_ mask: SlingInputMask) {
+    public func setMask(_ mask: EmeraldInputMask) {
         self.inputMask = mask
     }
     
@@ -203,7 +203,7 @@ public protocol SlingInputDelegate: class {
         self.inputField.becomeFirstResponder()
     }
     
-    internal func stateDidChange(_ newState: SlingElementState) {
+    internal func stateDidChange(_ newState: EmeraldElementState) {
         self.setInputIcon(for: newState)
         self.applyColors(for: newState)
         self.handleBottomText(for: newState)
@@ -211,7 +211,7 @@ public protocol SlingInputDelegate: class {
         self.inputField.isUserInteractionEnabled = newState == .disabled ? false : true
     }
     
-    internal func maskDidChange(to mask: SlingInputMask) {
+    internal func maskDidChange(to mask: EmeraldInputMask) {
         switch mask {
         case .password:
             self.inputField.delegate = self
@@ -230,7 +230,7 @@ public protocol SlingInputDelegate: class {
             self.inputField.delegate = self
             
         default:
-            let maskFormat = SlingInputMask.getMaskFormat(for: mask)
+            let maskFormat = EmeraldInputMask.getMaskFormat(for: mask)
             
             maskHandler = MaskedTextFieldDelegate(primaryFormat: maskFormat)
             maskHandler.listener = self
@@ -243,7 +243,7 @@ public protocol SlingInputDelegate: class {
     
     // MARK: - Mask
     
-    internal func validateInput(for mask: SlingInputMask) -> Bool {
+    internal func validateInput(for mask: EmeraldInputMask) -> Bool {
         switch mask {
         case .none:
             return true
@@ -264,7 +264,7 @@ public protocol SlingInputDelegate: class {
     
     // MARK: - Aux
     
-    internal func handleBottomText(for state: SlingElementState) {
+    internal func handleBottomText(for state: EmeraldElementState) {
         if state == .error, let errorString = self.errorMessage {
             self.bottomTextLabel.text = errorString
             self.toggleBottomLabel(false)
@@ -293,13 +293,13 @@ public protocol SlingInputDelegate: class {
         }
     }
     
-    internal func applyColors(for state: SlingElementState) {
+    internal func applyColors(for state: EmeraldElementState) {
         self.lineView.backgroundColor = self.color(for: state)
         self.bottomTextLabel.textColor = self.bottomTextColor(for: state)
         self.inputField.textColor = self.inputTextColor(for: state)
     }
     
-    internal func setInputIcon(for state: SlingElementState) {
+    internal func setInputIcon(for state: EmeraldElementState) {
         guard self.inputMask != .password else {
             self.inputButton.tintColor = UIColor.lightGray
             self.inputButton.setImage(UIImage.securePassword(self.inputField.isSecureTextEntry), for: .normal)
@@ -320,7 +320,7 @@ public protocol SlingInputDelegate: class {
         }
     }
     
-    internal func setKeyboardType(for mask: SlingInputMask) {
+    internal func setKeyboardType(for mask: EmeraldInputMask) {
         switch mask {
         case .phone, .cpf, .cnpj, .cep, .currency:
             self.setKeyboardType(.numberPad)
@@ -331,7 +331,7 @@ public protocol SlingInputDelegate: class {
         }
     }
     
-    internal func color(for state: SlingElementState) -> UIColor {
+    internal func color(for state: EmeraldElementState) -> UIColor {
         switch state {
         case .error:
             return UIColor.Palette.Basic.error
@@ -348,7 +348,7 @@ public protocol SlingInputDelegate: class {
         }
     }
     
-    internal func inputTextColor(for state: SlingElementState) -> UIColor {
+    internal func inputTextColor(for state: EmeraldElementState) -> UIColor {
         switch state {
         case .inactive:
             return UIColor.Palette.Light.white5
@@ -359,7 +359,7 @@ public protocol SlingInputDelegate: class {
         }
     }
     
-    internal func bottomTextColor(for state: SlingElementState) -> UIColor {
+    internal func bottomTextColor(for state: EmeraldElementState) -> UIColor {
         switch state {
         case .success, .warning, .error:
             return self.color(for: state)

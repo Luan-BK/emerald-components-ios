@@ -1,5 +1,5 @@
 //
-//  SlingButtonTests.swift
+//  EmeraldButtonTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 19/06/2018.
@@ -9,16 +9,16 @@
 import XCTest
 @testable import EmeraldComponents
 
-class SlingButtonTests: XCTestCase {
+class EmeraldButtonTests: XCTestCase {
     
-    private var button: SlingButton!
+    private var button: EmeraldButton!
     
-    private let types: [SlingButtonType] = [.regular, .confirm, .delete, .neutral, .disabled]
-    private let styles: [SlingButtonStyle] = [.fill, .outline, .plain]
+    private let types: [EmeraldButtonType] = [.regular, .confirm, .delete, .neutral, .disabled]
+    private let styles: [EmeraldButtonStyle] = [.fill, .outline, .plain]
     
     override func setUp() {
         super.setUp()
-        self.button = SlingButton(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 60.0))
+        self.button = EmeraldButton(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 60.0))
     }
     
     override func tearDown() {
@@ -45,7 +45,7 @@ class SlingButtonTests: XCTestCase {
     }
     
     func testStyleAdapter() {
-        let newStyle = SlingButtonStyle.plain
+        let newStyle = EmeraldButtonStyle.plain
         
         self.button.styleAdapter = newStyle.rawValue
         
@@ -54,7 +54,7 @@ class SlingButtonTests: XCTestCase {
     }
     
     func testTypeAdapter() {
-        let newType = SlingButtonType.disabled
+        let newType = EmeraldButtonType.disabled
         
         self.button.typeAdapter = newType.rawValue
         
@@ -77,8 +77,8 @@ class SlingButtonTests: XCTestCase {
     // MARK: - Public configuration
     
     func testConfigure() {
-        let testType = SlingButtonType.confirm
-        let testStyle = SlingButtonStyle.outline
+        let testType = EmeraldButtonType.confirm
+        let testStyle = EmeraldButtonStyle.outline
         
         self.button.configure(style: testStyle, type: testType)
         

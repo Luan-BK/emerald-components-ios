@@ -1,5 +1,5 @@
 //
-//  SlingButton.swift
+//  EmeraldButton.swift
 //  EmeraldComponents
 //
 //  Created by Luan Kalume | Stone on 07/05/2018.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-public enum SlingButtonStyle: Int {
-    /// SlingButton's default style with a filled background color.
+public enum EmeraldButtonStyle: Int {
+    /// EmeraldButton's default style with a filled background color.
     case fill = 1
     /// A style with no background color, instead a border outlines the button.
     case outline
@@ -17,8 +17,8 @@ public enum SlingButtonStyle: Int {
     case plain
 }
 
-public enum SlingButtonType: Int {
-    /// The default type for SlingButton.
+public enum EmeraldButtonType: Int {
+    /// The default type for EmeraldButton.
     case regular = 1
     /// A type used for confirmation actions.
     case confirm
@@ -30,20 +30,20 @@ public enum SlingButtonType: Int {
     case disabled
 }
 
-@IBDesignable public class SlingButton: UIButton {
+@IBDesignable public class EmeraldButton: UIButton {
     
     // MARK: - Properties
     
     private let widthPadding: CGFloat = 48.0
     private let heightPadding: CGFloat = 12.0
     
-    internal private(set) var style: SlingButtonStyle = .fill {
+    internal private(set) var style: EmeraldButtonStyle = .fill {
         didSet {
             self.typeOrStyleDidChange(self.type, self.style)
         }
     }
     
-    internal private(set) var type: SlingButtonType = .regular {
+    internal private(set) var type: EmeraldButtonType = .regular {
         didSet {
             self.typeOrStyleDidChange(self.type, self.style)
             self.isUserInteractionEnabled = self.type == .disabled ? false : true
@@ -80,7 +80,7 @@ public enum SlingButtonType: Int {
             return self.style.rawValue
         }
         set {
-            self.style = SlingButtonStyle(rawValue: newValue) ?? .fill
+            self.style = EmeraldButtonStyle(rawValue: newValue) ?? .fill
         }
     }
     
@@ -89,7 +89,7 @@ public enum SlingButtonType: Int {
             return self.type.rawValue
         }
         set {
-            self.type = SlingButtonType(rawValue: newValue) ?? .regular
+            self.type = EmeraldButtonType(rawValue: newValue) ?? .regular
         }
     }
     
@@ -120,15 +120,15 @@ public enum SlingButtonType: Int {
     
     // MARK: - Public configuration
     
-    /// Configures the SlingButton using a style and type.
+    /// Configures the EmeraldButton using a style and type.
     ///
     /// Both parameters are optionals, when no value is passed the method
     /// uses the button's current style or type.
     ///
     /// - parameters:
-    ///   - style: A `SlingButtonStyle`. Default value is `SlingButtonStyle.fill`.
-    ///   - type: A `SlingButtonType`. Default value is `SlingButtonType.regular`.
-    public func configure(style: SlingButtonStyle? = nil, type: SlingButtonType? = nil ) {
+    ///   - style: A `EmeraldButtonStyle`. Default value is `EmeraldButtonStyle.fill`.
+    ///   - type: A `EmeraldButtonType`. Default value is `EmeraldButtonType.regular`.
+    public func configure(style: EmeraldButtonStyle? = nil, type: EmeraldButtonType? = nil ) {
         self.style = style ?? self.style
         self.type = type ?? self.type
     }
@@ -152,7 +152,7 @@ public enum SlingButtonType: Int {
     
     // MARK: - State changes
     
-    internal func typeOrStyleDidChange(_ newType: SlingButtonType, _ newStyle: SlingButtonStyle) {
+    internal func typeOrStyleDidChange(_ newType: EmeraldButtonType, _ newStyle: EmeraldButtonStyle) {
         self.backgroundColor = self.backgroundColor(forType: newType, andStyle: newStyle)
         
         self.setTitleColor(self.textColor(forType: newType, andStyle: newStyle), for: .normal)
@@ -187,7 +187,7 @@ public enum SlingButtonType: Int {
     
     // MARK: - Aux
     
-    internal func backgroundColor(forType type: SlingButtonType, andStyle style: SlingButtonStyle) -> UIColor {
+    internal func backgroundColor(forType type: EmeraldButtonType, andStyle style: EmeraldButtonStyle) -> UIColor {
         
         switch style {
         case .outline, .plain:
@@ -207,7 +207,7 @@ public enum SlingButtonType: Int {
         }
     }
     
-    internal func borderColor(forType type: SlingButtonType, andStyle style: SlingButtonStyle) -> CGColor {
+    internal func borderColor(forType type: EmeraldButtonType, andStyle style: EmeraldButtonStyle) -> CGColor {
         
         switch style {
         case .fill, .outline:
@@ -227,7 +227,7 @@ public enum SlingButtonType: Int {
         }
     }
     
-    internal func textColor(forType type: SlingButtonType, andStyle style: SlingButtonStyle) -> UIColor {
+    internal func textColor(forType type: EmeraldButtonType, andStyle style: EmeraldButtonStyle) -> UIColor {
         
         switch style {
         case .fill:

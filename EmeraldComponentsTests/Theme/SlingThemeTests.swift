@@ -1,5 +1,5 @@
 //
-//  SlingThemeTests.swift
+//  EmeraldThemeTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 07/05/2018.
@@ -9,13 +9,13 @@
 import XCTest
 @testable import EmeraldComponents
 
-class SlingThemeTests: XCTestCase {
+class EmeraldThemeTests: XCTestCase {
     
-    private var theme: SlingTheme!
+    private var theme: EmeraldTheme!
     
     func testTheme_Stone() {
         //given
-        theme = SlingTheme.stone
+        theme = EmeraldTheme.stone
         
         //then
         validateTintColor(UIColor.primaryColor(for: ThemeManager.currentTheme()))

@@ -1,5 +1,5 @@
 //
-//  SlingInput+DelegateTests.swift
+//  EmeraldInput+DelegateTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 22/06/2018.
@@ -10,7 +10,7 @@ import XCTest
 @testable import EmeraldComponents
 @testable import InputMask
 
-extension SlingInputTests {
+extension EmeraldInputTests {
     
     // MARK: - MaskedTextFieldDelegateListener
     
@@ -31,7 +31,7 @@ extension SlingInputTests {
     }
     
     func testShouldChangeCharactersInRange() {
-        let previousState: SlingElementState = .success
+        let previousState: EmeraldElementState = .success
         
         self.input.setState(previousState)
         let shouldChange = self.input.textField(self.input.inputField, shouldChangeCharactersIn: NSRange(), replacementString: "")
@@ -50,7 +50,7 @@ extension SlingInputTests {
     }
     
     func testDidBeginEditing_NoInputSet() {
-        let previousState: SlingElementState = .success
+        let previousState: EmeraldElementState = .success
         
         self.input.inputText = ""
         self.input.setState(previousState)
@@ -61,7 +61,7 @@ extension SlingInputTests {
     }
     
     func testDidBeginEditing_WithInputSet() {
-        let previousState: SlingElementState = .success
+        let previousState: EmeraldElementState = .success
         
         self.input.inputText = "Some input"
         self.input.setState(previousState)

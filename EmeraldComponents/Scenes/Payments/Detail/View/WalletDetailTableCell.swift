@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class WalletDetailTableCell: SlingTableViewCell {
+public class WalletDetailTableCell: EmeraldTableViewCell {
 
     @IBOutlet public weak var colorView: UIView!
     @IBOutlet public weak var walletTypeLabel: UILabel!

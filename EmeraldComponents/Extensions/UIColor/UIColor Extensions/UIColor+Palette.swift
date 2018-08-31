@@ -1,6 +1,6 @@
 //
 //  UIColor+Palette.swift
-//  SlingComponent
+//  EmeraldComponent
 //
 //  Created by João Mendes | Stone on 29/01/18.
 //  Copyright © 2018 StoneCo. All rights reserved.
@@ -12,7 +12,7 @@ extension UIColor {
     
     // MARK: - Main colors
     
-    public static func primaryColor(for theme: SlingTheme) -> UIColor {
+    public static func primaryColor(for theme: EmeraldTheme) -> UIColor {
         switch theme {
         case .stone:
             return Palette.Stone.digital

@@ -1,5 +1,5 @@
 //
-//  SlingPickerTests.swift
+//  EmeraldPickerTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 22/06/2018.
@@ -9,11 +9,11 @@
 import XCTest
 @testable import EmeraldComponents
 
-class SlingPickerTests: XCTestCase {
+class EmeraldPickerTests: XCTestCase {
 
     private let expectationTimeout = 10.0
     
-    internal var picker: SlingPicker!
+    internal var picker: EmeraldPicker!
     
     internal var selectedExpectation: XCTestExpectation?
     internal var deselectedExpectation: XCTestExpectation?
@@ -22,7 +22,7 @@ class SlingPickerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.picker = SlingPicker(frame: .zero)
+        self.picker = EmeraldPicker(frame: .zero)
     }
     
     override func tearDown() {
@@ -269,27 +269,27 @@ class SlingPickerTests: XCTestCase {
     }
 }
 
-extension SlingPickerTests: SlingPickerDelegate {
-    func didSelectOption(_ picker: SlingPicker, option: PickerData) {
+extension EmeraldPickerTests: EmeraldPickerDelegate {
+    func didSelectOption(_ picker: EmeraldPicker, option: PickerData) {
         self.selectedOption = true
         self.selectedExpectation?.fulfill()
     }
     
-    func didDeselectOption(_ picker: SlingPicker, option: PickerData) {
+    func didDeselectOption(_ picker: EmeraldPicker, option: PickerData) {
         self.deselectedOption = true
         self.deselectedExpectation?.fulfill()
     }
     
 }
 
-private class MockPickerDataSource: SlingPickerDataSource {
+private class MockPickerDataSource: EmeraldPickerDataSource {
     let dataAmount: Int
     
     public init(amount: Int) {
         self.dataAmount = amount
     }
     
-    func pickerOptions(for picker: SlingPicker) -> [PickerData] {
+    func pickerOptions(for picker: EmeraldPicker) -> [PickerData] {
         return [String].init(repeating: "option", count: self.dataAmount)
     }
 }

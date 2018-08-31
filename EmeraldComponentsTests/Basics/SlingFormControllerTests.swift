@@ -1,5 +1,5 @@
 //
-//  SlingFormControllerTests.swift
+//  EmeraldFormControllerTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 15/06/2018.
@@ -9,12 +9,12 @@
 import XCTest
 @testable import EmeraldComponents
 
-class SlingFormControllerTests: XCTestCase {
+class EmeraldFormControllerTests: XCTestCase {
     
     func testValidation_True() {
         let validList: [InputMock] = [InputMock(11),InputMock(42), InputMock(25)]
         
-        let validation = SlingFormController.validateFields(validList)
+        let validation = EmeraldFormController.validateFields(validList)
         
         XCTAssertTrue(validation)
     }
@@ -22,7 +22,7 @@ class SlingFormControllerTests: XCTestCase {
     func testValidation_False() {
         let invalidList: [InputMock] = [InputMock(11),InputMock(42), InputMock(25), InputMock(5)]
         
-        let validation = SlingFormController.validateFields(invalidList)
+        let validation = EmeraldFormController.validateFields(invalidList)
         
         XCTAssertFalse(validation)
     }
@@ -30,7 +30,7 @@ class SlingFormControllerTests: XCTestCase {
     func testValidation_Empty() {
         let emptyList: [InputMock] = []
         
-        let validation = SlingFormController.validateFields(emptyList)
+        let validation = EmeraldFormController.validateFields(emptyList)
         
         XCTAssertTrue(validation)
     }

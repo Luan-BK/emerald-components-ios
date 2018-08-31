@@ -12,14 +12,14 @@ public struct ThemeManager {
     
     internal static let currentThemeKey = "EmeraldComponentsTheme"
     
-    public static func currentTheme() -> SlingTheme {
+    public static func currentTheme() -> EmeraldTheme {
         guard let storedTheme = UserDefaults.standard.value(forKey: ThemeManager.currentThemeKey) as? Int else {
             return .stone
         }
-        return SlingTheme(rawValue: storedTheme)!
+        return EmeraldTheme(rawValue: storedTheme)!
     }
     
-    public static func applyTheme(_ theme: SlingTheme) {
+    public static func applyTheme(_ theme: EmeraldTheme) {
         UserDefaults.standard.set(theme.rawValue, forKey: ThemeManager.currentThemeKey)
         UserDefaults.standard.synchronize()
         
