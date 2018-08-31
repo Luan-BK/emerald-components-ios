@@ -12,6 +12,7 @@ platform :ios do
 
 	desc "Run tests"
 	lane :test do
+        install_cocoapods
 		lint
 		scan(
 			scheme: "EmeraldComponents", 
@@ -93,6 +94,13 @@ platform :ios do
             template_path: "fastlane/changelog_template.erb",
             tag_a: "v#{projet_version}",
             output_path: "CHANGELOG.md"
+        )
+    end
+
+    desc ""
+    lane :install_cocoapods do
+        cocoapods(
+            podfile: "./EmeraldComponents"
         )
     end
 
