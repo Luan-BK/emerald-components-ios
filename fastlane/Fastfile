@@ -99,18 +99,8 @@ platform :ios do
 
     desc "Commit updated files"
     lane :commit do
-        # git_commit(
-        #     path: ["./*.podspec"], 
-        #     message: "🤖 Podspec v#{projet_version} [skip ci]"
-        # ) rescue "Without commit"
-
         sh "git add ."
-        sh "git commit -m '🤖 Adds docs'"
-
-        # git_commit(
-        #     path: ["*.md"], 
-        #     message: "🤖 Changelog v#{projet_version} "
-        # ) rescue "Without commit"
+        sh "git commit -m '🤖 Adds docs [skip ci]'"
     end
 
     desc "Install cocoapods dependencies"
