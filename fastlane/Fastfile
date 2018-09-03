@@ -56,8 +56,7 @@ platform :ios do
     lane :pod_spec_lint do 
         pod_lib_lint(
             verbose: true,
-            allow_warnings: true,
-            fail_fast: true
+            allow_warnings: true
         )
     end
 
@@ -100,10 +99,18 @@ platform :ios do
 
     desc "Commit updated files"
     lane :commit do
-        git_commit(
-            path: ["./EmeraldComponents.podspec, CHANGELOG.md"], 
-            message: "🤖 Podspec v#{projet_version} [skip ci]"
-        )
+        # git_commit(
+        #     path: ["./*.podspec"], 
+        #     message: "🤖 Podspec v#{projet_version} [skip ci]"
+        # ) rescue "Without commit"
+
+        sh "git add ."
+        sh "git commit -m '🤖 Adds docs'"
+
+        # git_commit(
+        #     path: ["*.md"], 
+        #     message: "🤖 Changelog v#{projet_version} "
+        # ) rescue "Without commit"
     end
 
     desc "Install cocoapods dependencies"
