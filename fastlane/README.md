@@ -61,11 +61,16 @@ Push podfile
 fastlane ios release_changelog
 ```
 Create release changelog
-### ios install_cocoapods
+### ios commit
 ```
-fastlane ios install_cocoapods
+fastlane ios commit
 ```
-
+Commit updated files
+### ios pod_install
+```
+fastlane ios pod_install
+```
+Install cocoapods dependencies
 ### ios lint
 ```
 fastlane ios lint

@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "R$ 120,00"; ObjectID = "48K-3t-Vh3"; */
-"48K-3t-Vh3.text" = "$ 120.00";
+"48K-3t-Vh3.text" = "$ 120,00";
 
 /* Class = "UILabel"; text = "Débito"; ObjectID = "5ap-7e-iUd"; */
 "5ap-7e-iUd.text" = "Debit";

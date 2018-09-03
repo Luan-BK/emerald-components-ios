@@ -1,0 +1,11 @@
+[
+  {
+    "character" : 22,
+    "file" : "\/Users\/jmendes\/Git\/emerald-components-ios\/EmeraldComponents\/Basics\/Input\/EmeraldInput.swift",
+    "line" : 25,
+    "reason" : "Type body should span 200 lines or less excluding comments and whitespace: currently spans 209 lines",
+    "rule_id" : "type_body_length",
+    "severity" : "Warning",
+    "type" : "Type Body Length"
+  }
+]

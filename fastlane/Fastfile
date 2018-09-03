@@ -12,7 +12,7 @@ platform :ios do
 
 	desc "Run tests"
 	lane :test do
-        install_cocoapods
+        pod_install
 		lint
 		scan(
 			scheme: "EmeraldComponents", 
@@ -30,6 +30,7 @@ platform :ios do
         release_changelog
         release_github
         release_cocoapods
+        commit
     end
 
     desc "set target to get version number"
@@ -97,8 +98,16 @@ platform :ios do
         )
     end
 
-    desc ""
-    lane :install_cocoapods do
+    desc "Commit updated files"
+    lane :commit do
+        git_commit(
+            path: ["./EmeraldComponents.podspec, CHANGELOG.md"], 
+            message: "🤖 Podspec v#{projet_version} [skip ci]"
+        )
+    end
+
+    desc "Install cocoapods dependencies"
+    lane :pod_install do
         cocoapods(
             podfile: "./EmeraldComponents"
         )

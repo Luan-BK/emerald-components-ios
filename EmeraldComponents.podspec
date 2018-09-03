@@ -8,12 +8,14 @@ Pod::Spec.new do |s|
   s.homepage      = "https://github.com/stone-payments/emerald-components-ios"
   s.license       = { :type => "Apache", :file => "LICENSE" }
 
-  s.author        = { "Stone Payments" => "devportalcliente@stone.com.br" }
+  s.author        = { "Stone Payments" => "componentesdocliente@stone.com.br" }
   s.platform      = :ios, "9.0"
 
-  s.source        = { :git => "git@github.com:stone-payments/emerald-components-ios.git", :tag => s.version }
+  s.source        = { :git => "https://github.com/stone-payments/emerald-components-ios.git", :tag => s.version }
   s.source_files            = "EmeraldComponents/**/*.{h,m,swift}"
   s.ios.deployment_target   = "9.0"
+
+  s.xcconfig = { "APPLY_RULES_IN_COPY_FILES" => "YES", "STRINGS_FILE_OUTPUT_ENCODING" => "binary" }
 
   s.resources = "EmeraldComponents/**/*.{lproj,storyboard,xib,xcdatamodeld,plist,xcassets}"
 
