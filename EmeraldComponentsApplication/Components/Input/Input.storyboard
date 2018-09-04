@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gda-wN-nVs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Inputs-->
+        <scene sceneID="5Ja-eN-2Rd">
+            <objects>
+                <viewController storyboardIdentifier="InputViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gda-wN-nVs" customClass="InputViewController" customModule="EmeraldComponentsApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cx0-xC-PJc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ID1-3Z-2sb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0A-x5-cc2" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49g-Yz-PIz" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                <rect key="frame" x="38" y="20" width="300" height="76"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password Input"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="This is a guidance text"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqm-ky-Qat" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                <rect key="frame" x="38" y="104" width="300" height="51"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="CPF Input"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYB-Lm-wZS" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                <rect key="frame" x="38" y="163" width="300" height="51"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="CNPJ Input"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="046-AT-VPE" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                <rect key="frame" x="38" y="222" width="300" height="51"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="CEP Input"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kWD-VW-6gC" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                <rect key="frame" x="38" y="281" width="300" height="76"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Disabled Input"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="Just numbers"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="046-AT-VPE" firstAttribute="centerX" secondItem="f0A-x5-cc2" secondAttribute="centerX" id="1qv-wF-c5i"/>
+                                            <constraint firstItem="046-AT-VPE" firstAttribute="width" secondItem="49g-Yz-PIz" secondAttribute="width" id="4Qn-xd-XML"/>
+                                            <constraint firstItem="uqm-ky-Qat" firstAttribute="width" secondItem="49g-Yz-PIz" secondAttribute="width" id="DKh-Hc-Uyo"/>
+                                            <constraint firstItem="kWD-VW-6gC" firstAttribute="top" secondItem="f0A-x5-cc2" secondAttribute="top" constant="281" id="GFj-oY-K0x"/>
+                                            <constraint firstItem="kWD-VW-6gC" firstAttribute="centerX" secondItem="f0A-x5-cc2" secondAttribute="centerX" id="JPU-aF-Shm"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kWD-VW-6gC" secondAttribute="bottom" constant="20" id="KhM-rx-dip"/>
+                                            <constraint firstItem="49g-Yz-PIz" firstAttribute="width" secondItem="f0A-x5-cc2" secondAttribute="width" multiplier="0.8" id="SEC-mm-nUT"/>
+                                            <constraint firstItem="QYB-Lm-wZS" firstAttribute="top" secondItem="uqm-ky-Qat" secondAttribute="bottom" constant="8" id="UZk-7v-05G"/>
+                                            <constraint firstItem="uqm-ky-Qat" firstAttribute="top" secondItem="f0A-x5-cc2" secondAttribute="top" constant="104" id="VA6-NF-dU4"/>
+                                            <constraint firstItem="kWD-VW-6gC" firstAttribute="top" secondItem="046-AT-VPE" secondAttribute="bottom" constant="8" id="WNu-C3-yHJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="kWD-VW-6gC" secondAttribute="bottom" constant="310" id="X2O-0R-J8W"/>
+                                            <constraint firstItem="QYB-Lm-wZS" firstAttribute="top" secondItem="f0A-x5-cc2" secondAttribute="top" constant="163" id="fSd-V1-6ON"/>
+                                            <constraint firstItem="kWD-VW-6gC" firstAttribute="width" secondItem="046-AT-VPE" secondAttribute="width" id="hyS-YW-raf"/>
+                                            <constraint firstItem="49g-Yz-PIz" firstAttribute="top" secondItem="f0A-x5-cc2" secondAttribute="top" constant="20" id="i1a-bU-O66"/>
+                                            <constraint firstItem="uqm-ky-Qat" firstAttribute="centerX" secondItem="f0A-x5-cc2" secondAttribute="centerX" id="iEg-ZB-LDA"/>
+                                            <constraint firstItem="046-AT-VPE" firstAttribute="top" secondItem="QYB-Lm-wZS" secondAttribute="bottom" constant="8" id="kNz-yj-PRy"/>
+                                            <constraint firstItem="49g-Yz-PIz" firstAttribute="centerX" secondItem="f0A-x5-cc2" secondAttribute="centerX" id="pyX-NW-EFs"/>
+                                            <constraint firstItem="046-AT-VPE" firstAttribute="top" secondItem="f0A-x5-cc2" secondAttribute="top" constant="222" id="r4A-ht-AIX"/>
+                                            <constraint firstItem="uqm-ky-Qat" firstAttribute="top" secondItem="49g-Yz-PIz" secondAttribute="bottom" constant="8" id="r4Q-ir-lN1"/>
+                                            <constraint firstItem="QYB-Lm-wZS" firstAttribute="centerX" secondItem="f0A-x5-cc2" secondAttribute="centerX" id="rJ0-q4-hCC"/>
+                                            <constraint firstItem="QYB-Lm-wZS" firstAttribute="width" secondItem="49g-Yz-PIz" secondAttribute="width" id="vaV-n7-erW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="f0A-x5-cc2" firstAttribute="height" secondItem="ID1-3Z-2sb" secondAttribute="height" priority="750" id="0St-gb-C6U"/>
+                                    <constraint firstAttribute="bottom" secondItem="f0A-x5-cc2" secondAttribute="bottom" id="8rY-0m-h8S"/>
+                                    <constraint firstItem="f0A-x5-cc2" firstAttribute="leading" secondItem="ID1-3Z-2sb" secondAttribute="leading" id="G9K-BP-8M3"/>
+                                    <constraint firstItem="f0A-x5-cc2" firstAttribute="top" secondItem="ID1-3Z-2sb" secondAttribute="top" id="aFk-nG-4N5"/>
+                                    <constraint firstItem="f0A-x5-cc2" firstAttribute="width" secondItem="ID1-3Z-2sb" secondAttribute="width" id="gqe-RB-Qo7"/>
+                                    <constraint firstAttribute="trailing" secondItem="f0A-x5-cc2" secondAttribute="trailing" id="pQu-C4-KEp"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LLr-bU-m6U" firstAttribute="bottom" secondItem="ID1-3Z-2sb" secondAttribute="bottom" id="2GB-Yz-xgr"/>
+                            <constraint firstAttribute="trailing" secondItem="ID1-3Z-2sb" secondAttribute="trailing" id="7Yf-V7-gnv"/>
+                            <constraint firstItem="ID1-3Z-2sb" firstAttribute="top" secondItem="Cx0-xC-PJc" secondAttribute="top" id="CoR-W6-04X"/>
+                            <constraint firstItem="ID1-3Z-2sb" firstAttribute="leading" secondItem="Cx0-xC-PJc" secondAttribute="leading" id="HWZ-Ya-64G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LLr-bU-m6U"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inputs" largeTitleDisplayMode="never" id="wvF-Ys-qvq"/>
+                    <connections>
+                        <outlet property="cepInput" destination="046-AT-VPE" id="EFe-xX-ucT"/>
+                        <outlet property="cnpjInput" destination="QYB-Lm-wZS" id="hSh-hp-dUS"/>
+                        <outlet property="cpfInput" destination="uqm-ky-Qat" id="13h-du-cJe"/>
+                        <outlet property="noMaskInput" destination="49g-Yz-PIz" id="emL-WE-4RR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRK-GR-YgV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2213" y="697"/>
+        </scene>
+    </scenes>
+</document>

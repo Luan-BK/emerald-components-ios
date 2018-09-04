@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tg2-Fd-7j4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DateRangePicker-->
+        <scene sceneID="QNZ-WU-6ca">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DateRangePicker" bundleIdentifier="br.com.stoneco.EmeraldComponents" id="Sj3-SL-E6G" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DMY-Vo-GgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="1806"/>
+        </scene>
+        <!--Date Range Picker View Controller-->
+        <scene sceneID="gVB-bH-mk5">
+            <objects>
+                <viewController storyboardIdentifier="DateRangePickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tg2-Fd-7j4" customClass="DateRangePickerViewController" customModule="EmeraldComponentsApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vde-6c-Fl6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP3-tk-ztp" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                <rect key="frame" x="164" y="316.5" width="47" height="34"/>
+                                <state key="normal" title="Filtrar"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Sj3-SL-E6G" kind="show" id="FAU-xq-BV8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Período selecionado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yR8-4I-C8V">
+                                <rect key="frame" x="110" y="226.5" width="155" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyP-es-2mL">
+                                <rect key="frame" x="176" y="271.5" width="23.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.16078431369999999" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SyP-es-2mL" firstAttribute="centerX" secondItem="vde-6c-Fl6" secondAttribute="centerX" id="1lf-GE-tmS"/>
+                            <constraint firstItem="eP3-tk-ztp" firstAttribute="centerY" secondItem="vde-6c-Fl6" secondAttribute="centerY" id="9Y4-Oe-ply"/>
+                            <constraint firstItem="eP3-tk-ztp" firstAttribute="top" secondItem="SyP-es-2mL" secondAttribute="bottom" constant="24" id="Q1x-Eb-LQu"/>
+                            <constraint firstItem="SyP-es-2mL" firstAttribute="top" secondItem="yR8-4I-C8V" secondAttribute="bottom" constant="24" id="dpK-zJ-EMS"/>
+                            <constraint firstItem="yR8-4I-C8V" firstAttribute="centerX" secondItem="vde-6c-Fl6" secondAttribute="centerX" id="ePt-MJ-mxG"/>
+                            <constraint firstItem="eP3-tk-ztp" firstAttribute="centerX" secondItem="vde-6c-Fl6" secondAttribute="centerX" id="wy3-kt-ulc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vsv-yP-Uhi"/>
+                    </view>
+                    <connections>
+                        <outlet property="periodLabel" destination="SyP-es-2mL" id="yog-gV-Lxw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j03-HQ-pma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="1807"/>
+        </scene>
+    </scenes>
+</document>

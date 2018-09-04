@@ -79,6 +79,10 @@
 		A2690D01213D811A007ED6B1 /* EmeraldInput+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2690CFE213D811A007ED6B1 /* EmeraldInput+Delegate.swift */; };
 		A2690D05213D8141007ED6B1 /* EmeraldPicker+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2690D03213D8141007ED6B1 /* EmeraldPicker+Protocols.swift */; };
 		A2690D06213D8141007ED6B1 /* EmeraldPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2690D04213D8141007ED6B1 /* EmeraldPicker.swift */; };
+		A2690D28213ECDFA007ED6B1 /* Buttons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690D27213ECDFA007ED6B1 /* Buttons.storyboard */; };
+		A2690D2B213ECEA6007ED6B1 /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690D2A213ECEA6007ED6B1 /* Input.storyboard */; };
+		A2690D2D213ECF01007ED6B1 /* PickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690D2C213ECF01007ED6B1 /* PickerView.storyboard */; };
+		A2690D2F213ECF5B007ED6B1 /* DateRangePickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690D2E213ECF5B007ED6B1 /* DateRangePickerView.storyboard */; };
 		A26BD5BA20BC88E50013FA24 /* HUDConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26BD5B920BC88E50013FA24 /* HUDConstraints.swift */; };
 		A270034720179EF1008FBB2E /* SlingComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = A270033920179EF1008FBB2E /* SlingComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A28D839720815A6B0041457D /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28D839620815A6B0041457D /* HUD.swift */; };
@@ -214,6 +218,10 @@
 		A2690D04213D8141007ED6B1 /* EmeraldPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmeraldPicker.swift; sourceTree = "<group>"; };
 		A2690D08213D92C0007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EmeraldOperationTableViewCell.strings; sourceTree = "<group>"; };
 		A2690D0A213D92C1007ED6B1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/EmeraldOperationTableViewCell.strings"; sourceTree = "<group>"; };
+		A2690D27213ECDFA007ED6B1 /* Buttons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Buttons.storyboard; sourceTree = "<group>"; };
+		A2690D2A213ECEA6007ED6B1 /* Input.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
+		A2690D2C213ECF01007ED6B1 /* PickerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickerView.storyboard; sourceTree = "<group>"; };
+		A2690D2E213ECF5B007ED6B1 /* DateRangePickerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateRangePickerView.storyboard; sourceTree = "<group>"; };
 		A26BD5B920BC88E50013FA24 /* HUDConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDConstraints.swift; sourceTree = "<group>"; };
 		A270033620179EF1008FBB2E /* EmeraldComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EmeraldComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A270033920179EF1008FBB2E /* SlingComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlingComponent.h; sourceTree = "<group>"; };
@@ -272,13 +280,10 @@
 		372832E420DABEE800D607D4 /* EmeraldComponentsApplication */ = {
 			isa = PBXGroup;
 			children = (
-				372832FB20DAC83B00D607D4 /* Components */,
-				372832E520DABEE800D607D4 /* AppDelegate.swift */,
-				372832E720DABEE800D607D4 /* MainViewController.swift */,
 				372832E920DABEE800D607D4 /* Main.storyboard */,
-				372832EC20DABEE900D607D4 /* Assets.xcassets */,
-				372832EE20DABEE900D607D4 /* LaunchScreen.storyboard */,
-				372832F120DABEE900D607D4 /* Info.plist */,
+				372832E720DABEE800D607D4 /* MainViewController.swift */,
+				372832FB20DAC83B00D607D4 /* Components */,
+				A2690D30213ECFE2007ED6B1 /* Resources */,
 			);
 			path = EmeraldComponentsApplication;
 			sourceTree = "<group>";
@@ -286,9 +291,10 @@
 		372832FB20DAC83B00D607D4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				372832FC20DAC85000D607D4 /* InputViewController.swift */,
-				37E1297A20DC1F8900B45C5A /* PickerViewController.swift */,
-				37B813162123497A003A8C8E /* DateRangePickerViewController.swift */,
+				A2690D29213ECE83007ED6B1 /* DateRange */,
+				A2690D26213ECDDB007ED6B1 /* Buttons */,
+				A2690D25213ECDD1007ED6B1 /* PickerView */,
+				A2690D24213ECDC9007ED6B1 /* Input */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -373,11 +379,11 @@
 		37D2642720A0D06B006BE83D /* Basics */ = {
 			isa = PBXGroup;
 			children = (
-				37D2642820A0D08E006BE83D /* EmeraldButton.swift */,
 				37BDFD8220D45C3900FE97A3 /* EmeraldFormController.swift */,
 				37D2642E20A102B1006BE83D /* EmeraldTableViewCell.swift */,
 				37D2642C20A0D4AE006BE83D /* EmeraldTextField.swift */,
 				37D2642A20A0D1B8006BE83D /* EmeraldView.swift */,
+				A2690D31213ED515007ED6B1 /* Button */,
 				A2690CED213D8092007ED6B1 /* DataRangePicker */,
 				A2690CFB213D811A007ED6B1 /* Input */,
 				A2690D02213D8141007ED6B1 /* Picker */,
@@ -510,6 +516,60 @@
 				A2690D04213D8141007ED6B1 /* EmeraldPicker.swift */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		A2690D24213ECDC9007ED6B1 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				372832FC20DAC85000D607D4 /* InputViewController.swift */,
+				A2690D2A213ECEA6007ED6B1 /* Input.storyboard */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		A2690D25213ECDD1007ED6B1 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				37E1297A20DC1F8900B45C5A /* PickerViewController.swift */,
+				A2690D2C213ECF01007ED6B1 /* PickerView.storyboard */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
+		A2690D26213ECDDB007ED6B1 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A2690D27213ECDFA007ED6B1 /* Buttons.storyboard */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		A2690D29213ECE83007ED6B1 /* DateRange */ = {
+			isa = PBXGroup;
+			children = (
+				37B813162123497A003A8C8E /* DateRangePickerViewController.swift */,
+				A2690D2E213ECF5B007ED6B1 /* DateRangePickerView.storyboard */,
+			);
+			path = DateRange;
+			sourceTree = "<group>";
+		};
+		A2690D30213ECFE2007ED6B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				372832E520DABEE800D607D4 /* AppDelegate.swift */,
+				372832EC20DABEE900D607D4 /* Assets.xcassets */,
+				372832EE20DABEE900D607D4 /* LaunchScreen.storyboard */,
+				372832F120DABEE900D607D4 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A2690D31213ED515007ED6B1 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				37D2642820A0D08E006BE83D /* EmeraldButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		A270032C20179EF1008FBB2E = {
@@ -815,6 +875,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2690D28213ECDFA007ED6B1 /* Buttons.storyboard in Resources */,
+				A2690D2F213ECF5B007ED6B1 /* DateRangePickerView.storyboard in Resources */,
+				A2690D2D213ECF01007ED6B1 /* PickerView.storyboard in Resources */,
+				A2690D2B213ECEA6007ED6B1 /* Input.storyboard in Resources */,
 				372832FA20DAC36C00D607D4 /* Assets.xcassets in Resources */,
 				372832F020DABEE900D607D4 /* LaunchScreen.storyboard in Resources */,
 				372832ED20DABEE900D607D4 /* Assets.xcassets in Resources */,
@@ -1098,7 +1162,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q54VRJ624;
-				INFOPLIST_FILE = "$(SRCROOT)/EmeraldComponentsApplication/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EmeraldComponentsApplication/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Stone.EmeraldComponentsApplication;
@@ -1116,7 +1180,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q54VRJ624;
-				INFOPLIST_FILE = "$(SRCROOT)/EmeraldComponentsApplication/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EmeraldComponentsApplication/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Stone.EmeraldComponentsApplication;
