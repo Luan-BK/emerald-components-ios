@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import EmeraldComponentsApplication
+//@testable import EmeraldComponentsApplication
 
 class EmeraldComponentsApplicationUITests: XCTestCase {
     

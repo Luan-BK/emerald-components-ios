@@ -19,136 +19,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="kIJ-8U-dcT" userLabel="Footer View">
-                            <rect key="frame" x="0.0" y="817.5" width="375" height="0.0"/>
+                            <rect key="frame" x="0.0" y="1381.5" width="375" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <sections>
-                            <tableViewSection headerTitle="No mask input" id="J6Z-8T-7pZ">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Noc-9J-Xfe">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Noc-9J-Xfe" id="ixD-XL-JYB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-k6-UUK" customClass="EmeraldInput" customModule="EmeraldComponents">
-                                                    <rect key="frame" x="32" y="15" width="311" height="70"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password Input"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="This is a guidance text"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="tdu-k6-UUK" firstAttribute="top" secondItem="ixD-XL-JYB" secondAttribute="topMargin" constant="4" id="ArX-vw-ZDP"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="tdu-k6-UUK" secondAttribute="bottom" constant="4" id="GKl-YL-HZD"/>
-                                                <constraint firstItem="tdu-k6-UUK" firstAttribute="leading" secondItem="ixD-XL-JYB" secondAttribute="leadingMargin" constant="16" id="ZNA-DN-vMC"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="tdu-k6-UUK" secondAttribute="trailing" constant="16" id="m2X-aU-QUH"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Error input" id="8lM-0P-Xt2">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="ek4-jZ-gOO">
-                                        <rect key="frame" x="0.0" y="211.5" width="375" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ek4-jZ-gOO" id="S9S-fC-Jou">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHI-VB-YZ3" customClass="EmeraldInput" customModule="EmeraldComponents">
-                                                    <rect key="frame" x="32" y="15" width="311" height="70"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="CPF Input"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
-                                                            <integer key="value" value="5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="rHI-VB-YZ3" firstAttribute="top" secondItem="S9S-fC-Jou" secondAttribute="topMargin" constant="4" id="04l-Cb-oEF"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="rHI-VB-YZ3" secondAttribute="bottom" constant="4" id="a0c-o5-G3d"/>
-                                                <constraint firstItem="rHI-VB-YZ3" firstAttribute="leading" secondItem="S9S-fC-Jou" secondAttribute="leadingMargin" constant="16" id="ohl-vW-tWs"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="rHI-VB-YZ3" secondAttribute="trailing" constant="16" id="tOH-8H-nvU"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Warning input" id="2yw-6q-sMv">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="So4-0N-vbV">
-                                        <rect key="frame" x="0.0" y="367.5" width="375" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="So4-0N-vbV" id="Hck-Ju-66v">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEK-iO-frw" customClass="EmeraldInput" customModule="EmeraldComponents">
-                                                    <rect key="frame" x="32" y="15" width="311" height="70"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="CNPJ Input"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
-                                                            <integer key="value" value="4"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="dEK-iO-frw" secondAttribute="bottom" constant="4" id="5wY-KA-8DU"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="dEK-iO-frw" secondAttribute="trailing" constant="16" id="DlT-dh-kIQ"/>
-                                                <constraint firstItem="dEK-iO-frw" firstAttribute="leading" secondItem="Hck-Ju-66v" secondAttribute="leadingMargin" constant="16" id="Lh4-mf-ybl"/>
-                                                <constraint firstItem="dEK-iO-frw" firstAttribute="top" secondItem="Hck-Ju-66v" secondAttribute="topMargin" constant="4" id="tQw-HD-lXV"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="success input" id="ic1-sS-orU">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="3RY-pP-ydE">
-                                        <rect key="frame" x="0.0" y="523.5" width="375" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3RY-pP-ydE" id="A7w-cO-hm3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84h-o0-zKK" customClass="EmeraldInput" customModule="EmeraldComponents">
-                                                    <rect key="frame" x="32" y="15" width="311" height="70"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="CEP Input"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
-                                                            <integer key="value" value="3"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="84h-o0-zKK" secondAttribute="trailing" constant="16" id="ONf-jd-pWs"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="84h-o0-zKK" secondAttribute="bottom" constant="4" id="PQU-Dg-N8m"/>
-                                                <constraint firstItem="84h-o0-zKK" firstAttribute="top" secondItem="A7w-cO-hm3" secondAttribute="topMargin" constant="4" id="fKR-tO-f21"/>
-                                                <constraint firstItem="84h-o0-zKK" firstAttribute="leading" secondItem="A7w-cO-hm3" secondAttribute="leadingMargin" constant="16" id="iUY-qI-cFa"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Disabled input" id="xAJ-IY-Ggk">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="CGZ-zj-Zem">
-                                        <rect key="frame" x="0.0" y="679.5" width="375" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="CGZ-zj-Zem">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CGZ-zj-Zem" id="VMI-dW-maH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRQ-uL-ffw" customClass="EmeraldInput" customModule="EmeraldComponents">
@@ -156,7 +38,6 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Disabled Input"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="Just numbers"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
                                                             <integer key="value" value="6"/>
                                                         </userDefinedRuntimeAttribute>
@@ -173,6 +54,222 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Password input" id="J6Z-8T-7pZ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="Noc-9J-Xfe">
+                                        <rect key="frame" x="0.0" y="191.5" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Noc-9J-Xfe" id="ixD-XL-JYB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-k6-UUK" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="32" y="15" width="311" height="50"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password Input"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tdu-k6-UUK" firstAttribute="top" secondItem="ixD-XL-JYB" secondAttribute="topMargin" constant="4" id="ArX-vw-ZDP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tdu-k6-UUK" secondAttribute="bottom" constant="4" id="GKl-YL-HZD"/>
+                                                <constraint firstItem="tdu-k6-UUK" firstAttribute="leading" secondItem="ixD-XL-JYB" secondAttribute="leadingMargin" constant="16" id="ZNA-DN-vMC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tdu-k6-UUK" secondAttribute="trailing" constant="16" id="m2X-aU-QUH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="CPF input" id="8lM-0P-Xt2">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="ek4-jZ-gOO">
+                                        <rect key="frame" x="0.0" y="327.5" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ek4-jZ-gOO" id="S9S-fC-Jou">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHI-VB-YZ3" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="32" y="15" width="311" height="70"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="CPF Input"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rHI-VB-YZ3" firstAttribute="top" secondItem="S9S-fC-Jou" secondAttribute="topMargin" constant="4" id="04l-Cb-oEF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rHI-VB-YZ3" secondAttribute="bottom" constant="4" id="a0c-o5-G3d"/>
+                                                <constraint firstItem="rHI-VB-YZ3" firstAttribute="leading" secondItem="S9S-fC-Jou" secondAttribute="leadingMargin" constant="16" id="ohl-vW-tWs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rHI-VB-YZ3" secondAttribute="trailing" constant="16" id="tOH-8H-nvU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="CNPJ input" id="2yw-6q-sMv">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="So4-0N-vbV">
+                                        <rect key="frame" x="0.0" y="483.5" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="So4-0N-vbV" id="Hck-Ju-66v">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEK-iO-frw" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="32" y="15" width="311" height="70"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="CNPJ Input"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dEK-iO-frw" secondAttribute="bottom" constant="4" id="5wY-KA-8DU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dEK-iO-frw" secondAttribute="trailing" constant="16" id="DlT-dh-kIQ"/>
+                                                <constraint firstItem="dEK-iO-frw" firstAttribute="leading" secondItem="Hck-Ju-66v" secondAttribute="leadingMargin" constant="16" id="Lh4-mf-ybl"/>
+                                                <constraint firstItem="dEK-iO-frw" firstAttribute="top" secondItem="Hck-Ju-66v" secondAttribute="topMargin" constant="4" id="tQw-HD-lXV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Email input" id="gWR-Tn-S50">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="eR7-Bq-6ck">
+                                        <rect key="frame" x="0.0" y="639.5" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eR7-Bq-6ck" id="vZn-t8-2Gm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPR-SB-GIR" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="32" y="15" width="311" height="70"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email Input"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="uPR-SB-GIR" secondAttribute="trailing" constant="16" id="2R5-Qk-s4a"/>
+                                                <constraint firstItem="uPR-SB-GIR" firstAttribute="leading" secondItem="vZn-t8-2Gm" secondAttribute="leadingMargin" constant="16" id="4ZX-tg-iaB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="uPR-SB-GIR" secondAttribute="bottom" constant="4" id="dVf-rJ-dqi"/>
+                                                <constraint firstItem="uPR-SB-GIR" firstAttribute="top" secondItem="vZn-t8-2Gm" secondAttribute="topMargin" constant="4" id="lha-LB-xLI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Phone input" id="HTf-ul-Dfc">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="Keg-zb-huZ">
+                                        <rect key="frame" x="0.0" y="795.5" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Keg-zb-huZ" id="8Ve-Cg-BJi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBJ-F0-9kw" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="24" y="12" width="327" height="75.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Phone Input"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wBJ-F0-9kw" secondAttribute="trailing" constant="16" id="VUm-Vv-hMv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wBJ-F0-9kw" secondAttribute="bottom" constant="4" id="Ydk-qI-cOv"/>
+                                                <constraint firstItem="wBJ-F0-9kw" firstAttribute="top" secondItem="8Ve-Cg-BJi" secondAttribute="topMargin" constant="4" id="e1E-kZ-oYO"/>
+                                                <constraint firstItem="wBJ-F0-9kw" firstAttribute="leading" secondItem="8Ve-Cg-BJi" secondAttribute="leadingMargin" constant="16" id="e2L-JO-bcP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="CEP input" id="YOY-iW-Wmp">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="mjC-po-yQR">
+                                        <rect key="frame" x="0.0" y="951.5" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mjC-po-yQR" id="Jrg-ym-AwB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7P-df-OPI" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="24" y="12" width="327" height="75.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="CEP Input"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="k7P-df-OPI" firstAttribute="top" secondItem="Jrg-ym-AwB" secondAttribute="topMargin" constant="4" id="74m-AV-R6i"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="k7P-df-OPI" secondAttribute="trailing" constant="16" id="8tl-1w-xGt"/>
+                                                <constraint firstItem="k7P-df-OPI" firstAttribute="leading" secondItem="Jrg-ym-AwB" secondAttribute="leadingMargin" constant="16" id="QV5-iV-mm4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="k7P-df-OPI" secondAttribute="bottom" constant="4" id="YlP-28-quC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Currency input" id="Ze9-ww-iyF">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="L5U-eC-udw">
+                                        <rect key="frame" x="0.0" y="1107.5" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L5U-eC-udw" id="FfA-ZL-1uy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMu-2o-sKV" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="24" y="12" width="327" height="75.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Currency Input"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wMu-2o-sKV" firstAttribute="top" secondItem="FfA-ZL-1uy" secondAttribute="topMargin" constant="4" id="Gy3-zx-GG0"/>
+                                                <constraint firstItem="wMu-2o-sKV" firstAttribute="leading" secondItem="FfA-ZL-1uy" secondAttribute="leadingMargin" constant="16" id="V49-gC-2F2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wMu-2o-sKV" secondAttribute="bottom" constant="4" id="bnf-V8-EiK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wMu-2o-sKV" secondAttribute="trailing" constant="16" id="zV7-gQ-xDB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Custom input" id="7cz-y7-oRh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="6OM-tR-WdC">
+                                        <rect key="frame" x="0.0" y="1243.5" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6OM-tR-WdC" id="sr4-2V-M6l">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVH-Dm-4iE" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="24" y="12" width="327" height="75.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Custom Input"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xVH-Dm-4iE" firstAttribute="top" secondItem="sr4-2V-M6l" secondAttribute="topMargin" constant="4" id="6Is-Ng-uIN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xVH-Dm-4iE" secondAttribute="trailing" constant="16" id="CbR-L6-HXe"/>
+                                                <constraint firstItem="xVH-Dm-4iE" firstAttribute="leading" secondItem="sr4-2V-M6l" secondAttribute="leadingMargin" constant="16" id="bNy-y3-7h5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xVH-Dm-4iE" secondAttribute="bottom" constant="4" id="wz3-AS-bfJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="B8M-gB-blH" id="L7N-cV-HIn"/>
@@ -181,10 +278,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Input" largeTitleDisplayMode="never" id="V4N-9U-cpi"/>
                     <connections>
-                        <outlet property="cepInput" destination="84h-o0-zKK" id="uEa-Xq-eIk"/>
+                        <outlet property="cepInput" destination="k7P-df-OPI" id="zgn-6p-YKj"/>
                         <outlet property="cnpjInput" destination="dEK-iO-frw" id="2ou-S5-6H4"/>
                         <outlet property="cpfInput" destination="rHI-VB-YZ3" id="9ph-c7-Seh"/>
-                        <outlet property="noMaskInput" destination="tdu-k6-UUK" id="Atf-MS-Gq4"/>
+                        <outlet property="currencyInput" destination="wMu-2o-sKV" id="ezq-6V-iOB"/>
+                        <outlet property="customInput" destination="xVH-Dm-4iE" id="6Fy-Fx-ype"/>
+                        <outlet property="emailInput" destination="uPR-SB-GIR" id="Feq-nj-DIp"/>
+                        <outlet property="passwordInput" destination="tdu-k6-UUK" id="0Xi-wW-Tin"/>
+                        <outlet property="phoneInput" destination="wBJ-F0-9kw" id="k26-03-S9x"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLG-gO-Y4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
