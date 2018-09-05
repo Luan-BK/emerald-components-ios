@@ -7,9 +7,10 @@
 //
 
 import XCTest
+@testable import EmeraldComponentsApplication
 
 class EmeraldComponentsApplicationUITests: XCTestCase {
-        
+    
     override func setUp() {
         super.setUp()
         

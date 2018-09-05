@@ -19,7 +19,6 @@
 		372832F020DABEE900D607D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372832EE20DABEE900D607D4 /* LaunchScreen.storyboard */; };
 		372832F620DAC33000D607D4 /* EmeraldComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A270033620179EF1008FBB2E /* EmeraldComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		372832FA20DAC36C00D607D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21F0C46202B6FBE00C91077 /* Assets.xcassets */; };
-		372832FD20DAC85000D607D4 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372832FC20DAC85000D607D4 /* InputViewController.swift */; };
 		375B78C520D2F5DD005F9563 /* EmeraldElementState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375B78C420D2F5DD005F9563 /* EmeraldElementState.swift */; };
 		375B78C920D2F746005F9563 /* SlingInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375B78C820D2F746005F9563 /* SlingInputTests.swift */; };
 		37653E9520602B7100EB415B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37653E9420602B7100EB415B /* UIView.swift */; };
@@ -85,6 +84,7 @@
 		A2690D2D213ECF01007ED6B1 /* PickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690D2C213ECF01007ED6B1 /* PickerView.storyboard */; };
 		A2690D2F213ECF5B007ED6B1 /* DateRangePickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690D2E213ECF5B007ED6B1 /* DateRangePickerView.storyboard */; };
 		A2690D7521404E9F007ED6B1 /* EmeraldComponentsApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2690D7421404E9F007ED6B1 /* EmeraldComponentsApplicationUITests.swift */; };
+		A2690D7D21405313007ED6B1 /* InputTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2690D7C21405313007ED6B1 /* InputTableViewController.swift */; };
 		A26BD5BA20BC88E50013FA24 /* HUDConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26BD5B920BC88E50013FA24 /* HUDConstraints.swift */; };
 		A270034720179EF1008FBB2E /* SlingComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = A270033920179EF1008FBB2E /* SlingComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A28D839720815A6B0041457D /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28D839620815A6B0041457D /* HUD.swift */; };
@@ -96,8 +96,8 @@
 		A2C43C8F201F7DCA0067AA7E /* CompanyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C8E201F7DCA0067AA7E /* CompanyTheme.swift */; };
 		A2C43C91201F7E380067AA7E /* ColorUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C90201F7E380067AA7E /* ColorUpdatable.swift */; };
 		A2C43CA0201F85BE0067AA7E /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C9F201F85BE0067AA7E /* UIColor+Palette.swift */; };
-		B098A7B3A77012E5DC05D167 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
-		DB29B9AD3AE97FAB9306B334 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		B098A7B3A77012E5DC05D167 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		DB29B9AD3AE97FAB9306B334 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		E557098DD4758F8A5DFD254C /* Pods_EmeraldComponentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA13C85467E5B525A951794 /* Pods_EmeraldComponentsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -155,7 +155,6 @@
 		372832EC20DABEE900D607D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		372832EF20DABEE900D607D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		372832F120DABEE900D607D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		372832FC20DAC85000D607D4 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		375B78C420D2F5DD005F9563 /* EmeraldElementState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldElementState.swift; sourceTree = "<group>"; };
 		375B78C820D2F746005F9563 /* SlingInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingInputTests.swift; sourceTree = "<group>"; };
 		37653E9420602B7100EB415B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -236,6 +235,7 @@
 		A2690D7221404E9E007ED6B1 /* EmeraldComponentsApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmeraldComponentsApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2690D7421404E9F007ED6B1 /* EmeraldComponentsApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldComponentsApplicationUITests.swift; sourceTree = "<group>"; };
 		A2690D7621404E9F007ED6B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2690D7C21405313007ED6B1 /* InputTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableViewController.swift; sourceTree = "<group>"; };
 		A26BD5B920BC88E50013FA24 /* HUDConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDConstraints.swift; sourceTree = "<group>"; };
 		A270033620179EF1008FBB2E /* EmeraldComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EmeraldComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A270033920179EF1008FBB2E /* SlingComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlingComponent.h; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B098A7B3A77012E5DC05D167 /* BuildFile in Frameworks */,
+				B098A7B3A77012E5DC05D167 /* (null) in Frameworks */,
 				34ADBC3F76F7145EDC11A8B1 /* Pods_EmeraldComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A250F7F52052F3500013C05D /* EmeraldComponents.framework in Frameworks */,
-				DB29B9AD3AE97FAB9306B334 /* BuildFile in Frameworks */,
+				DB29B9AD3AE97FAB9306B334 /* (null) in Frameworks */,
 				E557098DD4758F8A5DFD254C /* Pods_EmeraldComponentsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,8 +544,8 @@
 		A2690D24213ECDC9007ED6B1 /* Input */ = {
 			isa = PBXGroup;
 			children = (
-				372832FC20DAC85000D607D4 /* InputViewController.swift */,
 				A2690D2A213ECEA6007ED6B1 /* Input.storyboard */,
+				A2690D7C21405313007ED6B1 /* InputTableViewController.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -1020,15 +1020,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-EmeraldComponentsApplicationUITests-checkManifestLockResult.txt",
 			);
@@ -1080,7 +1076,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				372832FD20DAC85000D607D4 /* InputViewController.swift in Sources */,
+				A2690D7D21405313007ED6B1 /* InputTableViewController.swift in Sources */,
 				37B813172123497A003A8C8E /* DateRangePickerViewController.swift in Sources */,
 				372832E820DABEE800D607D4 /* MainViewController.swift in Sources */,
 				37E1297B20DC1F8900B45C5A /* PickerViewController.swift in Sources */,

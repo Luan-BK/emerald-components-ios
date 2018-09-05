@@ -1,15 +1,15 @@
 //
-//  InputViewController.swift
-//  BasicTestApplication
+//  InputTableViewController.swift
+//  EmeraldComponentsApplication
 //
-//  Created by Luan Kalume | Stone on 20/06/2018.
+//  Created by João Mendes | Stone on 05/09/18.
 //  Copyright © 2018 StoneCo. All rights reserved.
 //
 
 import UIKit
 import EmeraldComponents
 
-class InputViewController: UIViewController {
+class InputTableViewController: UITableViewController {
 
     @IBOutlet weak var noMaskInput: EmeraldInput!
     @IBOutlet weak var cpfInput: EmeraldInput!
@@ -18,7 +18,7 @@ class InputViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         noMaskInput.inputDelegate = self
         cpfInput.inputDelegate = self
         cnpjInput.inputDelegate = self
@@ -35,7 +35,7 @@ class InputViewController: UIViewController {
 
 }
 
-extension InputViewController: EmeraldInputDelegate {
+extension InputTableViewController: EmeraldInputDelegate {
     
     func inputDidChange(_ input: EmeraldInput, text: String, valid: Bool) {
         print("\(input.title) has text: \(text) \nValid: \(valid)")
