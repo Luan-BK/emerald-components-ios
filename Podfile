@@ -14,16 +14,6 @@ target 'EmeraldComponents' do
     # Pods for testing
   end
  
- target 'EmeraldComponentsApplication' do
-     inherit! :search_paths
-     # Pods for testing
- end
- 
- target 'EmeraldComponentsApplicationUITests' do
-     inherit! :search_paths
-     # Pods for testing
- end
- 
 end
 
 # Workaround for Cocoapods issue #7606
