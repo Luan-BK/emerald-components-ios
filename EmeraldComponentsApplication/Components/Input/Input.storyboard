@@ -120,6 +120,9 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEK-iO-frw" customClass="EmeraldInput" customModule="EmeraldComponents">
                                                     <rect key="frame" x="32" y="15" width="311" height="70"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                    </accessibility>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="CNPJ Input"/>
                                                     </userDefinedRuntimeAttributes>
@@ -132,6 +135,9 @@
                                                 <constraint firstItem="dEK-iO-frw" firstAttribute="top" secondItem="Hck-Ju-66v" secondAttribute="topMargin" constant="4" id="tQw-HD-lXV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -226,7 +232,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMu-2o-sKV" customClass="EmeraldInput" customModule="EmeraldComponents">
-                                                    <rect key="frame" x="24" y="12" width="327" height="75.5"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="55.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Currency Input"/>

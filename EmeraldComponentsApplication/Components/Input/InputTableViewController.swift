@@ -53,35 +53,60 @@ extension InputTableViewController: EmeraldInputDelegate {
     func inputDidChange(_ input: EmeraldInput, text: String, valid: Bool) {
         switch input {
         case cpfInput:
-            state(cpfInput, text: text, valid: valid, message: "Error feedback")
+            state(cpfInput, text: text,
+                  valid: valid,
+                  warningMessage: "CPF Error feedback",
+                  successMessage: "CPF Success feedback")
         case cnpjInput:
-            state(cnpjInput, text: text, valid: valid, message: "Error feedback")
+            state(cnpjInput,
+                  text: text,
+                  valid: valid,
+                  warningMessage: "CNPJ Warning feedback",
+                  successMessage: "CNPJ Success feedback")
         case phoneInput:
-            state(phoneInput, text: text, valid: valid, message: "Warning feedback")
+            state(phoneInput,
+                  text: text,
+                  valid: valid,
+                  warningMessage: "Phone Warning feedback",
+                  successMessage: "Phone Success feedback")
         case cepInput:
-            state(cepInput, text: text, valid: valid, message: "Warning feedback")
+            state(cepInput,
+                  text: text,
+                  valid: valid,
+                  warningMessage: "CEP Warning feedback",
+                  successMessage: "CEP Success feedback")
         case customInput:
-            state(customInput, text: text, valid: valid, message: "Warning feedback")
+            state(customInput,
+                  text: text,
+                  valid: valid,
+                  warningMessage: "Custom Warning feedback",
+                  successMessage: "Custom Success feedback")
         default:
             break
         }
-        print("\(input.title) has text: \(text) \nValid: \(valid)")
+//        print("\(input.title) has text: \(text) \nValid: \(valid)")
     }
     
 }
 
 extension InputTableViewController {
     
-    func state(_ input: EmeraldInput, text: String, valid: Bool, message: String) {
+    func state(_ input: EmeraldInput,
+               text: String,
+               valid: Bool,
+               warningMessage: String,
+               successMessage: String) {
         if text == "" {
             input.setState(.regular)
             input.bottomText = ""
         } else if valid == false {
             input.setState(.warning)
-            input.bottomText = message
+            input.bottomText = warningMessage
         } else {
             input.setState(.success)
-            input.bottomText = "Success feedback"
+            input.bottomText = successMessage
+            input.accessibilityValue = successMessage
+            input.accessibilityIdentifier = successMessage
         }
     }
     
