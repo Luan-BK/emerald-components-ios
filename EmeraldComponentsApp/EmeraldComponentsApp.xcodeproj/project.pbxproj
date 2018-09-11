@@ -24,6 +24,10 @@
 		A23E8ACD2148407000933AC1 /* InputUITests+Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8ACC2148407000933AC1 /* InputUITests+Phone.swift */; };
 		A23E8ACF2148440D00933AC1 /* InputUITests+CEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8ACE2148440D00933AC1 /* InputUITests+CEP.swift */; };
 		A23E8AD12148452900933AC1 /* InputUITests+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD02148452900933AC1 /* InputUITests+Custom.swift */; };
+		A23E8AD321484AE000933AC1 /* InputUITests+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD221484AE000933AC1 /* InputUITests+Currency.swift */; };
+		A23E8AD521484C9D00933AC1 /* InputUITests+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD421484C9D00933AC1 /* InputUITests+Email.swift */; };
+		A23E8AD72148527000933AC1 /* InputUITests+Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD62148527000933AC1 /* InputUITests+Password.swift */; };
+		A23E8AD921485BC800933AC1 /* InputUITests+Disabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD821485BC800933AC1 /* InputUITests+Disabled.swift */; };
 		A2C9B4FB21471B1700634344 /* InputUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B4FA21471B1700634344 /* InputUITests.swift */; };
 		A2C9B50821471D2500634344 /* InputMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50721471D2500634344 /* InputMask.framework */; };
 		A2C9B50A21471D2500634344 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; };
@@ -81,6 +85,10 @@
 		A23E8ACC2148407000933AC1 /* InputUITests+Phone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Phone.swift"; sourceTree = "<group>"; };
 		A23E8ACE2148440D00933AC1 /* InputUITests+CEP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+CEP.swift"; sourceTree = "<group>"; };
 		A23E8AD02148452900933AC1 /* InputUITests+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Custom.swift"; sourceTree = "<group>"; };
+		A23E8AD221484AE000933AC1 /* InputUITests+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Currency.swift"; sourceTree = "<group>"; };
+		A23E8AD421484C9D00933AC1 /* InputUITests+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Email.swift"; sourceTree = "<group>"; };
+		A23E8AD62148527000933AC1 /* InputUITests+Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Password.swift"; sourceTree = "<group>"; };
+		A23E8AD821485BC800933AC1 /* InputUITests+Disabled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Disabled.swift"; sourceTree = "<group>"; };
 		A2C9B4F821471B1700634344 /* EmeraldComponentsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmeraldComponentsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B4FA21471B1700634344 /* InputUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputUITests.swift; sourceTree = "<group>"; };
 		A2C9B4FC21471B1700634344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -218,10 +226,14 @@
 			isa = PBXGroup;
 			children = (
 				A2C9B4FA21471B1700634344 /* InputUITests.swift */,
+				A23E8AD821485BC800933AC1 /* InputUITests+Disabled.swift */,
+				A23E8AD62148527000933AC1 /* InputUITests+Password.swift */,
 				A23E8ACA21483A5F00933AC1 /* InputUITests+CPF.swift */,
 				A23E8AC82148377C00933AC1 /* InputUITests+CNPJ.swift */,
+				A23E8AD421484C9D00933AC1 /* InputUITests+Email.swift */,
 				A23E8ACC2148407000933AC1 /* InputUITests+Phone.swift */,
 				A23E8ACE2148440D00933AC1 /* InputUITests+CEP.swift */,
+				A23E8AD221484AE000933AC1 /* InputUITests+Currency.swift */,
 				A23E8AD02148452900933AC1 /* InputUITests+Custom.swift */,
 			);
 			path = Inputs;
@@ -367,11 +379,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A23E8ACF2148440D00933AC1 /* InputUITests+CEP.swift in Sources */,
+				A23E8AD72148527000933AC1 /* InputUITests+Password.swift in Sources */,
+				A23E8AD921485BC800933AC1 /* InputUITests+Disabled.swift in Sources */,
 				A2C9B4FB21471B1700634344 /* InputUITests.swift in Sources */,
 				A23E8ACD2148407000933AC1 /* InputUITests+Phone.swift in Sources */,
+				A23E8AD321484AE000933AC1 /* InputUITests+Currency.swift in Sources */,
 				A23E8ACB21483A5F00933AC1 /* InputUITests+CPF.swift in Sources */,
 				A23E8AC92148377C00933AC1 /* InputUITests+CNPJ.swift in Sources */,
 				A23E8AD12148452900933AC1 /* InputUITests+Custom.swift in Sources */,
+				A23E8AD521484C9D00933AC1 /* InputUITests+Email.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
