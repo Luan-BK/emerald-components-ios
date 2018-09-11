@@ -14,16 +14,16 @@ extension InputUITests {
         
         XCTContext.runActivity(named: "Incompleted textfield") { _ in
             
-            XCTContext.runActivity(named: "Get Phone field and change value") { _ in
-                // Get CNPJ field
+            XCTContext.runActivity(named: "Get phone field and set value") { _ in
+                // Get textfield
                 let beforeInput = tablesQuery.textFields["Phone Input"]
                 beforeInput.tap()
                 
-                // Check text field
+                // Check textfield
                 let afterFirstClick = tablesQuery.textFields["("]
                 XCTAssertEqual(String(describing: afterFirstClick.value!), "(")
                 
-                // Fill CNPJ field
+                // Fill textfield
                 let fillKey = app.keys["0"]
                 
                 for _ in 0...8 {
@@ -31,12 +31,12 @@ extension InputUITests {
                 }
             }
             
-            XCTContext.runActivity(named: "Check if Phone textfield is correct") { _ in
-                let afterInput = tablesQuery.textFields["(00) 0000-000"]
-                XCTAssertEqual(String(describing: afterInput.value!), "(00) 0000-000")
+            XCTContext.runActivity(named: "Check if phone textfield is correct") { _ in
+                let input = tablesQuery.textFields["(00) 0000-000"]
+                XCTAssertEqual(String(describing: input.value!), "(00) 0000-000")
             }
             
-            XCTContext.runActivity(named: "Check if Phone icon is correct") { _ in
+            XCTContext.runActivity(named: "Check if phone icon is correct") { _ in
                 // Feedback icon
                 let feedbackIcon = tablesQuery.buttons["input warning icon"]
                 XCTAssertTrue(feedbackIcon.exists)
@@ -51,7 +51,7 @@ extension InputUITests {
                 fillKey.tap()
             }
             
-            XCTContext.runActivity(named: "Check if Phone icon is success") { _ in
+            XCTContext.runActivity(named: "Check if phone icon is success") { _ in
                 // Feedback icon
                 let feedbackIcon = tablesQuery.buttons["input success icon"]
                 XCTAssertTrue(feedbackIcon.exists)
@@ -62,11 +62,11 @@ extension InputUITests {
         XCTContext.runActivity(named: "Clean textfield") { _ in
             
             XCTContext.runActivity(named: "Get filled field and erase inputed data") { _ in
-                // Get CNPJ field
-                let afterInputedData = tablesQuery.textFields["(00) 0000-0000"]
-                afterInputedData.tap()
+                // Get textfield
+                let input = tablesQuery.textFields["(00) 0000-0000"]
+                input.tap()
                 
-                // Clean field
+                // Clean textfield
                 let deleteKey = app.keys["Delete"]
                 
                 for _ in 0...13 {
@@ -74,12 +74,12 @@ extension InputUITests {
                 }
             }
             
-            XCTContext.runActivity(named: "Check if Phone textfield is correct") { _ in
-                let afterInput = tablesQuery.textFields["Phone Input"]
-                XCTAssertEqual(String(describing: afterInput.value!), "Phone Input")
+            XCTContext.runActivity(named: "Check if phone textfield is correct") { _ in
+                let input = tablesQuery.textFields["Phone Input"]
+                XCTAssertEqual(String(describing: input.value!), "Phone Input")
             }
             
-            XCTContext.runActivity(named: "Check if Phone icon doen't exist") { _ in
+            XCTContext.runActivity(named: "Check if phone icon doesn't exist") { _ in
                 // Feedback icon
                 XCTAssertFalse(tablesQuery.buttons["input success icon"].exists)
                 XCTAssertFalse(tablesQuery.buttons["input warning icon"].exists)

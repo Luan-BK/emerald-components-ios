@@ -14,15 +14,15 @@ extension InputUITests {
 
         XCTContext.runActivity(named: "Incompleted textfield") { _ in
             
-            XCTContext.runActivity(named: "Get CEP field and change value") { _ in
-                // Get CNPJ field
-                let beforeInput = tablesQuery.textFields["CEP Input"]
-                beforeInput.tap()
+            XCTContext.runActivity(named: "Get CEP field and set value") { _ in
+                // Get textfield
+                let input = tablesQuery.textFields["CEP Input"]
+                input.tap()
                 
-                // Check text field
-                XCTAssertEqual(String(describing: beforeInput.value!), "CEP Input")
+                // Check textfield
+                XCTAssertEqual(String(describing: input.value!), "CEP Input")
                 
-                // Fill CNPJ field
+                // Fill textfield
                 let fillKey = app.keys["0"]
                 
                 for _ in 0...6 {
@@ -31,8 +31,8 @@ extension InputUITests {
             }
             
             XCTContext.runActivity(named: "Check if CEP textfield is correct") { _ in
-                let afterInput = tablesQuery.textFields["00000-00"]
-                XCTAssertEqual(String(describing: afterInput.value!), "00000-00")
+                let input = tablesQuery.textFields["00000-00"]
+                XCTAssertEqual(String(describing: input.value!), "00000-00")
             }
             
             XCTContext.runActivity(named: "Check if CEP icon is correct") { _ in
@@ -61,11 +61,11 @@ extension InputUITests {
         XCTContext.runActivity(named: "Clean textfield") { _ in
             
             XCTContext.runActivity(named: "Get filled field and erase inputed data") { _ in
-                // Get CNPJ field
-                let afterInputedData = tablesQuery.textFields["00000-000"]
-                afterInputedData.tap()
+                // Get textfield
+                let input = tablesQuery.textFields["00000-000"]
+                input.tap()
                 
-                // Clean field
+                // Clean textfield
                 let deleteKey = app.keys["Delete"]
                 
                 for _ in 0...8 {
@@ -74,11 +74,11 @@ extension InputUITests {
             }
             
             XCTContext.runActivity(named: "Check if CEP textfield is correct") { _ in
-                let afterInput = tablesQuery.textFields["CEP Input"]
-                XCTAssertEqual(String(describing: afterInput.value!), "CEP Input")
+                let input = tablesQuery.textFields["CEP Input"]
+                XCTAssertEqual(String(describing: input.value!), "CEP Input")
             }
             
-            XCTContext.runActivity(named: "Check if CEP icon doen't exist") { _ in
+            XCTContext.runActivity(named: "Check if CEP icon doesn't exist") { _ in
                 // Feedback icon
                 XCTAssertFalse(tablesQuery.buttons["input success icon"].exists)
                 XCTAssertFalse(tablesQuery.buttons["input warning icon"].exists)

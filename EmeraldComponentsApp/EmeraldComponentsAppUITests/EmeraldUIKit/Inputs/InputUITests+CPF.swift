@@ -12,19 +12,17 @@ extension InputUITests {
     
     func test_3_CPF() {
         
-        self.launch()
-        
         XCTContext.runActivity(named: "Incompleted textfield") { _ in
             
-            XCTContext.runActivity(named: "Get CPF field and change value") { _ in
-                // Get CNPJ field
-                let beforeInput = tablesQuery.textFields["CPF Input"]
-                beforeInput.tap()
+            XCTContext.runActivity(named: "Get CPF field and set value") { _ in
+                // Get textfield
+                let input = tablesQuery.textFields["CPF Input"]
+                input.tap()
                 
-                // Check text field
-                XCTAssertEqual(String(describing: beforeInput.value!), "CPF Input")
+                // Check textfield
+                XCTAssertEqual(String(describing: input.value!), "CPF Input")
                 
-                // Fill CNPJ field
+                // Fill textfield
                 let fillKey = app.keys["0"]
                 
                 for _ in 0...9 {
@@ -33,8 +31,8 @@ extension InputUITests {
             }
             
             XCTContext.runActivity(named: "Check if CPF textfield is correct") { _ in
-                let afterInput = tablesQuery.textFields["000.000.000-0"]
-                XCTAssertEqual(String(describing: afterInput.value!), "000.000.000-0")
+                let input = tablesQuery.textFields["000.000.000-0"]
+                XCTAssertEqual(String(describing: input.value!), "000.000.000-0")
             }
             
             XCTContext.runActivity(named: "Check if CPF icon is correct") { _ in
@@ -63,11 +61,11 @@ extension InputUITests {
         XCTContext.runActivity(named: "Clean textfield") { _ in
             
             XCTContext.runActivity(named: "Get filled field and erase inputed data") { _ in
-                // Get CNPJ field
-                let afterInputedData = tablesQuery.textFields["000.000.000-00"]
-                afterInputedData.tap()
+                // Get textfield
+                let input = tablesQuery.textFields["000.000.000-00"]
+                input.tap()
                 
-                // Clean field
+                // Clean textfield
                 let deleteKey = app.keys["Delete"]
                 
                 for _ in 0...13 {
@@ -76,11 +74,11 @@ extension InputUITests {
             }
             
             XCTContext.runActivity(named: "Check if CPF textfield is correct") { _ in
-                let afterInput = tablesQuery.textFields["CPF Input"]
-                XCTAssertEqual(String(describing: afterInput.value!), "CPF Input")
+                let input = tablesQuery.textFields["CPF Input"]
+                XCTAssertEqual(String(describing: input.value!), "CPF Input")
             }
             
-            XCTContext.runActivity(named: "Check if CPF icon doen't exist") { _ in
+            XCTContext.runActivity(named: "Check if CPF icon doesn't exist") { _ in
                 // Feedback icon
                 XCTAssertFalse(tablesQuery.buttons["input success icon"].exists)
                 XCTAssertFalse(tablesQuery.buttons["input warning icon"].exists)
