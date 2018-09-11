@@ -19,7 +19,11 @@
 		A23413E62147122A009DC2FC /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23413D52147122A009DC2FC /* Input.storyboard */; };
 		A23413E72147122A009DC2FC /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23413D72147122A009DC2FC /* PickerViewController.swift */; };
 		A23413E82147122A009DC2FC /* PickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23413D82147122A009DC2FC /* PickerView.storyboard */; };
-		A23E8AC62147F82600933AC1 /* ButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AC52147F82600933AC1 /* ButtonUITests.swift */; };
+		A23E8AC92148377C00933AC1 /* InputUITests+CNPJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AC82148377C00933AC1 /* InputUITests+CNPJ.swift */; };
+		A23E8ACB21483A5F00933AC1 /* InputUITests+CPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8ACA21483A5F00933AC1 /* InputUITests+CPF.swift */; };
+		A23E8ACD2148407000933AC1 /* InputUITests+Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8ACC2148407000933AC1 /* InputUITests+Phone.swift */; };
+		A23E8ACF2148440D00933AC1 /* InputUITests+CEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8ACE2148440D00933AC1 /* InputUITests+CEP.swift */; };
+		A23E8AD12148452900933AC1 /* InputUITests+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD02148452900933AC1 /* InputUITests+Custom.swift */; };
 		A2C9B4FB21471B1700634344 /* InputUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B4FA21471B1700634344 /* InputUITests.swift */; };
 		A2C9B50821471D2500634344 /* InputMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50721471D2500634344 /* InputMask.framework */; };
 		A2C9B50A21471D2500634344 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; };
@@ -72,7 +76,11 @@
 		A23413D52147122A009DC2FC /* Input.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
 		A23413D72147122A009DC2FC /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		A23413D82147122A009DC2FC /* PickerView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PickerView.storyboard; sourceTree = "<group>"; };
-		A23E8AC52147F82600933AC1 /* ButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUITests.swift; sourceTree = "<group>"; };
+		A23E8AC82148377C00933AC1 /* InputUITests+CNPJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+CNPJ.swift"; sourceTree = "<group>"; };
+		A23E8ACA21483A5F00933AC1 /* InputUITests+CPF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+CPF.swift"; sourceTree = "<group>"; };
+		A23E8ACC2148407000933AC1 /* InputUITests+Phone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Phone.swift"; sourceTree = "<group>"; };
+		A23E8ACE2148440D00933AC1 /* InputUITests+CEP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+CEP.swift"; sourceTree = "<group>"; };
+		A23E8AD02148452900933AC1 /* InputUITests+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Custom.swift"; sourceTree = "<group>"; };
 		A2C9B4F821471B1700634344 /* EmeraldComponentsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmeraldComponentsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B4FA21471B1700634344 /* InputUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputUITests.swift; sourceTree = "<group>"; };
 		A2C9B4FC21471B1700634344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -194,8 +202,7 @@
 		A23E8AC32147F79400933AC1 /* EmeraldUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A2C9B4FA21471B1700634344 /* InputUITests.swift */,
-				A23E8AC52147F82600933AC1 /* ButtonUITests.swift */,
+				A23E8AC72148375700933AC1 /* Inputs */,
 			);
 			path = EmeraldUIKit;
 			sourceTree = "<group>";
@@ -205,6 +212,19 @@
 			children = (
 			);
 			path = EmeraldComponents;
+			sourceTree = "<group>";
+		};
+		A23E8AC72148375700933AC1 /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				A2C9B4FA21471B1700634344 /* InputUITests.swift */,
+				A23E8ACA21483A5F00933AC1 /* InputUITests+CPF.swift */,
+				A23E8AC82148377C00933AC1 /* InputUITests+CNPJ.swift */,
+				A23E8ACC2148407000933AC1 /* InputUITests+Phone.swift */,
+				A23E8ACE2148440D00933AC1 /* InputUITests+CEP.swift */,
+				A23E8AD02148452900933AC1 /* InputUITests+Custom.swift */,
+			);
+			path = Inputs;
 			sourceTree = "<group>";
 		};
 		A2C9B4F12147174500634344 /* Frameworks */ = {
@@ -346,8 +366,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23E8ACF2148440D00933AC1 /* InputUITests+CEP.swift in Sources */,
 				A2C9B4FB21471B1700634344 /* InputUITests.swift in Sources */,
-				A23E8AC62147F82600933AC1 /* ButtonUITests.swift in Sources */,
+				A23E8ACD2148407000933AC1 /* InputUITests+Phone.swift in Sources */,
+				A23E8ACB21483A5F00933AC1 /* InputUITests+CPF.swift in Sources */,
+				A23E8AC92148377C00933AC1 /* InputUITests+CNPJ.swift in Sources */,
+				A23E8AD12148452900933AC1 /* InputUITests+Custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

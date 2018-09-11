@@ -30,7 +30,7 @@ class InputTableViewController: UITableViewController {
         phoneInput.setMask(.phone)
         cepInput.setMask(.cep)
         currencyInput.setMask(.currency)
-        customInput.setMask(.custom(mask: "[00]"))
+        customInput.setMask(.custom(mask: "[A][-]"))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,36 +55,40 @@ extension InputTableViewController: EmeraldInputDelegate {
         case cpfInput:
             state(cpfInput, text: text,
                   valid: valid,
-                  warningMessage: "CPF Error feedback",
+                  secondState: .error,
+                  secondStateMessage: "CPF Error feedback",
                   successMessage: "CPF Success feedback")
         case cnpjInput:
             state(cnpjInput,
                   text: text,
                   valid: valid,
-                  warningMessage: "CNPJ Warning feedback",
+                  secondState: .warning,
+                  secondStateMessage: "CNPJ Warning feedback",
                   successMessage: "CNPJ Success feedback")
         case phoneInput:
             state(phoneInput,
                   text: text,
                   valid: valid,
-                  warningMessage: "Phone Warning feedback",
+                  secondState: .warning,
+                  secondStateMessage: "Phone Warning feedback",
                   successMessage: "Phone Success feedback")
         case cepInput:
             state(cepInput,
                   text: text,
                   valid: valid,
-                  warningMessage: "CEP Warning feedback",
+                  secondState: .warning,
+                  secondStateMessage: "CEP Warning feedback",
                   successMessage: "CEP Success feedback")
         case customInput:
             state(customInput,
                   text: text,
                   valid: valid,
-                  warningMessage: "Custom Warning feedback",
+                  secondState: .warning,
+                  secondStateMessage: "Custom Warning feedback",
                   successMessage: "Custom Success feedback")
         default:
             break
         }
-//        print("\(input.title) has text: \(text) \nValid: \(valid)")
     }
     
 }
@@ -94,19 +98,18 @@ extension InputTableViewController {
     func state(_ input: EmeraldInput,
                text: String,
                valid: Bool,
-               warningMessage: String,
+               secondState: EmeraldElementState,
+               secondStateMessage: String,
                successMessage: String) {
         if text == "" {
             input.setState(.regular)
             input.bottomText = ""
         } else if valid == false {
-            input.setState(.warning)
-            input.bottomText = warningMessage
+            input.setState(secondState)
+            input.bottomText = secondStateMessage
         } else {
             input.setState(.success)
             input.bottomText = successMessage
-            input.accessibilityValue = successMessage
-            input.accessibilityIdentifier = successMessage
         }
     }
     
