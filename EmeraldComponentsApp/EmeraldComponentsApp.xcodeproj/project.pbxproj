@@ -19,7 +19,7 @@
 		A23413E62147122A009DC2FC /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23413D52147122A009DC2FC /* Input.storyboard */; };
 		A23413E72147122A009DC2FC /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23413D72147122A009DC2FC /* PickerViewController.swift */; };
 		A23413E82147122A009DC2FC /* PickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23413D82147122A009DC2FC /* PickerView.storyboard */; };
-		A2C9B4FB21471B1700634344 /* EmeraldComponentsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B4FA21471B1700634344 /* EmeraldComponentsAppUITests.swift */; };
+		A23E8AC62147F82600933AC1 /* ButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AC52147F82600933AC1 /* ButtonUITests.swift */; };
 		A2C9B4FB21471B1700634344 /* InputUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B4FA21471B1700634344 /* InputUITests.swift */; };
 		A2C9B50821471D2500634344 /* InputMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50721471D2500634344 /* InputMask.framework */; };
 		A2C9B50A21471D2500634344 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; };
@@ -72,6 +72,7 @@
 		A23413D52147122A009DC2FC /* Input.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
 		A23413D72147122A009DC2FC /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		A23413D82147122A009DC2FC /* PickerView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PickerView.storyboard; sourceTree = "<group>"; };
+		A23E8AC52147F82600933AC1 /* ButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUITests.swift; sourceTree = "<group>"; };
 		A2C9B4F821471B1700634344 /* EmeraldComponentsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmeraldComponentsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B4FA21471B1700634344 /* InputUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputUITests.swift; sourceTree = "<group>"; };
 		A2C9B4FC21471B1700634344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -346,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2C9B4FB21471B1700634344 /* InputUITests.swift in Sources */,
+				A23E8AC62147F82600933AC1 /* ButtonUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
