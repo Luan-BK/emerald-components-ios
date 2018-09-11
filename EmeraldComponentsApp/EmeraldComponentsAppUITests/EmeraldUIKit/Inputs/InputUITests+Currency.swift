@@ -46,7 +46,7 @@ extension InputUITests {
                 input.tap()
                 
                 // Clean textfield
-                let deleteKey = app.keys["delete"]
+                let deleteKey = app.keys["Delete"]
                 
                 for _ in 0...6 {
                     deleteKey.tap()

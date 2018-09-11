@@ -12,6 +12,8 @@ extension InputUITests {
     
     func test_1_disabled() {
         
+        self.launch()
+        
         XCTContext.runActivity(named: "Get disabled field and try to set value") { _ in
             // Get textfield
             let input = tablesQuery.textFields["Disabled Input"]
