@@ -10,8 +10,14 @@ default_platform(:ios)
 
 platform :ios do
 
-	desc "Run tests"
-	lane :test do
+    desc "Run tests"
+    lane :test do
+        unit_tests
+        ui_tests
+    end
+
+	desc "Unit Tests"
+	lane :unit_tests do
         pod_install
 		lint
 		scan(
@@ -22,6 +28,14 @@ platform :ios do
 		)
 		coverage
 	end
+
+    desc "UI Tests"
+    lane :ui_tests do
+        scan(
+            scheme: "EmeraldComponentsApp", 
+            devices: "iPhone 8"
+        )
+    end
 
 	desc "Deploy a new version"
     lane :release do
