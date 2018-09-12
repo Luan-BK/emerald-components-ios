@@ -5,6 +5,9 @@
       location = "group:EmeraldComponents.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:EmeraldComponentsApp/EmeraldComponentsApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

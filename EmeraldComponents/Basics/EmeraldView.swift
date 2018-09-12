@@ -32,4 +32,5 @@ public class EmeraldView: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
+    
 }

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9nm-Qk-CyI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Buttons-->
+        <scene sceneID="iNk-mp-EAg">
+            <objects>
+                <viewController storyboardIdentifier="Buttons" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9nm-Qk-CyI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9iZ-Yr-sux">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEC-F4-gLA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEP-fL-Yra" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="569.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="R8f-F6-KzE">
+                                                <rect key="frame" x="38" y="20" width="300" height="529.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjM-Np-PBT" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="44.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="353-kY-aRd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Aceitar">
+                                                            <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j33-rT-y2w" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                                        <rect key="frame" x="0.0" y="48.5" width="300" height="44.5"/>
+                                                        <state key="normal" title="Aceitar"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUe-ap-ZQl" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                                        <rect key="frame" x="0.0" y="97" width="300" height="44.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Aceitar">
+                                                            <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMe-5C-J1f" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                                        <rect key="frame" x="0.0" y="145.5" width="300" height="44.5"/>
+                                                        <state key="normal" title="Confirmar"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLa-zY-MpL" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                                        <rect key="frame" x="0.0" y="194" width="300" height="44.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Confirmar">
+                                                            <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wX-yA-nO0" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                                        <rect key="frame" x="0.0" y="242.5" width="300" height="44.5"/>
+                                                        <state key="normal" title="Confirmar"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvi-fC-gch" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                                        <rect key="frame" x="0.0" y="291" width="300" height="44.5"/>
+                                                        <state key="normal" title="Cancelar"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTt-NJ-zjl" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                                        <rect key="frame" x="0.0" y="339.5" width="300" height="44.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Cancelar">
+                                                            <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Int-zD-3yd" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                                        <rect key="frame" x="0.0" y="388" width="300" height="44.5"/>
+                                                        <state key="normal" title="Cancelar"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHW-xQ-I5U" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                                        <rect key="frame" x="0.0" y="436.5" width="300" height="44.5"/>
+                                                        <state key="normal" title="Mais detalhes"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAP-HN-Jlo" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                                        <rect key="frame" x="0.0" y="485" width="300" height="44.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Editar">
+                                                            <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="R8f-F6-KzE" firstAttribute="width" secondItem="uEP-fL-Yra" secondAttribute="width" multiplier="0.8" id="8fR-gA-ZGv"/>
+                                            <constraint firstItem="R8f-F6-KzE" firstAttribute="top" secondItem="uEP-fL-Yra" secondAttribute="top" constant="20" id="Mqg-84-uN7"/>
+                                            <constraint firstAttribute="bottom" secondItem="R8f-F6-KzE" secondAttribute="bottom" constant="20" id="dxf-5c-Tn8"/>
+                                            <constraint firstItem="R8f-F6-KzE" firstAttribute="centerX" secondItem="uEP-fL-Yra" secondAttribute="centerX" id="ycd-Ha-LWe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uEP-fL-Yra" firstAttribute="height" secondItem="QEC-F4-gLA" secondAttribute="height" priority="750" id="9cB-NF-j2s"/>
+                                    <constraint firstItem="uEP-fL-Yra" firstAttribute="top" secondItem="QEC-F4-gLA" secondAttribute="top" id="cjg-Nh-gzC"/>
+                                    <constraint firstAttribute="trailing" secondItem="uEP-fL-Yra" secondAttribute="trailing" id="iyE-TV-m12"/>
+                                    <constraint firstItem="uEP-fL-Yra" firstAttribute="width" secondItem="QEC-F4-gLA" secondAttribute="width" id="s05-ID-AOy"/>
+                                    <constraint firstAttribute="bottom" secondItem="uEP-fL-Yra" secondAttribute="bottom" id="udq-g0-gjd"/>
+                                    <constraint firstItem="uEP-fL-Yra" firstAttribute="leading" secondItem="QEC-F4-gLA" secondAttribute="leading" id="xIk-P1-lqw"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QEC-F4-gLA" secondAttribute="trailing" id="3si-Cf-XhJ"/>
+                            <constraint firstItem="QEC-F4-gLA" firstAttribute="top" secondItem="9iZ-Yr-sux" secondAttribute="top" id="6Ws-mw-TqP"/>
+                            <constraint firstItem="QEC-F4-gLA" firstAttribute="leading" secondItem="9iZ-Yr-sux" secondAttribute="leading" id="GAA-cT-tg4"/>
+                            <constraint firstItem="gWD-qg-Kry" firstAttribute="bottom" secondItem="QEC-F4-gLA" secondAttribute="bottom" id="Xse-rJ-pHl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gWD-qg-Kry"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Buttons" largeTitleDisplayMode="never" id="tUU-4w-tBt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUs-4c-5Fo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="362"/>
+        </scene>
+    </scenes>
+</document>
