@@ -49,4 +49,54 @@ class PickerUITests: XCTestCase {
         
     }
     
+    func test_2_pickerSearch_selectBank() {
+        
+        XCTContext.runActivity(named: "Select bank inside list") { _ in
+            // Select bank
+            tablesQuery.textFields["List of banks"].tap()
+            let bank = tablesQuery.staticTexts["HSBC"]
+            bank.tap()
+            
+            // Check if exists
+            XCTAssertNotNil(String(describing: bank))
+        }
+        
+        XCTContext.runActivity(named: "Choose another bank inside list") { _ in
+            // Select bank
+            tablesQuery.textFields["HSBC"].tap()
+            let bank = tablesQuery.staticTexts["Bank of America"]
+            bank.tap()
+            
+            // Check if exists
+            XCTAssertNotNil(String(describing: bank))
+            
+            // Check cancel button
+            tablesQuery.textFields["Bank of America"].tap()
+            XCUIApplication().buttons["Cancel"].tap()
+        }
+        
+    }
+
+    func test_3_pickerSearch_searchBank() {
+
+        XCTContext.runActivity(named: "Search bank inside list") { _ in
+            // Selects search list
+            tablesQuery.textFields["Bank of America"].tap()
+            app.searchFields["Search"].tap()
+            
+            // Types bank letters
+            app.keys["B"].tap()
+            app.keys["a"].tap()
+            app.keys["n"].tap()
+            app.keys["k"].tap()
+            
+            // Check if exists
+            let bank = tablesQuery.staticTexts["Bank of Brasil"]
+            bank.tap()
+            XCTAssertNotNil(String(describing: bank))
+            
+        }
+        
+    }
+    
 }
