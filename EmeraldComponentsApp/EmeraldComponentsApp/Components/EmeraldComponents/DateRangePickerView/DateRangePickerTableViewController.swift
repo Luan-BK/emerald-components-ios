@@ -1,15 +1,15 @@
 //
-//  DateRangePickerViewController.swift
-//  BasicTestApplication
+//  DateRangePickerTableViewController.swift
+//  EmeraldComponentsApp
 //
-//  Created by Luan Kalume | Stone on 14/08/2018.
+//  Created by João Mendes | Stone on 12/09/18.
 //  Copyright © 2018 StoneCo. All rights reserved.
 //
 
 import UIKit
 import EmeraldComponents
 
-class DateRangePickerViewController: UIViewController {
+class DateRangePickerTableViewController: UITableViewController {
 
     @IBOutlet weak var periodLabel: UILabel!
     
@@ -17,9 +17,7 @@ class DateRangePickerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.title = "Date Range Picker"
-        self.navigationItem.largeTitleDisplayMode = .never
+        periodLabel.accessibilityIdentifier = "dateRangeValue"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,7 +31,7 @@ class DateRangePickerViewController: UIViewController {
             break
         }
     }
-
+    
     func dateStringWithSlashes(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
@@ -43,7 +41,7 @@ class DateRangePickerViewController: UIViewController {
     
 }
 
-extension DateRangePickerViewController: EmeraldDateRangePickerDelegate {
+extension DateRangePickerTableViewController: EmeraldDateRangePickerDelegate {
     
     func didChooseDateRange(start: Date?, end: Date?, range: EmeraldDateRangePicker.EmeraldDatePeriod) {
         self.periodLabel.text = "\(self.dateStringWithSlashes(start!)) - \(self.dateStringWithSlashes(end!))"

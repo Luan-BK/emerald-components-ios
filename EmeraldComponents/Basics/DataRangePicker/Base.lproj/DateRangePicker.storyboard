@@ -341,7 +341,7 @@
                                     <constraint firstItem="ycD-nP-TF4" firstAttribute="leading" secondItem="YQq-Yx-QaQ" secondAttribute="leading" id="rua-5h-Loz"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afc-W2-VhI" customClass="SlingButton" customModule="EmeraldComponents" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afc-W2-VhI" customClass="EmeraldButton" customModule="EmeraldComponents" customModuleProvider="target">
                                 <rect key="frame" x="16" y="450" width="288" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="6eu-BF-nbF"/>
