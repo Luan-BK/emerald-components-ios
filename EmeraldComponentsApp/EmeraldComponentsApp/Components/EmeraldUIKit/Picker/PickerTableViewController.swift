@@ -14,6 +14,8 @@ class PickerTableViewController: UITableViewController {
     @IBOutlet weak var pickerView: EmeraldPicker!
     @IBOutlet weak var searchView: EmeraldPicker!
     
+    private var selectedPeriod: EmeraldDateRangePicker.EmeraldDatePeriod?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -66,4 +68,3 @@ extension PickerTableViewController: EmeraldPickerDelegate, EmeraldPickerDataSou
     }
     
 }
-
