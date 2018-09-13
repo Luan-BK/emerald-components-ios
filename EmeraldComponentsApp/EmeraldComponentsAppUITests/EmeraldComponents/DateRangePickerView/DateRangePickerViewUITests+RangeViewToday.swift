@@ -12,6 +12,8 @@ extension DateRangePickerViewUITests {
 
     func test_1_rangePicker_today() {
         
+        self.launch()
+        
         XCTContext.runActivity(named: "Select today range picker") { _ in
             tablesQuery.buttons["Filter"].tap()
             tablesQuery.staticTexts["Today"].tap()
