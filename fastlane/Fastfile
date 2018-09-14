@@ -12,28 +12,30 @@ platform :ios do
 
     desc "Run tests"
     lane :test do
+    	pod_install
+		lint
         unit_tests
         ui_tests
+        coverage
     end
 
 	desc "Unit Tests"
-	lane :unit_tests do
-        pod_install
-		lint
+	lane :unit_tests do        
 		scan(
 			scheme: "EmeraldComponents", 
-			devices: "iPhone 8",
+			devices: ["iPhone 8", "iPhone X"],
 			code_coverage: true,
 			clean: true
 		)
-		coverage
 	end
 
     desc "UI Tests"
     lane :ui_tests do
         scan(
             scheme: "EmeraldComponentsApp", 
-            devices: "iPhone 8"
+            devices: ["iPhone 8", "iPhone X"],
+            code_coverage: true,
+			clean: true
         )
     end
 
