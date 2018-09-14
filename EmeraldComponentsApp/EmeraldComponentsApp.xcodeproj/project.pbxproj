@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A23413DB2147122A009DC2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23413C32147122A009DC2FC /* Assets.xcassets */; };
+		A23413DC2147122A009DC2FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23413C42147122A009DC2FC /* LaunchScreen.storyboard */; };
+		A23413DE2147122A009DC2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23413C82147122A009DC2FC /* AppDelegate.swift */; };
+		A23413E02147122A009DC2FC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23413CA2147122A009DC2FC /* MainViewController.swift */; };
+		A23413E12147122A009DC2FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23413CB2147122A009DC2FC /* Main.storyboard */; };
+		A23413E22147122A009DC2FC /* Buttons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23413CF2147122A009DC2FC /* Buttons.storyboard */; };
+		A23413E52147122A009DC2FC /* InputTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23413D42147122A009DC2FC /* InputTableViewController.swift */; };
+		A23413E62147122A009DC2FC /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23413D52147122A009DC2FC /* Input.storyboard */; };
+		A23413E82147122A009DC2FC /* PickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23413D82147122A009DC2FC /* PickerView.storyboard */; };
+		A23E8AC92148377C00933AC1 /* InputUITests+CNPJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AC82148377C00933AC1 /* InputUITests+CNPJ.swift */; };
+		A23E8ACB21483A5F00933AC1 /* InputUITests+CPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8ACA21483A5F00933AC1 /* InputUITests+CPF.swift */; };
+		A23E8ACD2148407000933AC1 /* InputUITests+Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8ACC2148407000933AC1 /* InputUITests+Phone.swift */; };
+		A23E8ACF2148440D00933AC1 /* InputUITests+CEP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8ACE2148440D00933AC1 /* InputUITests+CEP.swift */; };
+		A23E8AD12148452900933AC1 /* InputUITests+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD02148452900933AC1 /* InputUITests+Custom.swift */; };
+		A23E8AD321484AE000933AC1 /* InputUITests+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD221484AE000933AC1 /* InputUITests+Currency.swift */; };
+		A23E8AD521484C9D00933AC1 /* InputUITests+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD421484C9D00933AC1 /* InputUITests+Email.swift */; };
+		A23E8AD72148527000933AC1 /* InputUITests+Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD62148527000933AC1 /* InputUITests+Password.swift */; };
+		A23E8AD921485BC800933AC1 /* InputUITests+Disabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD821485BC800933AC1 /* InputUITests+Disabled.swift */; };
+		A23E8ADC214863A500933AC1 /* PickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8ADB214863A500933AC1 /* PickerUITests.swift */; };
+		A23E8AE2214868C600933AC1 /* PickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AE1214868C600933AC1 /* PickerTableViewController.swift */; };
+		A23E8AE52148696F00933AC1 /* PickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AE42148696F00933AC1 /* PickerData.swift */; };
+		A23E8AEB2149A97C00933AC1 /* DateRangePickerViewUITests+RangeViewToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AEA2149A97C00933AC1 /* DateRangePickerViewUITests+RangeViewToday.swift */; };
+		A23E8AEE2149AA8A00933AC1 /* DateRangePickerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AED2149AA8A00933AC1 /* DateRangePickerViewUITests.swift */; };
+		A23E8AF32149AC5C00933AC1 /* DateRangePickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23E8AF22149AC5C00933AC1 /* DateRangePickerView.storyboard */; };
+		A23E8AF52149ACBC00933AC1 /* DateRangePickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AF42149ACBC00933AC1 /* DateRangePickerTableViewController.swift */; };
+		A2C9B4FB21471B1700634344 /* InputUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B4FA21471B1700634344 /* InputUITests.swift */; };
+		A2C9B50821471D2500634344 /* InputMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50721471D2500634344 /* InputMask.framework */; };
+		A2C9B50A21471D2500634344 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; };
+		A2C9B50B21471D7500634344 /* EmeraldComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50221471BE100634344 /* EmeraldComponents.framework */; };
+		A2C9B50C21471D7500634344 /* EmeraldComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50221471BE100634344 /* EmeraldComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2C9B50E21471DD000634344 /* InputMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50721471D2500634344 /* InputMask.framework */; };
+		A2C9B50F21471DD000634344 /* InputMask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50721471D2500634344 /* InputMask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2C9B51021471DD000634344 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; };
+		A2C9B51121471DD000634344 /* JTAppleCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2C9B4FD21471B1700634344 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A234139621471174009DC2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A234139D21471174009DC2FC;
+			remoteInfo = EmeraldComponentsApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2C9B50D21471D7600634344 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2C9B50C21471D7500634344 /* EmeraldComponents.framework in Embed Frameworks */,
+				A2C9B51121471DD000634344 /* JTAppleCalendar.framework in Embed Frameworks */,
+				A2C9B50F21471DD000634344 /* InputMask.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A234139E21471174009DC2FC /* EmeraldComponentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmeraldComponentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A23413C32147122A009DC2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A23413C52147122A009DC2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A23413C82147122A009DC2FC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A23413C92147122A009DC2FC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A23413CA2147122A009DC2FC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A23413CC2147122A009DC2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A23413CF2147122A009DC2FC /* Buttons.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Buttons.storyboard; sourceTree = "<group>"; };
+		A23413D42147122A009DC2FC /* InputTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewController.swift; sourceTree = "<group>"; };
+		A23413D52147122A009DC2FC /* Input.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
+		A23413D82147122A009DC2FC /* PickerView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PickerView.storyboard; sourceTree = "<group>"; };
+		A23E8AC82148377C00933AC1 /* InputUITests+CNPJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+CNPJ.swift"; sourceTree = "<group>"; };
+		A23E8ACA21483A5F00933AC1 /* InputUITests+CPF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+CPF.swift"; sourceTree = "<group>"; };
+		A23E8ACC2148407000933AC1 /* InputUITests+Phone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Phone.swift"; sourceTree = "<group>"; };
+		A23E8ACE2148440D00933AC1 /* InputUITests+CEP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+CEP.swift"; sourceTree = "<group>"; };
+		A23E8AD02148452900933AC1 /* InputUITests+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Custom.swift"; sourceTree = "<group>"; };
+		A23E8AD221484AE000933AC1 /* InputUITests+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Currency.swift"; sourceTree = "<group>"; };
+		A23E8AD421484C9D00933AC1 /* InputUITests+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Email.swift"; sourceTree = "<group>"; };
+		A23E8AD62148527000933AC1 /* InputUITests+Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Password.swift"; sourceTree = "<group>"; };
+		A23E8AD821485BC800933AC1 /* InputUITests+Disabled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Disabled.swift"; sourceTree = "<group>"; };
+		A23E8ADB214863A500933AC1 /* PickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerUITests.swift; sourceTree = "<group>"; };
+		A23E8AE1214868C600933AC1 /* PickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTableViewController.swift; sourceTree = "<group>"; };
+		A23E8AE42148696F00933AC1 /* PickerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerData.swift; sourceTree = "<group>"; };
+		A23E8AEA2149A97C00933AC1 /* DateRangePickerViewUITests+RangeViewToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateRangePickerViewUITests+RangeViewToday.swift"; sourceTree = "<group>"; };
+		A23E8AED2149AA8A00933AC1 /* DateRangePickerViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePickerViewUITests.swift; sourceTree = "<group>"; };
+		A23E8AF22149AC5C00933AC1 /* DateRangePickerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateRangePickerView.storyboard; sourceTree = "<group>"; };
+		A23E8AF42149ACBC00933AC1 /* DateRangePickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePickerTableViewController.swift; sourceTree = "<group>"; };
+		A2C9B4F821471B1700634344 /* EmeraldComponentsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmeraldComponentsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C9B4FA21471B1700634344 /* InputUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputUITests.swift; sourceTree = "<group>"; };
+		A2C9B4FC21471B1700634344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2C9B50221471BE100634344 /* EmeraldComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EmeraldComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C9B50721471D2500634344 /* InputMask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = InputMask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C9B50921471D2500634344 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A234139B21471174009DC2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2C9B50821471D2500634344 /* InputMask.framework in Frameworks */,
+				A2C9B50A21471D2500634344 /* JTAppleCalendar.framework in Frameworks */,
+				A2C9B50B21471D7500634344 /* EmeraldComponents.framework in Frameworks */,
+				A2C9B50E21471DD000634344 /* InputMask.framework in Frameworks */,
+				A2C9B51021471DD000634344 /* JTAppleCalendar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2C9B4F521471B1700634344 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A234139521471174009DC2FC = {
+			isa = PBXGroup;
+			children = (
+				A23413C12147122A009DC2FC /* EmeraldComponentsApp */,
+				A2C9B4F921471B1700634344 /* EmeraldComponentsAppUITests */,
+				A234139F21471174009DC2FC /* Products */,
+				A2C9B4F12147174500634344 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A234139F21471174009DC2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A234139E21471174009DC2FC /* EmeraldComponentsApp.app */,
+				A2C9B4F821471B1700634344 /* EmeraldComponentsAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A23413C12147122A009DC2FC /* EmeraldComponentsApp */ = {
+			isa = PBXGroup;
+			children = (
+				A23413CA2147122A009DC2FC /* MainViewController.swift */,
+				A23413CB2147122A009DC2FC /* Main.storyboard */,
+				A23E8AE32148695F00933AC1 /* Commons */,
+				A23E8AF02149AB8C00933AC1 /* Components */,
+				A23413C22147122A009DC2FC /* Resources */,
+			);
+			path = EmeraldComponentsApp;
+			sourceTree = "<group>";
+		};
+		A23413C22147122A009DC2FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A23413C32147122A009DC2FC /* Assets.xcassets */,
+				A23413C42147122A009DC2FC /* LaunchScreen.storyboard */,
+				A23413C82147122A009DC2FC /* AppDelegate.swift */,
+				A23413C92147122A009DC2FC /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A23413CD2147122A009DC2FC /* EmeraldUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A23413CE2147122A009DC2FC /* Buttons */,
+				A23413D32147122A009DC2FC /* Input */,
+				A23413D62147122A009DC2FC /* Picker */,
+			);
+			path = EmeraldUIKit;
+			sourceTree = "<group>";
+		};
+		A23413CE2147122A009DC2FC /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A23413CF2147122A009DC2FC /* Buttons.storyboard */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		A23413D32147122A009DC2FC /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				A23413D42147122A009DC2FC /* InputTableViewController.swift */,
+				A23413D52147122A009DC2FC /* Input.storyboard */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		A23413D62147122A009DC2FC /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				A23413D82147122A009DC2FC /* PickerView.storyboard */,
+				A23E8AE1214868C600933AC1 /* PickerTableViewController.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		A23E8AC32147F79400933AC1 /* EmeraldUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A23E8ADA2148637800933AC1 /* Picker */,
+				A23E8AC72148375700933AC1 /* Inputs */,
+			);
+			path = EmeraldUIKit;
+			sourceTree = "<group>";
+		};
+		A23E8AC42147F7BA00933AC1 /* EmeraldComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A23E8AEC2149AA5900933AC1 /* DateRangePickerView */,
+			);
+			path = EmeraldComponents;
+			sourceTree = "<group>";
+		};
+		A23E8AC72148375700933AC1 /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				A2C9B4FA21471B1700634344 /* InputUITests.swift */,
+				A23E8AD821485BC800933AC1 /* InputUITests+Disabled.swift */,
+				A23E8AD62148527000933AC1 /* InputUITests+Password.swift */,
+				A23E8ACA21483A5F00933AC1 /* InputUITests+CPF.swift */,
+				A23E8AC82148377C00933AC1 /* InputUITests+CNPJ.swift */,
+				A23E8AD421484C9D00933AC1 /* InputUITests+Email.swift */,
+				A23E8ACC2148407000933AC1 /* InputUITests+Phone.swift */,
+				A23E8ACE2148440D00933AC1 /* InputUITests+CEP.swift */,
+				A23E8AD221484AE000933AC1 /* InputUITests+Currency.swift */,
+				A23E8AD02148452900933AC1 /* InputUITests+Custom.swift */,
+			);
+			path = Inputs;
+			sourceTree = "<group>";
+		};
+		A23E8ADA2148637800933AC1 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				A23E8ADB214863A500933AC1 /* PickerUITests.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		A23E8AE32148695F00933AC1 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				A23E8AE42148696F00933AC1 /* PickerData.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		A23E8AEC2149AA5900933AC1 /* DateRangePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A23E8AED2149AA8A00933AC1 /* DateRangePickerViewUITests.swift */,
+				A23E8AEA2149A97C00933AC1 /* DateRangePickerViewUITests+RangeViewToday.swift */,
+			);
+			path = DateRangePickerView;
+			sourceTree = "<group>";
+		};
+		A23E8AEF2149AB7A00933AC1 /* EmeraldComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A23E8AF12149AC0500933AC1 /* DateRangePickerView */,
+			);
+			path = EmeraldComponents;
+			sourceTree = "<group>";
+		};
+		A23E8AF02149AB8C00933AC1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A23413CD2147122A009DC2FC /* EmeraldUIKit */,
+				A23E8AEF2149AB7A00933AC1 /* EmeraldComponents */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A23E8AF12149AC0500933AC1 /* DateRangePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A23E8AF22149AC5C00933AC1 /* DateRangePickerView.storyboard */,
+				A23E8AF42149ACBC00933AC1 /* DateRangePickerTableViewController.swift */,
+			);
+			path = DateRangePickerView;
+			sourceTree = "<group>";
+		};
+		A2C9B4F12147174500634344 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2C9B50721471D2500634344 /* InputMask.framework */,
+				A2C9B50921471D2500634344 /* JTAppleCalendar.framework */,
+				A2C9B50221471BE100634344 /* EmeraldComponents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2C9B4F921471B1700634344 /* EmeraldComponentsAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A23E8AC42147F7BA00933AC1 /* EmeraldComponents */,
+				A23E8AC32147F79400933AC1 /* EmeraldUIKit */,
+				A2C9B4FC21471B1700634344 /* Info.plist */,
+			);
+			path = EmeraldComponentsAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A234139D21471174009DC2FC /* EmeraldComponentsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A23413BB21471177009DC2FC /* Build configuration list for PBXNativeTarget "EmeraldComponentsApp" */;
+			buildPhases = (
+				A234139A21471174009DC2FC /* Sources */,
+				A234139B21471174009DC2FC /* Frameworks */,
+				A234139C21471174009DC2FC /* Resources */,
+				A2C9B50D21471D7600634344 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmeraldComponentsApp;
+			productName = EmeraldComponentsApp;
+			productReference = A234139E21471174009DC2FC /* EmeraldComponentsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2C9B4F721471B1700634344 /* EmeraldComponentsAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2C9B4FF21471B1700634344 /* Build configuration list for PBXNativeTarget "EmeraldComponentsAppUITests" */;
+			buildPhases = (
+				A2C9B4F421471B1700634344 /* Sources */,
+				A2C9B4F521471B1700634344 /* Frameworks */,
+				A2C9B4F621471B1700634344 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2C9B4FE21471B1700634344 /* PBXTargetDependency */,
+			);
+			name = EmeraldComponentsAppUITests;
+			productName = EmeraldComponentsAppUITests;
+			productReference = A2C9B4F821471B1700634344 /* EmeraldComponentsAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A234139621471174009DC2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = StoneCo;
+				TargetAttributes = {
+					A234139D21471174009DC2FC = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					A2C9B4F721471B1700634344 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = A234139D21471174009DC2FC;
+					};
+				};
+			};
+			buildConfigurationList = A234139921471174009DC2FC /* Build configuration list for PBXProject "EmeraldComponentsApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"pt-BR",
+			);
+			mainGroup = A234139521471174009DC2FC;
+			productRefGroup = A234139F21471174009DC2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A234139D21471174009DC2FC /* EmeraldComponentsApp */,
+				A2C9B4F721471B1700634344 /* EmeraldComponentsAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A234139C21471174009DC2FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A23413E22147122A009DC2FC /* Buttons.storyboard in Resources */,
+				A23413E12147122A009DC2FC /* Main.storyboard in Resources */,
+				A23E8AF32149AC5C00933AC1 /* DateRangePickerView.storyboard in Resources */,
+				A23413DB2147122A009DC2FC /* Assets.xcassets in Resources */,
+				A23413DC2147122A009DC2FC /* LaunchScreen.storyboard in Resources */,
+				A23413E82147122A009DC2FC /* PickerView.storyboard in Resources */,
+				A23413E62147122A009DC2FC /* Input.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2C9B4F621471B1700634344 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A234139A21471174009DC2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A23413E52147122A009DC2FC /* InputTableViewController.swift in Sources */,
+				A23E8AF52149ACBC00933AC1 /* DateRangePickerTableViewController.swift in Sources */,
+				A23413DE2147122A009DC2FC /* AppDelegate.swift in Sources */,
+				A23E8AE52148696F00933AC1 /* PickerData.swift in Sources */,
+				A23413E02147122A009DC2FC /* MainViewController.swift in Sources */,
+				A23E8AE2214868C600933AC1 /* PickerTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2C9B4F421471B1700634344 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A23E8ACF2148440D00933AC1 /* InputUITests+CEP.swift in Sources */,
+				A23E8AD72148527000933AC1 /* InputUITests+Password.swift in Sources */,
+				A23E8AEE2149AA8A00933AC1 /* DateRangePickerViewUITests.swift in Sources */,
+				A23E8AD921485BC800933AC1 /* InputUITests+Disabled.swift in Sources */,
+				A2C9B4FB21471B1700634344 /* InputUITests.swift in Sources */,
+				A23E8ACD2148407000933AC1 /* InputUITests+Phone.swift in Sources */,
+				A23E8AEB2149A97C00933AC1 /* DateRangePickerViewUITests+RangeViewToday.swift in Sources */,
+				A23E8AD321484AE000933AC1 /* InputUITests+Currency.swift in Sources */,
+				A23E8ADC214863A500933AC1 /* PickerUITests.swift in Sources */,
+				A23E8ACB21483A5F00933AC1 /* InputUITests+CPF.swift in Sources */,
+				A23E8AC92148377C00933AC1 /* InputUITests+CNPJ.swift in Sources */,
+				A23E8AD12148452900933AC1 /* InputUITests+Custom.swift in Sources */,
+				A23E8AD521484C9D00933AC1 /* InputUITests+Email.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2C9B4FE21471B1700634344 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A234139D21471174009DC2FC /* EmeraldComponentsApp */;
+			targetProxy = A2C9B4FD21471B1700634344 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A23413C42147122A009DC2FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A23413C52147122A009DC2FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A23413CB2147122A009DC2FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A23413CC2147122A009DC2FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A23413B921471177009DC2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A23413BA21471177009DC2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A23413BC21471177009DC2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q54VRJ624;
+				INFOPLIST_FILE = "$(SRCROOT)/EmeraldComponentsApp/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.stone.EmeraldComponentsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A23413BD21471177009DC2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q54VRJ624;
+				INFOPLIST_FILE = "$(SRCROOT)/EmeraldComponentsApp/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.stone.EmeraldComponentsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A2C9B50021471B1700634344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q54VRJ624;
+				INFOPLIST_FILE = EmeraldComponentsAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.stone.EmeraldComponentsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EmeraldComponentsApp;
+			};
+			name = Debug;
+		};
+		A2C9B50121471B1700634344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q54VRJ624;
+				INFOPLIST_FILE = EmeraldComponentsAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.stone.EmeraldComponentsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EmeraldComponentsApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A234139921471174009DC2FC /* Build configuration list for PBXProject "EmeraldComponentsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A23413B921471177009DC2FC /* Debug */,
+				A23413BA21471177009DC2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A23413BB21471177009DC2FC /* Build configuration list for PBXNativeTarget "EmeraldComponentsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A23413BC21471177009DC2FC /* Debug */,
+				A23413BD21471177009DC2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2C9B4FF21471B1700634344 /* Build configuration list for PBXNativeTarget "EmeraldComponentsAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2C9B50021471B1700634344 /* Debug */,
+				A2C9B50121471B1700634344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A234139621471174009DC2FC /* Project object */;
+}

@@ -29,12 +29,12 @@
                                             <outlet property="delegate" destination="soX-9b-Djv" id="0jH-AP-cwn"/>
                                         </connections>
                                     </searchBar>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9b-67-CDb">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9b-67-CDb">
+                                        <rect key="frame" x="8" y="0.0" width="304" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="Lb3-oo-i6h"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="quI-VZ-IAX"/>
+                                            <constraint firstAttribute="height" constant="44" id="Vup-lG-Nhw"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Cancelar"/>
                                         <connections>
                                             <action selector="cancelButtonTouched" destination="soX-9b-Djv" eventType="touchUpInside" id="bxa-Jj-Reb"/>
@@ -51,15 +51,16 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="c4B-JB-bh2" firstAttribute="leading" secondItem="1Ba-wz-SmO" secondAttribute="leading" id="0Ii-iz-n8Z"/>
+                                    <constraint firstItem="D9b-67-CDb" firstAttribute="top" secondItem="1Ba-wz-SmO" secondAttribute="top" id="63L-d0-vBM"/>
                                     <constraint firstItem="cQ7-wS-8p3" firstAttribute="leading" secondItem="1Ba-wz-SmO" secondAttribute="leading" id="7YZ-wi-MqE"/>
-                                    <constraint firstAttribute="trailing" secondItem="D9b-67-CDb" secondAttribute="trailing" constant="240" id="8r4-oh-CJY"/>
+                                    <constraint firstAttribute="trailing" secondItem="D9b-67-CDb" secondAttribute="trailing" constant="8" id="L8z-zl-J3a"/>
                                     <constraint firstAttribute="height" constant="100" id="LRI-lI-Pio"/>
-                                    <constraint firstItem="D9b-67-CDb" firstAttribute="top" secondItem="1Ba-wz-SmO" secondAttribute="top" id="Lmc-fa-eIt"/>
+                                    <constraint firstItem="D9b-67-CDb" firstAttribute="leading" secondItem="1Ba-wz-SmO" secondAttribute="leading" constant="8" id="MBy-rG-gcj"/>
                                     <constraint firstAttribute="trailing" secondItem="c4B-JB-bh2" secondAttribute="trailing" id="MMb-EA-lzk"/>
-                                    <constraint firstItem="D9b-67-CDb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1Ba-wz-SmO" secondAttribute="leading" id="NAO-Tv-3Lp"/>
                                     <constraint firstAttribute="bottom" secondItem="cQ7-wS-8p3" secondAttribute="bottom" id="NKO-rZ-aiR"/>
                                     <constraint firstAttribute="bottom" secondItem="c4B-JB-bh2" secondAttribute="bottom" id="NMK-Wd-znS"/>
                                     <constraint firstAttribute="trailing" secondItem="cQ7-wS-8p3" secondAttribute="trailing" id="PQ8-DG-GvA"/>
+                                    <constraint firstItem="cQ7-wS-8p3" firstAttribute="top" secondItem="D9b-67-CDb" secondAttribute="bottom" id="tCO-JA-V1J"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rXw-SM-hLn">

@@ -58,6 +58,9 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dica do campo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxV-Mg-xK8">
                             <rect key="frame" x="0.0" y="0.0" width="234" height="17"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" none="YES"/>
+                            </accessibility>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="8" id="xTZ-9h-LDe"/>
                             </constraints>
@@ -68,6 +71,10 @@
                     </subviews>
                 </stackView>
             </subviews>
+            <accessibility key="accessibilityConfiguration">
+                <accessibilityTraits key="traits" notEnabled="YES"/>
+                <bool key="isElement" value="NO"/>
+            </accessibility>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="uP1-qq-GhF" firstAttribute="trailing" secondItem="mMW-Xc-vZm" secondAttribute="trailing" id="62p-R8-3WQ"/>

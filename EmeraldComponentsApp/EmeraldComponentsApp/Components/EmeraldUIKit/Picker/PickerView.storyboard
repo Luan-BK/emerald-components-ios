@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DO1-SX-eXB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Picker-->
+        <scene sceneID="2BG-BW-sYs">
+            <objects>
+                <tableViewController storyboardIdentifier="PickerTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DO1-SX-eXB" customClass="PickerTableViewController" customModule="EmeraldComponentsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ySo-GG-IWA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Dnq-AW-a4p" userLabel="Footer View">
+                            <rect key="frame" x="0.0" y="329.5" width="375" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <sections>
+                            <tableViewSection headerTitle="Picker View" id="xeB-3W-LIx">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="zvT-qs-uhj">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zvT-qs-uhj" id="Moe-aU-eOn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHV-74-O2X" customClass="EmeraldPicker" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="16" y="8" width="343" height="83.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Banks"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="bottomText" value="some feedback text"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BHV-74-O2X" firstAttribute="top" secondItem="Moe-aU-eOn" secondAttribute="top" constant="8" id="GLB-hx-IgZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="BHV-74-O2X" secondAttribute="trailing" constant="16" id="NCP-Vn-adg"/>
+                                                <constraint firstItem="BHV-74-O2X" firstAttribute="leading" secondItem="Moe-aU-eOn" secondAttribute="leading" constant="16" id="PUa-qb-3jQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="BHV-74-O2X" secondAttribute="bottom" constant="8" id="eUy-cD-VGk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Search View" id="Vef-7Q-vdX">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="dzg-HG-2E0">
+                                        <rect key="frame" x="0.0" y="211.5" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dzg-HG-2E0" id="DzQ-gc-wtZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fw5-J3-W7Z" customClass="EmeraldPicker" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="32" y="15" width="311" height="49.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="List of banks"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Fw5-J3-W7Z" secondAttribute="bottom" constant="4" id="3Yn-HJ-ihA"/>
+                                                <constraint firstItem="Fw5-J3-W7Z" firstAttribute="leading" secondItem="DzQ-gc-wtZ" secondAttribute="leadingMargin" constant="16" id="G4b-pF-dW3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fw5-J3-W7Z" secondAttribute="trailing" constant="16" id="ODd-t6-wi9"/>
+                                                <constraint firstItem="Fw5-J3-W7Z" firstAttribute="top" secondItem="DzQ-gc-wtZ" secondAttribute="topMargin" constant="4" id="PEv-Aw-4Xw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="DO1-SX-eXB" id="d6T-hi-bTY"/>
+                            <outlet property="delegate" destination="DO1-SX-eXB" id="DxD-KS-TNX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Picker" largeTitleDisplayMode="never" id="XT1-ux-bjX"/>
+                    <connections>
+                        <outlet property="pickerView" destination="BHV-74-O2X" id="mvO-t4-Tv4"/>
+                        <outlet property="searchView" destination="Fw5-J3-W7Z" id="ICb-Pq-weG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMG-1b-gQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2492" y="1181.5592203898052"/>
+        </scene>
+    </scenes>
+</document>
