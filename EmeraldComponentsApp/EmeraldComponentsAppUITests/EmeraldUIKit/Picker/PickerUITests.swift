@@ -29,10 +29,10 @@ class PickerUITests: XCTestCase {
         self.launch()
         
         XCTContext.runActivity(named: "Selects bank") { _ in
+            
             // Select picker view,swipe up to select bradesco bank option
             tablesQuery.textFields["Banks"].tap()
-            app.pickerWheels["---"].swipeUp()
-            app.pickerWheels["Bradesco"].tap()
+            app.pickerWheels["---"].adjust(toPickerWheelValue: "Bradesco")
             
             // Check if the bank was selected
             let beforeChoosePickerOption = app.pickerWheels["Bradesco"]
