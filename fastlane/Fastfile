@@ -15,8 +15,8 @@ platform :ios do
     	pod_install
 		lint
         unit_tests
-        ui_tests
         coverage
+        ui_tests
     end
 
 	desc "Unit Tests"
@@ -144,6 +144,7 @@ platform :ios do
   			scheme: "EmeraldComponents",
 		 	output_directory: "xcov_output",
             exclude_targets: "JTAppleCalendar.framework, 
+            				  EmeraldComponentsApp.app,
                               InputMask.framework",
             minimum_coverage_percentage: 80.0
         )
