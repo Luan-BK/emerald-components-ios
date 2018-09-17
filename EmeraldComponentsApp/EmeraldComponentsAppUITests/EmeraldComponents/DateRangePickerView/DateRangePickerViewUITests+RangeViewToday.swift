@@ -23,6 +23,8 @@ extension DateRangePickerViewUITests {
             XCTAssertTrue(rangeValue.exists)
         }
 
+        self.attachment.fullScreenshot("Get typed search picker view screenshot", to: 1)
+        
         XCTContext.runActivity(named: "Select yesterday range picker") { _ in
             tablesQuery.buttons["Filter"].tap()
             tablesQuery.staticTexts["Yesterday"].tap()

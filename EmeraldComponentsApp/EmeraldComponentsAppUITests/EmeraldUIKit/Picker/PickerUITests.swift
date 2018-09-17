@@ -12,11 +12,13 @@ class PickerUITests: XCTestCase {
     
     let app = XCUIApplication()
     var tablesQuery: XCUIElementQuery!
+    var attachment: Attachment!
     
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
         tablesQuery = app.tables
+        attachment = Attachment()
     }
     
     func launch() {
@@ -28,6 +30,8 @@ class PickerUITests: XCTestCase {
         
         self.launch()
         
+        self.attachment.screenshot("Get picker view empty screenshot", to: 0)
+        
         XCTContext.runActivity(named: "Selects bank") { _ in
             
             // Select picker view,swipe up to select bradesco bank option
@@ -37,6 +41,8 @@ class PickerUITests: XCTestCase {
             // Check if the bank was selected
             let beforeChoosePickerOption = app.pickerWheels["Bradesco"]
             XCTAssertEqual(String(describing: beforeChoosePickerOption.value!), "Bradesco")
+            
+            self.attachment.screenshot("Get selected picker view screenshot", to: 0)
             
             // Swipe down to clean value
             app.pickerWheels["Bradesco"].swipeDown()
@@ -51,6 +57,8 @@ class PickerUITests: XCTestCase {
     
     func test_2_pickerSearch_selectBank() {
         
+        self.attachment.screenshot("Get search picker view screenshot", to: 1)
+        
         XCTContext.runActivity(named: "Select bank inside list") { _ in
             // Select bank
             tablesQuery.textFields["List of banks"].tap()
@@ -60,6 +68,8 @@ class PickerUITests: XCTestCase {
             // Check if exists
             XCTAssertNotNil(String(describing: bank))
         }
+        
+        self.attachment.screenshot("Get sealeted search picker view screenshot", to: 1)
         
         XCTContext.runActivity(named: "Choose another bank inside list") { _ in
             // Select bank
@@ -89,6 +99,8 @@ class PickerUITests: XCTestCase {
             app.keys["a"].tap()
             app.keys["n"].tap()
             app.keys["k"].tap()
+            
+            self.attachment.screenshot("Get typed search picker view screenshot", to: 1)
             
             // Check if exists
             let bank = tablesQuery.staticTexts["Bank of Brasil"]

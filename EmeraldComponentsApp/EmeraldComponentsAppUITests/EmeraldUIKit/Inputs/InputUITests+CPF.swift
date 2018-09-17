@@ -11,17 +11,10 @@ import XCTest
 extension InputUITests {
     
     func test_3_CPF() {
-        self.launch()
+        
+        self.attachment.screenshot("Get CPF empty state screenshot", to: 2)
+        
         XCTContext.runActivity(named: "Incompleted textfield") { _ in
-            
-            XCTContext.runActivity(named: "Gather CPF first state screenshots") { activity in
-                // Capture cell screen
-                let cell = app.cells.element(boundBy: 2)
-                let cellScreenshot = cell.screenshot()
-                let cellScreenshotAttachment = XCTAttachment(screenshot: cellScreenshot)
-                cellScreenshotAttachment.lifetime = .keepAlways
-                activity.add(cellScreenshotAttachment)
-            }
             
             XCTContext.runActivity(named: "Get CPF field and set value") { _ in
                 // Get textfield
@@ -50,16 +43,9 @@ extension InputUITests {
                 XCTAssertTrue(feedbackIcon.exists)
             }
             
-            XCTContext.runActivity(named: "Gather CPF second state screenshots") { activity in
-                // Capture cell screen
-                let cell = app.cells.element(boundBy: 2)
-                let cellScreenshot = cell.screenshot()
-                let cellScreenshotAttachment = XCTAttachment(screenshot: cellScreenshot)
-                cellScreenshotAttachment.lifetime = .keepAlways
-                activity.add(cellScreenshotAttachment)
-            }
-            
         }
+        
+        self.attachment.screenshot("Get CPF error state screenshot", to: 2)
         
         XCTContext.runActivity(named: "Fill textfield") { _ in
             
@@ -76,14 +62,7 @@ extension InputUITests {
             
         }
         
-        XCTContext.runActivity(named: "Gather CPF thrid state screenshots") { activity in
-            // Capture cell screen
-            let cell = app.cells.element(boundBy: 2)
-            let cellScreenshot = cell.screenshot()
-            let cellScreenshotAttachment = XCTAttachment(screenshot: cellScreenshot)
-            cellScreenshotAttachment.lifetime = .keepAlways
-            activity.add(cellScreenshotAttachment)
-        }
+        self.attachment.screenshot("Get CPF success state screenshot", to: 2)
         
         XCTContext.runActivity(named: "Clean textfield") { _ in
             
