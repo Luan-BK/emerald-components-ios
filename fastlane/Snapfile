@@ -7,10 +7,10 @@ devices([
 ])
 
 # A list of languages which should be used
-languages([
-  	"en-US",
-  	["pt", "pt_BR"]
-])
+# languages([
+#   	"en-US",
+#   	["pt", "pt_BR"]
+# ])
 
 # The name of the scheme which contains the UI Tests
 scheme("EmeraldComponentsApp")
