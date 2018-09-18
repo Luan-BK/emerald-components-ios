@@ -16,10 +16,10 @@ platform :ios do
 		lint
         unit_tests
         coverage
-        ui_tests
+        screenshots
     end
 
-	desc "Unit Tests"
+	desc "Run Unit Tests"
 	lane :unit_tests do        
 		scan(
 			scheme: "EmeraldComponents", 
@@ -28,16 +28,6 @@ platform :ios do
 			clean: true
 		)
 	end
-
-    desc "UI Tests"
-    lane :ui_tests do
-        scan(
-            scheme: "EmeraldComponentsApp", 
-            devices: ["iPhone 8", "iPhone X"],
-            code_coverage: true,
-			clean: true
-        )
-    end
 
 	desc "Deploy a new version"
     lane :release do
@@ -48,6 +38,11 @@ platform :ios do
         release_cocoapods
         commit
     end
+
+    desc "Run UITests and get screenshots"
+    lane :screenshots do
+	  	capture_screenshots
+	end
 
     desc "set target to get version number"
     lane :projet_version do
