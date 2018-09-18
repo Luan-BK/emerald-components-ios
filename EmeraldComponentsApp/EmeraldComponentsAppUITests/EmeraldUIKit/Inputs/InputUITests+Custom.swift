@@ -12,7 +12,7 @@ extension InputUITests {
     
     func test_9_custom() {
 
-        self.attachment.screenshot("Get custom empty screenshot", to: 8)
+        self.attachment.screenshot("Input-21: Get custom empty screenshot", to: 8)
         
         XCTContext.runActivity(named: "Fill textfield") { _ in
             
@@ -36,7 +36,7 @@ extension InputUITests {
             
         }
         
-        self.attachment.screenshot("Get custom success screenshot", to: 8)
+        self.attachment.screenshot("Input-22: Get custom success screenshot", to: 8)
         
         XCTContext.runActivity(named: "Clean textfield") { _ in
             

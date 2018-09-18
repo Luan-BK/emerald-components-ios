@@ -12,7 +12,7 @@ extension InputUITests {
     
     func test_8_currency() {
 
-        self.attachment.screenshot("Get currency empty state screenshot", to: 7)
+        self.attachment.screenshot("Input-19: Get currency empty state screenshot", to: 7)
         
         XCTContext.runActivity(named: "fill textfield") { _ in
             
@@ -40,7 +40,7 @@ extension InputUITests {
             
         }
         
-        self.attachment.screenshot("Get currency success state screenshot", to: 7)
+        self.attachment.screenshot("Input-20: Get currency success state screenshot", to: 7)
         
         XCTContext.runActivity(named: "Clean textfield") { _ in
             

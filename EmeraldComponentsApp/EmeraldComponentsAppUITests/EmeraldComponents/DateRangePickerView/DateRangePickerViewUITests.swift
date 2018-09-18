@@ -12,17 +12,18 @@ class DateRangePickerViewUITests: XCTestCase {
     
     let app = XCUIApplication()
     var tablesQuery: XCUIElementQuery!
-    var attachment: Attachment!
+    var attachment: AttachmentHelper!
     
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
         tablesQuery = app.tables
-        attachment = Attachment()
+        attachment = AttachmentHelper()
     }
     
     func launch() {
-        XCUIApplication().launch()
+        setupSnapshot(app)
+        app.launch()
         tablesQuery.staticTexts["Date Range Picker"].tap()
     }
     

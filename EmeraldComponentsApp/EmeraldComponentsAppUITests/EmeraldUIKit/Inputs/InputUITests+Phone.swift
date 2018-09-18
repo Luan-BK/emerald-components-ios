@@ -12,7 +12,7 @@ extension InputUITests {
     
     func test_6_phoneNumber() {
         
-        self.attachment.screenshot("Get phone number empty state screenshot", to: 5)
+        self.attachment.screenshot("Input-13: Get phone number empty state screenshot", to: 5)
         
         XCTContext.runActivity(named: "Incompleted textfield") { _ in
             
@@ -46,7 +46,7 @@ extension InputUITests {
             
         }
         
-        self.attachment.screenshot("Get phone number warning state screenshot", to: 5)
+        self.attachment.screenshot("Input-14: Get phone number warning state screenshot", to: 5)
         
         XCTContext.runActivity(named: "Fill textfield") { _ in
             
@@ -63,7 +63,7 @@ extension InputUITests {
             
         }
         
-        self.attachment.screenshot("Get phone number success state screenshot", to: 5)
+        self.attachment.screenshot("Input-15: Get phone number success state screenshot", to: 5)
         
         XCTContext.runActivity(named: "Clean textfield") { _ in
             

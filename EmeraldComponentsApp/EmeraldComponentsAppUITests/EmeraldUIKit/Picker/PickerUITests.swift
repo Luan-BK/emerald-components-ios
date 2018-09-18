@@ -12,17 +12,18 @@ class PickerUITests: XCTestCase {
     
     let app = XCUIApplication()
     var tablesQuery: XCUIElementQuery!
-    var attachment: Attachment!
+    var attachment: AttachmentHelper!
     
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
         tablesQuery = app.tables
-        attachment = Attachment()
+        attachment = AttachmentHelper()
     }
     
     func launch() {
-        XCUIApplication().launch()
+        setupSnapshot(app)
+        app.launch()
         tablesQuery.staticTexts["Picker"].tap()
     }
     
@@ -30,7 +31,7 @@ class PickerUITests: XCTestCase {
         
         self.launch()
         
-        self.attachment.screenshot("Get picker view empty screenshot", to: 0)
+        self.attachment.screenshot("DatePickerView-1: Get picker view empty screenshot", to: 0)
         
         XCTContext.runActivity(named: "Selects bank") { _ in
             
@@ -42,7 +43,7 @@ class PickerUITests: XCTestCase {
             let beforeChoosePickerOption = app.pickerWheels["Bradesco"]
             XCTAssertEqual(String(describing: beforeChoosePickerOption.value!), "Bradesco")
             
-            self.attachment.screenshot("Get selected picker view screenshot", to: 0)
+            self.attachment.screenshot("DatePickerView-2: Get selected picker view screenshot", to: 0)
             
             // Swipe down to clean value
             app.pickerWheels["Bradesco"].swipeDown()
@@ -57,7 +58,7 @@ class PickerUITests: XCTestCase {
     
     func test_2_pickerSearch_selectBank() {
         
-        self.attachment.screenshot("Get search picker view screenshot", to: 1)
+        self.attachment.screenshot("DatePickerView-3: Get search picker view screenshot", to: 1)
         
         XCTContext.runActivity(named: "Select bank inside list") { _ in
             // Select bank
@@ -69,7 +70,7 @@ class PickerUITests: XCTestCase {
             XCTAssertNotNil(String(describing: bank))
         }
         
-        self.attachment.screenshot("Get sealeted search picker view screenshot", to: 1)
+        self.attachment.screenshot("DatePickerView-4: Get sealeted search picker view screenshot", to: 1)
         
         XCTContext.runActivity(named: "Choose another bank inside list") { _ in
             // Select bank
@@ -100,7 +101,7 @@ class PickerUITests: XCTestCase {
             app.keys["n"].tap()
             app.keys["k"].tap()
             
-            self.attachment.screenshot("Get typed search picker view screenshot", to: 1)
+            self.attachment.screenshot("DatePickerView-5: Get typed search picker view screenshot", to: 1)
             
             // Check if exists
             let bank = tablesQuery.staticTexts["Bank of Brasil"]

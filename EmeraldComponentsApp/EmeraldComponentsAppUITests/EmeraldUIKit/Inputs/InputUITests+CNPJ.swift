@@ -12,7 +12,7 @@ extension InputUITests {
     
     func test_4_CNPJ() {
         
-        self.attachment.screenshot("Get CNPJ empty state screenshot", to: 3)
+        self.attachment.screenshot("Input-7: Get CNPJ empty state screenshot", to: 3)
         
         XCTContext.runActivity(named: "Incompleted textfield") { _ in
             
@@ -45,7 +45,7 @@ extension InputUITests {
             
         }
         
-        self.attachment.screenshot("Get CNPJ warning state screenshot", to: 3)
+        self.attachment.screenshot("Input-8: Get CNPJ warning state screenshot", to: 3)
         
         XCTContext.runActivity(named: "Fill textfield") { _ in
             
@@ -62,7 +62,7 @@ extension InputUITests {
             
         }
         
-        self.attachment.screenshot("Get CNPJ success state screenshot", to: 3)
+        self.attachment.screenshot("Input-9: Get CNPJ success state screenshot", to: 3)
         
         XCTContext.runActivity(named: "Clean textfield") { _ in
             
