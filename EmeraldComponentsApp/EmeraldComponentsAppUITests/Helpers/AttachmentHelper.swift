@@ -1,5 +1,5 @@
 //
-//  Attachment.swift
+//  AttachmentHelper.swift
 //  EmeraldComponentsAppUITests
 //
 //  Created by João Mendes | Stone on 17/09/18.
@@ -9,7 +9,7 @@
 import Foundation
 import XCTest
 
-public struct Attachment {
+public struct AttachmentHelper {
     
     let app = XCUIApplication()
     
@@ -20,6 +20,7 @@ public struct Attachment {
             let cell = app.cells.element(boundBy: cell)
             let cellScreenshot = cell.screenshot()
             let cellScreenshotAttachment = XCTAttachment(screenshot: cellScreenshot)
+            snapshot(named)
             cellScreenshotAttachment.lifetime = .keepAlways
             activity.add(cellScreenshotAttachment)
         }
@@ -30,6 +31,7 @@ public struct Attachment {
         
         XCTContext.runActivity(named: named) { activity in
             // Capture cell screen
+            snapshot(named)
             let mainScreen = XCUIScreen.main
             let fullScreenshot = mainScreen.screenshot()
             let fullScreenshotAttachment = XCTAttachment(screenshot: fullScreenshot)
