@@ -25,17 +25,17 @@ Run tests
 ```
 fastlane ios unit_tests
 ```
-Unit Tests
-### ios ui_tests
-```
-fastlane ios ui_tests
-```
-UI Tests
+Run Unit Tests
 ### ios release
 ```
 fastlane ios release
 ```
 Deploy a new version
+### ios screenshots
+```
+fastlane ios screenshots
+```
+Run UITests and get screenshots
 ### ios projet_version
 ```
 fastlane ios projet_version

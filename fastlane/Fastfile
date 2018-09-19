@@ -12,30 +12,22 @@ platform :ios do
 
     desc "Run tests"
     lane :test do
+    	pod_install
+		lint
         unit_tests
-        ui_tests
+        coverage
+        screenshots
     end
 
-	desc "Unit Tests"
-	lane :unit_tests do
-        pod_install
-		lint
+	desc "Run Unit Tests"
+	lane :unit_tests do        
 		scan(
 			scheme: "EmeraldComponents", 
-			devices: "iPhone 8",
+			devices: ["iPhone 8", "iPhone X"],
 			code_coverage: true,
 			clean: true
 		)
-		coverage
 	end
-
-    desc "UI Tests"
-    lane :ui_tests do
-        scan(
-            scheme: "EmeraldComponentsApp", 
-            devices: "iPhone 8"
-        )
-    end
 
 	desc "Deploy a new version"
     lane :release do
@@ -46,6 +38,11 @@ platform :ios do
         release_cocoapods
         commit
     end
+
+    desc "Run UITests and get screenshots"
+    lane :screenshots do
+	  	capture_screenshots
+	end
 
     desc "set target to get version number"
     lane :projet_version do
@@ -143,6 +140,7 @@ platform :ios do
   			scheme: "EmeraldComponents",
 		 	output_directory: "xcov_output",
             exclude_targets: "JTAppleCalendar.framework, 
+            				  EmeraldComponentsApp.app,
                               InputMask.framework",
             minimum_coverage_percentage: 80.0
         )

@@ -16,6 +16,7 @@ extension DateRangePickerViewUITests {
         
         XCTContext.runActivity(named: "Select today range picker") { _ in
             tablesQuery.buttons["Filter"].tap()
+            self.attachment.fullScreenshot("DateRangePickerView-1: Get date range picker view screenshot", to: 1)
             tablesQuery.staticTexts["Today"].tap()
 
             // Check if range value exists
@@ -23,6 +24,8 @@ extension DateRangePickerViewUITests {
             XCTAssertTrue(rangeValue.exists)
         }
 
+        self.attachment.fullScreenshot("DateRangePickerView-2: Get typed date range picker view screenshot", to: 1)
+        
         XCTContext.runActivity(named: "Select yesterday range picker") { _ in
             tablesQuery.buttons["Filter"].tap()
             tablesQuery.staticTexts["Yesterday"].tap()
