@@ -31,7 +31,6 @@ platform :ios do
 
 	desc "Deploy a new version"
     lane :release do
-        test
         pod_spec_lint
         release_changelog
         release_github
