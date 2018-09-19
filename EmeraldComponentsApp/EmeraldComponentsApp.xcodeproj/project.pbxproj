@@ -41,6 +41,8 @@
 		A2C9B50F21471DD000634344 /* InputMask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50721471D2500634344 /* InputMask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2C9B51021471DD000634344 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; };
 		A2C9B51121471DD000634344 /* JTAppleCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2E64BBA21503DFF00FD1937 /* AttachmentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E64BB921503DFF00FD1937 /* AttachmentHelper.swift */; };
+		A2E64BC021516E0000FD1937 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E64BBF21516E0000FD1937 /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		A2C9B50221471BE100634344 /* EmeraldComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EmeraldComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B50721471D2500634344 /* InputMask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = InputMask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B50921471D2500634344 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2E64BB921503DFF00FD1937 /* AttachmentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentHelper.swift; sourceTree = "<group>"; };
+		A2E64BBF21516E0000FD1937 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,11 +308,21 @@
 		A2C9B4F921471B1700634344 /* EmeraldComponentsAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				A2C9B4FC21471B1700634344 /* Info.plist */,
+				A2E64BB821503DE300FD1937 /* Helpers */,
 				A23E8AC42147F7BA00933AC1 /* EmeraldComponents */,
 				A23E8AC32147F79400933AC1 /* EmeraldUIKit */,
-				A2C9B4FC21471B1700634344 /* Info.plist */,
 			);
 			path = EmeraldComponentsAppUITests;
+			sourceTree = "<group>";
+		};
+		A2E64BB821503DE300FD1937 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A2E64BBF21516E0000FD1937 /* SnapshotHelper.swift */,
+				A2E64BB921503DFF00FD1937 /* AttachmentHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,8 +456,10 @@
 				A23E8ADC214863A500933AC1 /* PickerUITests.swift in Sources */,
 				A23E8ACB21483A5F00933AC1 /* InputUITests+CPF.swift in Sources */,
 				A23E8AC92148377C00933AC1 /* InputUITests+CNPJ.swift in Sources */,
+				A2E64BBA21503DFF00FD1937 /* AttachmentHelper.swift in Sources */,
 				A23E8AD12148452900933AC1 /* InputUITests+Custom.swift in Sources */,
 				A23E8AD521484C9D00933AC1 /* InputUITests+Email.swift in Sources */,
+				A2E64BC021516E0000FD1937 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "EmeraldComponents"
-  s.version       = "0.1.1"
+  s.version       = "0.1.2"
   s.summary       = "Stone Payments iOS Emerald Components."
   s.description   = "EmeraldComponents is UI dependency for Stone Payments."
 

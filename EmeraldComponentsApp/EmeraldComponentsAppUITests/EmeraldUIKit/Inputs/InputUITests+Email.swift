@@ -12,6 +12,8 @@ extension InputUITests {
     
     func test_5_email() {
         
+        self.attachment.screenshot("Input-10: Get email empty state screenshot", to: 4)
+        
         XCTContext.runActivity(named: "fill textfield") { _ in
             
             XCTContext.runActivity(named: "Get email field and set value") { _ in
@@ -34,6 +36,8 @@ extension InputUITests {
                 
                 XCTAssertEqual(String(describing: input.value!), "componentesdocliente@stone.com.br")
             }
+            
+            self.attachment.screenshot("Input-11: Get email success state screenshot", to: 4)
             
         }
         
@@ -92,6 +96,8 @@ extension InputUITests {
                 
                 XCTAssertNotEqual(String(describing: input.value!), "componentesdocliente@stone.com.br")
             }
+            
+            self.attachment.screenshot("Input-12: Get email error state screenshot", to: 4)
             
             XCTContext.runActivity(named: "Check if email icon is success") { _ in
                 // Feedback icon

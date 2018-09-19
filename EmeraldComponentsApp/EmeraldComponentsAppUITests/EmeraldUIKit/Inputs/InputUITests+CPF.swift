@@ -12,6 +12,8 @@ extension InputUITests {
     
     func test_3_CPF() {
         
+        self.attachment.screenshot("Input-4: Get CPF empty state screenshot", to: 2)
+        
         XCTContext.runActivity(named: "Incompleted textfield") { _ in
             
             XCTContext.runActivity(named: "Get CPF field and set value") { _ in
@@ -43,6 +45,8 @@ extension InputUITests {
             
         }
         
+        self.attachment.screenshot("Input-5: Get CPF error state screenshot", to: 2)
+        
         XCTContext.runActivity(named: "Fill textfield") { _ in
             
             XCTContext.runActivity(named: "Completes textfield") { _ in
@@ -57,6 +61,8 @@ extension InputUITests {
             }
             
         }
+        
+        self.attachment.screenshot("Input-6: Get CPF success state screenshot", to: 2)
         
         XCTContext.runActivity(named: "Clean textfield") { _ in
             

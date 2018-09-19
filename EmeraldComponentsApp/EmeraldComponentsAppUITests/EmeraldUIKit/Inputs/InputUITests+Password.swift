@@ -12,6 +12,8 @@ extension InputUITests {
     
     func test_2_password() {
         
+        self.attachment.screenshot("Input-1: Get password empty state screenshot", to: 1)
+        
         XCTContext.runActivity(named: "Get password field and set value") { _ in
             // Get textfield
             let input = tablesQuery.secureTextFields["Password Input"]
@@ -60,9 +62,13 @@ extension InputUITests {
             tablesQuery.buttons["icon password show"].tap()
             XCTAssertNotNil(input)
             
+            self.attachment.screenshot("Input-2: Get show password state screenshot", to: 1)
+            
             // Tap hide button
             tablesQuery.buttons["icon password hide"].tap()
             XCTAssertNotNil(input)
+            
+            self.attachment.screenshot("Input-3: Get hide password state screenshot", to: 1)
             
             // Clean textfield
             app.keys["delete"].tap()

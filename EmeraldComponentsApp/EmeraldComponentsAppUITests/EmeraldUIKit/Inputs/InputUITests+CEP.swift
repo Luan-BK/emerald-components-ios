@@ -12,6 +12,8 @@ extension InputUITests {
     
     func test_7_CEP() {
 
+        self.attachment.screenshot("Input-16: Get CEP empty state screenshot", to: 6)
+        
         XCTContext.runActivity(named: "Incompleted textfield") { _ in
             
             XCTContext.runActivity(named: "Get CEP field and set value") { _ in
@@ -43,6 +45,8 @@ extension InputUITests {
             
         }
         
+        self.attachment.screenshot("Input-17: Get CEP warning state screenshot", to: 6)
+        
         XCTContext.runActivity(named: "Fill textfield") { _ in
             
             XCTContext.runActivity(named: "Completes textfield") { _ in
@@ -57,6 +61,8 @@ extension InputUITests {
             }
             
         }
+        
+        self.attachment.screenshot("Input-18: Get CEP success state screenshot", to: 6)
         
         XCTContext.runActivity(named: "Clean textfield") { _ in
             
