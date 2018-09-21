@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kVl-pi-KMA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Simulador de vendas-->
+        <scene sceneID="9O7-vR-Roy">
+            <objects>
+                <tableViewController storyboardIdentifier="SalesSimulationTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kVl-pi-KMA" customClass="SalesSimulationTableViewController" customModule="EmeraldComponents" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NeN-wJ-m6q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="iJN-3m-kgf">
+                            <rect key="frame" x="0.0" y="240" width="375" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ids-Rd-KGk" customClass="EmeraldButton" customModule="EmeraldComponents">
+                                    <rect key="frame" x="24" y="15" width="327" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="UhL-LK-ZB5"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="styleAdapter">
+                                            <integer key="value" value="0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                            <integer key="value" value="0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="saleSimulateEmeraldButtonAction:" destination="kVl-pi-KMA" eventType="touchUpInside" id="SBL-Bu-2Cj"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="ids-Rd-KGk" firstAttribute="centerY" secondItem="iJN-3m-kgf" secondAttribute="centerY" id="3RS-Lk-gk0"/>
+                                <constraint firstItem="ids-Rd-KGk" firstAttribute="leading" secondItem="iJN-3m-kgf" secondAttribute="leading" constant="24" id="A3v-l7-fai"/>
+                                <constraint firstAttribute="trailing" secondItem="ids-Rd-KGk" secondAttribute="trailing" constant="24" id="W1m-Hd-n6s"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection id="8D9-dJ-ZXe">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="WZA-QE-XJg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WZA-QE-XJg" id="zuE-C3-hOa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rs8-OW-KMZ" customClass="EmeraldInput" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="24" y="11" width="327" height="58"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Valor da venda"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Rs8-OW-KMZ" firstAttribute="bottom" secondItem="zuE-C3-hOa" secondAttribute="bottomMargin" id="4x4-Dh-jsT"/>
+                                                <constraint firstItem="Rs8-OW-KMZ" firstAttribute="leading" secondItem="zuE-C3-hOa" secondAttribute="leadingMargin" constant="8" id="Wui-fL-Biq"/>
+                                                <constraint firstItem="Rs8-OW-KMZ" firstAttribute="top" secondItem="zuE-C3-hOa" secondAttribute="topMargin" id="Zh9-j0-1CU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Rs8-OW-KMZ" secondAttribute="trailing" constant="8" id="gnB-Oy-x1h"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="XBC-oC-F8m">
+                                        <rect key="frame" x="0.0" y="80" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XBC-oC-F8m" id="RLE-aA-pIF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lmi-xu-NQw" customClass="EmeraldPicker" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="24" y="11" width="327" height="58"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Bandeira"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Lmi-xu-NQw" secondAttribute="bottom" id="EbD-ew-wSf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Lmi-xu-NQw" secondAttribute="trailing" constant="8" id="FB4-wx-oDD"/>
+                                                <constraint firstItem="Lmi-xu-NQw" firstAttribute="top" secondItem="RLE-aA-pIF" secondAttribute="topMargin" id="Zlh-p7-are"/>
+                                                <constraint firstItem="Lmi-xu-NQw" firstAttribute="leading" secondItem="RLE-aA-pIF" secondAttribute="leadingMargin" constant="8" id="oj6-3c-0hE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="alh-16-VPw">
+                                        <rect key="frame" x="0.0" y="160" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alh-16-VPw" id="ND2-Ld-Xex">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I48-W8-8wH" customClass="EmeraldPicker" customModule="EmeraldComponents">
+                                                    <rect key="frame" x="24" y="11" width="327" height="58"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Tipo"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="I48-W8-8wH" secondAttribute="bottom" id="0yt-ip-1mX"/>
+                                                <constraint firstItem="I48-W8-8wH" firstAttribute="top" secondItem="ND2-Ld-Xex" secondAttribute="topMargin" id="SeK-he-u9y"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="I48-W8-8wH" secondAttribute="trailing" constant="8" id="cIB-Pi-CYb"/>
+                                                <constraint firstItem="I48-W8-8wH" firstAttribute="leading" secondItem="ND2-Ld-Xex" secondAttribute="leadingMargin" constant="8" id="jAS-8P-PRR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="kVl-pi-KMA" id="r7b-Yn-VoB"/>
+                            <outlet property="delegate" destination="kVl-pi-KMA" id="dDP-Sh-GqM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Simulador de vendas" id="ita-I3-5st">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="uKJ-GH-RUf"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="amountEmeraldInput" destination="Rs8-OW-KMZ" id="7DQ-ib-vb1"/>
+                        <outlet property="brandsEmeraldInput" destination="Lmi-xu-NQw" id="J8q-mm-fdC"/>
+                        <outlet property="feesEmeraldInput" destination="I48-W8-8wH" id="N7w-kZ-LRy"/>
+                        <outlet property="feesSimulateEmeraldButton" destination="ids-Rd-KGk" id="cUf-Ol-5Ct"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYf-ev-vVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2000000000000002" y="97.601199400299862"/>
+        </scene>
+    </scenes>
+</document>

@@ -52,6 +52,19 @@
 		A24686032092631000D934BE /* CalendarCollectionCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */; };
 		A24686042092631000D934BE /* CalendarCollectionCustomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */; };
 		A250F7F52052F3500013C05D /* EmeraldComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A270033620179EF1008FBB2E /* EmeraldComponents.framework */; };
+		A2554D01215414AC006F0C5D /* SalesSimulation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2554D00215414AC006F0C5D /* SalesSimulation.storyboard */; };
+		A2554D0321541511006F0C5D /* SalesSimulationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D0221541511006F0C5D /* SalesSimulationTableViewController.swift */; };
+		A2554D09215428A8006F0C5D /* SalesSimulationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D08215428A8006F0C5D /* SalesSimulationModel.swift */; };
+		A2554D0B215428D3006F0C5D /* PickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D0A215428D3006F0C5D /* PickerData.swift */; };
+		A2554D0F215429BC006F0C5D /* SaleSimulatedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D0E215429BC006F0C5D /* SaleSimulatedModel.swift */; };
+		A2554D11215429E2006F0C5D /* SaleSimulated.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2554D10215429E2006F0C5D /* SaleSimulated.storyboard */; };
+		A2554D1321542A0E006F0C5D /* SalesSimulatedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D1221542A0E006F0C5D /* SalesSimulatedTableViewController.swift */; };
+		A2554D1721542F9D006F0C5D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D1621542F9D006F0C5D /* Double.swift */; };
+		A2554D1921556D18006F0C5D /* SalesSimulationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D1821556D18006F0C5D /* SalesSimulationViewModel.swift */; };
+		A2554D1F21556D74006F0C5D /* SalesSimulationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D1E21556D74006F0C5D /* SalesSimulationProtocol.swift */; };
+		A2554D2521556F88006F0C5D /* SalesSimulatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D2421556F88006F0C5D /* SalesSimulatedViewModel.swift */; };
+		A2554D2821559602006F0C5D /* SalesSimulatedPresentablel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D2721559602006F0C5D /* SalesSimulatedPresentablel.swift */; };
+		A2554D2A2155A470006F0C5D /* SalesSimulatedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D292155A470006F0C5D /* SalesSimulatedDelegate.swift */; };
 		A26757552097665400F66181 /* ScrollToSegmentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */; };
 		A2690C8D21370CBA007ED6B1 /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690C8F21370CBA007ED6B1 /* SearchList.storyboard */; };
 		A2690C9C21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2690C9E21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib */; };
@@ -145,6 +158,19 @@
 		A24685E720912BBB00D934BE /* WeekHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeader.swift; sourceTree = "<group>"; };
 		A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionCustomViewCell.swift; sourceTree = "<group>"; };
 		A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionCustomViewCell.xib; sourceTree = "<group>"; };
+		A2554D00215414AC006F0C5D /* SalesSimulation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SalesSimulation.storyboard; sourceTree = "<group>"; };
+		A2554D0221541511006F0C5D /* SalesSimulationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulationTableViewController.swift; sourceTree = "<group>"; };
+		A2554D08215428A8006F0C5D /* SalesSimulationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulationModel.swift; sourceTree = "<group>"; };
+		A2554D0A215428D3006F0C5D /* PickerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerData.swift; sourceTree = "<group>"; };
+		A2554D0E215429BC006F0C5D /* SaleSimulatedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleSimulatedModel.swift; sourceTree = "<group>"; };
+		A2554D10215429E2006F0C5D /* SaleSimulated.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SaleSimulated.storyboard; sourceTree = "<group>"; };
+		A2554D1221542A0E006F0C5D /* SalesSimulatedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedTableViewController.swift; sourceTree = "<group>"; };
+		A2554D1621542F9D006F0C5D /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		A2554D1821556D18006F0C5D /* SalesSimulationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulationViewModel.swift; sourceTree = "<group>"; };
+		A2554D1E21556D74006F0C5D /* SalesSimulationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulationProtocol.swift; sourceTree = "<group>"; };
+		A2554D2421556F88006F0C5D /* SalesSimulatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedViewModel.swift; sourceTree = "<group>"; };
+		A2554D2721559602006F0C5D /* SalesSimulatedPresentablel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedPresentablel.swift; sourceTree = "<group>"; };
+		A2554D292155A470006F0C5D /* SalesSimulatedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedDelegate.swift; sourceTree = "<group>"; };
 		A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToSegmentDelegate.swift; sourceTree = "<group>"; };
 		A2690C9821370D63007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchList.strings; sourceTree = "<group>"; };
 		A2690CAA21370EAB007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WeekHeader.strings; sourceTree = "<group>"; };
@@ -385,6 +411,104 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		A2554CF521540A8F006F0C5D /* SalesSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D0D21542921006F0C5D /* SaleSimulated */,
+				A2554D0C21542913006F0C5D /* SaleSimulation */,
+			);
+			path = SalesSimulator;
+			sourceTree = "<group>";
+		};
+		A2554D0C21542913006F0C5D /* SaleSimulation */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D1D21556D52006F0C5D /* Protocol */,
+				A2554D1C21556D32006F0C5D /* Model */,
+				A2554D1B21556D29006F0C5D /* ViewModel */,
+				A2554D1A21556D22006F0C5D /* View */,
+			);
+			path = SaleSimulation;
+			sourceTree = "<group>";
+		};
+		A2554D0D21542921006F0C5D /* SaleSimulated */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D26215595ED006F0C5D /* Protocol */,
+				A2554D2221556F55006F0C5D /* View */,
+				A2554D2121556F4E006F0C5D /* ViewModel */,
+				A2554D2021556F46006F0C5D /* Model */,
+			);
+			path = SaleSimulated;
+			sourceTree = "<group>";
+		};
+		A2554D1A21556D22006F0C5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D00215414AC006F0C5D /* SalesSimulation.storyboard */,
+				A2554D0221541511006F0C5D /* SalesSimulationTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2554D1B21556D29006F0C5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D1821556D18006F0C5D /* SalesSimulationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A2554D1C21556D32006F0C5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D08215428A8006F0C5D /* SalesSimulationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2554D1D21556D52006F0C5D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D1E21556D74006F0C5D /* SalesSimulationProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A2554D2021556F46006F0C5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D0E215429BC006F0C5D /* SaleSimulatedModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2554D2121556F4E006F0C5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D2421556F88006F0C5D /* SalesSimulatedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A2554D2221556F55006F0C5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D10215429E2006F0C5D /* SaleSimulated.storyboard */,
+				A2554D1221542A0E006F0C5D /* SalesSimulatedTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2554D26215595ED006F0C5D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D2721559602006F0C5D /* SalesSimulatedPresentablel.swift */,
+				A2554D292155A470006F0C5D /* SalesSimulatedDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		A26757532097660200F66181 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +603,7 @@
 		A270035020179F0E008FBB2E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A2554CF521540A8F006F0C5D /* SalesSimulator */,
 				A28DDE5720D15B4500CC61C6 /* SearchList */,
 				37C2A4F520939ADC0098E876 /* Operations */,
 				A24685DC209122F400D934BE /* Payments */,
@@ -567,6 +692,8 @@
 				A2B2F99820F9677A0035099C /* String.swift */,
 				37BF7C0D212239A100A09737 /* Date.swift */,
 				37B813142123450B003A8C8E /* UINavigationController.swift */,
+				A2554D0A215428D3006F0C5D /* PickerData.swift */,
+				A2554D1621542F9D006F0C5D /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -722,11 +849,13 @@
 				37AF650D20B8A16C00D90AE0 /* LoadingTableViewCell.xib in Resources */,
 				37BF7C0721222B4100A09737 /* Localizable.strings in Resources */,
 				A2690C8D21370CBA007ED6B1 /* SearchList.storyboard in Resources */,
+				A2554D11215429E2006F0C5D /* SaleSimulated.storyboard in Resources */,
 				A21D2A5020502EF8004CCA9A /* Assets.xcassets in Resources */,
 				A24686042092631000D934BE /* CalendarCollectionCustomViewCell.xib in Resources */,
 				A2690CF4213D8099007ED6B1 /* DateRangePicker.storyboard in Resources */,
 				A2690C9C21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib in Resources */,
 				A2690CA621370EA7007ED6B1 /* WeekHeader.xib in Resources */,
+				A2554D01215414AC006F0C5D /* SalesSimulation.storyboard in Resources */,
 				A2690D00213D811A007ED6B1 /* EmeraldInput.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -824,36 +953,47 @@
 				37C2A4FB2093A2B20098E876 /* EmeraldOperationCellViewModel.swift in Sources */,
 				A26757552097665400F66181 /* ScrollToSegmentDelegate.swift in Sources */,
 				A2690CF2213D8092007ED6B1 /* EmeraldCustomDateRangePicker.swift in Sources */,
+				A2554D2521556F88006F0C5D /* SalesSimulatedViewModel.swift in Sources */,
 				A2C43C91201F7E380067AA7E /* ColorUpdatable.swift in Sources */,
 				37C2A4F820939AF90098E876 /* EmeraldOperationTableViewCell.swift in Sources */,
 				37D2642920A0D08E006BE83D /* EmeraldButton.swift in Sources */,
 				37D2642B20A0D1B8006BE83D /* EmeraldView.swift in Sources */,
 				37B813152123450B003A8C8E /* UINavigationController.swift in Sources */,
+				A2554D0B215428D3006F0C5D /* PickerData.swift in Sources */,
 				37D2642F20A102B1006BE83D /* EmeraldTableViewCell.swift in Sources */,
 				A24685E820912BBB00D934BE /* WeekHeader.swift in Sources */,
 				37D2642D20A0D4AE006BE83D /* EmeraldTextField.swift in Sources */,
 				A2690CF3213D8092007ED6B1 /* EmeraldDateRangePicker.swift in Sources */,
 				37BF7C0E212239A100A09737 /* Date.swift in Sources */,
 				37D92CC1209CE3B700C0FD1A /* EmeraldTheme.swift in Sources */,
+				A2554D0321541511006F0C5D /* SalesSimulationTableViewController.swift in Sources */,
+				A2554D1F21556D74006F0C5D /* SalesSimulationProtocol.swift in Sources */,
 				37C2F97220A207DE001A9BCD /* PaymentListViewModel.swift in Sources */,
 				37D92CBF209CDFF700C0FD1A /* ThemeManager.swift in Sources */,
 				37AF650C20B8A16C00D90AE0 /* LoadingTableViewCell.swift in Sources */,
+				A2554D0F215429BC006F0C5D /* SaleSimulatedModel.swift in Sources */,
 				37BDFD8320D45C3900FE97A3 /* EmeraldFormController.swift in Sources */,
 				A2690D01213D811A007ED6B1 /* EmeraldInput+Delegate.swift in Sources */,
 				A2690D05213D8141007ED6B1 /* EmeraldPicker+Protocols.swift in Sources */,
 				37E0102D20D182EC00FA6410 /* UIImage.swift in Sources */,
+				A2554D09215428A8006F0C5D /* SalesSimulationModel.swift in Sources */,
 				A24686032092631000D934BE /* CalendarCollectionCustomViewCell.swift in Sources */,
 				A28DDE5F20D1601400CC61C6 /* EmeraldSearchList.swift in Sources */,
 				37E1297920DC101100B45C5A /* Bundle.swift in Sources */,
 				37E1298F20DC5A1100B45C5A /* UIResponder.swift in Sources */,
+				A2554D2A2155A470006F0C5D /* SalesSimulatedDelegate.swift in Sources */,
 				A2690D06213D8141007ED6B1 /* EmeraldPicker.swift in Sources */,
+				A2554D1921556D18006F0C5D /* SalesSimulationViewModel.swift in Sources */,
+				A2554D2821559602006F0C5D /* SalesSimulatedPresentablel.swift in Sources */,
 				A26BD5BA20BC88E50013FA24 /* HUDConstraints.swift in Sources */,
 				A2C43C8F201F7DCA0067AA7E /* CompanyTheme.swift in Sources */,
 				A28D839D208524E70041457D /* HUDHelper.swift in Sources */,
 				37BDFD7E20D43E1800FE97A3 /* EmeraldInputMask.swift in Sources */,
+				A2554D1321542A0E006F0C5D /* SalesSimulatedTableViewController.swift in Sources */,
 				375B78C520D2F5DD005F9563 /* EmeraldElementState.swift in Sources */,
 				A2C43CA0201F85BE0067AA7E /* UIColor+Palette.swift in Sources */,
 				A2098DC020D2E9AB006A10BA /* SearchListDelegate.swift in Sources */,
+				A2554D1721542F9D006F0C5D /* Double.swift in Sources */,
 				A2690CFF213D811A007ED6B1 /* EmeraldInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

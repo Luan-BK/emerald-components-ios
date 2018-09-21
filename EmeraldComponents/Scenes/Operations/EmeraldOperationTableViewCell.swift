@@ -45,4 +45,5 @@ public class EmeraldOperationTableViewCell: EmeraldTableViewCell {
         statusLabel.text = ""
         accessoryType = .none
     }
+    
 }

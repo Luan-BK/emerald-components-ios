@@ -27,7 +27,6 @@
 		A23E8AD921485BC800933AC1 /* InputUITests+Disabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AD821485BC800933AC1 /* InputUITests+Disabled.swift */; };
 		A23E8ADC214863A500933AC1 /* PickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8ADB214863A500933AC1 /* PickerUITests.swift */; };
 		A23E8AE2214868C600933AC1 /* PickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AE1214868C600933AC1 /* PickerTableViewController.swift */; };
-		A23E8AE52148696F00933AC1 /* PickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AE42148696F00933AC1 /* PickerData.swift */; };
 		A23E8AEB2149A97C00933AC1 /* DateRangePickerViewUITests+RangeViewToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AEA2149A97C00933AC1 /* DateRangePickerViewUITests+RangeViewToday.swift */; };
 		A23E8AEE2149AA8A00933AC1 /* DateRangePickerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AED2149AA8A00933AC1 /* DateRangePickerViewUITests.swift */; };
 		A23E8AF32149AC5C00933AC1 /* DateRangePickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23E8AF22149AC5C00933AC1 /* DateRangePickerView.storyboard */; };
@@ -94,7 +93,6 @@
 		A23E8AD821485BC800933AC1 /* InputUITests+Disabled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputUITests+Disabled.swift"; sourceTree = "<group>"; };
 		A23E8ADB214863A500933AC1 /* PickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerUITests.swift; sourceTree = "<group>"; };
 		A23E8AE1214868C600933AC1 /* PickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTableViewController.swift; sourceTree = "<group>"; };
-		A23E8AE42148696F00933AC1 /* PickerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerData.swift; sourceTree = "<group>"; };
 		A23E8AEA2149A97C00933AC1 /* DateRangePickerViewUITests+RangeViewToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateRangePickerViewUITests+RangeViewToday.swift"; sourceTree = "<group>"; };
 		A23E8AED2149AA8A00933AC1 /* DateRangePickerViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePickerViewUITests.swift; sourceTree = "<group>"; };
 		A23E8AF22149AC5C00933AC1 /* DateRangePickerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateRangePickerView.storyboard; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			children = (
 				A23413CA2147122A009DC2FC /* MainViewController.swift */,
 				A23413CB2147122A009DC2FC /* Main.storyboard */,
-				A23E8AE32148695F00933AC1 /* Commons */,
 				A23E8AF02149AB8C00933AC1 /* Components */,
 				A23413C22147122A009DC2FC /* Resources */,
 			);
@@ -250,14 +247,6 @@
 				A23E8ADB214863A500933AC1 /* PickerUITests.swift */,
 			);
 			path = Picker;
-			sourceTree = "<group>";
-		};
-		A23E8AE32148695F00933AC1 /* Commons */ = {
-			isa = PBXGroup;
-			children = (
-				A23E8AE42148696F00933AC1 /* PickerData.swift */,
-			);
-			path = Commons;
 			sourceTree = "<group>";
 		};
 		A23E8AEC2149AA5900933AC1 /* DateRangePickerView */ = {
@@ -435,7 +424,6 @@
 				A23413E52147122A009DC2FC /* InputTableViewController.swift in Sources */,
 				A23E8AF52149ACBC00933AC1 /* DateRangePickerTableViewController.swift in Sources */,
 				A23413DE2147122A009DC2FC /* AppDelegate.swift in Sources */,
-				A23E8AE52148696F00933AC1 /* PickerData.swift in Sources */,
 				A23413E02147122A009DC2FC /* MainViewController.swift in Sources */,
 				A23E8AE2214868C600933AC1 /* PickerTableViewController.swift in Sources */,
 			);
