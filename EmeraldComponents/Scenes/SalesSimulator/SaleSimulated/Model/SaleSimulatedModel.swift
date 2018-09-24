@@ -8,8 +8,10 @@
 
 import Foundation
 
-public struct SaleSimulatedModel: Codable {
-    public var grossAmount: Double
-    public var prepayAmount: Double
-    public var totalNetAmount: Double
+public class SaleSimulatedModel: Codable {
+    public var grossAmount: Double = 0.0
+    public var prepayAmount: Double = 0.0
+    public var totalNetAmount: Double = 0.0
+    
+    public init() { }
 }

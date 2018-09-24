@@ -17,8 +17,6 @@ public class SalesSimulatedTableViewController: UITableViewController {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var simulateAgainEmeraldButton: EmeraldButton!
     
-    private var viewModel: SalesSimulatedViewModel!
-    
     public weak var delegate: SalesSimulatedDelegate?
     
     public override func viewDidLoad() {
@@ -59,18 +57,7 @@ extension SalesSimulatedTableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 53))
-        headerView.backgroundColor = UIColor.Palette.Light.white2
-        
-        let header = UILabel()
-        header.textColor = UIColor.Palette.Dark.black3
-        header.font = UIFont.boldSystemFont(ofSize: 14)
-        header.text = "Resultado da simulação"
-        header.frame = CGRect(x: 24, y: headerView.center.y - 11, width: tableView.frame.size.width, height: 22)
-        
-        headerView.addSubview(header)
-        
-        return headerView
+        return SalesSimulatedCell.setupCell(header: "Resultado da simulação", to: tableView)
     }
     
 }
