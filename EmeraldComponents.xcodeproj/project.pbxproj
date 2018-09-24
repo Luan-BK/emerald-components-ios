@@ -61,10 +61,12 @@
 		A2554D1321542A0E006F0C5D /* SalesSimulatedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D1221542A0E006F0C5D /* SalesSimulatedTableViewController.swift */; };
 		A2554D1721542F9D006F0C5D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D1621542F9D006F0C5D /* Double.swift */; };
 		A2554D1921556D18006F0C5D /* SalesSimulationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D1821556D18006F0C5D /* SalesSimulationViewModel.swift */; };
-		A2554D1F21556D74006F0C5D /* SalesSimulationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D1E21556D74006F0C5D /* SalesSimulationProtocol.swift */; };
+		A2554D1F21556D74006F0C5D /* SalesSimulationPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D1E21556D74006F0C5D /* SalesSimulationPresentation.swift */; };
 		A2554D2521556F88006F0C5D /* SalesSimulatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D2421556F88006F0C5D /* SalesSimulatedViewModel.swift */; };
-		A2554D2821559602006F0C5D /* SalesSimulatedPresentablel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D2721559602006F0C5D /* SalesSimulatedPresentablel.swift */; };
+		A2554D2821559602006F0C5D /* SalesSimulatedPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D2721559602006F0C5D /* SalesSimulatedPresentable.swift */; };
 		A2554D2A2155A470006F0C5D /* SalesSimulatedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D292155A470006F0C5D /* SalesSimulatedDelegate.swift */; };
+		A2554D2C21591799006F0C5D /* SalesSimulationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D2B21591799006F0C5D /* SalesSimulationDelegate.swift */; };
+		A2554D302159265C006F0C5D /* SalesSimulatedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D2F2159265C006F0C5D /* SalesSimulatedCell.swift */; };
 		A26757552097665400F66181 /* ScrollToSegmentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */; };
 		A2690C8D21370CBA007ED6B1 /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690C8F21370CBA007ED6B1 /* SearchList.storyboard */; };
 		A2690C9C21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2690C9E21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib */; };
@@ -167,10 +169,12 @@
 		A2554D1221542A0E006F0C5D /* SalesSimulatedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedTableViewController.swift; sourceTree = "<group>"; };
 		A2554D1621542F9D006F0C5D /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		A2554D1821556D18006F0C5D /* SalesSimulationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulationViewModel.swift; sourceTree = "<group>"; };
-		A2554D1E21556D74006F0C5D /* SalesSimulationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulationProtocol.swift; sourceTree = "<group>"; };
+		A2554D1E21556D74006F0C5D /* SalesSimulationPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulationPresentation.swift; sourceTree = "<group>"; };
 		A2554D2421556F88006F0C5D /* SalesSimulatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedViewModel.swift; sourceTree = "<group>"; };
-		A2554D2721559602006F0C5D /* SalesSimulatedPresentablel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedPresentablel.swift; sourceTree = "<group>"; };
+		A2554D2721559602006F0C5D /* SalesSimulatedPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedPresentable.swift; sourceTree = "<group>"; };
 		A2554D292155A470006F0C5D /* SalesSimulatedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedDelegate.swift; sourceTree = "<group>"; };
+		A2554D2B21591799006F0C5D /* SalesSimulationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulationDelegate.swift; sourceTree = "<group>"; };
+		A2554D2F2159265C006F0C5D /* SalesSimulatedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedCell.swift; sourceTree = "<group>"; };
 		A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToSegmentDelegate.swift; sourceTree = "<group>"; };
 		A2690C9821370D63007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchList.strings; sourceTree = "<group>"; };
 		A2690CAA21370EAB007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WeekHeader.strings; sourceTree = "<group>"; };
@@ -470,7 +474,8 @@
 		A2554D1D21556D52006F0C5D /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				A2554D1E21556D74006F0C5D /* SalesSimulationProtocol.swift */,
+				A2554D1E21556D74006F0C5D /* SalesSimulationPresentation.swift */,
+				A2554D2B21591799006F0C5D /* SalesSimulationDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -496,6 +501,7 @@
 			children = (
 				A2554D10215429E2006F0C5D /* SaleSimulated.storyboard */,
 				A2554D1221542A0E006F0C5D /* SalesSimulatedTableViewController.swift */,
+				A2554D2F2159265C006F0C5D /* SalesSimulatedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -503,7 +509,7 @@
 		A2554D26215595ED006F0C5D /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				A2554D2721559602006F0C5D /* SalesSimulatedPresentablel.swift */,
+				A2554D2721559602006F0C5D /* SalesSimulatedPresentable.swift */,
 				A2554D292155A470006F0C5D /* SalesSimulatedDelegate.swift */,
 			);
 			path = Protocol;
@@ -967,7 +973,7 @@
 				37BF7C0E212239A100A09737 /* Date.swift in Sources */,
 				37D92CC1209CE3B700C0FD1A /* EmeraldTheme.swift in Sources */,
 				A2554D0321541511006F0C5D /* SalesSimulationTableViewController.swift in Sources */,
-				A2554D1F21556D74006F0C5D /* SalesSimulationProtocol.swift in Sources */,
+				A2554D1F21556D74006F0C5D /* SalesSimulationPresentation.swift in Sources */,
 				37C2F97220A207DE001A9BCD /* PaymentListViewModel.swift in Sources */,
 				37D92CBF209CDFF700C0FD1A /* ThemeManager.swift in Sources */,
 				37AF650C20B8A16C00D90AE0 /* LoadingTableViewCell.swift in Sources */,
@@ -976,6 +982,7 @@
 				A2690D01213D811A007ED6B1 /* EmeraldInput+Delegate.swift in Sources */,
 				A2690D05213D8141007ED6B1 /* EmeraldPicker+Protocols.swift in Sources */,
 				37E0102D20D182EC00FA6410 /* UIImage.swift in Sources */,
+				A2554D302159265C006F0C5D /* SalesSimulatedCell.swift in Sources */,
 				A2554D09215428A8006F0C5D /* SalesSimulationModel.swift in Sources */,
 				A24686032092631000D934BE /* CalendarCollectionCustomViewCell.swift in Sources */,
 				A28DDE5F20D1601400CC61C6 /* EmeraldSearchList.swift in Sources */,
@@ -984,8 +991,9 @@
 				A2554D2A2155A470006F0C5D /* SalesSimulatedDelegate.swift in Sources */,
 				A2690D06213D8141007ED6B1 /* EmeraldPicker.swift in Sources */,
 				A2554D1921556D18006F0C5D /* SalesSimulationViewModel.swift in Sources */,
-				A2554D2821559602006F0C5D /* SalesSimulatedPresentablel.swift in Sources */,
+				A2554D2821559602006F0C5D /* SalesSimulatedPresentable.swift in Sources */,
 				A26BD5BA20BC88E50013FA24 /* HUDConstraints.swift in Sources */,
+				A2554D2C21591799006F0C5D /* SalesSimulationDelegate.swift in Sources */,
 				A2C43C8F201F7DCA0067AA7E /* CompanyTheme.swift in Sources */,
 				A28D839D208524E70041457D /* HUDHelper.swift in Sources */,
 				37BDFD7E20D43E1800FE97A3 /* EmeraldInputMask.swift in Sources */,
