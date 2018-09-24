@@ -17,6 +17,8 @@ public class SalesSimulationTableViewController: UITableViewController {
     
     var viewModel: SalesSimulationViewModel!
     
+    let simulated: SaleSimulatedModel = SaleSimulatedModel()
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,26 +44,17 @@ public class SalesSimulationTableViewController: UITableViewController {
         amountEmeraldInput.resignFirstResponder()
         brandsEmeraldInput.resignFirstResponder()
         feesEmeraldInput.resignFirstResponder()
-    }
+    }   
     
     @IBAction func saleSimulateEmeraldButtonAction(_ sender: EmeraldButton) {
-        
-//        if validate() {
-//            let rate = 0.0
-//            let grossAmount = Double(amountEmeraldInput.inputText.filter { "01234567890".contains($0) })! / 100
-//            let prepayAmount = (Double(grossAmount) * Double(rate)) / 100
-//            let totalNetAmount = grossAmount - prepayAmount
-//
-//            resign()
-//
+        if validate() {
             let identifier = String(describing: SalesSimulatedTableViewController.self)
             let storyboard = UIStoryboard(name: "SaleSimulated", bundle: Bundle.basic)
             if let vc = storyboard.instantiateViewController(withIdentifier: identifier) as? SalesSimulatedTableViewController {
                 vc.delegate = self
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-//        }
-        
+        }
     }
     
 }
@@ -87,7 +80,6 @@ extension SalesSimulationTableViewController {
 extension SalesSimulationTableViewController {
     
     func validate() -> Bool {
-        
         if amountEmeraldInput.inputText == "" {
             amountEmeraldInput.setState(.error)
             return false
@@ -100,16 +92,6 @@ extension SalesSimulationTableViewController {
         
         if feesEmeraldInput.inputText == "" {
             feesEmeraldInput.setState(.error)
-            return false
-        }
-        
-        return true
-    }
-    
-    func validateBrands() -> Bool {
-        
-        if brandsEmeraldInput.inputText == "" {
-            brandsEmeraldInput.setState(.error)
             return false
         }
         
@@ -131,7 +113,6 @@ extension SalesSimulationTableViewController: EmeraldInputDelegate {
             break
             
         }
-        
         feesSimulateEmeraldButton.configure(style: .fill, type: .regular)
     }
     
@@ -160,8 +141,16 @@ extension SalesSimulationTableViewController: EmeraldPickerDelegate, EmeraldPick
 extension SalesSimulationTableViewController: SalesSimulatedDelegate {
     
     public func retrieveViewModel() -> SalesSimulatedViewModel {
-        let model =  SaleSimulatedModel(grossAmount: 200.0, prepayAmount: 200.0, totalNetAmount: 200.0)
-        return SalesSimulatedViewModel(model: model)
+        
+        let rate = 0.0
+        simulated.grossAmount = Double(amountEmeraldInput.inputText.filter { "01234567890".contains($0) })! / 100
+        simulated.prepayAmount = (simulated.grossAmount * rate) / 100
+        simulated.totalNetAmount = simulated.grossAmount - simulated.prepayAmount
+
+        resign()
+        
+        return SalesSimulatedViewModel(model: simulated)
+
     }
     
 }

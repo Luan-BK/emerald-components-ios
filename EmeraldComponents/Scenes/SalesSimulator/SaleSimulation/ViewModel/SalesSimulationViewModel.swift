@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct SalesSimulationViewModel {
+public struct SalesSimulationViewModel: SaleSimulationPresentable {
     
     private let model: SalesSimulationModel
     
