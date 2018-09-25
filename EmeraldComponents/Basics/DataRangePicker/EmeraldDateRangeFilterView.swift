@@ -12,7 +12,8 @@ public protocol EmeraldDateRangeFilterViewDelegate: class {
     func didTouchFilterButton()
 }
 
-@IBDesignable public class EmeraldDateRangeFilterView: UIView {
+@IBDesignable
+public class EmeraldDateRangeFilterView: UIView {
     
     @IBOutlet var contentView: UIView!
     

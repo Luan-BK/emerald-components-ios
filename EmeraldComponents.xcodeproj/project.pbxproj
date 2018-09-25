@@ -58,6 +58,7 @@
 		A2554D3921598020006F0C5D /* EmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D372159801F006F0C5D /* EmptyTableView.swift */; };
 		A2554D3A21598020006F0C5D /* EmptyTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2554D3821598020006F0C5D /* EmptyTableView.xib */; };
 		A2554D3C21598637006F0C5D /* EmptyTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3B21598637006F0C5D /* EmptyTableViewTests.swift */; };
+		A2554D3E215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */; };
 		A26757552097665400F66181 /* ScrollToSegmentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */; };
 		A2690C8D21370CBA007ED6B1 /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690C8F21370CBA007ED6B1 /* SearchList.storyboard */; };
 		A2690C9C21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2690C9E21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib */; };
@@ -157,6 +158,7 @@
 		A2554D372159801F006F0C5D /* EmptyTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTableView.swift; sourceTree = "<group>"; };
 		A2554D3821598020006F0C5D /* EmptyTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTableView.xib; sourceTree = "<group>"; };
 		A2554D3B21598637006F0C5D /* EmptyTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewTests.swift; sourceTree = "<group>"; };
+		A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldDateRangeFilterViewTests.swift; sourceTree = "<group>"; };
 		A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToSegmentDelegate.swift; sourceTree = "<group>"; };
 		A2690C9821370D63007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchList.strings; sourceTree = "<group>"; };
 		A2690CAA21370EAB007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WeekHeader.strings; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			children = (
 				37B813232123891D003A8C8E /* SlingDateRangePickerTests.swift */,
 				37EEED2A21248A6B00469F01 /* SlingCustomDateRangePickerTests.swift */,
+				A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */,
 			);
 			path = DateRangePicker;
 			sourceTree = "<group>";
@@ -902,6 +905,7 @@
 				372395E620DD50FF0018BB46 /* SlingInput+DelegateTests.swift in Sources */,
 				37BDFD8120D44DBF00FE97A3 /* SlingInputMaskTests.swift in Sources */,
 				A2690CAC213712E3007ED6B1 /* PaymentListTableCellTests.swift in Sources */,
+				A2554D3E215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift in Sources */,
 				37B813242123891D003A8C8E /* SlingDateRangePickerTests.swift in Sources */,
 				A2BEDEF12085510F0047A127 /* HUDTests.swift in Sources */,
 				A2554D3C21598637006F0C5D /* EmptyTableViewTests.swift in Sources */,
