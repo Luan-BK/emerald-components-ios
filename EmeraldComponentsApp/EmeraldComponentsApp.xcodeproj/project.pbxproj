@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A22FCD44215C052E0000266E /* EmptyView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22FCD43215C052E0000266E /* EmptyView.storyboard */; };
 		A23413DB2147122A009DC2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23413C32147122A009DC2FC /* Assets.xcassets */; };
 		A23413DC2147122A009DC2FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23413C42147122A009DC2FC /* LaunchScreen.storyboard */; };
 		A23413DE2147122A009DC2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23413C82147122A009DC2FC /* AppDelegate.swift */; };
@@ -71,7 +70,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A22FCD43215C052E0000266E /* EmptyView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmptyView.storyboard; sourceTree = "<group>"; };
 		A234139E21471174009DC2FC /* EmeraldComponentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmeraldComponentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23413C32147122A009DC2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A23413C52147122A009DC2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -130,14 +128,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A22FCD42215C05020000266E /* Empty */ = {
-			isa = PBXGroup;
-			children = (
-				A22FCD43215C052E0000266E /* EmptyView.storyboard */,
-			);
-			path = Empty;
-			sourceTree = "<group>";
-		};
 		A234139521471174009DC2FC = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +173,6 @@
 		A23413CD2147122A009DC2FC /* EmeraldUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A22FCD42215C05020000266E /* Empty */,
 				A23413CE2147122A009DC2FC /* Buttons */,
 				A23413D32147122A009DC2FC /* Input */,
 				A23413D62147122A009DC2FC /* Picker */,
@@ -420,7 +409,6 @@
 				A23E8AF32149AC5C00933AC1 /* DateRangePickerView.storyboard in Resources */,
 				A23413DB2147122A009DC2FC /* Assets.xcassets in Resources */,
 				A23413DC2147122A009DC2FC /* LaunchScreen.storyboard in Resources */,
-				A22FCD44215C052E0000266E /* EmptyView.storyboard in Resources */,
 				A23413E82147122A009DC2FC /* PickerView.storyboard in Resources */,
 				A23413E62147122A009DC2FC /* Input.storyboard in Resources */,
 			);
