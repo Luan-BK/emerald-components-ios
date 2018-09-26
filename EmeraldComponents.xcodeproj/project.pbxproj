@@ -48,7 +48,6 @@
 		37EEED2E2124987E00469F01 /* UINavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEED2D2124987E00469F01 /* UINavigationControllerTests.swift */; };
 		A2098DC020D2E9AB006A10BA /* SearchListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2098DBF20D2E9AB006A10BA /* SearchListDelegate.swift */; };
 		A21D2A5020502EF8004CCA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21F0C46202B6FBE00C91077 /* Assets.xcassets */; };
-		A22FCD45215C06990000266E /* EmptyTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A22FCD47215C06990000266E /* EmptyTableView.xib */; };
 		A24685E820912BBB00D934BE /* WeekHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24685E720912BBB00D934BE /* WeekHeader.swift */; };
 		A24686032092631000D934BE /* CalendarCollectionCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */; };
 		A24686042092631000D934BE /* CalendarCollectionCustomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */; };
@@ -56,7 +55,6 @@
 		A2554D3321597C14006F0C5D /* EmeraldDateRangeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */; };
 		A2554D3421597C14006F0C5D /* EmeraldDateRangeFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */; };
 		A2554D3621597EE2006F0C5D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3521597EE2006F0C5D /* Calendar.swift */; };
-		A2554D3921598020006F0C5D /* EmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D372159801F006F0C5D /* EmptyTableView.swift */; };
 		A2554D3C21598637006F0C5D /* EmptyTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3B21598637006F0C5D /* EmptyTableViewTests.swift */; };
 		A2554D3E215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */; };
 		A26757552097665400F66181 /* ScrollToSegmentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */; };
@@ -149,16 +147,12 @@
 		9B83F1FD9BF5F6EE0B756B31 /* Pods-EmeraldComponentsApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmeraldComponentsApplication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmeraldComponentsApplication/Pods-EmeraldComponentsApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		A2098DBF20D2E9AB006A10BA /* SearchListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListDelegate.swift; sourceTree = "<group>"; };
 		A21F0C46202B6FBE00C91077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A22FCD46215C06990000266E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EmptyTableView.xib; sourceTree = "<group>"; };
-		A22FCD49215C06A00000266E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EmptyTableView.strings; sourceTree = "<group>"; };
-		A22FCD4B215C06A50000266E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/EmptyTableView.strings"; sourceTree = "<group>"; };
 		A24685E720912BBB00D934BE /* WeekHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeader.swift; sourceTree = "<group>"; };
 		A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionCustomViewCell.swift; sourceTree = "<group>"; };
 		A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionCustomViewCell.xib; sourceTree = "<group>"; };
 		A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmeraldDateRangeFilterView.swift; sourceTree = "<group>"; };
 		A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmeraldDateRangeFilterView.xib; sourceTree = "<group>"; };
 		A2554D3521597EE2006F0C5D /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
-		A2554D372159801F006F0C5D /* EmptyTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTableView.swift; sourceTree = "<group>"; };
 		A2554D3B21598637006F0C5D /* EmptyTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewTests.swift; sourceTree = "<group>"; };
 		A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldDateRangeFilterViewTests.swift; sourceTree = "<group>"; };
 		A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToSegmentDelegate.swift; sourceTree = "<group>"; };
@@ -265,8 +259,6 @@
 		37AF650920B8A13800D90AE0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				A2554D372159801F006F0C5D /* EmptyTableView.swift */,
-				A22FCD47215C06990000266E /* EmptyTableView.xib */,
 				37AF650A20B8A16C00D90AE0 /* LoadingTableViewCell.swift */,
 				37AF650B20B8A16C00D90AE0 /* LoadingTableViewCell.xib */,
 			);
@@ -752,7 +744,6 @@
 				A2690C9C21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib in Resources */,
 				A2690CA621370EA7007ED6B1 /* WeekHeader.xib in Resources */,
 				A2690D00213D811A007ED6B1 /* EmeraldInput.xib in Resources */,
-				A22FCD45215C06990000266E /* EmptyTableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,7 +867,6 @@
 				A2690D06213D8141007ED6B1 /* EmeraldPicker.swift in Sources */,
 				A26BD5BA20BC88E50013FA24 /* HUDConstraints.swift in Sources */,
 				A2C43C8F201F7DCA0067AA7E /* CompanyTheme.swift in Sources */,
-				A2554D3921598020006F0C5D /* EmptyTableView.swift in Sources */,
 				A28D839D208524E70041457D /* HUDHelper.swift in Sources */,
 				37BDFD7E20D43E1800FE97A3 /* EmeraldInputMask.swift in Sources */,
 				375B78C520D2F5DD005F9563 /* EmeraldElementState.swift in Sources */,
@@ -933,16 +923,6 @@
 				37BF7C0A21222B4600A09737 /* en */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		A22FCD47215C06990000266E /* EmptyTableView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A22FCD46215C06990000266E /* Base */,
-				A22FCD49215C06A00000266E /* en */,
-				A22FCD4B215C06A50000266E /* pt-BR */,
-			);
-			name = EmptyTableView.xib;
 			sourceTree = "<group>";
 		};
 		A2690C8F21370CBA007ED6B1 /* SearchList.storyboard */ = {
