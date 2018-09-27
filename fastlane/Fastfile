@@ -73,7 +73,7 @@ platform :ios do
     desc "Do git push"
     lane :release_cocoapods do
         version_podspec
-        pod_publish     
+        pod_publish
     end
 
     desc "Increment or set the version in a podspec file"
@@ -107,9 +107,9 @@ platform :ios do
     end
 
     desc "Commit updated files"
-    lane :commit do
-        sh "git add ."
-        sh "git commit -m '🤖 Adds docs [skip ci]'"
+    lane :commit_and_push do
+        git_commit(path: ["./CHANGELOG.md", "./EmeraldComponents.podspec"], message: "🤖 Adds docs [skip ci]")
+        push_to_git_remote
     end
 
     desc "Install cocoapods dependencies"
