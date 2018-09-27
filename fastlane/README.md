@@ -71,11 +71,11 @@ Push podfile
 fastlane ios release_changelog
 ```
 Create release changelog
-### ios commit
+### ios commit_and_push
 ```
-fastlane ios commit
+fastlane ios commit_and_push
 ```
-Commit updated files
+Commit and update files
 ### ios pod_install
 ```
 fastlane ios pod_install
@@ -90,7 +90,7 @@ Run swiftlint
 ```
 fastlane ios coverage
 ```
-Get coverage percentage, remove framework's coverage and generate HTML page with coverage data
+Get coverage percentage, remove framework's coverage
 ### ios increment_version_minor
 ```
 fastlane ios increment_version_minor
