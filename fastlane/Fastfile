@@ -35,7 +35,7 @@ platform :ios do
         release_changelog
         release_github
         release_cocoapods
-        commit
+        commit_and_push
     end
 
     desc "Run UITests and get screenshots"
@@ -78,7 +78,11 @@ platform :ios do
 
     desc "Increment or set the version in a podspec file"
     lane :version_podspec do
-        version = version_bump_podspec(path: "EmeraldComponents.podspec", version_number: "#{projet_version}")
+        version = version_bump_podspec(
+            path: "EmeraldComponents.podspec", 
+            version_number: "#{projet_version}"
+        )
+        
         increment_version_number(
             version_number: "#{projet_version}",
             xcodeproj: "./EmeraldComponents.xcodeproj"
@@ -106,9 +110,12 @@ platform :ios do
         )
     end
 
-    desc "Commit updated files"
+    desc "Commit and update files"
     lane :commit_and_push do
-        git_commit(path: ["./CHANGELOG.md", "./EmeraldComponents.podspec"], message: "🤖 Adds docs [skip ci]")
+        git_commit(
+            path: ["./CHANGELOG.md", "./EmeraldComponents.podspec"], 
+            message: "🤖 Adds docs [skip ci]"
+        )
         push_to_git_remote
     end
 
@@ -130,7 +137,7 @@ platform :ios do
 		)
 	end
 
-	desc "Get coverage percentage, remove framework's coverage and generate HTML page with coverage data"
+	desc "Get coverage percentage, remove framework's coverage"
 	lane :coverage do 
 		xcov(
 			workspace: "EmeraldComponents.xcworkspace",
