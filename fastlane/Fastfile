@@ -88,8 +88,6 @@ platform :ios do
     desc "Push podfile"
     lane :pod_publish do 
         pod_push(
-            path: "EmeraldComponents.podspec",
-            repo: "stone-payments",
             allow_warnings: true,
             verbose: true
         )
