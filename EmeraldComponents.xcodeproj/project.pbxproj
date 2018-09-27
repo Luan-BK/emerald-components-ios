@@ -52,6 +52,10 @@
 		A24686032092631000D934BE /* CalendarCollectionCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */; };
 		A24686042092631000D934BE /* CalendarCollectionCustomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */; };
 		A250F7F52052F3500013C05D /* EmeraldComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A270033620179EF1008FBB2E /* EmeraldComponents.framework */; };
+		A2554D3321597C14006F0C5D /* EmeraldDateRangeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */; };
+		A2554D3421597C14006F0C5D /* EmeraldDateRangeFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */; };
+		A2554D3621597EE2006F0C5D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3521597EE2006F0C5D /* Calendar.swift */; };
+		A2554D3E215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */; };
 		A26757552097665400F66181 /* ScrollToSegmentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */; };
 		A2690C8D21370CBA007ED6B1 /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690C8F21370CBA007ED6B1 /* SearchList.storyboard */; };
 		A2690C9C21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2690C9E21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib */; };
@@ -145,6 +149,10 @@
 		A24685E720912BBB00D934BE /* WeekHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeader.swift; sourceTree = "<group>"; };
 		A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionCustomViewCell.swift; sourceTree = "<group>"; };
 		A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionCustomViewCell.xib; sourceTree = "<group>"; };
+		A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmeraldDateRangeFilterView.swift; sourceTree = "<group>"; };
+		A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmeraldDateRangeFilterView.xib; sourceTree = "<group>"; };
+		A2554D3521597EE2006F0C5D /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldDateRangeFilterViewTests.swift; sourceTree = "<group>"; };
 		A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToSegmentDelegate.swift; sourceTree = "<group>"; };
 		A2690C9821370D63007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchList.strings; sourceTree = "<group>"; };
 		A2690CAA21370EAB007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WeekHeader.strings; sourceTree = "<group>"; };
@@ -260,6 +268,7 @@
 			children = (
 				37B813232123891D003A8C8E /* SlingDateRangePickerTests.swift */,
 				37EEED2A21248A6B00469F01 /* SlingCustomDateRangePickerTests.swift */,
+				A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */,
 			);
 			path = DateRangePicker;
 			sourceTree = "<group>";
@@ -409,6 +418,8 @@
 				A2690CF6213D8099007ED6B1 /* DateRangePicker.storyboard */,
 				A2690CEF213D8092007ED6B1 /* EmeraldCustomDateRangePicker.swift */,
 				A2690CF0213D8092007ED6B1 /* EmeraldDateRangePicker.swift */,
+				A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */,
+				A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */,
 			);
 			path = DataRangePicker;
 			sourceTree = "<group>";
@@ -567,6 +578,7 @@
 				A2B2F99820F9677A0035099C /* String.swift */,
 				37BF7C0D212239A100A09737 /* Date.swift */,
 				37B813142123450B003A8C8E /* UINavigationController.swift */,
+				A2554D3521597EE2006F0C5D /* Calendar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -723,6 +735,7 @@
 				37BF7C0721222B4100A09737 /* Localizable.strings in Resources */,
 				A2690C8D21370CBA007ED6B1 /* SearchList.storyboard in Resources */,
 				A21D2A5020502EF8004CCA9A /* Assets.xcassets in Resources */,
+				A2554D3421597C14006F0C5D /* EmeraldDateRangeFilterView.xib in Resources */,
 				A24686042092631000D934BE /* CalendarCollectionCustomViewCell.xib in Resources */,
 				A2690CF4213D8099007ED6B1 /* DateRangePicker.storyboard in Resources */,
 				A2690C9C21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib in Resources */,
@@ -830,6 +843,7 @@
 				37D2642B20A0D1B8006BE83D /* EmeraldView.swift in Sources */,
 				37B813152123450B003A8C8E /* UINavigationController.swift in Sources */,
 				37D2642F20A102B1006BE83D /* EmeraldTableViewCell.swift in Sources */,
+				A2554D3321597C14006F0C5D /* EmeraldDateRangeFilterView.swift in Sources */,
 				A24685E820912BBB00D934BE /* WeekHeader.swift in Sources */,
 				37D2642D20A0D4AE006BE83D /* EmeraldTextField.swift in Sources */,
 				A2690CF3213D8092007ED6B1 /* EmeraldDateRangePicker.swift in Sources */,
@@ -839,6 +853,7 @@
 				37D92CBF209CDFF700C0FD1A /* ThemeManager.swift in Sources */,
 				37AF650C20B8A16C00D90AE0 /* LoadingTableViewCell.swift in Sources */,
 				37BDFD8320D45C3900FE97A3 /* EmeraldFormController.swift in Sources */,
+				A2554D3621597EE2006F0C5D /* Calendar.swift in Sources */,
 				A2690D01213D811A007ED6B1 /* EmeraldInput+Delegate.swift in Sources */,
 				A2690D05213D8141007ED6B1 /* EmeraldPicker+Protocols.swift in Sources */,
 				37E0102D20D182EC00FA6410 /* UIImage.swift in Sources */,
@@ -879,6 +894,7 @@
 				372395E620DD50FF0018BB46 /* SlingInput+DelegateTests.swift in Sources */,
 				37BDFD8120D44DBF00FE97A3 /* SlingInputMaskTests.swift in Sources */,
 				A2690CAC213712E3007ED6B1 /* PaymentListTableCellTests.swift in Sources */,
+				A2554D3E215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift in Sources */,
 				37B813242123891D003A8C8E /* SlingDateRangePickerTests.swift in Sources */,
 				A2BEDEF12085510F0047A127 /* HUDTests.swift in Sources */,
 				377381E420D9BDD2000B8C84 /* SlingButtonTests.swift in Sources */,

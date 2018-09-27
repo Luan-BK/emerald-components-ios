@@ -9,7 +9,6 @@
 import XCTest
 @testable import EmeraldComponents
 
-//swiftlint:disable force_cast
 class EmeraldSearchListTests: XCTestCase {
     
     private let expectationTimeout = 10.0
@@ -24,7 +23,7 @@ class EmeraldSearchListTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.searchList = storyboard.instantiateInitialViewController() as! EmeraldSearchList
+        self.searchList = storyboard.instantiateInitialViewController() as? EmeraldSearchList
         _ = self.searchList.view
     }
     

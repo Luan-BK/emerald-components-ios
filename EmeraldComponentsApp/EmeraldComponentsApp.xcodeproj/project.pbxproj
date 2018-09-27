@@ -37,9 +37,7 @@
 		A2C9B50A21471D2500634344 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; };
 		A2C9B50B21471D7500634344 /* EmeraldComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50221471BE100634344 /* EmeraldComponents.framework */; };
 		A2C9B50C21471D7500634344 /* EmeraldComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50221471BE100634344 /* EmeraldComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A2C9B50E21471DD000634344 /* InputMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50721471D2500634344 /* InputMask.framework */; };
 		A2C9B50F21471DD000634344 /* InputMask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50721471D2500634344 /* InputMask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A2C9B51021471DD000634344 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; };
 		A2C9B51121471DD000634344 /* JTAppleCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2E64BBA21503DFF00FD1937 /* AttachmentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E64BB921503DFF00FD1937 /* AttachmentHelper.swift */; };
 		A2E64BC021516E0000FD1937 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E64BBF21516E0000FD1937 /* SnapshotHelper.swift */; };
@@ -117,8 +115,6 @@
 				A2C9B50821471D2500634344 /* InputMask.framework in Frameworks */,
 				A2C9B50A21471D2500634344 /* JTAppleCalendar.framework in Frameworks */,
 				A2C9B50B21471D7500634344 /* EmeraldComponents.framework in Frameworks */,
-				A2C9B50E21471DD000634344 /* InputMask.framework in Frameworks */,
-				A2C9B51021471DD000634344 /* JTAppleCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +367,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = StoneCo;
 				TargetAttributes = {
 					A234139D21471174009DC2FC = {
