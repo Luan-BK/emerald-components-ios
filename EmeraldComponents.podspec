@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.xcconfig = { "APPLY_RULES_IN_COPY_FILES" => "YES", "STRINGS_FILE_OUTPUT_ENCODING" => "binary" }
 
-  s.resources = "EmeraldComponents/**/*.{lproj,strings,storyboard,xib,xcdatamodeld,plist,xcassets}"
+  s.resources = "EmeraldComponents/**/*.{lproj,strings,storyboard,xib,xcdatamodeld,xcassets}"
 
   s.requires_arc = true
 
