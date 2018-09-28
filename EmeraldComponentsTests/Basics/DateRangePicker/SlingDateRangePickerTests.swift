@@ -9,7 +9,6 @@
 import XCTest
 @testable import EmeraldComponents
 
-//swiftlint:disable force_cast
 class EmeraldDateRangePickerTests: XCTestCase {
     
     var viewController: EmeraldDateRangePicker!
@@ -18,7 +17,7 @@ class EmeraldDateRangePickerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        self.viewController = UIStoryboard(name: "DateRangePicker", bundle: Bundle.basic).instantiateViewController(withIdentifier: "EmeraldDateRangePicker") as! EmeraldDateRangePicker
+        self.viewController = UIStoryboard(name: "DateRangePicker", bundle: Bundle.basic).instantiateViewController(withIdentifier: "EmeraldDateRangePicker") as? EmeraldDateRangePicker
         self.viewController.delegate = self
         _ = self.viewController.view
         

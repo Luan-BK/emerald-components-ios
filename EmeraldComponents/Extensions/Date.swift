@@ -47,4 +47,24 @@ extension Date {
         return Calendar.current.date(byAdding: components, to: monthStart)
     }
     
+    // MARK: - Date to String methods
+    
+    func monthString(_ short: Bool = false, _ calendar: Calendar = Calendar.emeraldCalendar) -> String {
+        let componentValue = calendar.component(.month, from: self)
+        
+        if short {
+            return calendar.shortMonthSymbols[componentValue - 1].capitalized
+        } else {
+            return calendar.monthSymbols[componentValue - 1].capitalized
+        }
+    }
+    
+    func simpleDateString(_ calendar: Calendar = Calendar.emeraldCalendar) -> String? {
+        let formartter = DateFormatter()
+        formartter.calendar = calendar
+        formartter.dateFormat = "dd/MM/yy"
+        
+        return formartter.string(from: self)
+    }
+
 }
