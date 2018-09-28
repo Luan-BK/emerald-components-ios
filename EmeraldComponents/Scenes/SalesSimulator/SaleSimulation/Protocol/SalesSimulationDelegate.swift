@@ -10,5 +10,5 @@ import UIKit
 
 public protocol SaleSimulationDelegate: class {
     func didSelectSaleSimulation() -> SalesSimulationViewModel
-    func didPushViewController(origin: UIViewController)
+    func didPushViewController()
 }

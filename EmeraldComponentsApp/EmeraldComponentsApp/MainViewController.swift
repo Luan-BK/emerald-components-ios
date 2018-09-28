@@ -10,7 +10,7 @@ import UIKit
 import EmeraldComponents
 
 class MainViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,7 +29,6 @@ class MainViewController: UITableViewController {
             switch indexPath.row {
             case 1:
                 self.pushViewController()
-                
             case 2:
                 self.pushViewController2()
             default:
@@ -67,7 +66,7 @@ extension MainViewController: SaleSimulationDelegate {
         return SalesSimulationViewModel(model: model)
     }
     
-    func didPushViewController(origin: UIViewController) {
+    func didPushViewController() {
         let identifier = String(describing: SalesSimulatedTableViewController.self)
         let storyboard = UIStoryboard(name: "SaleSimulated", bundle: Bundle.basic)
         if let vc = storyboard.instantiateViewController(withIdentifier: identifier) as? SalesSimulatedTableViewController {

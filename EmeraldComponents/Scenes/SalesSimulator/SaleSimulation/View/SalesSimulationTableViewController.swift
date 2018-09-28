@@ -55,7 +55,7 @@ public class SalesSimulationTableViewController: UITableViewController {
     @IBAction func saleSimulateEmeraldButtonAction(_ sender: EmeraldButton) {
         if validate() {
             resign()
-            self.delegate?.didPushViewController(origin: self)
+            self.delegate?.didPushViewController()
         }
     }
     
