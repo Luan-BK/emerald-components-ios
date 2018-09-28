@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="nVU-9Q-I0W" userLabel="Footer View">
-                            <rect key="frame" x="0.0" y="369.5" width="375" height="0.0"/>
+                            <rect key="frame" x="0.0" y="413.5" width="375" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -116,7 +116,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Sales simulator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Af9-aS-ji0">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Sales simulation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Af9-aS-ji0">
                                                     <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -125,9 +125,23 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="K6Q-aB-J0l" kind="show" id="aWj-pS-yfC"/>
-                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="GNh-3U-Wcq" style="IBUITableViewCellStyleDefault" id="9aJ-C8-G3M">
+                                        <rect key="frame" x="0.0" y="331.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9aJ-C8-G3M" id="ufB-dC-ivW">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Sales simulated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GNh-3U-Wcq">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -164,42 +178,34 @@
         <!--Buttons-->
         <scene sceneID="bnd-6z-tUG">
             <objects>
-                <viewControllerPlaceholder storyboardName="Buttons" id="2Ns-3m-GNt" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Buttons" bundleIdentifier="org.cocoapods.EmeraldComponents" id="2Ns-3m-GNt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2XP-A0-5k0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1270" y="763"/>
+            <point key="canvasLocation" x="1278" y="741"/>
         </scene>
         <!--Input-->
         <scene sceneID="gt2-lw-y1c">
             <objects>
-                <viewControllerPlaceholder storyboardName="Input" id="3nj-oS-hjK" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Input" bundleIdentifier="org.cocoapods.EmeraldComponents" id="3nj-oS-hjK" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zia-4q-4lC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258" y="813"/>
+            <point key="canvasLocation" x="1266" y="789"/>
         </scene>
         <!--PickerView-->
         <scene sceneID="QCz-Kj-Vk0">
             <objects>
-                <viewControllerPlaceholder storyboardName="PickerView" id="ont-GF-Jom" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PickerView" bundleIdentifier="org.cocoapods.EmeraldComponents" id="ont-GF-Jom" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYv-R8-70B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288" y="855"/>
+            <point key="canvasLocation" x="1294" y="832"/>
         </scene>
         <!--DateRangePickerView-->
         <scene sceneID="YGV-sh-2EO">
             <objects>
-                <viewControllerPlaceholder storyboardName="DateRangePickerView" id="1SS-PV-Ca0" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="DateRangePickerView" bundleIdentifier="org.cocoapods.EmeraldComponents" id="1SS-PV-Ca0" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWU-Dx-2tJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341" y="899"/>
-        </scene>
-        <!--SalesSimulation-->
-        <scene sceneID="PQA-u4-6is">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SalesSimulation" bundleIdentifier="br.com.stoneco.EmeraldComponents" id="K6Q-aB-J0l" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F1S-Rs-C6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1342" y="949"/>
+            <point key="canvasLocation" x="1347" y="877"/>
         </scene>
     </scenes>
 </document>
