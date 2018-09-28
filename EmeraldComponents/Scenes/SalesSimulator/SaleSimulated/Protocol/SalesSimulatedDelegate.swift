@@ -6,7 +6,7 @@
 //  Copyright © 2018 StoneCo. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public protocol SalesSimulatedDelegate: class {
     func retrieveViewModel() -> SalesSimulatedViewModel

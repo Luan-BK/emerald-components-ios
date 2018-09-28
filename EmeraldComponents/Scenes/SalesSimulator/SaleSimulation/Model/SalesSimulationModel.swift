@@ -11,6 +11,11 @@ import Foundation
 public struct SalesSimulationModel: Codable {
     public var brands: [String]
     public var fees: [String]
+    
+    public init(brands: [String], fees: [String]) {
+        self.brands = brands
+        self.fees = fees
+    }
 }
 
 public class SaleSimulatorRequestModel: Codable {

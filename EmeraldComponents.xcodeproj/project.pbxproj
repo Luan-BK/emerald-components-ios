@@ -95,8 +95,8 @@
 		A2C43C8F201F7DCA0067AA7E /* CompanyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C8E201F7DCA0067AA7E /* CompanyTheme.swift */; };
 		A2C43C91201F7E380067AA7E /* ColorUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C90201F7E380067AA7E /* ColorUpdatable.swift */; };
 		A2C43CA0201F85BE0067AA7E /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C9F201F85BE0067AA7E /* UIColor+Palette.swift */; };
-		B098A7B3A77012E5DC05D167 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
-		DB29B9AD3AE97FAB9306B334 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		B098A7B3A77012E5DC05D167 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		DB29B9AD3AE97FAB9306B334 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		E557098DD4758F8A5DFD254C /* Pods_EmeraldComponentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA13C85467E5B525A951794 /* Pods_EmeraldComponentsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -233,7 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B098A7B3A77012E5DC05D167 /* BuildFile in Frameworks */,
+				B098A7B3A77012E5DC05D167 /* (null) in Frameworks */,
 				34ADBC3F76F7145EDC11A8B1 /* Pods_EmeraldComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A250F7F52052F3500013C05D /* EmeraldComponents.framework in Frameworks */,
-				DB29B9AD3AE97FAB9306B334 /* BuildFile in Frameworks */,
+				DB29B9AD3AE97FAB9306B334 /* (null) in Frameworks */,
 				E557098DD4758F8A5DFD254C /* Pods_EmeraldComponentsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,10 +436,10 @@
 		A2554D0C21542913006F0C5D /* SaleSimulation */ = {
 			isa = PBXGroup;
 			children = (
-				A2554D1D21556D52006F0C5D /* Protocol */,
 				A2554D1C21556D32006F0C5D /* Model */,
-				A2554D1B21556D29006F0C5D /* ViewModel */,
+				A2554D1D21556D52006F0C5D /* Protocol */,
 				A2554D1A21556D22006F0C5D /* View */,
+				A2554D1B21556D29006F0C5D /* ViewModel */,
 			);
 			path = SaleSimulation;
 			sourceTree = "<group>";
@@ -447,10 +447,10 @@
 		A2554D0D21542921006F0C5D /* SaleSimulated */ = {
 			isa = PBXGroup;
 			children = (
+				A2554D2021556F46006F0C5D /* Model */,
 				A2554D26215595ED006F0C5D /* Protocol */,
 				A2554D2221556F55006F0C5D /* View */,
 				A2554D2121556F4E006F0C5D /* ViewModel */,
-				A2554D2021556F46006F0C5D /* Model */,
 			);
 			path = SaleSimulated;
 			sourceTree = "<group>";

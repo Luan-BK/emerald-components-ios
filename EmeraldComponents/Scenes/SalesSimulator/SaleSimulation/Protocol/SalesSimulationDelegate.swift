@@ -9,6 +9,6 @@
 import UIKit    
 
 public protocol SaleSimulationDelegate: class {
-    func didPushViewController(viewModel: SalesSimulationViewModel,
-                               to viewController: UIViewController)
+    func didSelectSaleSimulation() -> SalesSimulationViewModel
+    func didPushViewController(origin: UIViewController)
 }

@@ -10,20 +10,20 @@ import UIKit
 
 public class SalesSimulationTableViewController: UITableViewController {
 
+    // MARK: - Properties
     @IBOutlet weak var amountEmeraldInput: EmeraldInput!
     @IBOutlet weak var brandsEmeraldInput: EmeraldPicker!
     @IBOutlet weak var feesEmeraldInput: EmeraldPicker!
     @IBOutlet weak var feesSimulateEmeraldButton: EmeraldButton!
     
-    var viewModel: SalesSimulationViewModel!
+    public weak var delegate: SaleSimulationDelegate?
+    
+    public var viewModel: SalesSimulationViewModel!
     
     let simulated: SaleSimulatedModel = SaleSimulatedModel()
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
-        let model = SalesSimulationModel(brands: ["Visa", "Master"], fees: ["A vista", "Parcelado"])
-        viewModel = SalesSimulationViewModel(model: model)
         
         feesSimulateEmeraldButton.setTitle("Simular venda", for: .normal)
         
@@ -40,6 +40,12 @@ public class SalesSimulationTableViewController: UITableViewController {
         feesEmeraldInput.inputDelegate = self
     }
     
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel = delegate?.didSelectSaleSimulation()
+    }
+    
     func resign() {
         amountEmeraldInput.resignFirstResponder()
         brandsEmeraldInput.resignFirstResponder()
@@ -48,12 +54,8 @@ public class SalesSimulationTableViewController: UITableViewController {
     
     @IBAction func saleSimulateEmeraldButtonAction(_ sender: EmeraldButton) {
         if validate() {
-            let identifier = String(describing: SalesSimulatedTableViewController.self)
-            let storyboard = UIStoryboard(name: "SaleSimulated", bundle: Bundle.basic)
-            if let vc = storyboard.instantiateViewController(withIdentifier: identifier) as? SalesSimulatedTableViewController {
-                vc.delegate = self
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
+            resign()
+            self.delegate?.didPushViewController(origin: self)
         }
     }
     
@@ -134,23 +136,6 @@ extension SalesSimulationTableViewController: EmeraldPickerDelegate, EmeraldPick
             fatalError("This case does not exist")
             
         }
-    }
-    
-}
-
-extension SalesSimulationTableViewController: SalesSimulatedDelegate {
-    
-    public func retrieveViewModel() -> SalesSimulatedViewModel {
-        
-        let rate = 0.0
-        simulated.grossAmount = Double(amountEmeraldInput.inputText.filter { "01234567890".contains($0) })! / 100
-        simulated.prepayAmount = (simulated.grossAmount * rate) / 100
-        simulated.totalNetAmount = simulated.grossAmount - simulated.prepayAmount
-
-        resign()
-        
-        return SalesSimulatedViewModel(model: simulated)
-
     }
     
 }
