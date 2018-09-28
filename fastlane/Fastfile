@@ -35,7 +35,8 @@ platform :ios do
         release_changelog
         release_github
         release_cocoapods
-        commit_and_push
+        commit_changes
+        push_to_origin
     end
 
     desc "Run UITests and get screenshots"
@@ -110,13 +111,21 @@ platform :ios do
         )
     end
 
-    desc "Commit and update files"
-    lane :commit_and_push do
+    desc "Commit files"
+    lane :commit_changes do
         git_commit(
             path: ["./CHANGELOG.md", "./EmeraldComponents.podspec"], 
             message: "🤖 Adds docs [skip ci]"
         )
-        push_to_git_remote
+    end
+
+    desc "Push files to origin"
+    lane :push_to_origin do
+        push_to_git_remote(
+            remote: "origin",
+            local_branch: "master",
+            remote_branch: "master"
+        )
     end
 
     desc "Install cocoapods dependencies"
