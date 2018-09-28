@@ -52,10 +52,6 @@
 		A24686032092631000D934BE /* CalendarCollectionCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */; };
 		A24686042092631000D934BE /* CalendarCollectionCustomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */; };
 		A250F7F52052F3500013C05D /* EmeraldComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A270033620179EF1008FBB2E /* EmeraldComponents.framework */; };
-		A2554D3321597C14006F0C5D /* EmeraldDateRangeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */; };
-		A2554D3421597C14006F0C5D /* EmeraldDateRangeFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */; };
-		A2554D3621597EE2006F0C5D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3521597EE2006F0C5D /* Calendar.swift */; };
-		A2554D3E215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */; };
 		A2554D01215414AC006F0C5D /* SalesSimulation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2554D00215414AC006F0C5D /* SalesSimulation.storyboard */; };
 		A2554D0321541511006F0C5D /* SalesSimulationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D0221541511006F0C5D /* SalesSimulationTableViewController.swift */; };
 		A2554D09215428A8006F0C5D /* SalesSimulationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D08215428A8006F0C5D /* SalesSimulationModel.swift */; };
@@ -71,6 +67,10 @@
 		A2554D2A2155A470006F0C5D /* SalesSimulatedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D292155A470006F0C5D /* SalesSimulatedDelegate.swift */; };
 		A2554D2C21591799006F0C5D /* SalesSimulationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D2B21591799006F0C5D /* SalesSimulationDelegate.swift */; };
 		A2554D302159265C006F0C5D /* SalesSimulatedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D2F2159265C006F0C5D /* SalesSimulatedCell.swift */; };
+		A2554D3321597C14006F0C5D /* EmeraldDateRangeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */; };
+		A2554D3421597C14006F0C5D /* EmeraldDateRangeFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */; };
+		A2554D3621597EE2006F0C5D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3521597EE2006F0C5D /* Calendar.swift */; };
+		A2554D3E215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */; };
 		A26757552097665400F66181 /* ScrollToSegmentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */; };
 		A2690C8D21370CBA007ED6B1 /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690C8F21370CBA007ED6B1 /* SearchList.storyboard */; };
 		A2690C9C21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2690C9E21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib */; };
@@ -95,8 +95,8 @@
 		A2C43C8F201F7DCA0067AA7E /* CompanyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C8E201F7DCA0067AA7E /* CompanyTheme.swift */; };
 		A2C43C91201F7E380067AA7E /* ColorUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C90201F7E380067AA7E /* ColorUpdatable.swift */; };
 		A2C43CA0201F85BE0067AA7E /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C9F201F85BE0067AA7E /* UIColor+Palette.swift */; };
-		B098A7B3A77012E5DC05D167 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		DB29B9AD3AE97FAB9306B334 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		B098A7B3A77012E5DC05D167 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		DB29B9AD3AE97FAB9306B334 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		E557098DD4758F8A5DFD254C /* Pods_EmeraldComponentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA13C85467E5B525A951794 /* Pods_EmeraldComponentsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -164,10 +164,6 @@
 		A24685E720912BBB00D934BE /* WeekHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeader.swift; sourceTree = "<group>"; };
 		A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionCustomViewCell.swift; sourceTree = "<group>"; };
 		A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionCustomViewCell.xib; sourceTree = "<group>"; };
-		A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmeraldDateRangeFilterView.swift; sourceTree = "<group>"; };
-		A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmeraldDateRangeFilterView.xib; sourceTree = "<group>"; };
-		A2554D3521597EE2006F0C5D /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
-		A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldDateRangeFilterViewTests.swift; sourceTree = "<group>"; };
 		A2554D00215414AC006F0C5D /* SalesSimulation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SalesSimulation.storyboard; sourceTree = "<group>"; };
 		A2554D0221541511006F0C5D /* SalesSimulationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulationTableViewController.swift; sourceTree = "<group>"; };
 		A2554D08215428A8006F0C5D /* SalesSimulationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulationModel.swift; sourceTree = "<group>"; };
@@ -183,6 +179,10 @@
 		A2554D292155A470006F0C5D /* SalesSimulatedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedDelegate.swift; sourceTree = "<group>"; };
 		A2554D2B21591799006F0C5D /* SalesSimulationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulationDelegate.swift; sourceTree = "<group>"; };
 		A2554D2F2159265C006F0C5D /* SalesSimulatedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesSimulatedCell.swift; sourceTree = "<group>"; };
+		A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmeraldDateRangeFilterView.swift; sourceTree = "<group>"; };
+		A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmeraldDateRangeFilterView.xib; sourceTree = "<group>"; };
+		A2554D3521597EE2006F0C5D /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		A2554D3D215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldDateRangeFilterViewTests.swift; sourceTree = "<group>"; };
 		A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToSegmentDelegate.swift; sourceTree = "<group>"; };
 		A2690C9821370D63007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchList.strings; sourceTree = "<group>"; };
 		A2690CAA21370EAB007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WeekHeader.strings; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B098A7B3A77012E5DC05D167 /* (null) in Frameworks */,
+				B098A7B3A77012E5DC05D167 /* BuildFile in Frameworks */,
 				34ADBC3F76F7145EDC11A8B1 /* Pods_EmeraldComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A250F7F52052F3500013C05D /* EmeraldComponents.framework in Frameworks */,
-				DB29B9AD3AE97FAB9306B334 /* (null) in Frameworks */,
+				DB29B9AD3AE97FAB9306B334 /* BuildFile in Frameworks */,
 				E557098DD4758F8A5DFD254C /* Pods_EmeraldComponentsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
