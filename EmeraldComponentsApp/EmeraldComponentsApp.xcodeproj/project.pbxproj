@@ -32,15 +32,7 @@
 		A23E8AEE2149AA8A00933AC1 /* DateRangePickerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AED2149AA8A00933AC1 /* DateRangePickerViewUITests.swift */; };
 		A23E8AF32149AC5C00933AC1 /* DateRangePickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23E8AF22149AC5C00933AC1 /* DateRangePickerView.storyboard */; };
 		A23E8AF52149ACBC00933AC1 /* DateRangePickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AF42149ACBC00933AC1 /* DateRangePickerTableViewController.swift */; };
-		A25FFBD8215E76C5007A52C0 /* Snap_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25FFBD6215E76C0007A52C0 /* Snap_swift.framework */; };
-		A25FFBD9215E76C5007A52C0 /* Snap_swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A25FFBD6215E76C0007A52C0 /* Snap_swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2C9B4FB21471B1700634344 /* InputUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B4FA21471B1700634344 /* InputUITests.swift */; };
-		A2C9B50821471D2500634344 /* InputMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50721471D2500634344 /* InputMask.framework */; };
-		A2C9B50A21471D2500634344 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; };
-		A2C9B50B21471D7500634344 /* EmeraldComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50221471BE100634344 /* EmeraldComponents.framework */; };
-		A2C9B50C21471D7500634344 /* EmeraldComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50221471BE100634344 /* EmeraldComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A2C9B50F21471DD000634344 /* InputMask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50721471D2500634344 /* InputMask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A2C9B51121471DD000634344 /* JTAppleCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9B50921471D2500634344 /* JTAppleCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2E64BBA21503DFF00FD1937 /* AttachmentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E64BB921503DFF00FD1937 /* AttachmentHelper.swift */; };
 		A2E64BC021516E0000FD1937 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E64BBF21516E0000FD1937 /* SnapshotHelper.swift */; };
 		A92C0D54C060FD54CA51BBA7 /* Pods_EmeraldComponentsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC4BA9A68123EA2A1CB90B1 /* Pods_EmeraldComponentsAppUITests.framework */; };
@@ -55,23 +47,6 @@
 			remoteInfo = EmeraldComponentsApp;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A2C9B50D21471D7600634344 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A2C9B50C21471D7500634344 /* EmeraldComponents.framework in Embed Frameworks */,
-				A2C9B51121471DD000634344 /* JTAppleCalendar.framework in Embed Frameworks */,
-				A25FFBD9215E76C5007A52C0 /* Snap_swift.framework in Embed Frameworks */,
-				A2C9B50F21471DD000634344 /* InputMask.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		436F9274B07AE032E027ABE8 /* Pods_EmeraldComponentsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmeraldComponentsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,10 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C9B50821471D2500634344 /* InputMask.framework in Frameworks */,
-				A2C9B50A21471D2500634344 /* JTAppleCalendar.framework in Frameworks */,
-				A25FFBD8215E76C5007A52C0 /* Snap_swift.framework in Frameworks */,
-				A2C9B50B21471D7500634344 /* EmeraldComponents.framework in Frameworks */,
 				9CB29EBC81F7197BE9C14168 /* Pods_EmeraldComponentsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +322,6 @@
 				A234139A21471174009DC2FC /* Sources */,
 				A234139B21471174009DC2FC /* Frameworks */,
 				A234139C21471174009DC2FC /* Resources */,
-				A2C9B50D21471D7600634344 /* Embed Frameworks */,
 				ECE2B9C0B67281E80BED3AB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -371,7 +341,6 @@
 				A2C9B4F421471B1700634344 /* Sources */,
 				A2C9B4F521471B1700634344 /* Frameworks */,
 				A2C9B4F621471B1700634344 /* Resources */,
-				382DA127FF89ED956E41E316 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -447,28 +416,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		382DA127FF89ED956E41E316 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EmeraldComponentsAppUITests/Pods-EmeraldComponentsAppUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Snap.swift/Snap_swift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Snap_swift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmeraldComponentsAppUITests/Pods-EmeraldComponentsAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		86730A81BD139047EDA60658 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

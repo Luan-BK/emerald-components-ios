@@ -1,31 +1,27 @@
 PODS:
-  - EmeraldComponents (0.1.2):
+  - EmeraldComponents (0.1.4):
     - InputMask
     - JTAppleCalendar
   - InputMask (4.0.0)
   - JTAppleCalendar (7.1.6)
-  - Snap.swift (0.3.0)
 
 DEPENDENCIES:
-  - EmeraldComponents (from `../../emerald-components-ios`)
-  - Snap.swift
+  - EmeraldComponents (from `..`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - InputMask
     - JTAppleCalendar
-    - Snap.swift
 
 EXTERNAL SOURCES:
   EmeraldComponents:
-    :path: "../../emerald-components-ios"
+    :path: ".."
 
 SPEC CHECKSUMS:
-  EmeraldComponents: b172270f46aa9cddfd542d8e7dfdc7aced9c6fc7
+  EmeraldComponents: 04ccba78ed9d17d62ac317eb46acad9b14cfa474
   InputMask: e3fe4ee45ce70241fd76684c1e9d6f98e1492eab
   JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
-  Snap.swift: 7c9e859c279c252acd47ae283bd0d5ce7a6ed837
 
-PODFILE CHECKSUM: 8003f151797ecdd2dd8515a9a2d74fcb6689755f
+PODFILE CHECKSUM: 219693e7e71c373608bdf74b56b1a2a81c106c93
 
 COCOAPODS: 1.5.3

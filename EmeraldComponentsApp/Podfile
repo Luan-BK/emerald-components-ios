@@ -6,12 +6,11 @@ target 'EmeraldComponentsApp' do
   use_frameworks!
 
   # Pods for EmeraldComponentsApp
-  pod 'EmeraldComponents', :path => '../../emerald-components-ios'
+  pod 'EmeraldComponents', :path => '..'
 
   target 'EmeraldComponentsAppUITests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Snap.swift'
   end
 
 end
