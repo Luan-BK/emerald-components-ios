@@ -53,7 +53,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <segue destination="7Cb-4R-rxr" kind="show" id="971-LK-c2A"/>
+                                                        <action selector="filterDate:" destination="PhQ-DT-Ock" eventType="touchUpInside" id="OWx-9C-URb"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -83,14 +83,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Is-mf-RlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2492" y="1181.5592203898052"/>
-        </scene>
-        <!--DateRangePicker-->
-        <scene sceneID="Vb6-k2-63l">
-            <objects>
-                <viewControllerPlaceholder storyboardName="DateRangePicker" bundleIdentifier="br.com.stoneco.EmeraldComponents" id="7Cb-4R-rxr" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Pa-xq-sKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3091" y="1182"/>
         </scene>
     </scenes>
 </document>

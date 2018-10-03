@@ -39,6 +39,14 @@ class DateRangePickerTableViewController: UITableViewController {
         return formatter.string(from: date)
     }
     
+    @IBAction func filterDate(_ sender: Any) {
+        let identifier = String(describing: EmeraldDateRangePicker.self)
+        let storyboard = UIStoryboard(name: "DateRangePicker", bundle: Bundle.basic)
+        if let vc = storyboard.instantiateViewController(withIdentifier: identifier) as? EmeraldDateRangePicker {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }
 
 extension DateRangePickerTableViewController: EmeraldDateRangePickerDelegate {

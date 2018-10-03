@@ -178,7 +178,7 @@
         <!--Buttons-->
         <scene sceneID="bnd-6z-tUG">
             <objects>
-                <viewControllerPlaceholder storyboardName="Buttons" bundleIdentifier="br.com.stoneco.EmeraldComponents" id="2Ns-3m-GNt" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Buttons" id="2Ns-3m-GNt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2XP-A0-5k0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1278" y="741"/>
@@ -186,7 +186,7 @@
         <!--Input-->
         <scene sceneID="gt2-lw-y1c">
             <objects>
-                <viewControllerPlaceholder storyboardName="Input" bundleIdentifier="br.com.stoneco.EmeraldComponents" id="3nj-oS-hjK" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Input" id="3nj-oS-hjK" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zia-4q-4lC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1266" y="789"/>
@@ -194,7 +194,7 @@
         <!--PickerView-->
         <scene sceneID="QCz-Kj-Vk0">
             <objects>
-                <viewControllerPlaceholder storyboardName="PickerView" bundleIdentifier="br.com.stoneco.EmeraldComponents" id="ont-GF-Jom" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PickerView" id="ont-GF-Jom" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYv-R8-70B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1294" y="832"/>
