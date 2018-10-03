@@ -87,7 +87,7 @@
         <!--DateRangePicker-->
         <scene sceneID="Vb6-k2-63l">
             <objects>
-                <viewControllerPlaceholder storyboardName="DateRangePicker" bundleIdentifier="org.cocoapods.EmeraldComponents" id="7Cb-4R-rxr" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="DateRangePicker" bundleIdentifier="br.com.stoneco.EmeraldComponents" id="7Cb-4R-rxr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Pa-xq-sKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3091" y="1182"/>
