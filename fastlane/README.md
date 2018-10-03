@@ -20,7 +20,7 @@ or alternatively using `brew cask install fastlane`
 ```
 fastlane ios test
 ```
-Run tests
+Run unit tests and UI tests
 ### ios unit_tests
 ```
 fastlane ios unit_tests
@@ -71,11 +71,16 @@ Push podfile
 fastlane ios release_changelog
 ```
 Create release changelog
-### ios commit_and_push
+### ios commit_changes
 ```
-fastlane ios commit_and_push
+fastlane ios commit_changes
 ```
-Commit and update files
+Commit files
+### ios push_to_origin
+```
+fastlane ios push_to_origin
+```
+Push files to origin
 ### ios pod_install
 ```
 fastlane ios pod_install
