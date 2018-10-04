@@ -394,6 +394,15 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		A21DD356216573230013EAA7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */,
+				A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A233E138209765A700CB37E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,11 +552,10 @@
 		A2690CED213D8092007ED6B1 /* DataRangePicker */ = {
 			isa = PBXGroup;
 			children = (
+				A21DD356216573230013EAA7 /* Cell */,
 				A21DD354216571B70013EAA7 /* DateRangePicker.storyboard */,
 				A2690CEF213D8092007ED6B1 /* EmeraldCustomDateRangePicker.swift */,
 				A2690CF0213D8092007ED6B1 /* EmeraldDateRangePicker.swift */,
-				A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */,
-				A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */,
 			);
 			path = DataRangePicker;
 			sourceTree = "<group>";
