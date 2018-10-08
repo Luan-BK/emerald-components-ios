@@ -15,12 +15,25 @@ platform :ios do
 
     desc "Run tests"
     lane :test do
+        slack_start_build
     	run_tests_pipeline
     end
 
 	desc "Deploy a new version"
     lane :release do
+        slack_start_build
         run_deploy_pipeline
+    end
+
+    desc "Send message to slack that indicates the process has been started"
+    lane :slack_start_build do
+        slack(
+            channel: "#fastlane",
+            slack_url: ENV["SLACK_API_TOKEN"],
+            attachment_properties: {
+                thumb_url: "https://github.com/bitrise-io.png",
+            }
+        )
     end
 
 end
