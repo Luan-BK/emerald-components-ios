@@ -1,0 +1,87 @@
+# This pipeline is used in the deploy process.
+# You can read each description to understand what each methods do
+#
+
+desc "Deploy a new version"
+lane :run_deploy_pipeline do
+    pod_spec_lint
+    release_changelog
+    release_github
+    version_podspec
+    increment_version
+    pod_publish
+    commit_and_push
+end
+
+desc "Cocoapods linter"
+lane :pod_spec_lint do 
+    pod_lib_lint(
+        verbose: true,
+        allow_warnings: true
+    )
+end
+
+desc "Create release changelog"
+lane :release_changelog do
+    v2_changelog = generate_release_changelog(
+        github_project: "stone-payments/emerald-components-ios",
+        github_api_token: ENV["GITHUB_API_TOKEN"],
+        base_branch: "master",
+        template_path: "fastlane/changelog_template.erb",
+        tag_a: "v#{projet_version}",
+        tag_b: "v#{projet_version}",
+        output_path: "CHANGELOG.md"
+    )
+end
+
+desc "release new github version"
+lane :release_github do 
+    github_release = set_github_release(
+        repository_name: "stone-payments/emerald-components-ios",
+        api_token: ENV["GITHUB_API_TOKEN"],
+        name: "[Deploy 🚀] Release new version - v#{projet_version}",
+        tag_name: "#{projet_version}",
+        description: (File.read("./CHANGELOG.md") rescue "No changelog provided"),
+        commitish: "master"
+    )
+end
+
+desc "Increment or set the version in a podspec file"
+lane :version_podspec do
+    version = version_bump_podspec(
+        path: "EmeraldComponents.podspec", 
+        version_number: "#{projet_version}"
+    )
+end
+
+desc "Increment version number"
+lane :increment_version do
+    increment_version_number(
+        version_number: "#{projet_version}",
+        xcodeproj: "./EmeraldComponents.xcodeproj"
+    )
+end
+
+desc "Push podfile"
+lane :pod_publish do 
+    pod_push(
+        allow_warnings: true,
+        verbose: true
+    )
+end
+
+desc "Commit and update files"
+lane :commit_and_push do
+    git_commit(
+        path: ["./CHANGELOG.md", "./EmeraldComponents.podspec"], 
+        message: "🤖 Adds docs [skip ci]"
+    )
+    push_to_git_remote
+end
+
+desc "set target to get version number"
+lane :projet_version do
+    get_version_number(
+        target: "EmeraldComponents"
+    )
+end

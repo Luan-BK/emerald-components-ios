@@ -15,107 +15,95 @@ Install _fastlane_ using
 or alternatively using `brew cask install fastlane`
 
 # Available Actions
+### run_tests_pipeline
+```
+fastlane run_tests_pipeline
+```
+Run tests
+### pod_install
+```
+fastlane pod_install
+```
+Install cocoapods dependencies
+### lint
+```
+fastlane lint
+```
+Run swiftlint
+### unit_tests
+```
+fastlane unit_tests
+```
+Run Unit Tests
+### coverage
+```
+fastlane coverage
+```
+Get coverage percentage, remove framework's coverage
+### screenshots
+```
+fastlane screenshots
+```
+Run UITests and get screenshots
+### run_deploy_pipeline
+```
+fastlane run_deploy_pipeline
+```
+Deploy a new version
+### pod_spec_lint
+```
+fastlane pod_spec_lint
+```
+Cocoapods linter
+### release_changelog
+```
+fastlane release_changelog
+```
+Create release changelog
+### release_github
+```
+fastlane release_github
+```
+release new github version
+### version_podspec
+```
+fastlane version_podspec
+```
+Increment or set the version in a podspec file
+### increment_version
+```
+fastlane increment_version
+```
+Increment version number
+### pod_publish
+```
+fastlane pod_publish
+```
+Push podfile
+### commit_and_push
+```
+fastlane commit_and_push
+```
+Commit and update files
+### projet_version
+```
+fastlane projet_version
+```
+set target to get version number
+
+----
+
 ## iOS
 ### ios test
 ```
 fastlane ios test
 ```
 Run tests
-### ios unit_tests
-```
-fastlane ios unit_tests
-```
-Run Unit Tests
 ### ios release
 ```
 fastlane ios release
 ```
 Deploy a new version
-### ios screenshots
-```
-fastlane ios screenshots
-```
-Run UITests and get screenshots
-### ios projet_version
-```
-fastlane ios projet_version
-```
-set target to get version number
-### ios release_github
-```
-fastlane ios release_github
-```
-release new github version
-### ios pod_spec_lint
-```
-fastlane ios pod_spec_lint
-```
-Cocoapods linter
-### ios release_cocoapods
-```
-fastlane ios release_cocoapods
-```
-Do git push
-### ios version_podspec
-```
-fastlane ios version_podspec
-```
-Increment or set the version in a podspec file
-### ios pod_publish
-```
-fastlane ios pod_publish
-```
-Push podfile
-### ios release_changelog
-```
-fastlane ios release_changelog
-```
-Create release changelog
-### ios commit_and_push
-```
-fastlane ios commit_and_push
-```
-Commit and update files
-### ios pod_install
-```
-fastlane ios pod_install
-```
-Install cocoapods dependencies
-### ios lint
-```
-fastlane ios lint
-```
-Run swiftlint
-### ios coverage
-```
-fastlane ios coverage
-```
-Get coverage percentage, remove framework's coverage
-### ios increment_version_minor
-```
-fastlane ios increment_version_minor
-```
-Increment minor version
-### ios increment_version_patch
-```
-fastlane ios increment_version_patch
-```
-Increment path version
-### ios increment_version
-```
-fastlane ios increment_version
-```
-Increment version number
-### ios increment_version_custom
-```
-fastlane ios increment_version_custom
-```
-Increment custom version
-### ios increment_build
-```
-fastlane ios increment_build
-```
-Increment build
 
 ----
 
