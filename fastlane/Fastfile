@@ -29,7 +29,7 @@ platform :ios do
     lane :slack_start_build do
         slack(
             channel: "#fastlane",
-            slack_url: ENV["SLACK_API_TOKEN"],
+            slack_url: ENV["SLACK_TEST"],
             attachment_properties: {
                 thumb_url: "https://github.com/bitrise-io.png",
             }
