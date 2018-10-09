@@ -3,10 +3,10 @@
 #
 
 # Get pull request full path 
-github_page = "https://github.com"
-github_owner = ENV["BITRISEIO_GIT_REPOSITORY_OWNER"]
-github_repository = ENV["BITRISEIO_GIT_REPOSITORY_SLUG"]
-github_pull_request = ENV["BITRISEIO_PULL_REQUEST_REPOSITORY_URL"]
+github_page = "https://github.com/"
+github_owner = ENV["BITRISEIO_GIT_REPOSITORY_OWNER"] + "/"
+github_repository = ENV["BITRISEIO_GIT_REPOSITORY_SLUG"] + "/"
+github_pull_request = ENV["BITRISEIO_PULL_REQUEST_HEAD_BRANCH"]
 github_pull_request_title = "PULL REQUEST NUMBER " + ENV["PULL_REQUEST_ID"]
 
 pull_request_path = github_page + github_owner + github_repository + github_pull_request
