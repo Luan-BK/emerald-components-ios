@@ -20,11 +20,6 @@ or alternatively using `brew cask install fastlane`
 fastlane run_tests_pipeline
 ```
 Run tests
-### initital_slack_process
-```
-fastlane initital_slack_process
-```
-Send message to slack that indicates the process has been started
 ### pod_install
 ```
 fastlane pod_install
@@ -109,6 +104,11 @@ Run tests
 fastlane ios release
 ```
 Deploy a new version
+### ios slack_start_build
+```
+fastlane ios slack_start_build
+```
+Send message to slack that indicates the process has been started
 
 ----
 
