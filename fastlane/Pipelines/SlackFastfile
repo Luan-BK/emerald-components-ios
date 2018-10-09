@@ -24,6 +24,9 @@ lane :slack_start_build do
             title: github_pull_request_title,
             title_link: pull_request_path,
             text: ENV["BITRISE_GIT_MESSAGE"],
+            mrkdwn_in: [
+                "text"
+            ]
             color: "#008952",
             fields: [
                 {
