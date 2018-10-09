@@ -15,7 +15,7 @@ platform :ios do
 
     desc "Run tests"
     lane :test do
-        slack_start_build
+        # slack_start_build
     	run_tests_pipeline
     end
 
@@ -28,17 +28,17 @@ platform :ios do
     desc "Send message to slack that indicates the process has been started"
     lane :slack_start_build do
         slack(
-            # author_name: "Author name",
-            # author_link: "https://github.com",
-            # author_icon: "https://platform.slack-edge.com/img/default_application_icon.png",
-            # title: "Pull Request title",
-            # title_link: "https://github.com",
-            # text: "Pull Request description",
-            # color: "#008952",
             channel: "#fastlane",
             slack_url: ENV["SLACK_WEBHOOK"],
             default_payloads: [],
             attachment_properties: {
+                author_name: "Author name",
+                author_link: "https://github.com",
+                author_icon: "https://platform.slack-edge.com/img/default_application_icon.png",
+                title: "Pull Request title",
+                title_link: "https://github.com",
+                text: "Pull Request description",
+                color: "#008952",
                 fields: [{
                     title: "Project",
                     value: "Emerald iOS",
