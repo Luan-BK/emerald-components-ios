@@ -15,7 +15,7 @@ platform :ios do
 
     desc "Run tests"
     lane :test do
-        # slack_start_build
+        slack_start_build
     	run_tests_pipeline
     end
 
@@ -40,19 +40,18 @@ platform :ios do
                 text: "Pull Request description",
                 color: "#008952",
                 fields: [{
-                    title: "Project",
-                    value: "Emerald iOS",
+                    title: "App",
+                    value: ENV["BITRISE_APP_TITLE"],
                     short: true
                 }, {
-                    title: "Pipeline",
-                    value: "Test",
+                    title: "Git Branch",
+                    value: ENV["BITRISE_GIT_BRANCH"],
+                    short: true
+                }, {
+                    title: "Workflow",
+                    value: ENV["BITRISE_TRIGGERED_WORKFLOW_ID"],
                     short: true
                 }],
-                # actions: [{
-                #     type: "button",
-                #     text: "View Pipeline",
-                #     url: ENV["BITRISE_Pipeline_URL"]
-                # }],
                 actions: [{
                     type: "button",
                     text: "View Build",
