@@ -8,6 +8,7 @@
 
 import "Pipelines/TestsFastfile"
 import "Pipelines/DeployFastfile"
+import "Pipelines/SlackFastfile"
 
 default_platform(:ios)
 
@@ -23,45 +24,6 @@ platform :ios do
     lane :release do
         slack_start_build
         run_deploy_pipeline
-    end
-
-    desc "Send message to slack that indicates the process has been started"
-    lane :slack_start_build do
-        slack(
-            channel: "#fastlane",
-            slack_url: ENV["SLACK_WEBHOOK"],
-            default_payloads: [],
-            attachment_properties: {
-                author_name: ENV["GIT_CLONE_COMMIT_AUTHOR_NAME"],
-                author_link: "https://github.com",
-                author_icon: "https://platform.slack-edge.com/img/default_application_icon.png",
-                title: "PULL REQUEST NUMBER " + ENV["PULL_REQUEST_ID"],
-                title_link: ENV["BITRISEIO_PULL_REQUEST_REPOSITORY_URL"],
-                text: ENV["BITRISE_GIT_MESSAGE"],
-                color: "#008952",
-                fields: [{
-                    title: "App",
-                    value: ENV["BITRISE_APP_TITLE"],
-                    short: true
-                }, {
-                    title: "Git Branch",
-                    value: ENV["BITRISE_GIT_BRANCH"],
-                    short: true
-                }, {
-                    title: "Workflow",
-                    value: ENV["BITRISE_TRIGGERED_WORKFLOW_ID"],
-                    short: true
-                }],
-                actions: [{
-                    type: "button",
-                    text: "View Build",
-                    url: ENV["BITRISE_BUILD_URL"]
-                }],
-                footer: "Bitrise",
-                footer_icon: "https://github.com/bitrise-io.png",
-                ts: 123456789
-            }
-        )
     end
 
 end
