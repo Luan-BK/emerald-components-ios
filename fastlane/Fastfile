@@ -28,12 +28,20 @@ platform :ios do
     desc "Send message to slack that indicates the process has been started"
     lane :slack_start_build do
         slack(
+            author_name: "Author name",
+            author_link: "https://github.com",
+            author_icon: "https://platform.slack-edge.com/img/default_application_icon.png",
+            title: "Pull Request title",
+            title_link: "https://github.com",
+            text: "Pull Request description",
+            color: "#008952",
             channel: "#fastlane",
             slack_url: ENV["SLACK_WEBHOOK"],
+            default_payloads: [],
             attachment_properties: {
                 fields: [{
                     title: "Project",
-                    value: "Emerald",
+                    value: "Emerald iOS",
                     short: true
                 }, {
                     title: "Pipeline",
@@ -42,17 +50,22 @@ platform :ios do
                 }],
                 # actions: [{
                 #     type: "button",
-                #     text: "View Build",
-                #     url: ENV["BITRISE_BUILD_URL"]
+                #     text: "View Pipeline",
+                #     url: ENV["BITRISE_Pipeline_URL"]
                 # }],
                 actions: [{
                     type: "button",
-                    text: "PAGE_URL",
+                    text: "View Build",
+                    url: ENV["BITRISE_BUILD_URL"]
+                }],
+                actions: [{
+                    type: "button",
+                    text: "Page Url",
                     url: ENV["$BITRISE_PUBLIC_INSTALL_PAGE_URL"]
                 }],
                 actions: [{
                     type: "button",
-                    text: "PAGE_URL_MAP",
+                    text: "Page Url map",
                     url: ENV["$BITRISE_PUBLIC_INSTALL_PAGE_URL_MAP"]
                 }],
                 footer: "Bitrise",
