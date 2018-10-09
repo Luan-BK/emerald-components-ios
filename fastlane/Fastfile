@@ -32,7 +32,7 @@ platform :ios do
             slack_url: ENV["SLACK_WEBHOOK"],
             attachment_properties: {
                 # Change this image later to use emerald brand
-                thumb_url: "https://github.com/bitrise-io.png",
+                # thumb_url: "https://github.com/bitrise-io.png",
                 fields: [
                     {
                         title: "Project",
@@ -51,7 +51,10 @@ platform :ios do
                         text: "View Build",
                         url: ENV["BITRISE_BUILD_URL"]
                     }
-                ]
+                ],
+                footer: "Bitrise",
+                footer_icon: "https://github.com/bitrise-io.png",
+                ts: 123456789
             }
         )
     end
