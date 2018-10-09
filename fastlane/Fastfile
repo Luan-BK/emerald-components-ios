@@ -31,8 +31,6 @@ platform :ios do
             channel: "#fastlane",
             slack_url: ENV["SLACK_WEBHOOK"],
             attachment_properties: {
-                # Change this image later to use emerald brand
-                # thumb_url: "https://github.com/bitrise-io.png",
                 fields: [
                     {
                         title: "Project",
@@ -53,8 +51,7 @@ platform :ios do
                     }
                 ],
                 footer: "Bitrise",
-                footer_icon: "https://github.com/bitrise-io.png",
-                ts: 123456789
+                footer_icon: "https://github.com/bitrise-io.png"
             }
         )
     end
