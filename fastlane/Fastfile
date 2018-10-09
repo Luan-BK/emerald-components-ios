@@ -62,7 +62,7 @@ platform :ios do
                     text: "Download Artifacts",
                     style: "primary",
                     url: ENV["BITRISE_DEPLOY_DIR"]
-                },
+                }],
                 footer: "Bitrise",
                 footer_icon: "https://github.com/bitrise-io.png",
                 ts: 123456789
