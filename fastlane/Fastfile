@@ -32,11 +32,11 @@ platform :ios do
             slack_url: ENV["SLACK_WEBHOOK"],
             default_payloads: [],
             attachment_properties: {
-                author_name: "Author name",
+                author_name: ENV["GIT_CLONE_COMMIT_AUTHOR_NAME"],
                 author_link: "https://github.com",
                 author_icon: "https://platform.slack-edge.com/img/default_application_icon.png",
-                title: "Pull Request title",
-                title_link: "https://github.com",
+                title: ENV["PULL_REQUEST_ID"],
+                title_link: ENV["BITRISEIO_PULL_REQUEST_REPOSITORY_URL"],
                 text: "Pull Request description",
                 color: "#008952",
                 fields: [{
