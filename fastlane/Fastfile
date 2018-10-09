@@ -29,9 +29,29 @@ platform :ios do
     lane :slack_start_build do
         slack(
             channel: "#fastlane",
-            slack_url: ENV["SLACK_TEST"],
+            slack_url: ENV["SLACK_WEBHOOK"],
             attachment_properties: {
+                # Change this image later to use emerald brand
                 thumb_url: "https://github.com/bitrise-io.png",
+                fields: [
+                    {
+                        title: "Project",
+                        value: "Emerald",
+                        short: true
+                    },
+                    {
+                        title: "Pipeline",
+                        value: "Test",
+                        short: true
+                    }
+                ],
+                actions: [
+                    {
+                        type: "button",
+                        text: "Test",
+                        url: "https://www.stone.com.br"
+                    }
+                ]
             }
         )
     end
