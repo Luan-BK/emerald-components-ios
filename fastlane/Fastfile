@@ -28,12 +28,12 @@ platform :ios do
     desc "Send message to slack that indicates the process has been started"
     lane :slack_start_build do
         slack(
-            author_name: "Author name",
-            author_link: "https://github.com",
-            author_icon: "https://platform.slack-edge.com/img/default_application_icon.png",
-            title: "Pull Request title",
-            title_link: "https://github.com",
-            text: "Pull Request description",
+            # author_name: "Author name",
+            # author_link: "https://github.com",
+            # author_icon: "https://platform.slack-edge.com/img/default_application_icon.png",
+            # title: "Pull Request title",
+            # title_link: "https://github.com",
+            # text: "Pull Request description",
             color: "#008952",
             channel: "#fastlane",
             slack_url: ENV["SLACK_WEBHOOK"],
