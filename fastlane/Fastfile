@@ -60,7 +60,7 @@ platform :ios do
                 }, {
                     type: "button",
                     text: "Download Artifacts",
-                    style: "primary"
+                    style: "primary",
                     url: ENV["BITRISE_DEPLOY_DIR"]
                 },
                 footer: "Bitrise",
