@@ -35,9 +35,9 @@ platform :ios do
                 author_name: ENV["GIT_CLONE_COMMIT_AUTHOR_NAME"],
                 author_link: "https://github.com",
                 author_icon: "https://platform.slack-edge.com/img/default_application_icon.png",
-                title: ENV["PULL_REQUEST_ID"],
+                title: "PULL REQUEST NUMBER " + ENV["PULL_REQUEST_ID"],
                 title_link: ENV["BITRISEIO_PULL_REQUEST_REPOSITORY_URL"],
-                text: "Pull Request description",
+                text: ENV["BITRISE_GIT_MESSAGE"],
                 color: "#008952",
                 fields: [{
                     title: "App",
@@ -56,11 +56,6 @@ platform :ios do
                     type: "button",
                     text: "View Build",
                     url: ENV["BITRISE_BUILD_URL"]
-                }, {
-                    type: "button",
-                    text: "Download Artifacts",
-                    style: "primary",
-                    url: ENV["BITRISE_DEPLOY_DIR"]
                 }],
                 footer: "Bitrise",
                 footer_icon: "https://github.com/bitrise-io.png",
