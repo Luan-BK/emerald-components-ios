@@ -48,8 +48,8 @@ platform :ios do
                 actions: [
                     {
                         type: "button",
-                        text: "Test",
-                        url: "https://www.stone.com.br"
+                        text: "View Build",
+                        url: ENV["BITRISE_BUILD_URL"]
                     }
                 ]
             }
