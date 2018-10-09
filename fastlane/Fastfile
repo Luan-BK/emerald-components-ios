@@ -59,6 +59,10 @@ platform :ios do
                     url: ENV["BITRISE_BUILD_URL"]
                 }, {
                     type: "button",
+                    text: "View Build",
+                    url: ENV["BITRISE_BUILD_URL"]
+                }, {
+                    type: "button",
                     text: "Page Url",
                     url: ENV["BITRISE_PUBLIC_INSTALL_PAGE_URL"]
                 }, {
