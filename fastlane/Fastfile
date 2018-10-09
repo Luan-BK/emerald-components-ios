@@ -31,25 +31,30 @@ platform :ios do
             channel: "#fastlane",
             slack_url: ENV["SLACK_WEBHOOK"],
             attachment_properties: {
-                fields: [
-                    {
-                        title: "Project",
-                        value: "Emerald",
-                        short: true
-                    },
-                    {
-                        title: "Pipeline",
-                        value: "Test",
-                        short: true
-                    }
-                ],
-                actions: [
-                    {
-                        type: "button",
-                        text: "View Build",
-                        url: ENV["BITRISE_BUILD_URL"]
-                    }
-                ],
+                fields: [{
+                    title: "Project",
+                    value: "Emerald",
+                    short: true
+                }, {
+                    title: "Pipeline",
+                    value: "Test",
+                    short: true
+                }],
+                # actions: [{
+                #     type: "button",
+                #     text: "View Build",
+                #     url: ENV["BITRISE_BUILD_URL"]
+                # }],
+                actions: [{
+                    type: "button",
+                    text: "PAGE_URL",
+                    url: ENV["$BITRISE_PUBLIC_INSTALL_PAGE_URL"]
+                }],
+                actions: [{
+                    type: "button",
+                    text: "PAGE_URL_MAP",
+                    url: ENV["$BITRISE_PUBLIC_INSTALL_PAGE_URL_MAP"]
+                }],
                 footer: "Bitrise",
                 footer_icon: "https://github.com/bitrise-io.png"
             }
