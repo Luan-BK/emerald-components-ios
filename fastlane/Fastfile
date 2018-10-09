@@ -59,19 +59,13 @@ platform :ios do
                     url: ENV["BITRISE_BUILD_URL"]
                 }, {
                     type: "button",
-                    text: "View Build",
-                    url: ENV["BITRISE_BUILD_URL"]
-                }, {
-                    type: "button",
-                    text: "Page Url",
-                    url: ENV["BITRISE_PUBLIC_INSTALL_PAGE_URL"]
-                }, {
-                    type: "button",
-                    text: "Page Url map",
-                    url: ENV["BITRISE_PUBLIC_INSTALL_PAGE_URL_MAP"]
-                }],
+                    text: "Download Artifacts",
+                    style: "primary"
+                    url: ENV["BITRISE_DEPLOY_DIR"]
+                },
                 footer: "Bitrise",
-                footer_icon: "https://github.com/bitrise-io.png"
+                footer_icon: "https://github.com/bitrise-io.png",
+                ts: 123456789
             }
         )
     end
