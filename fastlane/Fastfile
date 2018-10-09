@@ -34,7 +34,7 @@ platform :ios do
             # title: "Pull Request title",
             # title_link: "https://github.com",
             # text: "Pull Request description",
-            color: "#008952",
+            # color: "#008952",
             channel: "#fastlane",
             slack_url: ENV["SLACK_WEBHOOK"],
             default_payloads: [],
