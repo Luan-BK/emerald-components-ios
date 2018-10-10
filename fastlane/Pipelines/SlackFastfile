@@ -48,6 +48,14 @@ lane :slack_start_build do
                     type: "button",
                     text: "View Build",
                     url: ENV["BITRISE_BUILD_URL"]
+                }, {
+                    type: "button",
+                    text: "Public page",
+                    url: ENV["BITRISE_PUBLIC_INSTALL_PAGE"]
+                }, {
+                    type: "button",
+                    text: "Public page url",
+                    url: ENV["BITRISE_PUBLIC_INSTALL_PAGE_URL"]
                 }
             ],
             footer: "Bitrise",
