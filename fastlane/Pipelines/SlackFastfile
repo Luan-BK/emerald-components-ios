@@ -48,14 +48,42 @@ lane :slack_start_build do
                     type: "button",
                     text: "View Build",
                     url: ENV["BITRISE_BUILD_URL"]
+                }
+            ],
+            footer: "Bitrise",
+            footer_icon: "https://github.com/bitrise-io.png",
+            ts: ENV["BITRISE_BUILD_TRIGGER_TIMESTAMP"]
+        }
+    )
+end
+
+desc "Send message to slack that indicates the process has been started"
+lane :slack_end_build do
+    slack(
+        channel: "#fastlane",
+        slack_url: ENV["SLACK_WEBHOOK"],
+        default_payloads: [],
+        attachment_properties: {
+            author_name: ENV["GIT_CLONE_COMMIT_AUTHOR_NAME"],
+            author_link: "https://github.com",
+            author_icon: "https://platform.slack-edge.com/img/default_application_icon.png",
+            title: github_pull_request_title,
+            title_link: pull_request_path,
+            text: ENV["BITRISE_PUBLIC_INSTALL_PAGE"],
+            color: "#008952",
+            fields: [
+                {
+                    title: "App",
+                    value: ENV["BITRISE_APP_TITLE"],
+                    short: true
                 }, {
-                    type: "button",
-                    text: "Public page",
-                    url: ENV["BITRISE_PUBLIC_INSTALL_PAGE"]
+                    title: "Git Branch",
+                    value: ENV["BITRISE_GIT_BRANCH"],
+                    short: true
                 }, {
-                    type: "button",
-                    text: "Public page url",
-                    url: ENV["BITRISE_PUBLIC_INSTALL_PAGE_URL"]
+                    title: "Workflow",
+                    value: ENV["BITRISE_TRIGGERED_WORKFLOW_ID"],
+                    short: true
                 }
             ],
             footer: "Bitrise",
