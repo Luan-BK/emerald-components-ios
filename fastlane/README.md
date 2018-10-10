@@ -80,11 +80,16 @@ Increment version number
 fastlane pod_publish
 ```
 Push podfile
-### commit_and_push
+### commit_changes
 ```
-fastlane commit_and_push
+fastlane commit_changes
 ```
-Commit and update files
+Commit files
+### push_to_origin
+```
+fastlane push_to_origin
+```
+Push files to origin
 ### projet_version
 ```
 fastlane projet_version
@@ -94,6 +99,11 @@ set target to get version number
 ----
 
 ## iOS
+### ios download_bitrise_artifacts
+```
+fastlane ios download_bitrise_artifacts
+```
+download and parse json file
 ### ios test
 ```
 fastlane ios test
@@ -104,11 +114,6 @@ Run tests
 fastlane ios release
 ```
 Deploy a new version
-### ios slack_start_build
-```
-fastlane ios slack_start_build
-```
-Send message to slack that indicates the process has been started
 
 ----
 
