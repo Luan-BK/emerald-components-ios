@@ -13,9 +13,8 @@ end
 
 desc "Install cocoapods dependencies"
 lane :pod_install do
-    cocoapods(
-        podfile: "./EmeraldComponents"
-    )
+    cocoapods(podfile: "./EmeraldComponents")
+    cocoapods(podfile: "./EmeraldComponentsApp/EmeraldComponentsApp")
 end
 
 desc "Run swiftlint"
