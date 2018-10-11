@@ -7,7 +7,7 @@ target 'EmeraldComponentsApp' do
 
   # Pods for EmeraldComponentsApp
   pod 'EmeraldComponents', :path => '..'
-  pod 'SimulatorStatusMagic', '2.2', :configurations => ['Debug']
+  pod 'SimulatorStatusMagic', :configurations => ['Debug']
   
   target 'EmeraldComponentsAppUITests' do
     inherit! :search_paths

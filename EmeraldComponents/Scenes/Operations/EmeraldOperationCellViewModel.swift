@@ -17,5 +17,5 @@ public protocol EmeraldOperationCellViewModel {
     var movementCategoryColor: UIColor { get }
     var settlementStatus: String { get }
     var settlementStatusColor: UIColor { get }
-    var accessoryType: UITableViewCellAccessoryType { get }
+    var accessoryType: UITableViewCell.AccessoryType { get }
 }
