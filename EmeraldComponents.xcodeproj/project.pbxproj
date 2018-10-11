@@ -80,8 +80,8 @@
 		A2C43C8F201F7DCA0067AA7E /* CompanyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C8E201F7DCA0067AA7E /* CompanyTheme.swift */; };
 		A2C43C91201F7E380067AA7E /* ColorUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C90201F7E380067AA7E /* ColorUpdatable.swift */; };
 		A2C43CA0201F85BE0067AA7E /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C9F201F85BE0067AA7E /* UIColor+Palette.swift */; };
-		B098A7B3A77012E5DC05D167 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		DB29B9AD3AE97FAB9306B334 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		B098A7B3A77012E5DC05D167 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		DB29B9AD3AE97FAB9306B334 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		E557098DD4758F8A5DFD254C /* Pods_EmeraldComponentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA13C85467E5B525A951794 /* Pods_EmeraldComponentsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -203,7 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B098A7B3A77012E5DC05D167 /* (null) in Frameworks */,
+				B098A7B3A77012E5DC05D167 /* BuildFile in Frameworks */,
 				34ADBC3F76F7145EDC11A8B1 /* Pods_EmeraldComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A250F7F52052F3500013C05D /* EmeraldComponents.framework in Frameworks */,
-				DB29B9AD3AE97FAB9306B334 /* (null) in Frameworks */,
+				DB29B9AD3AE97FAB9306B334 /* BuildFile in Frameworks */,
 				E557098DD4758F8A5DFD254C /* Pods_EmeraldComponentsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

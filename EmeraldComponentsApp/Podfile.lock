@@ -1,0 +1,31 @@
+PODS:
+  - EmeraldComponents (0.1.4):
+    - InputMask
+    - JTAppleCalendar
+  - InputMask (4.0.1)
+  - JTAppleCalendar (7.1.6)
+  - SimulatorStatusMagic (2.3)
+
+DEPENDENCIES:
+  - EmeraldComponents (from `..`)
+  - SimulatorStatusMagic
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - InputMask
+    - JTAppleCalendar
+    - SimulatorStatusMagic
+
+EXTERNAL SOURCES:
+  EmeraldComponents:
+    :path: ".."
+
+SPEC CHECKSUMS:
+  EmeraldComponents: 04ccba78ed9d17d62ac317eb46acad9b14cfa474
+  InputMask: 2eb0dd868885f5ba061db2640db0b17265bb95eb
+  JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
+  SimulatorStatusMagic: 631fe6e4195a8a8d587ad8744af9015126526cc2
+
+PODFILE CHECKSUM: fbdc8a0c8eb3bc99bae43293ee72b91f13c9bac5
+
+COCOAPODS: 1.5.3
