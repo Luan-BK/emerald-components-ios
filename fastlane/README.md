@@ -99,11 +99,6 @@ set target to get version number
 ----
 
 ## iOS
-### ios download_bitrise_artifacts
-```
-fastlane ios download_bitrise_artifacts
-```
-download and parse json file
 ### ios test
 ```
 fastlane ios test
