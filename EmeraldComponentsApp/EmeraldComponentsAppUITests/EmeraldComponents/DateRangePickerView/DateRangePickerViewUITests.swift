@@ -7,6 +7,7 @@
 //
 
 import XCTest
+//import SimulatorStatusMagic
 
 class DateRangePickerViewUITests: XCTestCase {
     
@@ -15,6 +16,12 @@ class DateRangePickerViewUITests: XCTestCase {
     var attachment: AttachmentHelper!
     
     override func setUp() {
+        
+//        SDStatusBarManager.sharedInstance().carrierName = "Somkiat"
+//        SDStatusBarManager.sharedInstance().timeString = "12:00"
+//        SDStatusBarManager.sharedInstance().batteryDetailEnabled = true
+//        SDStatusBarManager.sharedInstance().enableOverrides()
+        
         super.setUp()
         continueAfterFailure = false
         tablesQuery = app.tables
