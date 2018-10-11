@@ -7,7 +7,7 @@ target 'EmeraldComponents' do
   
   # Pods for EmeraldComponents
   pod 'JTAppleCalendar', '~> 7.0'
-  pod 'InputMask'
+  pod 'InputMask', '4.0.0'
 
   target 'EmeraldComponentsTests' do
     inherit! :search_paths
