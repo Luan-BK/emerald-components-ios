@@ -23,7 +23,7 @@ class EmeraldOperationTableViewCellTests: XCTestCase {
         var amount: String = "R$ 10,90"
         var movementCategory: String = "VENDA"
         var settlementStatus: String = "COMPENSADO"
-        var accessoryType: UITableViewCell.AccessoryType = .none
+        var accessoryType: UITableViewCellAccessoryType = .none
     }
     
     override func setUp() {

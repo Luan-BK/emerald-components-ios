@@ -42,7 +42,7 @@ class HUDHelper {
         guard let view = view else { return UIActivityIndicatorView() }
         
         activityIndicatorView.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
-        activityIndicatorView.style = UIActivityIndicatorView.Style.whiteLarge
+        activityIndicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
         activityIndicatorView.color = UIColor.black
         activityIndicatorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         activityIndicatorView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)

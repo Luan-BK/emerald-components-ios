@@ -149,14 +149,14 @@ class HUDHelperTests: XCTestCase {
     func testActivityAnimating_activityIndicatorViewStyle() {
         // given
         let view = UIView()
-        let style = UIActivityIndicatorView.Style.whiteLarge
+        let style = UIActivityIndicatorViewStyle.whiteLarge
         
         // when
         guard let animating = activityIndicatorView else { return XCTFail("error to instantiate view") }
-        animating.style = style
+        animating.activityIndicatorViewStyle = style
         
         // then
-        XCTAssertEqual(animating.style, hudHelper?.activityAnimating(view).style)
+        XCTAssertEqual(animating.activityIndicatorViewStyle, hudHelper?.activityAnimating(view).activityIndicatorViewStyle)
     }
     
     func testActivityAnimating_color() {
