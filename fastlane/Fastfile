@@ -8,7 +8,7 @@
 
 import "Pipelines/TestsFastfile"
 import "Pipelines/DeployFastfile"
-# import "Pipelines/SlackFastfile"
+import "Pipelines/SlackFastfile"
 
 default_platform(:ios)
 
@@ -16,7 +16,7 @@ platform :ios do
 
     desc "Run tests"
     lane :test do
-        # slack_start_build
+        slack_start_build
     	run_tests_pipeline
     end
 
