@@ -1,8 +1,8 @@
 //
 //  String.swift
-//  EmeraldComponents
+//  EmeraldComponentsAppUITests
 //
-//  Created by João Mendes | Stone on 13/07/18.
+//  Created by João Mendes | Stone on 16/10/18.
 //  Copyright © 2018 StoneCo. All rights reserved.
 //
 
@@ -39,3 +39,4 @@ public extension String {
     }
     
 }
+

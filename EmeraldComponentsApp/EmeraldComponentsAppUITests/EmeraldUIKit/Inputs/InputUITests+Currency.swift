@@ -11,7 +11,7 @@ import XCTest
 extension InputUITests {
     
     func test_8_currency() {
-
+        
         self.attachment.screenshot("Input-19: Get currency empty state screenshot", to: 7)
         
         XCTContext.runActivity(named: "fill textfield") { _ in
@@ -34,34 +34,44 @@ extension InputUITests {
             }
             
             XCTContext.runActivity(named: "Check if currency textfield is correct") { _ in
-                let input = tablesQuery.textFields["R$ 10.000,00"]
-                XCTAssertEqual(String(describing: input.value!), "R$ 10.000,00")
+                let input = XCUIApplication().tables.children(matching: .cell).element(boundBy: 7).children(matching: .textField).element
+                
+                let label = UITextField()
+                label.text = label.text?.currencyFormatter("R$ 10.000,00")
+                let labelAmount = tablesQuery.textFields[label.text!]
+                
+                XCTAssertEqual(String(describing: input.value!), String(describing: labelAmount.value!))
             }
             
         }
         
         self.attachment.screenshot("Input-20: Get currency success state screenshot", to: 7)
-        
+
         XCTContext.runActivity(named: "Clean textfield") { _ in
-            
+
             XCTContext.runActivity(named: "Get filled field and erase inputed data") { _ in
                 // Get textfield
-                let input = tablesQuery.textFields["R$ 10.000,00"]
+                let input = XCUIApplication().tables.children(matching: .cell).element(boundBy: 7).children(matching: .textField).element
                 input.tap()
-                
+
                 // Clean textfield
                 let deleteKey = app.keys["Delete"]
-                
+
                 for _ in 0...6 {
                     deleteKey.tap()
                 }
             }
-            
+
             XCTContext.runActivity(named: "Check if currency textfield is correct") { _ in
-                let input = tablesQuery.textFields["R$ 0,00"]
-                XCTAssertEqual(String(describing: input.value!), "R$ 0,00")
+                let input = XCUIApplication().tables.children(matching: .cell).element(boundBy: 7).children(matching: .textField).element
+                
+                let label = UITextField()
+                label.text = label.text?.currencyFormatter("R$ 0,00")
+                let labelAmount = tablesQuery.textFields[label.text!]
+                
+                XCTAssertEqual(String(describing: input.value!), String(describing: labelAmount.value!))
             }
-            
+
         }
         
     }
