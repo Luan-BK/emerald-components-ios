@@ -1,0 +1,57 @@
+# This pipeline is used in the tests process.
+# You can read each description to understand what each methods do
+#
+
+desc "Run tests"
+lane :run_tests_pipeline do
+    pod_install
+    lint
+    unit_tests
+    coverage
+    screenshots
+end
+
+desc "Install cocoapods dependencies"
+lane :pod_install do
+    cocoapods(podfile: "./EmeraldComponents")
+    cocoapods(podfile: "./EmeraldComponentsApp/EmeraldComponentsApp")
+end
+
+desc "Run swiftlint"
+lane :lint do
+    swiftlint(
+        mode: :lint,
+        output_file: "swiftlint.result.json",
+        reporter: "json",
+        config_file: ".swiftlint-ci.yml",
+        ignore_exit_status: false
+    )
+end
+
+desc "Run Unit Tests"
+lane :unit_tests do        
+    scan(   
+        scheme: "EmeraldComponents", 
+        devices: ["iPhone 8", "iPhone X"],
+        code_coverage: true,
+        clean: true
+    )
+end
+
+desc "Get coverage percentage, remove framework's coverage"
+lane :coverage do 
+    xcov(
+        workspace: "EmeraldComponents.xcworkspace",
+        scheme: "EmeraldComponents",
+        output_directory: "xcov_output",
+        exclude_targets: "JTAppleCalendar.framework, 
+                          EmeraldComponentsApp.app,
+                          InputMask.framework",
+        minimum_coverage_percentage: 80.0
+    )
+end
+
+desc "Run UITests and get screenshots"
+lane :screenshots do
+    capture_screenshots
+end
