@@ -8,7 +8,6 @@
 
 import "Pipelines/TestsFastfile"
 import "Pipelines/DeployFastfile"
-import "Pipelines/SlackFastfile"
 
 default_platform(:ios)
 
@@ -22,8 +21,64 @@ platform :ios do
 
 	desc "Deploy a new version"
     lane :release do
-        slack_start_build
+        # slack_start_build
         run_deploy_pipeline
+    end
+
+    desc "Send message to slack that indicates the process has been started"
+    lane :slack_start_build do
+
+        # Get pull request full path 
+        github_page = "https://github.com/"
+        github_owner = ENV["BITRISEIO_GIT_REPOSITORY_OWNER"] + "/"
+        github_repository = ENV["BITRISEIO_GIT_REPOSITORY_SLUG"] + "/"
+        github_pull_request = ENV["BITRISEIO_PULL_REQUEST_HEAD_BRANCH"]
+        github_pull_request_title = "PULL REQUEST NUMBER " + ENV["PULL_REQUEST_ID"]
+
+        pull_request_path = github_page + github_owner + github_repository + github_pull_request
+
+        slack(
+            channel: "#fastlane",
+            slack_url: ENV["SLACK_WEBHOOK"],
+            default_payloads: [],
+            attachment_properties: {
+                author_name: ENV["GIT_CLONE_COMMIT_AUTHOR_NAME"],
+                author_link: "https://github.com",
+                author_icon: "https://platform.slack-edge.com/img/default_application_icon.png",
+                title: github_pull_request_title,
+                title_link: pull_request_path,
+                text: ENV["BITRISE_GIT_MESSAGE"],
+                mrkdwn_in: [
+                    "text"
+                ],
+                color: "#008952",
+                fields: [
+                    {
+                        title: "App",
+                        value: ENV["BITRISE_APP_TITLE"],
+                        short: true
+                    }, {
+                        title: "Git Branch",
+                        value: ENV["BITRISE_GIT_BRANCH"],
+                        short: true
+                    }, {
+                        title: "Workflow",
+                        value: ENV["BITRISE_TRIGGERED_WORKFLOW_ID"],
+                        short: true
+                    }
+                ],
+                actions: [
+                    {
+                        type: "button",
+                        text: "View Build",
+                        url: ENV["BITRISE_BUILD_URL"]
+                    }
+                ],
+                footer: "Bitrise",
+                footer_icon: "https://github.com/bitrise-io.png",
+                ts: ENV["BITRISE_BUILD_TRIGGER_TIMESTAMP"]
+            }
+        )
     end
 
 end
