@@ -3,8 +3,8 @@ PODS:
   - JTAppleCalendar (7.1.5)
 
 DEPENDENCIES:
-  - InputMask
-  - JTAppleCalendar (~> 7.0)
+  - InputMask (= 4.0.0)
+  - JTAppleCalendar (= 7.1.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -15,6 +15,6 @@ SPEC CHECKSUMS:
   InputMask: e3fe4ee45ce70241fd76684c1e9d6f98e1492eab
   JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
 
-PODFILE CHECKSUM: a34cf51d16e92e5c05658ee35d4b86f211252c00
+PODFILE CHECKSUM: 280c1fa4255f2c6936b9088f0e09f370f6c6f659
 
 COCOAPODS: 1.5.3

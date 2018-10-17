@@ -8,6 +8,7 @@
 
 import UIKit
 import EmeraldComponents
+import SimulatorStatusMagic
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
