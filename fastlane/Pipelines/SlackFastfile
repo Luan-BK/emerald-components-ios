@@ -2,17 +2,18 @@
 # You can read each description to understand what each methods do
 #
 
-# Get pull request full path 
-github_page = "https://github.com/"
-github_owner = ENV["BITRISEIO_GIT_REPOSITORY_OWNER"] + "/"
-github_repository = ENV["BITRISEIO_GIT_REPOSITORY_SLUG"] + "/"
-github_pull_request = ENV["BITRISEIO_PULL_REQUEST_HEAD_BRANCH"]
-github_pull_request_title = "PULL REQUEST NUMBER " + ENV["PULL_REQUEST_ID"]
-
-pull_request_path = github_page + github_owner + github_repository + github_pull_request
-
 desc "Send message to slack that indicates the process has been started"
 lane :slack_start_build do
+
+    # Get pull request full path 
+    github_page = "https://github.com/"
+    github_owner = ENV["BITRISEIO_GIT_REPOSITORY_OWNER"] + "/"
+    github_repository = ENV["BITRISEIO_GIT_REPOSITORY_SLUG"] + "/"
+    github_pull_request = ENV["BITRISEIO_PULL_REQUEST_HEAD_BRANCH"]
+    github_pull_request_title = "PULL REQUEST NUMBER " + ENV["PULL_REQUEST_ID"]
+
+    pull_request_path = github_page + github_owner + github_repository + github_pull_request
+
     slack(
         channel: "#fastlane",
         slack_url: ENV["SLACK_WEBHOOK"],
@@ -48,72 +49,6 @@ lane :slack_start_build do
                     type: "button",
                     text: "View Build",
                     url: ENV["BITRISE_BUILD_URL"]
-                }
-            ],
-            footer: "Bitrise",
-            footer_icon: "https://github.com/bitrise-io.png",
-            ts: ENV["BITRISE_BUILD_TRIGGER_TIMESTAMP"]
-        }
-    )
-end
-
-lane :show_message do
-    download_bitrise_artifacts
-    slack_end_build
-end
-
-download_url = nil
-desc "download and parse json file"
-lane :download_bitrise_artifacts do
-    artifacts_path = ENV["BITRISE_BUILD_URL"] + "/artifacts.json"
-    data = download(url: artifacts_path)
-    print("ARTIFACTS DATA: ", data)
-    content = load_json(json_path: "artifacts.json")
-    print("ARTIFACTS DATA: ", content)
-    download_url = content[0]["download_url"]
-end
-
-desc "Send message to slack that indicates the process has been started"
-lane :slack_end_build do
-    slack(
-        channel: "#fastlane",
-        slack_url: ENV["SLACK_WEBHOOK"],
-        default_payloads: [],
-        attachment_properties: {
-            author_name: ENV["GIT_CLONE_COMMIT_AUTHOR_NAME"],
-            author_link: "https://github.com",
-            author_icon: "https://platform.slack-edge.com/img/default_application_icon.png",
-            title: github_pull_request_title,
-            title_link: pull_request_path,
-            text: artifacts_path,
-            mrkdwn_in: [
-                "text"
-            ],
-            color: "#ff0000",
-            fields: [
-                {
-                    title: "App",
-                    value: ENV["BITRISE_APP_TITLE"],
-                    short: true
-                }, {
-                    title: "Git Branch",
-                    value: ENV["BITRISE_GIT_BRANCH"],
-                    short: true
-                }, {
-                    title: "Workflow",
-                    value: ENV["BITRISE_TRIGGERED_WORKFLOW_ID"],
-                    short: true
-                }
-            ],
-            actions: [
-                {
-                    type: "button",
-                    text: "View Build",
-                    url: ENV["BITRISE_BUILD_URL"]
-                }, {
-                    type: "button",
-                    text: "View Build",
-                    url: download_url
                 }
             ],
             footer: "Bitrise",
