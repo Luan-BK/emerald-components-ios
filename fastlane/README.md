@@ -95,6 +95,11 @@ Push files to origin
 fastlane projet_version
 ```
 set target to get version number
+### slack_start_build
+```
+fastlane slack_start_build
+```
+Send message to slack that indicates the process has been started
 
 ----
 
