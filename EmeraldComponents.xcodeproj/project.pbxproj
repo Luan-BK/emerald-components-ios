@@ -81,6 +81,8 @@
 		A2C43C8F201F7DCA0067AA7E /* CompanyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C8E201F7DCA0067AA7E /* CompanyTheme.swift */; };
 		A2C43C91201F7E380067AA7E /* ColorUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C90201F7E380067AA7E /* ColorUpdatable.swift */; };
 		A2C43CA0201F85BE0067AA7E /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C43C9F201F85BE0067AA7E /* UIColor+Palette.swift */; };
+		A2C95314217E413C000073E2 /* EmeraldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C95313217E413C000073E2 /* EmeraldLabel.swift */; };
+		A2C9531A217E69FD000073E2 /* EmeraldLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2C95319217E69FD000073E2 /* EmeraldLabel.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +182,8 @@
 		A2C43C8E201F7DCA0067AA7E /* CompanyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTheme.swift; sourceTree = "<group>"; };
 		A2C43C90201F7E380067AA7E /* ColorUpdatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUpdatable.swift; sourceTree = "<group>"; };
 		A2C43C9F201F85BE0067AA7E /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		A2C95313217E413C000073E2 /* EmeraldLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldLabel.swift; sourceTree = "<group>"; };
+		A2C95319217E69FD000073E2 /* EmeraldLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmeraldLabel.xib; sourceTree = "<group>"; };
 		BCCA954D0FE1F92C6E18CCDA /* Pods-EmeraldComponentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmeraldComponentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmeraldComponentsTests/Pods-EmeraldComponentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F559D6EC43E9F8F92BDA9263 /* Pods-EmeraldComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmeraldComponents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmeraldComponents/Pods-EmeraldComponents.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,6 +297,7 @@
 				A2690D31213ED515007ED6B1 /* Button */,
 				A2690CED213D8092007ED6B1 /* DataRangePicker */,
 				A2690CFB213D811A007ED6B1 /* Input */,
+				A2C95312217E410F000073E2 /* Label */,
 				A2690D02213D8141007ED6B1 /* Picker */,
 			);
 			path = Basics;
@@ -604,6 +609,15 @@
 			path = "UIColor Extensions";
 			sourceTree = "<group>";
 		};
+		A2C95312217E410F000073E2 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				A2C95313217E413C000073E2 /* EmeraldLabel.swift */,
+				A2C95319217E69FD000073E2 /* EmeraldLabel.xib */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -706,6 +720,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37AF650D20B8A16C00D90AE0 /* LoadingTableViewCell.xib in Resources */,
+				A2C9531A217E69FD000073E2 /* EmeraldLabel.xib in Resources */,
 				37BF7C0721222B4100A09737 /* Localizable.strings in Resources */,
 				A2690C8D21370CBA007ED6B1 /* SearchList.storyboard in Resources */,
 				A21D2A5020502EF8004CCA9A /* Assets.xcassets in Resources */,
@@ -848,6 +863,7 @@
 				37E1297920DC101100B45C5A /* Bundle.swift in Sources */,
 				37E1298F20DC5A1100B45C5A /* UIResponder.swift in Sources */,
 				A2690D06213D8141007ED6B1 /* EmeraldPicker.swift in Sources */,
+				A2C95314217E413C000073E2 /* EmeraldLabel.swift in Sources */,
 				A26BD5BA20BC88E50013FA24 /* HUDConstraints.swift in Sources */,
 				A2C43C8F201F7DCA0067AA7E /* CompanyTheme.swift in Sources */,
 				A28D839D208524E70041457D /* HUDHelper.swift in Sources */,
