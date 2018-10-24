@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum EmeraldLabelStyle: Int {
+public enum EmeraldLabelType: Int {
     case fill = 1
     case outline
     case text
@@ -16,9 +16,9 @@ public enum EmeraldLabelStyle: Int {
 }
 
 public enum EmeraldLabelState: Int {
-    case error = 1
+    case neutral = 1
+    case error
     case warning
-    case neutral
     case success
     case info
 }
@@ -32,27 +32,26 @@ public class EmeraldLabel: UIView {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
     
-    internal var iconLabel: String = "calendar-icon"
+    @IBOutlet weak var iconImageHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var textLabelLeadingConstraint: NSLayoutConstraint!
     
-    internal private(set) var style: EmeraldLabelStyle = .fill {
+    internal private(set) var type: EmeraldLabelType = .fill {
         didSet {
-            self.typeOrStyleDidChange(self.type, self.style)
+            self.typeOrStyleDidChange(self.state, self.type)
         }
     }
 
-    internal private(set) var type: EmeraldLabelState = .error {
+    internal private(set) var state: EmeraldLabelState = .error {
         didSet {
-            self.typeOrStyleDidChange(self.type, self.style)
+            self.typeOrStyleDidChange(self.state, self.type)
         }
     }
     
-    // MARK: - Inspectables
+    // MARK: - Aux properties
     
-    @IBInspectable public var text: String = "" {
-        didSet {
-            self.textLabel.text = text.uppercased()
-        }
-    }
+    internal var auxIconLabel: String = "icon-dot"
+    
+    internal var auxTextLabel: String = "Label"
     
     // MARK: - Init
 
@@ -74,50 +73,54 @@ public class EmeraldLabel: UIView {
         self.contentView.frame = self.bounds
         self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
-        setDefaultLabel()
+        self.setDefaultValuesToLabels()
     }
     
-    internal func setDefaultLabel() {
+    internal func setDefaultValuesToLabels() {
         self.textLabel.layer.cornerRadius = 15.0
         self.textLabel.layer.masksToBounds = true
-        self.textLabel.textAlignment = .center
-        self.textLabel.font = UIFont.systemFont(ofSize: 18.0, weight: .medium)
+        self.textLabel.font = UIFont.systemFont(ofSize: 15.0, weight: .heavy)
     }
     
     // MARK: - Public configuration
     
     public func setIcon(name: String) {
-        iconLabel = name
+        self.auxIconLabel = name
     }
     
     public func setLabel(text: String) {
-        self.textLabel.text = text.uppercased()
+        self.auxTextLabel = text.uppercased()
     }
     
-    public func configure(style: EmeraldLabelStyle? = nil, type: EmeraldLabelState? = nil) {
-        self.style = style ?? self.style
-        self.type = type ?? self.type
+    public func configure(state: EmeraldLabelState, type: EmeraldLabelType) {
+        self.state = state
+        self.type = type
     }
     
     // MARK: - State changes
 
-    internal func typeOrStyleDidChange(_ newType: EmeraldLabelState, _ newStyle: EmeraldLabelStyle) {
-        self.textLabel.backgroundColor = self.backgroundColor(forType: newType, andStyle: newStyle)
-        self.textLabel.textColor = textColor(forType: newType, andStyle: newStyle)
-        self.textLabel.tintColor = self.textColor(forType: newType, andStyle: newStyle)
-        self.textLabel.layer.borderColor = self.borderColor(forType: newType, andStyle: newStyle)
-        self.textLabel.layer.borderWidth = self.borderWidth(forType: newType, andStyle: newStyle)
+    internal func typeOrStyleDidChange(_ newState: EmeraldLabelState, _ newType: EmeraldLabelType) {
+        self.textLabel.text = self.text(forState: newState, andType: newType)
+        self.textLabel.backgroundColor = self.backgroundColor(forState: newState, andType: newType)
+        self.textLabel.textColor = textColor(forState: newState, andType: newType)
+        self.textLabel.tintColor = self.textColor(forState: newState, andType: newType)
+        self.textLabel.layer.borderColor = self.borderColor(forState: newState, andType: newType)
+        self.textLabel.layer.borderWidth = self.borderWidth(forState: newState, andType: newType)
+        self.textLabel.textAlignment = self.textAlignment(forState: newState, andType: newType)
         
-        self.iconImage.image = self.textBullet(forType: newType, andStyle: newStyle)
-        self.iconImage.tintColor = self.textColor(forType: newType, andStyle: newStyle)
+        let text = NSAttributedString(string: self.textLabel.text!, attributes: [NSAttributedStringKey.kern : 1.0])
+        self.textLabel.attributedText = text
+        
+        self.iconImage.image = self.textIcon(forState: newState, andType: newType)
+        self.iconImage.tintColor = self.textColor(forState: newState, andType: newType)
+        
+        self.constraintsVisibility(forState: newState, andType: newType)
     }
-
-    // MARK: - Aux
-
-    internal func backgroundColor(forType type: EmeraldLabelState, andStyle style: EmeraldLabelStyle) -> UIColor {
-        switch style {
+    
+    internal func backgroundColor(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> UIColor {
+        switch type {
         case .fill:
-            switch type {
+            switch state {
             case .error:
                 return UIColor.Palette.Basic.error
             case .warning:
@@ -134,8 +137,8 @@ public class EmeraldLabel: UIView {
         }
     }
     
-    internal func borderWidth(forType type: EmeraldLabelState, andStyle style: EmeraldLabelStyle) -> CGFloat {
-        switch style {
+    internal func borderWidth(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> CGFloat {
+        switch type {
         case .outline:
             return 1.0
         default:
@@ -143,10 +146,10 @@ public class EmeraldLabel: UIView {
         }
     }
     
-    internal func borderColor(forType type: EmeraldLabelState, andStyle style: EmeraldLabelStyle) -> CGColor {
-        switch style {
+    internal func borderColor(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> CGColor {
+        switch type {
         case .fill, .outline:
-            switch type {
+            switch state {
             case .error:
                 return UIColor.Palette.Basic.error.cgColor
             case .warning:
@@ -163,23 +166,34 @@ public class EmeraldLabel: UIView {
         }
     }
     
-    internal func textBullet(forType type: EmeraldLabelState, andStyle style: EmeraldLabelStyle) -> UIImage? {
-        switch style {
+    internal func textIcon(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> UIImage? {
+        switch type {
         case .text:
-            return UIImage(named: "calendar-icon", in: Bundle.basic, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
+            return UIImage(named: "icon-dot", in: Bundle.basic, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
         case .image:
-            return UIImage(named: iconLabel, in: Bundle.basic, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
+            return UIImage(named: auxIconLabel, in: Bundle.basic, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
         default:
             return nil
         }
     }
     
-    internal func textColor(forType type: EmeraldLabelState, andStyle style: EmeraldLabelStyle) -> UIColor {
-        switch style {
+    internal func constraintsVisibility(forState state: EmeraldLabelState, andType type: EmeraldLabelType) {
+        switch type {
+        case .fill, .outline:
+            self.iconImageHeightConstraint.constant = 0.0
+            self.textLabelLeadingConstraint.constant = 0.0
+        case .text, .image:
+            self.iconImageHeightConstraint.constant = 30.0
+            self.textLabelLeadingConstraint.constant = 8.0
+        }
+    }
+    
+    internal func textColor(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> UIColor {
+        switch type {
         case .fill:
             return UIColor.Palette.Light.white1
         case .outline, .text, .image:
-            switch type {
+            switch state {
             case .error:
                 return UIColor.Palette.Basic.error
             case .warning:
@@ -192,6 +206,20 @@ public class EmeraldLabel: UIView {
                 return UIColor.Palette.purple
             }
         }
+    }
+    
+    internal func textAlignment(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> NSTextAlignment {
+        switch type {
+        case .fill, .outline:
+            return .center
+        case .text, .image:
+            return .left
+        }
+        
+    }
+    
+    internal func text(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> String {
+        return self.auxTextLabel
     }
     
 }
