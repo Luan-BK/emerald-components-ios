@@ -48,6 +48,7 @@
 		37EEED2E2124987E00469F01 /* UINavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEED2D2124987E00469F01 /* UINavigationControllerTests.swift */; };
 		9DA32D04AB428D22AADCE84A /* Pods_EmeraldComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A2225068EEBA4A4703A1798 /* Pods_EmeraldComponents.framework */; };
 		A2098DC020D2E9AB006A10BA /* SearchListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2098DBF20D2E9AB006A10BA /* SearchListDelegate.swift */; };
+		A21963E52180D8C60038450D /* LabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21963E42180D8C60038450D /* LabelTests.swift */; };
 		A21D2A5020502EF8004CCA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21F0C46202B6FBE00C91077 /* Assets.xcassets */; };
 		A2360121216FE6E300200335 /* DateRangePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2360120216FE6E300200335 /* DateRangePicker.storyboard */; };
 		A24685E820912BBB00D934BE /* WeekHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24685E720912BBB00D934BE /* WeekHeader.swift */; };
@@ -140,6 +141,7 @@
 		4A1B3DB2C24C4FEC9E631DEF /* Pods-EmeraldComponentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmeraldComponentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmeraldComponentsTests/Pods-EmeraldComponentsTests.release.xcconfig"; sourceTree = "<group>"; };
 		6B5A61B7CEBF46B26B66DC84 /* Pods_EmeraldComponentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmeraldComponentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2098DBF20D2E9AB006A10BA /* SearchListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListDelegate.swift; sourceTree = "<group>"; };
+		A21963E42180D8C60038450D /* LabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTests.swift; sourceTree = "<group>"; };
 		A21F0C46202B6FBE00C91077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2360120216FE6E300200335 /* DateRangePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DateRangePicker.storyboard; sourceTree = "<group>"; };
 		A24685E720912BBB00D934BE /* WeekHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeader.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		375B78C720D2F732005F9563 /* Basics */ = {
 			isa = PBXGroup;
 			children = (
+				A21963E32180D8540038450D /* Label */,
 				37B813222123890D003A8C8E /* DateRangePicker */,
 				37BDFD8520D4668500FE97A3 /* SlingFormControllerTests.swift */,
 				375B78C820D2F746005F9563 /* SlingInputTests.swift */,
@@ -373,6 +376,14 @@
 				37D2642520A0BFC6006BE83D /* WeekHeaderTests.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		A21963E32180D8540038450D /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				A21963E42180D8C60038450D /* LabelTests.swift */,
+			);
+			path = Label;
 			sourceTree = "<group>";
 		};
 		A233E138209765A700CB37E1 /* View */ = {
@@ -895,6 +906,7 @@
 				3769F6E32093D376000DA1A0 /* SlingOperationTableViewCellTests.swift in Sources */,
 				372395E620DD50FF0018BB46 /* SlingInput+DelegateTests.swift in Sources */,
 				37BDFD8120D44DBF00FE97A3 /* SlingInputMaskTests.swift in Sources */,
+				A21963E52180D8C60038450D /* LabelTests.swift in Sources */,
 				A2690CAC213712E3007ED6B1 /* PaymentListTableCellTests.swift in Sources */,
 				A2554D3E215AA997006F0C5D /* EmeraldDateRangeFilterViewTests.swift in Sources */,
 				37B813242123891D003A8C8E /* SlingDateRangePickerTests.swift in Sources */,
