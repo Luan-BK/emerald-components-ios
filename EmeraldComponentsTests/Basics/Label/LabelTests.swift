@@ -7,27 +7,81 @@
 //
 
 import XCTest
+@testable import EmeraldComponents
 
 class LabelTests: XCTestCase {
 
+    internal var label: EmeraldLabel!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        let frame = CGRect(x: 0.0, y: 0.0, width: 140, height: 30)
+        self.label = EmeraldLabel(frame: frame)
+        
+        self.label.configure(state: .neutral, type: .outline)
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.label = nil
+        super.tearDown()
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // MARK: - Init
+    
+    func testContetView_frame() {
+        // given
+        let boundsContentView = self.label.contentView.bounds
+        let frameContentView = self.label.contentView.frame
+        // when
+        XCTAssertEqual(boundsContentView, frameContentView)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testContetView_autoresizingMask() {
+        // given
+        let autoresizingMask: UIView.AutoresizingMask = [.flexibleHeight, .flexibleWidth]
+        // then
+        let contentView = self.label.contentView.autoresizingMask
+        // when
+        XCTAssertEqual(autoresizingMask, contentView)
     }
-
+    
+    func testDefaultvalues_corderRadius() {
+        // given
+        let cornerRadius: CGFloat = 15.0
+        // then
+        let label = self.label.textLabel.layer.cornerRadius
+        // when
+        XCTAssertEqual(cornerRadius, label)
+    }
+    
+    func testDefaultvalues_masksToBounds() {
+        // given
+        let masksToBounds = true
+        // then
+        let label = self.label.textLabel.layer.masksToBounds
+        // when
+        XCTAssertEqual(masksToBounds, label)
+    }
+    
+    func testDefaultvalues_font() {
+        // given
+        let font = UIFont.systemFont(ofSize: 15.0, weight: .heavy)
+        // then
+        let label = self.label.textLabel.font
+        // when
+        XCTAssertEqual(font, label)
+    }
+    
+    // MARK: - Text
+    
+    func testText() {
+        // given
+        let text = "New".uppercased()
+        // when
+        self.label.setLabel(text: "New")
+        let label = self.label.text(forState: .success, andType: .fill)
+        // then
+        XCTAssertEqual(text, label)
+    }
+    
 }
