@@ -34,11 +34,9 @@ class HUDTests: XCTestCase {
     func testShowAnimating() {
         // given
         let view = UIView()
-
         // when
         hud.hide()
         let hudView = hud.show(view)
-
         // then
         XCTAssertNotNil(hudView)
         XCTAssertTrue(hud.isAnimating)
@@ -47,11 +45,9 @@ class HUDTests: XCTestCase {
     func testHideAnimating() {
         // given
         let view = UIView()
-        
         // when
         let hudView = hud.show(view)
         hud.hide()
-        
         // then
         XCTAssertNotNil(hudView)
         XCTAssertFalse(hud.isAnimating)

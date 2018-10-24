@@ -1,5 +1,5 @@
 //
-//  EmeraldOperationTableViewCellTests.swift
+//  OperationTableViewCellTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 27/04/2018.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import EmeraldComponents
 
-class EmeraldOperationTableViewCellTests: XCTestCase {
+class OperationTableViewCellTests: XCTestCase {
     
     let bundle = Bundle(for: EmeraldOperationTableViewCell.self)
     var cell: EmeraldOperationTableViewCell!

@@ -1,5 +1,5 @@
 //
-//  EmeraldSearchListTests.swift
+//  SearchListTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 22/06/2018.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import EmeraldComponents
 
-class EmeraldSearchListTests: XCTestCase {
+class SearchListTests: XCTestCase {
     
     private let expectationTimeout = 10.0
 
@@ -128,7 +128,7 @@ class EmeraldSearchListTests: XCTestCase {
     }
 }
 
-extension EmeraldSearchListTests: SearchListDelegate {
+extension SearchListTests: SearchListDelegate {
 
     var dataList: [PickerData] {
         return ["option 1", "option 2", "option 3"]
