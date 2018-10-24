@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1346628C361FDAEF817F2C9B /* Pods_EmeraldComponentsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2856D309B6685717BE3AE6D3 /* Pods_EmeraldComponentsApp.framework */; };
+		A21963F62181050A0038450D /* LabelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21963F52181050A0038450D /* LabelUITests.swift */; };
 		A23413DB2147122A009DC2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23413C32147122A009DC2FC /* Assets.xcassets */; };
 		A23413DC2147122A009DC2FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23413C42147122A009DC2FC /* LaunchScreen.storyboard */; };
 		A23413DE2147122A009DC2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23413C82147122A009DC2FC /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		02757F5F47860AD7C3DA2B80 /* Pods-EmeraldComponentsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmeraldComponentsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmeraldComponentsApp/Pods-EmeraldComponentsApp.release.xcconfig"; sourceTree = "<group>"; };
 		08A4B4E741D803D6E6F19E17 /* Pods_EmeraldComponentsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmeraldComponentsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2856D309B6685717BE3AE6D3 /* Pods_EmeraldComponentsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmeraldComponentsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A21963F52181050A0038450D /* LabelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelUITests.swift; sourceTree = "<group>"; };
 		A234139E21471174009DC2FC /* EmeraldComponentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmeraldComponentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23413C32147122A009DC2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A23413C52147122A009DC2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 				F58C18FD1C0E2B061E948D90 /* Pods-EmeraldComponentsAppUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A21963F4218104EB0038450D /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				A21963F52181050A0038450D /* LabelUITests.swift */,
+			);
+			path = Label;
 			sourceTree = "<group>";
 		};
 		A234139521471174009DC2FC = {
@@ -213,6 +223,7 @@
 		A23E8AC32147F79400933AC1 /* EmeraldUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A21963F4218104EB0038450D /* Label */,
 				A23E8ADA2148637800933AC1 /* Picker */,
 				A23E8AC72148375700933AC1 /* Inputs */,
 			);
@@ -544,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A21963F62181050A0038450D /* LabelUITests.swift in Sources */,
 				A23E8ACF2148440D00933AC1 /* InputUITests+CEP.swift in Sources */,
 				A23E8AD72148527000933AC1 /* InputUITests+Password.swift in Sources */,
 				A2F251F22176752500D148C2 /* String.swift in Sources */,

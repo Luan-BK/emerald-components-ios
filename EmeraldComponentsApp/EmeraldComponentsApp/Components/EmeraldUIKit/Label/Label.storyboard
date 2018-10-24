@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Label Table View Controller-->
+        <!--Label-->
         <scene sceneID="ViL-MX-7do">
             <objects>
-                <tableViewController storyboardIdentifier="LabelTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dku-q5-ygP" customClass="LabelTableViewController" customModule="EmeraldComponentsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LabelTableViewController" title="Label" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dku-q5-ygP" customClass="LabelTableViewController" customModule="EmeraldComponentsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="BMt-6d-zXR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,6 +348,7 @@
                             <outlet property="delegate" destination="Dku-q5-ygP" id="Fyc-bZ-k3Q"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Label" largeTitleDisplayMode="never" id="mXf-dV-Zag"/>
                     <connections>
                         <outlet property="fillErrorLabel" destination="VE0-Al-eFW" id="nix-S2-hk6"/>
                         <outlet property="fillInfoLabel" destination="Kpr-VL-uAi" id="Au5-Tg-E5d"/>
