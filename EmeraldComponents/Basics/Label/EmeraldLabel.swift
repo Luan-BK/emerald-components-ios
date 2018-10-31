@@ -8,31 +8,29 @@
 
 import UIKit
 
-/// There`re 4 label types. Each type have an specific purpose.
-///
-/// - fill: The default type for label. It displays the background color filled according to selected state.
-/// - outline: It displays transparent background color and color border according to selected state.
-/// - text: It displays a text with a bullet image. It's used to demonstrate minor priority
-/// - image: It displays a text with an emerald assets. It's used to report data
+/// An enum representing the possible types of an EmeraldLabel.
 public enum EmeraldLabelType: Int {
+    /// The default type of label. It displays the background color filled according to the selected state.
     case fill = 1
+    /// It displays transparent background color and a border coloured according to the selected state.
     case outline
+    /// It displays a text with a bullet image. It's used to demonstrate minor priority.
     case text
+    /// It displays a text with an emerald assets. It's used to report data
     case image
 }
 
-/// It's the label
-///
-/// - error: Used to shows an problem to user, i.e. there was a problem with the payment.
-/// - warning: Used to shows a warning to user, i.e. the payment status is in progress.
-/// - neutral: Used to shows any information to user. i.e. the default payment status.
-/// - success: Used to shows a success to user, i.e. the payment status was successful.
-/// - info: Used to shows an info to user, i.e. a new feature.
+/// An enum representing the possible states of an EmeraldLabel
 public enum EmeraldLabelState: Int {
+    /// Used to show any information to the user.
     case neutral = 1
+    /// Used to indicate a problem to the user.
     case error
+    /// Used to indicate a warning to the user.
     case warning
+    /// Used to indicate a success to the user.
     case success
+    /// Used to show an info to the user.
     case info
 }
 
@@ -54,7 +52,7 @@ public class EmeraldLabel: UIView {
         }
     }
 
-    internal private(set) var state: EmeraldLabelState = .error {
+    internal private(set) var state: EmeraldLabelState = .neutral {
         didSet {
             self.typeOrStyleDidChange(self.state, self.type)
         }
@@ -99,14 +97,14 @@ public class EmeraldLabel: UIView {
     
     // MARK: - Public configuration
     
-    /// Set an icon that will be displayed to the left of label.
+    /// Sets the icon that will be displayed to the left of label.
     ///
     /// - Parameter name: The name of an image inside emerald project assets. You can't choose any image. Only emerald images
     public func setIcon(name: String) {
         self.auxIconLabel = name
     }
     
-    /// Set an label text that will be displayed to user.
+    /// Sets the text to be displayed by the EmeraldLabel.
     ///
     /// - Parameter Text: The text label name.
     public func setLabel(text: String) {
@@ -118,9 +116,9 @@ public class EmeraldLabel: UIView {
     /// - Parameters:
     ///   - state: Label state to be displayed
     ///   - type: Label type to be displayed
-    public func configure(state: EmeraldLabelState, type: EmeraldLabelType) {
-        self.state = state
-        self.type = type
+    public func configure(state: EmeraldLabelState? = nil, type: EmeraldLabelType? = nil) {
+        self.state = state ?? self.state
+        self.type = type ?? self.type
     }
     
     // MARK: - State changes
@@ -133,7 +131,7 @@ public class EmeraldLabel: UIView {
     internal func typeOrStyleDidChange(_ newState: EmeraldLabelState, _ newType: EmeraldLabelType) {
         self.textLabel.text = self.text(forState: newState, andType: newType)
         self.textLabel.backgroundColor = self.backgroundColor(forState: newState, andType: newType)
-        self.textLabel.textColor = textColor(forState: newState, andType: newType)
+        self.textLabel.textColor = self.textColor(forState: newState, andType: newType)
         self.textLabel.tintColor = self.textColor(forState: newState, andType: newType)
         self.textLabel.layer.borderColor = self.borderColor(forState: newState, andType: newType)
         self.textLabel.layer.borderWidth = self.borderWidth(forState: newState, andType: newType)
@@ -145,101 +143,97 @@ public class EmeraldLabel: UIView {
         self.iconImage.image = self.textIcon(forState: newState, andType: newType)
         self.iconImage.tintColor = self.textColor(forState: newState, andType: newType)
         
-        self.constraintsVisibility(forState: newState, andType: newType)
+        self.setVisibilityConstraints(forState: newState, andType: newType)
     }
 
     // MARK: - Aux methods
 
-    /// Sets label background color according to states
+    /// Returns the backgroundColor for a given type and state.
     ///
     /// - Parameters:
     ///   - state: Label state enum
     ///   - type: Label type enum
     /// - Returns: Return label background color
     internal func backgroundColor(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> UIColor {
-        switch type {
-        case .fill:
-            switch state {
-            case .error:
-                return UIColor.Palette.Basic.error
-            case .warning:
-                return UIColor.Palette.Basic.warning
-            case .neutral:
-                return UIColor.Palette.Light.white4
-            case .success:
-                return UIColor.Palette.Basic.success
-            case .info:
-                return UIColor.Palette.purple
-            }
-        default:
-            return UIColor.clear
+        guard type == .fill else { return UIColor.clear }
+        
+        switch state {
+        case .error:
+            return UIColor.Palette.Basic.error
+        case .warning:
+            return UIColor.Palette.Basic.warning
+        case .neutral:
+            return UIColor.Palette.Light.white4
+        case .success:
+            return UIColor.Palette.Basic.success
+        case .info:
+            return UIColor.Palette.purple
         }
     }
     
-    /// Sets label border with to be displayed
+    /// Returns the border width for a given state and type.
     ///
     /// - Parameters:
     ///   - state: Label state enum
     ///   - type: Label type enum
-    /// - Returns: Return label border width
+    /// - Returns: A CGFloat representing the border width.
     internal func borderWidth(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> CGFloat {
-        switch type {
-        case .outline:
-            return 1.0
-        default:
-            return 0.0
-        }
+        return type == .outline ? 1.0 : 0.0
     }
     
-    /// Sets border label border color to be displayed
+    /// Returns the borderColor for a given state and type.
     ///
     /// - Parameters:
     ///   - state: Label state enum
     ///   - type: Label type enum
-    /// - Returns: Return label border color
+    /// - Returns: A CGColor representing the borderColor.
     internal func borderColor(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> CGColor {
-        switch type {
-        case .fill, .outline:
-            switch state {
-            case .error:
-                return UIColor.Palette.Basic.error.cgColor
-            case .warning:
-                return UIColor.Palette.Basic.warning.cgColor
-            case .neutral:
-                return UIColor.Palette.Light.white4.cgColor
-            case .success:
-                return UIColor.Palette.Basic.success.cgColor
-            case .info:
-                return UIColor.Palette.purple.cgColor
-            }
-        default:
+        guard type == .fill || type == .outline else {
             return UIColor.clear.cgColor
         }
+        
+        switch state {
+        case .error:
+            return UIColor.Palette.Basic.error.cgColor
+        case .warning:
+            return UIColor.Palette.Basic.warning.cgColor
+        case .neutral:
+            return UIColor.Palette.Light.white4.cgColor
+        case .success:
+            return UIColor.Palette.Basic.success.cgColor
+        case .info:
+            return UIColor.Palette.purple.cgColor
+        }
     }
     
-    /// Sets an image according to label type. I'll always displays a bullet fot text labe.
+    /// Returns an image for a given state and type.
+    ///
+    /// The image for the type `.text` will always be a dot bullet icon.
+    /// This method returns `nil` if the image can't be found inside the Bundle.
     ///
     /// - Parameters:
     ///   - state: Label state enum
     ///   - type: Label type enum
-    /// - Returns: Return an label image to be displayed
+    /// - Returns: An UIImage representing the Label's icon or `nil` if no image could be created.
     internal func textIcon(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> UIImage? {
         switch type {
         case .text:
-            return UIImage(named: "icon-dot", in: Bundle.basic, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
+            return UIImage(named: "icon-dot", in: Bundle.basic, compatibleWith: nil)!
+                .withRenderingMode(.alwaysTemplate)
         case .image:
-            return UIImage(named: auxIconLabel, in: Bundle.basic, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
+            return UIImage(named: auxIconLabel, in: Bundle.basic, compatibleWith: nil)!
+                .withRenderingMode(.alwaysTemplate)
         default:
             return nil
         }
     }
     
-    /// Set constraints visibility according to label type, if label type there were no icons to display, so constraints needs to be 0.0
+    /// Updates the Label's constraints for a given state and type.
     ///
     /// - Parameters:
     ///   - state: Label state enum
     ///   - type: Label type enum
-    internal func constraintsVisibility(forState state: EmeraldLabelState, andType type: EmeraldLabelType) {
+    internal func setVisibilityConstraints(forState state: EmeraldLabelState, andType type: EmeraldLabelType) {
         switch type {
         case .fill, .outline:
             self.iconImageHeightConstraint.constant = 0.0
@@ -250,29 +244,26 @@ public class EmeraldLabel: UIView {
         }
     }
     
-    /// Sets the text color label
+    /// Returns a textColor for a given state and type.
     ///
     /// - Parameters:
     ///   - state: Label state enum
     ///   - type: Label type enum
-    /// - Returns: Return label text color
+    /// - Returns: An UIColor representing the Label's textColor.
     internal func textColor(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> UIColor {
-        switch type {
-        case .fill:
-            return UIColor.Palette.Light.white1
-        case .outline, .text, .image:
-            switch state {
-            case .error:
-                return UIColor.Palette.Basic.error
-            case .warning:
-                return UIColor.Palette.Basic.warning
-            case .neutral:
-                return UIColor.Palette.Light.white4
-            case .success:
-                return UIColor.Palette.Basic.success
-            case .info:
-                return UIColor.Palette.purple
-            }
+        guard type != .fill else { return UIColor.Palette.Light.white1 }
+        
+        switch state {
+        case .error:
+            return UIColor.Palette.Basic.error
+        case .warning:
+            return UIColor.Palette.Basic.warning
+        case .neutral:
+            return UIColor.Palette.Light.white4
+        case .success:
+            return UIColor.Palette.Basic.success
+        case .info:
+            return UIColor.Palette.purple
         }
     }
     
@@ -281,7 +272,7 @@ public class EmeraldLabel: UIView {
     /// - Parameters:
     ///   - state: Label state enum
     ///   - type: Label type enum
-    /// - Returns: Returns label text aligment
+    /// - Returns: A `NSTextAlignment` for the Label. 
     internal func textAlignment(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> NSTextAlignment {
         switch type {
         case .fill, .outline:
@@ -294,11 +285,8 @@ public class EmeraldLabel: UIView {
     
     /// Sets the label text to be dipayed
     ///
-    /// - Parameters:
-    ///   - state: Label state enum
-    ///   - type: Label type enum
     /// - Returns: Return an label text string setted by 'setLabel(text: String)' method
-    internal func text(forState state: EmeraldLabelState, andType type: EmeraldLabelType) -> String {
+    internal func text() -> String {
         return self.auxTextLabel
     }
     
