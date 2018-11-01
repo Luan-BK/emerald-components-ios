@@ -27,10 +27,10 @@ public struct AttachmentHelper {
         
     }
     
-    func fullScreenshot(_ named: String, to cell: Int) {
+    func fullScreenshot(_ named: String) {
         
         XCTContext.runActivity(named: named) { activity in
-            // Capture cell screen
+            // Capture fullscreen
             snapshot(named)
             let mainScreen = XCUIScreen.main
             let fullScreenshot = mainScreen.screenshot()

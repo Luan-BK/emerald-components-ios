@@ -1,5 +1,5 @@
 //
-//  EmeraldInput+DelegateTests.swift
+//  Input+DelegateTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 22/06/2018.
@@ -10,7 +10,7 @@ import XCTest
 @testable import EmeraldComponents
 @testable import InputMask
 
-extension EmeraldInputTests {
+extension InputTests {
     
     // MARK: - MaskedTextFieldDelegateListener
     

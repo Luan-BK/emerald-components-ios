@@ -62,9 +62,9 @@ extension UIColor {
         
     /* Others colors */
     
-    public static let warning: UIColor = Palette.yellow
+    public static let warning: UIColor = Palette.Basic.warning
     
-    public static let failure: UIColor = Palette.red
+    public static let failure: UIColor = Palette.Basic.error
     
     // MARK: - Color modifiers
     
@@ -138,22 +138,32 @@ extension UIColor {
         }
         
         // Others colors
-        static let red                  = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
-        static let yellow               = UIColor(red: 230/255, green: 75/255, blue: 40/255, alpha: 1.0)
-        static let iron                 = UIColor(red: 38/255, green: 38/255, blue: 38/255, alpha: 1.0)
+        
+        /// #262626 - 38, 38, 38
+        static let iron     = UIColor(red: 38/255, green: 38/255, blue: 38/255, alpha: 1.0)
+        /// #8036dc - 128, 58, 220
+        static let purple   = UIColor(red: 128/255, green: 58/255, blue: 220/255, alpha: 1.0)
         
         public struct Basic {
+            /// #e74c3c - 231, 76, 60
             public static let error            = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
+            /// #f9bf09 - 249, 191, 9
             public static let warning          = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
+            /// #2ECC71 - 46, 204, 113
             public static let success          = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0)
         }
         
         // Payment status
         public struct Payment {
+            /// #F9BF09 - 249, 191, 9
             public static let pending          = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
+            /// #B9C3CC - 185, 195, 104
             public static let scheduled        = UIColor(red: 185/255, green: 195/255, blue: 204/255, alpha: 1.0)
+            /// #C7352E - 199, 53, 46
             public static let rejected         = UIColor(red: 199/255, green: 53/255, blue: 46/255, alpha: 1.0)
+            /// #31CD65 - 49, 205, 101
             public static let paid             = UIColor(red: 49/255, green: 205/255, blue: 101/255, alpha: 1.0)
+            /// #B9C3CC - 185, 195, 204
             public static let other            = UIColor(red: 185/255, green: 195/255, blue: 204/255, alpha: 1.0)
         }
         

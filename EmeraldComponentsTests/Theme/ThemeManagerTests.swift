@@ -14,10 +14,8 @@ class ThemeManagerTests: XCTestCase {
     func testCurrentTheme() {
         //given
         UserDefaults.standard.set(nil, forKey: ThemeManager.currentThemeKey)
-        
         //when
         let theme = ThemeManager.currentTheme()
-        
         //then
         XCTAssertEqual(theme, .stone)
     }
@@ -25,10 +23,8 @@ class ThemeManagerTests: XCTestCase {
     func testApplyTheme() {
         //given
         ThemeManager.applyTheme(.stone)
-        
         //when
         let currentTheme = ThemeManager.currentTheme()
-        
         //then
         XCTAssertEqual(currentTheme, .stone)
     }

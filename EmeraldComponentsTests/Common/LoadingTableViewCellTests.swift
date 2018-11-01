@@ -37,7 +37,6 @@ class LoadingTableViewCellTests: XCTestCase {
     func testAnimate() {
         // when
         cell.animate()
-        
         // then
         XCTAssertTrue(cell.activityIndicator.isAnimating)
     }

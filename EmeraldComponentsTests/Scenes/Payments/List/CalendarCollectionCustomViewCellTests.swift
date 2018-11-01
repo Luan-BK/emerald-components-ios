@@ -32,10 +32,8 @@ class CalendarCollectionCustomViewCellTests: XCTestCase {
             return
         }
         let model = PaymentListTableCellTests.PaymentViewModelMock()
-        
         //when
         cell.configure(model)
-        
         //then
         XCTAssertEqual(cell.statusView.backgroundColor, model.statusColor)
         XCTAssertEqual(cell.statusView.isHidden, false)
@@ -49,10 +47,8 @@ class CalendarCollectionCustomViewCellTests: XCTestCase {
             XCTFail("Nib loading should not fail")
             return
         }
-        
         //when
         cell.configure(nil)
-        
         //then
         XCTAssertEqual(cell.statusView.isHidden, true)
     }
