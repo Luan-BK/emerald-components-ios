@@ -73,7 +73,7 @@ public class EmeraldLabel: UIView {
         self.xibSetup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.xibSetup()
     }
