@@ -79,7 +79,7 @@ class LabelTests: XCTestCase {
         let text = "New".uppercased()
         // when
         self.label.setLabel(text: "New")
-        let label = self.label.text(forState: .success, andType: .fill)
+        let label = self.label.text()
         // then
         XCTAssertEqual(text, label)
     }

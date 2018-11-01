@@ -16,7 +16,7 @@ extension LabelTests {
         let height: CGFloat = 0.0
         let leading: CGFloat = 0.0
         // when
-        self.label.constraintsVisibility(forState: .error, andType: .fill)
+        self.label.setVisibilityConstraints(forState: .error, andType: .fill)
         // then
         XCTAssertEqual(self.label.iconImageHeightConstraint.constant, height)
         XCTAssertEqual(self.label.textLabelLeadingConstraint.constant, leading)
@@ -27,7 +27,7 @@ extension LabelTests {
         let height: CGFloat = 0.0
         let leading: CGFloat = 0.0
         // when
-        self.label.constraintsVisibility(forState: .error, andType: .outline)
+        self.label.setVisibilityConstraints(forState: .error, andType: .outline)
         // then
         XCTAssertEqual(self.label.iconImageHeightConstraint.constant, height)
         XCTAssertEqual(self.label.textLabelLeadingConstraint.constant, leading)
@@ -38,7 +38,7 @@ extension LabelTests {
         let height: CGFloat = 30.0
         let leading: CGFloat = 8.0
         // when
-        self.label.constraintsVisibility(forState: .error, andType: .text)
+        self.label.setVisibilityConstraints(forState: .error, andType: .text)
         // then
         XCTAssertEqual(self.label.iconImageHeightConstraint.constant, height)
         XCTAssertEqual(self.label.textLabelLeadingConstraint.constant, leading)
@@ -49,7 +49,7 @@ extension LabelTests {
         let height: CGFloat = 30.0
         let leading: CGFloat = 8.0
         // when
-        self.label.constraintsVisibility(forState: .error, andType: .image)
+        self.label.setVisibilityConstraints(forState: .error, andType: .image)
         // then
         XCTAssertEqual(self.label.iconImageHeightConstraint.constant, height)
         XCTAssertEqual(self.label.textLabelLeadingConstraint.constant, leading)
