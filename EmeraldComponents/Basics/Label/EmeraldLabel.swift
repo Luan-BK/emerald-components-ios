@@ -129,7 +129,7 @@ public class EmeraldLabel: UIView {
     ///   - state: Label state enum
     ///   - type: Label type enum
     internal func typeOrStyleDidChange(_ newState: EmeraldLabelState, _ newType: EmeraldLabelType) {
-        self.textLabel.text = self.text(forState: newState, andType: newType)
+        self.textLabel.text = self.text()
         self.textLabel.backgroundColor = self.backgroundColor(forState: newState, andType: newType)
         self.textLabel.textColor = self.textColor(forState: newState, andType: newType)
         self.textLabel.tintColor = self.textColor(forState: newState, andType: newType)
