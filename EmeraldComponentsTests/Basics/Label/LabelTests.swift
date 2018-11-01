@@ -38,11 +38,12 @@ class LabelTests: XCTestCase {
     
     func testContetView_autoresizingMask() {
         // given
-        let autoresizingMask: UIView.AutoresizingMask = [.flexibleHeight, .flexibleWidth]
+        let autoresizingMask = UIView()
+        autoresizingMask.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         // then
         let contentView = self.label.contentView.autoresizingMask
         // when
-        XCTAssertEqual(autoresizingMask, contentView)
+        XCTAssertEqual(autoresizingMask.autoresizingMask, contentView)
     }
     
     func testDefaultvalues_corderRadius() {
