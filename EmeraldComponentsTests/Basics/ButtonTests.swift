@@ -1,5 +1,5 @@
 //
-//  EmeraldButtonTests.swift
+//  ButtonTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 19/06/2018.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import EmeraldComponents
 
-class EmeraldButtonTests: XCTestCase {
+class ButtonTests: XCTestCase {
     
     private var button: EmeraldButton!
     

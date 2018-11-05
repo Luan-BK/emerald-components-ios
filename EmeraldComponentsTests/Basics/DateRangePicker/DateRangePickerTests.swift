@@ -1,5 +1,5 @@
 //
-//  EmeraldDateRangePickerTests.swift
+//  DateRangePickerTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 14/08/2018.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import EmeraldComponents
 
-class EmeraldDateRangePickerTests: XCTestCase {
+class DateRangePickerTests: XCTestCase {
     
     var viewController: EmeraldDateRangePicker!
     var selectedPeriod: EmeraldDateRangePicker.EmeraldDatePeriod?
@@ -52,7 +52,7 @@ class EmeraldDateRangePickerTests: XCTestCase {
     
 }
 
-extension EmeraldDateRangePickerTests: EmeraldDateRangePickerDelegate {
+extension DateRangePickerTests: EmeraldDateRangePickerDelegate {
     
     func didChooseDateRange(start: Date?, end: Date?, range: EmeraldDateRangePicker.EmeraldDatePeriod) {
         self.selectedPeriod = range

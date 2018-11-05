@@ -1,5 +1,5 @@
 //
-//  EmeraldPickerTests.swift
+//  PickerTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 22/06/2018.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import EmeraldComponents
 
-class EmeraldPickerTests: XCTestCase {
+class PickerTests: XCTestCase {
 
     private let expectationTimeout = 10.0
     
@@ -269,7 +269,7 @@ class EmeraldPickerTests: XCTestCase {
     }
 }
 
-extension EmeraldPickerTests: EmeraldPickerDelegate {
+extension PickerTests: EmeraldPickerDelegate {
     func didSelectOption(_ picker: EmeraldPicker, option: PickerData) {
         self.selectedOption = true
         self.selectedExpectation?.fulfill()

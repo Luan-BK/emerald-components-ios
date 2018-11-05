@@ -1,5 +1,5 @@
 //
-//  EmeraldThemeTests.swift
+//  ThemeTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 07/05/2018.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import EmeraldComponents
 
-class EmeraldThemeTests: XCTestCase {
+class ThemeTests: XCTestCase {
     
     private var theme: EmeraldTheme!
     

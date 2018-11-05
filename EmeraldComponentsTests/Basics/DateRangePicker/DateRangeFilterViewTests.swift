@@ -1,5 +1,5 @@
 //
-//  EmeraldDateRangeFilterViewTests.swift
+//  DateRangeFilterViewTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by João Mendes | Stone on 25/09/18.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import EmeraldComponents
 
-class EmeraldDateRangeFilterViewTests: XCTestCase {
+class DateRangeFilterViewTests: XCTestCase {
 
     var dateRangeFilter: EmeraldDateRangeFilterView!
     var date: Date!

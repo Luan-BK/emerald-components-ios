@@ -1,5 +1,5 @@
 //
-//  EmeraldInputTests.swift
+//  InputTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 14/06/2018.
@@ -10,7 +10,7 @@ import XCTest
 @testable import EmeraldComponents
 @testable import InputMask
 
-class EmeraldInputTests: XCTestCase {
+class InputTests: XCTestCase {
     
     internal var input: EmeraldInput!
     

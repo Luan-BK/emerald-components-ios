@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="nVU-9Q-I0W" userLabel="Footer View">
-                            <rect key="frame" x="0.0" y="325.5" width="375" height="0.0"/>
+                            <rect key="frame" x="0.0" y="369.5" width="375" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -85,12 +85,32 @@
                                             <segue destination="ont-GF-Jom" kind="show" id="rWf-yt-oof"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ZVt-aw-0aS" style="IBUITableViewCellStyleDefault" id="rS4-WQ-DVc">
+                                        <rect key="frame" x="0.0" y="187.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rS4-WQ-DVc" id="4ev-P7-pKE">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZVt-aw-0aS">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tnx-rc-Sef" kind="show" id="9JI-Jb-J6Y"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="UI Payment Components" id="GJ0-sl-oMi">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PNu-ol-gRX" style="IBUITableViewCellStyleDefault" id="Yio-lU-8oY">
-                                        <rect key="frame" x="0.0" y="243.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="287.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yio-lU-8oY" id="fMA-RT-UWv">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -141,6 +161,14 @@
             </objects>
             <point key="canvasLocation" x="-282" y="833"/>
         </scene>
+        <!--Label-->
+        <scene sceneID="O0W-eQ-3gt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Label" id="tnx-rc-Sef" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTO-ts-sBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266" y="896"/>
+        </scene>
         <!--Buttons-->
         <scene sceneID="bnd-6z-tUG">
             <objects>
@@ -171,7 +199,7 @@
                 <viewControllerPlaceholder storyboardName="DateRangePickerView" id="1SS-PV-Ca0" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWU-Dx-2tJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341" y="899"/>
+            <point key="canvasLocation" x="1339" y="940"/>
         </scene>
     </scenes>
 </document>

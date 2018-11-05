@@ -1,5 +1,5 @@
 //
-//  EmeraldFormControllerTests.swift
+//  FormControllerTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 15/06/2018.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import EmeraldComponents
 
-class EmeraldFormControllerTests: XCTestCase {
+class FormControllerTests: XCTestCase {
     
     func testValidation_True() {
         let validList: [InputMock] = [InputMock(11),InputMock(42), InputMock(25)]

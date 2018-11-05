@@ -1,5 +1,5 @@
 //
-//  EmeraldInputMaskTests.swift
+//  InputMaskTests.swift
 //  EmeraldComponentsTests
 //
 //  Created by Luan Kalume | Stone on 15/06/2018.
@@ -10,7 +10,7 @@ import XCTest
 @testable import EmeraldComponents
 @testable import InputMask
 
-class EmeraldInputMaskTests: XCTestCase {
+class InputMaskTests: XCTestCase {
     
     func testGetMaskFormat() {
         let customMaskString = "[0000]"
