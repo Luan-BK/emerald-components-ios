@@ -30,10 +30,6 @@ public enum EmeraldButtonType: Int {
     case disabled
 }
 
-public class EUIButton {
-    
-}
-
 @IBDesignable public class EmeraldButton: UIButton {
     
     // MARK: - Properties

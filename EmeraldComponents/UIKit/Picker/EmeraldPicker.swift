@@ -68,6 +68,7 @@ public class EmeraldPicker: EmeraldInput {
             return image?.rotate(radians: (.pi)/2).withRenderingMode(.alwaysTemplate)
         }
     }
+    
 }
 
 // MARK: - UITextFieldDelegate
@@ -78,10 +79,11 @@ extension EmeraldPicker {
         guard let dataSource = self.dataSource else { return false }
         
         guard dataSource.pickerOptions(for: self).count < self.optionsThreshold else {
-            if let searchController = UIStoryboard(name: "SearchList", bundle: Bundle.basic).instantiateInitialViewController() as? EmeraldSearchList {
-                searchController.delegate = self
-                searchController.selectedOption = self.selectedOption
-                self.parentViewController?.present(searchController, animated: true, completion: nil)
+            if let searchController = UIStoryboard(name: "SearchList", bundle: Bundle.basic)
+                .instantiateInitialViewController() as? EmeraldSearchList {
+                    searchController.delegate = self
+                    searchController.selectedOption = self.selectedOption
+                    self.parentViewController?.present(searchController, animated: true, completion: nil)
             }
             return false
         }
@@ -98,6 +100,7 @@ extension EmeraldPicker {
         super.textFieldDidEndEditing(textField)
         self.inputButton.setImage(self.pickerButtonImage(expanded: false), for: .normal)
     }
+    
 }
 
 // MARK: - SearchListDelegate
@@ -173,4 +176,5 @@ extension EmeraldPicker: UIPickerViewDelegate, UIPickerViewDataSource {
         self.inputText = selectedOption.identifier
         self.selectedOption = selectedOption
     }
+    
 }
