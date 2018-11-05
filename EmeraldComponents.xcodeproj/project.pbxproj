@@ -225,29 +225,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		375B78C720D2F732005F9563 /* Basics */ = {
+		375B78C720D2F732005F9563 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A21963E32180D8540038450D /* Label */,
+				A2883AFB2190D4B000864094 /* Button */,
 				37B813222123890D003A8C8E /* DateRangePicker */,
-				37BDFD8520D4668500FE97A3 /* FormControllerTests.swift */,
-				375B78C820D2F746005F9563 /* InputTests.swift */,
-				377381E320D9BDD2000B8C84 /* ButtonTests.swift */,
-				372395E520DD50FF0018BB46 /* Input+DelegateTests.swift */,
-				372395E720DD56AE0018BB46 /* PickerTests.swift */,
+				A2883AFE2190D4D900864094 /* Form */,
+				A2BEDEED208550DD0047A127 /* HUD */,
+				A2883AFD2190D4B300864094 /* Input */,
+				A21963E32180D8540038450D /* Label */,
+				A2883AFC2190D4B100864094 /* Picker */,
+				A2883B002190D52800864094 /* TableViewCell */,
 			);
-			path = Basics;
+			path = UIKit;
 			sourceTree = "<group>";
 		};
-		378F4D58206C068400C52CEB /* Scenes */ = {
+		378F4D58206C068400C52CEB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A2883B022190D55700864094 /* Operations */,
 				A20DAB7E209CD8AF009A1E6D /* Payments */,
-				A2BEDEED208550DD0047A127 /* HUD */,
-				3769F6E22093D376000DA1A0 /* OperationTableViewCellTests.swift */,
-				372395E920DD6A640018BB46 /* SearchListTests.swift */,
+				A2883B012190D55500864094 /* SearchList */,
 			);
-			path = Scenes;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		37B813222123890D003A8C8E /* DateRangePicker */ = {
@@ -258,22 +258,6 @@
 				A2554D3D215AA997006F0C5D /* DateRangeFilterViewTests.swift */,
 			);
 			path = DateRangePicker;
-			sourceTree = "<group>";
-		};
-		37BDFD7F20D44DAE00FE97A3 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				37BDFD8020D44DBF00FE97A3 /* InputMaskTests.swift */,
-			);
-			path = Enum;
-			sourceTree = "<group>";
-		};
-		37C0461020BE0A490056A878 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				37C0461120BE0A560056A878 /* LoadingTableViewCellTests.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		37C2A4F520939ADC0098E876 /* Operations */ = {
@@ -324,7 +308,8 @@
 		37EEED2C2124986300469F01 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				37EEED2D2124987E00469F01 /* UINavigationControllerTests.swift */,
+				A2883B042190D5FF00864094 /* UIColor */,
+				A2883B032190D5FD00864094 /* UINavigationController */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -524,14 +509,11 @@
 		A27003622017A8D8008FBB2E /* EmeraldComponentsTests */ = {
 			isa = PBXGroup;
 			children = (
-				37EEED2C2124986300469F01 /* Extensions */,
-				37BDFD7F20D44DAE00FE97A3 /* Enum */,
-				375B78C720D2F732005F9563 /* Basics */,
-				37C0461020BE0A490056A878 /* Common */,
-				37D2643020A10FFC006BE83D /* Theme */,
-				378F4D58206C068400C52CEB /* Scenes */,
-				378F4D5B206C0BE800C52CEB /* Color+PalleteTests.swift */,
 				A27003652017A8D8008FBB2E /* Info.plist */,
+				37EEED2C2124986300469F01 /* Extensions */,
+				37D2643020A10FFC006BE83D /* Theme */,
+				375B78C720D2F732005F9563 /* UIKit */,
+				378F4D58206C068400C52CEB /* Components */,
 			);
 			path = EmeraldComponentsTests;
 			sourceTree = "<group>";
@@ -665,6 +647,88 @@
 				375B78C420D2F5DD005F9563 /* EmeraldElementState.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		A2883AFB2190D4B000864094 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				377381E320D9BDD2000B8C84 /* ButtonTests.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		A2883AFC2190D4B100864094 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				372395E720DD56AE0018BB46 /* PickerTests.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		A2883AFD2190D4B300864094 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				A2883AFF2190D4FF00864094 /* Mask */,
+				375B78C820D2F746005F9563 /* InputTests.swift */,
+				372395E520DD50FF0018BB46 /* Input+DelegateTests.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		A2883AFE2190D4D900864094 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				37BDFD8520D4668500FE97A3 /* FormControllerTests.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		A2883AFF2190D4FF00864094 /* Mask */ = {
+			isa = PBXGroup;
+			children = (
+				37BDFD8020D44DBF00FE97A3 /* InputMaskTests.swift */,
+			);
+			path = Mask;
+			sourceTree = "<group>";
+		};
+		A2883B002190D52800864094 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				37C0461120BE0A560056A878 /* LoadingTableViewCellTests.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		A2883B012190D55500864094 /* SearchList */ = {
+			isa = PBXGroup;
+			children = (
+				372395E920DD6A640018BB46 /* SearchListTests.swift */,
+			);
+			path = SearchList;
+			sourceTree = "<group>";
+		};
+		A2883B022190D55700864094 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				3769F6E22093D376000DA1A0 /* OperationTableViewCellTests.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		A2883B032190D5FD00864094 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				37EEED2D2124987E00469F01 /* UINavigationControllerTests.swift */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		A2883B042190D5FF00864094 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				378F4D5B206C0BE800C52CEB /* Color+PalleteTests.swift */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 		A28D839520815A470041457D /* HUD */ = {
