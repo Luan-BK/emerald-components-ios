@@ -172,17 +172,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A23413CD2147122A009DC2FC /* EmeraldUIKit */ = {
-			isa = PBXGroup;
-			children = (
-				A2C95316217E5096000073E2 /* Label */,
-				A23413CE2147122A009DC2FC /* Buttons */,
-				A23413D32147122A009DC2FC /* Input */,
-				A23413D62147122A009DC2FC /* Picker */,
-			);
-			path = EmeraldUIKit;
-			sourceTree = "<group>";
-		};
 		A23413CE2147122A009DC2FC /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,20 +198,13 @@
 			path = Picker;
 			sourceTree = "<group>";
 		};
-		A23E8AC32147F79400933AC1 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				A21963F4218104EB0038450D /* Label */,
-				A23E8ADA2148637800933AC1 /* Picker */,
-				A23E8AC72148375700933AC1 /* Inputs */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
 		A23E8AC42147F7BA00933AC1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				A23E8AEC2149AA5900933AC1 /* DateRangePickerView */,
+				A23E8AC72148375700933AC1 /* Inputs */,
+				A21963F4218104EB0038450D /* Label */,
+				A23E8ADA2148637800933AC1 /* Picker */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -269,19 +251,14 @@
 			path = DateRangePickerView;
 			sourceTree = "<group>";
 		};
-		A23E8AEF2149AB7A00933AC1 /* EmeraldComponents */ = {
-			isa = PBXGroup;
-			children = (
-				A23E8AF12149AC0500933AC1 /* DateRangePickerView */,
-			);
-			path = EmeraldComponents;
-			sourceTree = "<group>";
-		};
 		A23E8AF02149AB8C00933AC1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A23413CD2147122A009DC2FC /* EmeraldUIKit */,
-				A23E8AEF2149AB7A00933AC1 /* EmeraldComponents */,
+				A23E8AF12149AC0500933AC1 /* DateRangePickerView */,
+				A2C95316217E5096000073E2 /* Label */,
+				A23413CE2147122A009DC2FC /* Buttons */,
+				A23413D32147122A009DC2FC /* Input */,
+				A23413D62147122A009DC2FC /* Picker */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -321,7 +298,6 @@
 			children = (
 				A2C9B4FC21471B1700634344 /* Info.plist */,
 				A23E8AC42147F7BA00933AC1 /* Components */,
-				A23E8AC32147F79400933AC1 /* UIKit */,
 				A2F251F02176751700D148C2 /* Extensions */,
 				A2E64BB821503DE300FD1937 /* Helpers */,
 			);

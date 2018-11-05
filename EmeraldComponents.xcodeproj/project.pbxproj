@@ -225,7 +225,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		375B78C720D2F732005F9563 /* UIKit */ = {
+		375B78C720D2F732005F9563 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				A2883AFB2190D4B000864094 /* Button */,
@@ -235,19 +235,19 @@
 				A2883AFD2190D4B300864094 /* Input */,
 				A21963E32180D8540038450D /* Label */,
 				A2883AFC2190D4B100864094 /* Picker */,
+				A2883B012190D55500864094 /* SearchList */,
 				A2883B002190D52800864094 /* TableViewCell */,
 			);
-			path = UIKit;
+			path = Components;
 			sourceTree = "<group>";
 		};
-		378F4D58206C068400C52CEB /* Components */ = {
+		378F4D58206C068400C52CEB /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
 				A2883B022190D55700864094 /* Operations */,
 				A20DAB7E209CD8AF009A1E6D /* Payments */,
-				A2883B012190D55500864094 /* SearchList */,
 			);
-			path = Components;
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		37B813222123890D003A8C8E /* DateRangePicker */ = {
@@ -270,7 +270,7 @@
 			path = Operations;
 			sourceTree = "<group>";
 		};
-		37D2642720A0D06B006BE83D /* UIKit */ = {
+		37D2642720A0D06B006BE83D /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				A2690D31213ED515007ED6B1 /* Button */,
@@ -280,11 +280,12 @@
 				A2690CFB213D811A007ED6B1 /* Input */,
 				A2C95312217E410F000073E2 /* Label */,
 				A2690D02213D8141007ED6B1 /* Picker */,
+				A28DDE5720D15B4500CC61C6 /* SearchList */,
 				A2883AE92190BAFC00864094 /* TableViewCell */,
 				A2883AE82190BAED00864094 /* TextField */,
 				A2883AE72190BAD300864094 /* View */,
 			);
-			path = UIKit;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		37D2643020A10FFC006BE83D /* Theme */ = {
@@ -489,21 +490,20 @@
 				A2883AFA2190BE4F00864094 /* Commons */,
 				A2C43C60201F4F7A0067AA7E /* Extensions */,
 				37D92CBD209CDFD200C0FD1A /* Theme */,
-				37D2642720A0D06B006BE83D /* UIKit */,
-				A270035020179F0E008FBB2E /* Components */,
+				37D2642720A0D06B006BE83D /* Components */,
+				A270035020179F0E008FBB2E /* Custom Views */,
 				A270036C2017B65A008FBB2E /* Supporting Files */,
 			);
 			path = EmeraldComponents;
 			sourceTree = "<group>";
 		};
-		A270035020179F0E008FBB2E /* Components */ = {
+		A270035020179F0E008FBB2E /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				A28DDE5720D15B4500CC61C6 /* SearchList */,
 				37C2A4F520939ADC0098E876 /* Operations */,
 				A24685DC209122F400D934BE /* Payments */,
 			);
-			path = Components;
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		A27003622017A8D8008FBB2E /* EmeraldComponentsTests */ = {
@@ -512,8 +512,8 @@
 				A27003652017A8D8008FBB2E /* Info.plist */,
 				37EEED2C2124986300469F01 /* Extensions */,
 				37D2643020A10FFC006BE83D /* Theme */,
-				375B78C720D2F732005F9563 /* UIKit */,
-				378F4D58206C068400C52CEB /* Components */,
+				375B78C720D2F732005F9563 /* Components */,
+				378F4D58206C068400C52CEB /* Custom Views */,
 			);
 			path = EmeraldComponentsTests;
 			sourceTree = "<group>";
