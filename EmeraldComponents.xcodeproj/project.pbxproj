@@ -67,7 +67,6 @@
 		A2554D3621597EE2006F0C5D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3521597EE2006F0C5D /* Calendar.swift */; };
 		A2554D3E215AA997006F0C5D /* DateRangeFilterViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3D215AA997006F0C5D /* DateRangeFilterViewTests.swift */; };
 		A26757552097665400F66181 /* ScrollToSegmentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */; };
-		A2690C8D21370CBA007ED6B1 /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2690C8F21370CBA007ED6B1 /* SearchList.storyboard */; };
 		A2690C9C21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2690C9E21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib */; };
 		A2690CA621370EA7007ED6B1 /* WeekHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2690CA821370EA7007ED6B1 /* WeekHeader.xib */; };
 		A2690CAC213712E3007ED6B1 /* PaymentListTableCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2690CAB213712E2007ED6B1 /* PaymentListTableCellTests.swift */; };
@@ -80,6 +79,7 @@
 		A2690D06213D8141007ED6B1 /* EmeraldPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2690D04213D8141007ED6B1 /* EmeraldPicker.swift */; };
 		A26BD5BA20BC88E50013FA24 /* HUDConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26BD5B920BC88E50013FA24 /* HUDConstraints.swift */; };
 		A270034720179EF1008FBB2E /* SlingComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = A270033920179EF1008FBB2E /* SlingComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2883B072190D76400864094 /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2883B092190D76400864094 /* SearchList.storyboard */; };
 		A28D839720815A6B0041457D /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28D839620815A6B0041457D /* HUD.swift */; };
 		A28D839B20851CD90041457D /* HUDHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28D839A20851CD90041457D /* HUDHelperTests.swift */; };
 		A28D839D208524E70041457D /* HUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28D839C208524E70041457D /* HUDHelper.swift */; };
@@ -166,11 +166,8 @@
 		A2554D3521597EE2006F0C5D /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		A2554D3D215AA997006F0C5D /* DateRangeFilterViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangeFilterViewTests.swift; sourceTree = "<group>"; };
 		A26757542097665400F66181 /* ScrollToSegmentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToSegmentDelegate.swift; sourceTree = "<group>"; };
-		A2690C9821370D63007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchList.strings; sourceTree = "<group>"; };
 		A2690CAA21370EAB007ED6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WeekHeader.strings; sourceTree = "<group>"; };
 		A2690CAB213712E2007ED6B1 /* PaymentListTableCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentListTableCellTests.swift; sourceTree = "<group>"; };
-		A2690CAD213717BC007ED6B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchList.storyboard; sourceTree = "<group>"; };
-		A2690CAE213717CA007ED6B1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/SearchList.strings"; sourceTree = "<group>"; };
 		A2690CB121371813007ED6B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EmeraldOperationTableViewCell.xib; sourceTree = "<group>"; };
 		A2690CB321371AF5007ED6B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/WeekHeader.xib; sourceTree = "<group>"; };
 		A2690CB421371AFA007ED6B1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/WeekHeader.strings"; sourceTree = "<group>"; };
@@ -189,6 +186,9 @@
 		A270033A20179EF1008FBB2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A27003612017A8D8008FBB2E /* EmeraldComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmeraldComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27003652017A8D8008FBB2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2883B082190D76400864094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchList.storyboard; sourceTree = "<group>"; };
+		A2883B0B2190D76700864094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchList.strings; sourceTree = "<group>"; };
+		A2883B0D2190D76900864094 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/SearchList.strings"; sourceTree = "<group>"; };
 		A28D839620815A6B0041457D /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		A28D839A20851CD90041457D /* HUDHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDHelperTests.swift; sourceTree = "<group>"; };
 		A28D839C208524E70041457D /* HUDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDHelper.swift; sourceTree = "<group>"; };
@@ -754,7 +754,7 @@
 		A28DDE5820D15B7E00CC61C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A2690C8F21370CBA007ED6B1 /* SearchList.storyboard */,
+				A2883B092190D76400864094 /* SearchList.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -921,8 +921,8 @@
 			files = (
 				37AF650D20B8A16C00D90AE0 /* LoadingTableViewCell.xib in Resources */,
 				A2C9531A217E69FD000073E2 /* EmeraldLabel.xib in Resources */,
+				A2883B072190D76400864094 /* SearchList.storyboard in Resources */,
 				37BF7C0721222B4100A09737 /* Localizable.strings in Resources */,
-				A2690C8D21370CBA007ED6B1 /* SearchList.storyboard in Resources */,
 				A21D2A5020502EF8004CCA9A /* Assets.xcassets in Resources */,
 				A2554D3421597C14006F0C5D /* EmeraldDateRangeFilterView.xib in Resources */,
 				A24686042092631000D934BE /* CalendarCollectionCustomViewCell.xib in Resources */,
@@ -1131,16 +1131,6 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		A2690C8F21370CBA007ED6B1 /* SearchList.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A2690C9821370D63007ED6B1 /* en */,
-				A2690CAD213717BC007ED6B1 /* Base */,
-				A2690CAE213717CA007ED6B1 /* pt-BR */,
-			);
-			name = SearchList.storyboard;
-			sourceTree = "<group>";
-		};
 		A2690C9E21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1159,6 +1149,16 @@
 				A2690CB421371AFA007ED6B1 /* pt-BR */,
 			);
 			name = WeekHeader.xib;
+			sourceTree = "<group>";
+		};
+		A2883B092190D76400864094 /* SearchList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2883B082190D76400864094 /* Base */,
+				A2883B0B2190D76700864094 /* en */,
+				A2883B0D2190D76900864094 /* pt-BR */,
+			);
+			name = SearchList.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
