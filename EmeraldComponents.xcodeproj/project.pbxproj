@@ -225,15 +225,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		375B78C320D2F5C4005F9563 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				375B78C420D2F5DD005F9563 /* EmeraldElementState.swift */,
-				37BDFD7D20D43E1800FE97A3 /* EmeraldInputMask.swift */,
-			);
-			path = Enum;
-			sourceTree = "<group>";
-		};
 		375B78C720D2F732005F9563 /* Basics */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,15 +248,6 @@
 				372395E920DD6A640018BB46 /* SearchListTests.swift */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		37AF650920B8A13800D90AE0 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				37AF650A20B8A16C00D90AE0 /* LoadingTableViewCell.swift */,
-				37AF650B20B8A16C00D90AE0 /* LoadingTableViewCell.xib */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		37B813222123890D003A8C8E /* DateRangePicker */ = {
@@ -304,20 +286,21 @@
 			path = Operations;
 			sourceTree = "<group>";
 		};
-		37D2642720A0D06B006BE83D /* Basics */ = {
+		37D2642720A0D06B006BE83D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				37BDFD8220D45C3900FE97A3 /* EmeraldFormController.swift */,
-				37D2642E20A102B1006BE83D /* EmeraldTableViewCell.swift */,
-				37D2642C20A0D4AE006BE83D /* EmeraldTextField.swift */,
-				37D2642A20A0D1B8006BE83D /* EmeraldView.swift */,
 				A2690D31213ED515007ED6B1 /* Button */,
 				A2690CED213D8092007ED6B1 /* DataRangePicker */,
+				A2883AEA2190BB0F00864094 /* Form */,
+				A28D839520815A470041457D /* HUD */,
 				A2690CFB213D811A007ED6B1 /* Input */,
 				A2C95312217E410F000073E2 /* Label */,
 				A2690D02213D8141007ED6B1 /* Picker */,
+				A2883AE92190BAFC00864094 /* TableViewCell */,
+				A2883AE82190BAED00864094 /* TextField */,
+				A2883AE72190BAD300864094 /* View */,
 			);
-			path = Basics;
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		37D2643020A10FFC006BE83D /* Theme */ = {
@@ -469,8 +452,9 @@
 			isa = PBXGroup;
 			children = (
 				A2690CFC213D811A007ED6B1 /* EmeraldInput.swift */,
-				A2690CFD213D811A007ED6B1 /* EmeraldInput.xib */,
 				A2690CFE213D811A007ED6B1 /* EmeraldInput+Delegate.swift */,
+				A2690CFD213D811A007ED6B1 /* EmeraldInput.xib */,
+				A2883AF92190BDC000864094 /* Mask */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -515,28 +499,26 @@
 		A270033820179EF1008FBB2E /* EmeraldComponents */ = {
 			isa = PBXGroup;
 			children = (
-				375B78C320D2F5C4005F9563 /* Enum */,
-				37AF650920B8A13800D90AE0 /* Common */,
-				37D2642720A0D06B006BE83D /* Basics */,
-				37D92CBD209CDFD200C0FD1A /* Theme */,
-				A2C43C60201F4F7A0067AA7E /* Extensions */,
-				A270035020179F0E008FBB2E /* Scenes */,
-				A270036C2017B65A008FBB2E /* Supporting Files */,
 				A270033920179EF1008FBB2E /* SlingComponent.h */,
 				A270033A20179EF1008FBB2E /* Info.plist */,
+				A2883AFA2190BE4F00864094 /* Commons */,
+				A2C43C60201F4F7A0067AA7E /* Extensions */,
+				37D92CBD209CDFD200C0FD1A /* Theme */,
+				37D2642720A0D06B006BE83D /* UIKit */,
+				A270035020179F0E008FBB2E /* Components */,
+				A270036C2017B65A008FBB2E /* Supporting Files */,
 			);
 			path = EmeraldComponents;
 			sourceTree = "<group>";
 		};
-		A270035020179F0E008FBB2E /* Scenes */ = {
+		A270035020179F0E008FBB2E /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				A28DDE5720D15B4500CC61C6 /* SearchList */,
 				37C2A4F520939ADC0098E876 /* Operations */,
 				A24685DC209122F400D934BE /* Payments */,
-				A28D839520815A470041457D /* HUD */,
 			);
-			path = Scenes;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		A27003622017A8D8008FBB2E /* EmeraldComponentsTests */ = {
@@ -561,6 +543,128 @@
 				37BF7C0921222B4100A09737 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2883AE72190BAD300864094 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37D2642A20A0D1B8006BE83D /* EmeraldView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2883AE82190BAED00864094 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				37D2642C20A0D4AE006BE83D /* EmeraldTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		A2883AE92190BAFC00864094 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				37D2642E20A102B1006BE83D /* EmeraldTableViewCell.swift */,
+				A2883AF82190BD7E00864094 /* LoadingTableViewCell */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		A2883AEA2190BB0F00864094 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				37BDFD8220D45C3900FE97A3 /* EmeraldFormController.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		A2883AEB2190BBB000864094 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				A2554D3521597EE2006F0C5D /* Calendar.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		A2883AF02190BBB900864094 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				37B813142123450B003A8C8E /* UINavigationController.swift */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		A2883AF12190BBBF00864094 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				37BF7C0D212239A100A09737 /* Date.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		A2883AF32190BC0300864094 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2F99820F9677A0035099C /* String.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		A2883AF42190BC0600864094 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				37E1297820DC101100B45C5A /* Bundle.swift */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+		A2883AF52190BC0700864094 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				37E0102C20D182EB00FA6410 /* UIImage.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		A2883AF62190BC3B00864094 /* UIResponder */ = {
+			isa = PBXGroup;
+			children = (
+				37E1298E20DC5A1100B45C5A /* UIResponder.swift */,
+			);
+			path = UIResponder;
+			sourceTree = "<group>";
+		};
+		A2883AF72190BC3D00864094 /* UIVIew */ = {
+			isa = PBXGroup;
+			children = (
+				37653E9420602B7100EB415B /* UIView.swift */,
+			);
+			path = UIVIew;
+			sourceTree = "<group>";
+		};
+		A2883AF82190BD7E00864094 /* LoadingTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				37AF650A20B8A16C00D90AE0 /* LoadingTableViewCell.swift */,
+				37AF650B20B8A16C00D90AE0 /* LoadingTableViewCell.xib */,
+			);
+			path = LoadingTableViewCell;
+			sourceTree = "<group>";
+		};
+		A2883AF92190BDC000864094 /* Mask */ = {
+			isa = PBXGroup;
+			children = (
+				37BDFD7D20D43E1800FE97A3 /* EmeraldInputMask.swift */,
+			);
+			path = Mask;
+			sourceTree = "<group>";
+		};
+		A2883AFA2190BE4F00864094 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				375B78C420D2F5DD005F9563 /* EmeraldElementState.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		A28D839520815A470041457D /* HUD */ = {
@@ -611,15 +715,15 @@
 		A2C43C60201F4F7A0067AA7E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A2883AF72190BC3D00864094 /* UIVIew */,
+				A2883AF62190BC3B00864094 /* UIResponder */,
+				A2883AF52190BC0700864094 /* UIImage */,
+				A2883AF42190BC0600864094 /* Bundle */,
+				A2883AF32190BC0300864094 /* String */,
+				A2883AF12190BBBF00864094 /* Date */,
+				A2883AF02190BBB900864094 /* UINavigationController */,
+				A2883AEB2190BBB000864094 /* Calendar */,
 				A24C7AFA202374760019A85F /* UIColor */,
-				37653E9420602B7100EB415B /* UIView.swift */,
-				37E0102C20D182EB00FA6410 /* UIImage.swift */,
-				37E1297820DC101100B45C5A /* Bundle.swift */,
-				37E1298E20DC5A1100B45C5A /* UIResponder.swift */,
-				A2B2F99820F9677A0035099C /* String.swift */,
-				37BF7C0D212239A100A09737 /* Date.swift */,
-				37B813142123450B003A8C8E /* UINavigationController.swift */,
-				A2554D3521597EE2006F0C5D /* Calendar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIView {
+    
     func loadFromNib<T: UIView>() -> T {
         let selfType = type(of: self)
         let bundle = Bundle(for: selfType)
@@ -20,4 +21,5 @@ extension UIView {
         }
         return view
     }
+    
 }

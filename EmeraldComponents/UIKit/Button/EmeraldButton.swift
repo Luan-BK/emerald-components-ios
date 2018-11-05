@@ -30,6 +30,10 @@ public enum EmeraldButtonType: Int {
     case disabled
 }
 
+public class EUIButton {
+    
+}
+
 @IBDesignable public class EmeraldButton: UIButton {
     
     // MARK: - Properties
@@ -78,8 +82,7 @@ public enum EmeraldButtonType: Int {
     @IBInspectable var styleAdapter: Int {
         get {
             return self.style.rawValue
-        }
-        set {
+        } set {
             self.style = EmeraldButtonStyle(rawValue: newValue) ?? .fill
         }
     }
@@ -87,8 +90,7 @@ public enum EmeraldButtonType: Int {
     @IBInspectable var typeAdapter: Int {
         get {
             return self.type.rawValue
-        }
-        set {
+        } set {
             self.type = EmeraldButtonType(rawValue: newValue) ?? .regular
         }
     }
@@ -115,7 +117,9 @@ public enum EmeraldButtonType: Int {
         self.titleLabel?.font = UIFont.systemFont(ofSize: 18.0, weight: .medium)
         
         self.addTarget(self, action: #selector(darkenBackground), for: .touchDown)
-        self.addTarget(self, action: #selector(restoreBackground), for: [.touchUpInside, .touchCancel, .touchDragOutside])
+        self.addTarget(self, action: #selector(restoreBackground), for: [
+            .touchUpInside, .touchCancel, .touchDragOutside
+        ])
     }
     
     // MARK: - Public configuration
@@ -170,13 +174,17 @@ public enum EmeraldButtonType: Int {
         switch self.style {
         case .outline, .plain:
             switch type {
-            case .neutral: self.backgroundColor = UIColor.Palette.Light.white2
-            default: self.backgroundColor = self.titleColor(for: .normal)?.withAlphaComponent(0.1)
+            case .neutral:
+                self.backgroundColor = UIColor.Palette.Light.white2
+            default:
+                self.backgroundColor = self.titleColor(for: .normal)?.withAlphaComponent(0.1)
             }
         case .fill:
             switch type {
-            case .regular, .confirm, .delete: self.backgroundColor = self.backgroundColor(forType: self.type, andStyle: self.style).darker(by: 20.0)
-            default: self.backgroundColor = UIColor.Palette.Light.white2
+            case .regular, .confirm, .delete:
+                self.backgroundColor = self.backgroundColor(forType: self.type, andStyle: self.style).darker(by: 20.0)
+            default:
+                self.backgroundColor = UIColor.Palette.Light.white2
             }
         }
     }
@@ -192,17 +200,25 @@ public enum EmeraldButtonType: Int {
         switch style {
         case .outline, .plain:
             switch type {
-            case .neutral: return UIColor.Palette.Light.white1
-            case .disabled: return UIColor.Palette.Light.white2
-            default: return UIColor.clear
+            case .neutral:
+                return UIColor.Palette.Light.white1
+            case .disabled:
+                return UIColor.Palette.Light.white2
+            default:
+                return UIColor.clear
             }
         case .fill:
             switch type {
-            case .regular: return UIColor.primaryColor(for: ThemeManager.currentTheme())
-            case .confirm: return UIColor.Palette.Basic.success
-            case .delete: return UIColor.Palette.Basic.error
-            case .neutral: return UIColor.Palette.Light.white1
-            case .disabled: return UIColor.Palette.Light.white2
+            case .regular:
+                return UIColor.primaryColor(for: ThemeManager.currentTheme())
+            case .confirm:
+                return UIColor.Palette.Basic.success
+            case .delete:
+                return UIColor.Palette.Basic.error
+            case .neutral:
+                return UIColor.Palette.Light.white1
+            case .disabled:
+                return UIColor.Palette.Light.white2
             }
         }
     }
@@ -212,11 +228,16 @@ public enum EmeraldButtonType: Int {
         switch style {
         case .fill, .outline:
             switch type {
-            case .regular: return UIColor.primaryColor(for: ThemeManager.currentTheme()).cgColor
-            case .confirm: return UIColor.Palette.Basic.success.cgColor
-            case .delete: return UIColor.Palette.Basic.error.cgColor
-            case .neutral: return UIColor.Palette.Light.white4.cgColor
-            case .disabled: return UIColor.clear.cgColor
+            case .regular:
+                return UIColor.primaryColor(for: ThemeManager.currentTheme()).cgColor
+            case .confirm:
+                return UIColor.Palette.Basic.success.cgColor
+            case .delete:
+                return UIColor.Palette.Basic.error.cgColor
+            case .neutral:
+                return UIColor.Palette.Light.white4.cgColor
+            case .disabled:
+                return UIColor.clear.cgColor
             }
         case .plain:
             if type == .neutral {
@@ -232,17 +253,25 @@ public enum EmeraldButtonType: Int {
         switch style {
         case .fill:
             switch type {
-            case .neutral: return UIColor.Palette.Dark.black4
-            case .disabled: return UIColor.Palette.Light.white4
-            default: return UIColor.Palette.Light.white1
+            case .neutral:
+                return UIColor.Palette.Dark.black4
+            case .disabled:
+                return UIColor.Palette.Light.white4
+            default:
+                return UIColor.Palette.Light.white1
             }
         case .outline, .plain:
             switch type {
-            case .regular: return UIColor.primaryColor(for: ThemeManager.currentTheme())
-            case .confirm: return UIColor.Palette.Basic.success
-            case .delete: return UIColor.Palette.Basic.error
-            case .neutral: return UIColor.Palette.Dark.black4
-            case .disabled: return UIColor.Palette.Light.white4
+            case .regular:
+                return UIColor.primaryColor(for: ThemeManager.currentTheme())
+            case .confirm:
+                return UIColor.Palette.Basic.success
+            case .delete:
+                return UIColor.Palette.Basic.error
+            case .neutral:
+                return UIColor.Palette.Dark.black4
+            case .disabled:
+                return UIColor.Palette.Light.white4
             }
         }
     }
