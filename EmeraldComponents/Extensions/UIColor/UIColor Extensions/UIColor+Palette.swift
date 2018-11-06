@@ -10,61 +10,35 @@ import UIKit
 
 extension UIColor {
     
-    // MARK: - Main colors
-    
     public static func primaryColor(for theme: EmeraldTheme) -> UIColor {
         switch theme {
         case .stone:
-            return Palette.Stone.digital
+            return Palette.Basic.primary
         }
     }
-    
-    /* Text colors */
-    
-    public static let primaryText: UIColor = UIColor.white
-    
-    public static let secondaryText: UIColor =  Palette.iron
     
     /* Background colors */
     
-    public class func primaryContentBackground(for colorTheme: CompanyTheme) -> UIColor {
-        switch colorTheme {
-        case .stone:        return Palette.Stone.keyAccount
-        case .mundiPagg:    return Palette.MundiPagg.navy
-        }
-    }
-    
-    public class func secondaryContentBackground(for colorTheme: CompanyTheme) -> UIColor {
-        switch colorTheme {
-        case .stone:        return Palette.Stone.keyExpansion
-        case .mundiPagg:    return Palette.MundiPagg.green
-        }
-    }
-    
-    public class func tertiaryContentBackground(for colorTheme: CompanyTheme) -> UIColor {
-        switch colorTheme {
-        case .stone:        return Palette.Stone.digital
-        case .mundiPagg:    return Palette.MundiPagg.turquoise
-        }
-    }
+//    public class func primaryContentBackground(for colorTheme: CompanyTheme) -> UIColor {
+//        switch colorTheme {
+//        case .stone:        return Palette.Stone.keyAccount
+//        case .mundiPagg:    return Palette.MundiPagg.navy
+//        }
+//    }
     
     /* Background gray scale colors */
     
-    public static let veryDarkGrayScaleContentBackground: UIColor = Palette.Gray.veryDark
+    @available(*, deprecated, message: "Use UIColor.Palette.Dark.black5 instead")
+    public static let veryDarkGrayScaleContentBackground: UIColor = Palette.Dark.black5
     
-    public static let darkGrayScaleContentBackground: UIColor = Palette.Gray.dark
+    @available(*, deprecated, message: "Use UIColor.Palette.Light.white5 instead")
+    public static let darkGrayScaleContentBackground: UIColor = Palette.Light.white5
     
-    public static let mediumGrayScaleContentBackground: UIColor = Palette.Gray.medium
+    @available(*, deprecated, message: "Use UIColor.Palette.Light.white4 instead")
+    public static let lightGrayScaleContentBackground: UIColor = Palette.Light.white4
     
-    public static let lightGrayScaleContentBackground: UIColor = Palette.Gray.light
-    
-    public static let veryLighGrayScaleContentBackground: UIColor = Palette.Gray.veryLigh
-        
-    /* Others colors */
-    
-    public static let warning: UIColor = Palette.Basic.warning
-    
-    public static let failure: UIColor = Palette.Basic.error
+    @available(*, deprecated, message: "Use UIColor.Palette.Light.white3 instead")
+    public static let veryLighGrayScaleContentBackground: UIColor = Palette.Light.white3
     
     // MARK: - Color modifiers
     
@@ -105,6 +79,7 @@ extension UIColor {
         }
         return self
     }
+    
 }
 
 extension UIColor {
@@ -137,57 +112,36 @@ extension UIColor {
             public static let black5 = UIColor(red: 66/255, green: 75/255, blue: 84/255, alpha: 1.0)
         }
         
-        // Others colors
-        
-        /// #262626 - 38, 38, 38
-        static let iron     = UIColor(red: 38/255, green: 38/255, blue: 38/255, alpha: 1.0)
-        /// #8036dc - 128, 58, 220
-        static let purple   = UIColor(red: 128/255, green: 58/255, blue: 220/255, alpha: 1.0)
-        
         public struct Basic {
+            /// #95c93d - 149, 201, 61
+            public static let primary   = UIColor(red: 149/255, green: 201/255, blue: 61/255, alpha: 1.0)
+            /// #8036dc - 128, 58, 220
+            public static let secondary = UIColor(red: 128/255, green: 58/255, blue: 220/255, alpha: 1.0)
             /// #e74c3c - 231, 76, 60
-            public static let error            = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
+            public static let error     = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
             /// #f9bf09 - 249, 191, 9
-            public static let warning          = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
+            public static let warning   = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
             /// #2ECC71 - 46, 204, 113
-            public static let success          = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0)
+            public static let success   = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0)
         }
         
         // Payment status
         public struct Payment {
             /// #F9BF09 - 249, 191, 9
-            public static let pending          = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
+            @available(*, deprecated, message: "Use UIColor.Palette.Basic.warning instead")
+            public static let pending   = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
             /// #B9C3CC - 185, 195, 104
-            public static let scheduled        = UIColor(red: 185/255, green: 195/255, blue: 204/255, alpha: 1.0)
+            @available(*, deprecated, message: "Use UIColor.Palette.Light.white4 instead")
+            public static let scheduled = UIColor(red: 185/255, green: 195/255, blue: 204/255, alpha: 1.0)
             /// #C7352E - 199, 53, 46
-            public static let rejected         = UIColor(red: 199/255, green: 53/255, blue: 46/255, alpha: 1.0)
+            @available(*, deprecated, message: "Use UIColor.Palette.Basic.error instead")
+            public static let rejected  = UIColor(red: 199/255, green: 53/255, blue: 46/255, alpha: 1.0)
             /// #31CD65 - 49, 205, 101
-            public static let paid             = UIColor(red: 49/255, green: 205/255, blue: 101/255, alpha: 1.0)
+            @available(*, deprecated, message: "Use UIColor.Palette.Basic.success instead")
+            public static let paid      = UIColor(red: 49/255, green: 205/255, blue: 101/255, alpha: 1.0)
             /// #B9C3CC - 185, 195, 204
-            public static let other            = UIColor(red: 185/255, green: 195/255, blue: 204/255, alpha: 1.0)
-        }
-        
-        // Stone palette
-        public struct Stone {
-            static let keyExpansion     = UIColor(red: 20/255, green: 170/255, blue: 75/255, alpha: 1.0)
-            static let keyAccount       = UIColor(red: 16/255, green: 58/255, blue: 33/255, alpha: 1.0)
-            static let digital          = UIColor(red: 149/255, green: 201/255, blue: 61/255, alpha: 1.0)
-        }
-        
-        // MundiPagg palette
-        public struct MundiPagg {
-            static let navy             = UIColor(red: 9/255, green: 39/255, blue: 89/255, alpha: 1.0)
-            static let green            = UIColor(red: 24/255, green: 130/255, blue: 120/255, alpha: 1.0)
-            static let turquoise        = UIColor(red: 0/255, green: 185/255, blue: 181/255, alpha: 1.0)
-        }
-        
-        // Gray scale
-        public struct Gray {
-            static let veryDark         = UIColor(red: 65/255, green: 75/255, blue: 84/255, alpha: 1.0)
-            static let dark             = UIColor(red: 130/255, green: 150/255, blue: 166/255, alpha: 1.0)
-            static let medium           = UIColor(red: 178/255, green: 192/255, blue: 204/255, alpha: 1.0)
-            static let light            = UIColor(red: 206/255, green: 214/255, blue: 220/255, alpha: 1.0)
-            static let veryLigh         = UIColor(red: 232/255, green: 235/255, blue: 238/255, alpha: 1.0)
+            @available(*, deprecated, message: "Use UIColor.Palette.Light.white4 instead")
+            public static let other     = UIColor(red: 185/255, green: 195/255, blue: 204/255, alpha: 1.0)
         }
         
     }

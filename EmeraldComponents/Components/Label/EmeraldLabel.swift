@@ -167,7 +167,7 @@ public class EmeraldLabel: UIView {
         case .success:
             return UIColor.Palette.Basic.success
         case .info:
-            return UIColor.Palette.purple
+            return UIColor.Palette.Basic.secondary
         }
     }
     
@@ -202,7 +202,7 @@ public class EmeraldLabel: UIView {
         case .success:
             return UIColor.Palette.Basic.success.cgColor
         case .info:
-            return UIColor.Palette.purple.cgColor
+            return UIColor.Palette.Basic.secondary.cgColor
         }
     }
     
@@ -263,7 +263,7 @@ public class EmeraldLabel: UIView {
         case .success:
             return UIColor.Palette.Basic.success
         case .info:
-            return UIColor.Palette.purple
+            return UIColor.Palette.Basic.secondary
         }
     }
     
