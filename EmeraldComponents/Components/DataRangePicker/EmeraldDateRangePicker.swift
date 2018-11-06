@@ -9,11 +9,9 @@
 import UIKit
 
 public protocol EmeraldDateRangePickerDelegate: class {
-    
     func didChooseDateRange(start: Date?, end: Date?, range: EmeraldDateRangePicker.EmeraldDatePeriod)
-    
 }
-
+//EUIDateRangePicker
 public class EmeraldDateRangePicker: UITableViewController {
     
     public enum EmeraldDatePeriod: Int {
@@ -27,21 +25,33 @@ public class EmeraldDateRangePicker: UITableViewController {
         
         public var description: String {
             switch self {
-            case .today: return NSLocalizedString("DATE_PERIOD_TODAY", bundle: Bundle.basic, comment: "")
-            case .yesterday: return NSLocalizedString("DATE_PERIOD_YESTERDAY", bundle: Bundle.basic, comment: "")
-            case .last7Days: return NSLocalizedString("DATE_PERIOD_LAST_7_DAYS", bundle: Bundle.basic, comment: "")
-            case .last30Days: return NSLocalizedString("DATE_PERIOD_LAST_30_DAYS", bundle: Bundle.basic, comment: "")
-            case .thisMonth: return NSLocalizedString("DATE_PERIOD_THIS_MONTH", bundle: Bundle.basic, comment: "")
-            case .lastMonth: return NSLocalizedString("DATE_PERIOD_LAST_MONTH", bundle: Bundle.basic, comment: "")
-            case .custom: return NSLocalizedString("DATE_PERIOD_CUSTOM", bundle: Bundle.basic, comment: "")
+            case .today:
+                return NSLocalizedString("DATE_PERIOD_TODAY", bundle: Bundle.basic, comment: "")
+            case .yesterday:
+                return NSLocalizedString("DATE_PERIOD_YESTERDAY", bundle: Bundle.basic, comment: "")
+            case .last7Days:
+                return NSLocalizedString("DATE_PERIOD_LAST_7_DAYS", bundle: Bundle.basic, comment: "")
+            case .last30Days:
+                return NSLocalizedString("DATE_PERIOD_LAST_30_DAYS", bundle: Bundle.basic, comment: "")
+            case .thisMonth:
+                return NSLocalizedString("DATE_PERIOD_THIS_MONTH", bundle: Bundle.basic, comment: "")
+            case .lastMonth:
+                return NSLocalizedString("DATE_PERIOD_LAST_MONTH", bundle: Bundle.basic, comment: "")
+            case .custom:
+                return NSLocalizedString("DATE_PERIOD_CUSTOM", bundle: Bundle.basic, comment: "")
             }
         }
     }
     
     private let cellIdentifier = "EmeraldDateRangePickerCell"
     
-    internal var ranges: [EmeraldDatePeriod] = [.today, .yesterday, .last7Days, .last30Days,
-                                              .thisMonth, .lastMonth, .custom]
+    internal var ranges: [EmeraldDatePeriod] = [.today,
+                                                .yesterday,
+                                                .last7Days,
+                                                .last30Days,
+                                                .thisMonth,
+                                                .lastMonth,
+                                                .custom]
     
     public var calendar: Calendar = Calendar.current
     public var selectedPeriod: EmeraldDatePeriod = .today
