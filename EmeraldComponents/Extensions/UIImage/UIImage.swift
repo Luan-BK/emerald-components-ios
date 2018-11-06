@@ -11,8 +11,11 @@ import UIKit
 extension UIImage {
     
     public func rotate(radians: CGFloat) -> UIImage {
-        let rotatedSize = CGRect(origin: .zero, size: size).applying(CGAffineTransform(rotationAngle: CGFloat(radians))).integral.size
+        let rotatedSize = CGRect(origin: .zero, size: size)
+            .applying(CGAffineTransform(rotationAngle: CGFloat(radians))).integral.size
+        
         UIGraphicsBeginImageContext(rotatedSize)
+        
         if let context = UIGraphicsGetCurrentContext() {
             let origin = CGPoint(x: rotatedSize.width / 2.0, y: rotatedSize.height / 2.0)
             context.translateBy(x: origin.x, y: origin.y)
@@ -46,9 +49,11 @@ extension UIImage {
         let bundle = Bundle.basic
         
         if show {
-            return UIImage(named: "icon-password-show", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+            return UIImage(named: "icon-password-show", in: bundle, compatibleWith: nil)?
+                .withRenderingMode(.alwaysTemplate)
         } else {
-            return UIImage(named: "icon-password-hide", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+            return UIImage(named: "icon-password-hide", in: bundle, compatibleWith: nil)?
+                .withRenderingMode(.alwaysTemplate)
         }
     }
     

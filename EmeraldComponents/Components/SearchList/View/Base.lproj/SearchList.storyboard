@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="soX-9b-Djv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="soX-9b-Djv">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,7 +30,7 @@
                                         </connections>
                                     </searchBar>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9b-67-CDb">
-                                        <rect key="frame" x="8" y="0.0" width="304" height="44"/>
+                                        <rect key="frame" x="8" y="0.0" width="312" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Vup-lG-Nhw"/>
                                         </constraints>
@@ -53,7 +53,7 @@
                                     <constraint firstItem="c4B-JB-bh2" firstAttribute="leading" secondItem="1Ba-wz-SmO" secondAttribute="leading" id="0Ii-iz-n8Z"/>
                                     <constraint firstItem="D9b-67-CDb" firstAttribute="top" secondItem="1Ba-wz-SmO" secondAttribute="top" id="63L-d0-vBM"/>
                                     <constraint firstItem="cQ7-wS-8p3" firstAttribute="leading" secondItem="1Ba-wz-SmO" secondAttribute="leading" id="7YZ-wi-MqE"/>
-                                    <constraint firstAttribute="trailing" secondItem="D9b-67-CDb" secondAttribute="trailing" constant="8" id="L8z-zl-J3a"/>
+                                    <constraint firstAttribute="trailing" secondItem="D9b-67-CDb" secondAttribute="trailing" id="L8z-zl-J3a"/>
                                     <constraint firstAttribute="height" constant="100" id="LRI-lI-Pio"/>
                                     <constraint firstItem="D9b-67-CDb" firstAttribute="leading" secondItem="1Ba-wz-SmO" secondAttribute="leading" constant="8" id="MBy-rG-gcj"/>
                                     <constraint firstAttribute="trailing" secondItem="c4B-JB-bh2" secondAttribute="trailing" id="MMb-EA-lzk"/>
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nud-25-Z5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685.60000000000002" y="169.21182266009853"/>
+            <point key="canvasLocation" x="684.375" y="169.01408450704224"/>
         </scene>
     </scenes>
 </document>
