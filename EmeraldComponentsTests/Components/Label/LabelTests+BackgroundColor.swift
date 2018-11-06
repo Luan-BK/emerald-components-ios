@@ -51,7 +51,7 @@ extension LabelTests {
     
     func testBackgroundColor_typeFill_stateInfo() {
         // given
-        let text: UIColor = UIColor.Palette.purple
+        let text: UIColor = UIColor.Palette.Basic.secondary
         // when
         let color = label.backgroundColor(forState: .info, andType: .fill)
         // then

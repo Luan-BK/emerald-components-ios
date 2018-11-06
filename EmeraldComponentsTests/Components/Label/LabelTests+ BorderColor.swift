@@ -51,7 +51,7 @@ extension LabelTests {
     
     func testBorderColor_typeFill_stateInfo() {
         // given
-        let text: CGColor = UIColor.Palette.purple.cgColor
+        let text: CGColor = UIColor.Palette.secondary.cgColor
         // when
         let color = label.borderColor(forState: .info, andType: .fill)
         // then
@@ -98,7 +98,7 @@ extension LabelTests {
     
     func testBorderColor_typeOutline_stateInfo() {
         // given
-        let text: CGColor = UIColor.Palette.purple.cgColor
+        let text: CGColor = UIColor.Palette.secondary.cgColor
         // when
         let color = label.borderColor(forState: .info, andType: .outline)
         // then
