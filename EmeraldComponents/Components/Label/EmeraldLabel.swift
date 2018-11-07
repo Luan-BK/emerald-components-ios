@@ -30,7 +30,7 @@ public class EmeraldLabel: UIView {
     @IBOutlet weak var iconImageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var textLabelLeadingConstraint: NSLayoutConstraint!
     
-    internal private(set) var icon: UIImage = UIImage(named: "icon-dot", in: Bundle.basic, compatibleWith: nil)! {
+    internal private(set) var icon: UIImage = UIImage(named: "icon-dot", in: Bundle.emerald, compatibleWith: nil)! {
         didSet {
             self.labelConfigDidChange(text: self.text, color: self.color, type: self.type, and: self.icon)
         }
@@ -67,7 +67,7 @@ public class EmeraldLabel: UIView {
     }
     
     private func xibSetup() {
-        Bundle.basic.loadNibNamed(String(describing: EmeraldLabel.self), owner: self, options: nil)
+        Bundle.emerald.loadNibNamed(String(describing: EmeraldLabel.self), owner: self, options: nil)
         
         addSubview(self.contentView)
         

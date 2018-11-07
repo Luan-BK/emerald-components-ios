@@ -49,7 +49,7 @@ public class EmeraldDateRangeFilterView: UIView {
     
     internal func setUpIcon() {
         let calendarIcon = UIImage(named: "payments-detail-calendar-icon",
-                                   in: Bundle.basic,
+                                   in: Bundle.emerald,
                                    compatibleWith: nil)!
             .withRenderingMode(.alwaysTemplate)
         

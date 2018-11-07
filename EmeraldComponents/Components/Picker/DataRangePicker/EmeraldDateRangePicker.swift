@@ -28,19 +28,19 @@ public class EmeraldDateRangePicker: UITableViewController {
         public var description: String {
             switch self {
             case .today:
-                return NSLocalizedString("DATE_PERIOD_TODAY", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_TODAY", bundle: Bundle.emerald, comment: "")
             case .yesterday:
-                return NSLocalizedString("DATE_PERIOD_YESTERDAY", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_YESTERDAY", bundle: Bundle.emerald, comment: "")
             case .last7Days:
-                return NSLocalizedString("DATE_PERIOD_LAST_7_DAYS", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_LAST_7_DAYS", bundle: Bundle.emerald, comment: "")
             case .last30Days:
-                return NSLocalizedString("DATE_PERIOD_LAST_30_DAYS", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_LAST_30_DAYS", bundle: Bundle.emerald, comment: "")
             case .thisMonth:
-                return NSLocalizedString("DATE_PERIOD_THIS_MONTH", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_THIS_MONTH", bundle: Bundle.emerald, comment: "")
             case .lastMonth:
-                return NSLocalizedString("DATE_PERIOD_LAST_MONTH", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_LAST_MONTH", bundle: Bundle.emerald, comment: "")
             case .custom:
-                return NSLocalizedString("DATE_PERIOD_CUSTOM", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_CUSTOM", bundle: Bundle.emerald, comment: "")
             }
         }
     }
@@ -75,7 +75,7 @@ public class EmeraldDateRangePicker: UITableViewController {
     
     internal func setUpIcon() {
         let image = UIImage(named: "calendar-icon",
-                            in: Bundle.basic,
+                            in: Bundle.emerald,
                             compatibleWith: nil)!
             .withRenderingMode(.alwaysTemplate)
         

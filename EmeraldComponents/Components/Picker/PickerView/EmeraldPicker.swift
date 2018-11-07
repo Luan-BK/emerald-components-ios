@@ -60,7 +60,7 @@ public class EmeraldPicker: EmeraldInput {
     // MARK: - Aux
     
     internal func pickerButtonImage(expanded: Bool) -> UIImage? {
-        let image = UIImage(named: "disclosure-indicator-icon", in: Bundle.basic, compatibleWith: nil)
+        let image = UIImage(named: "disclosure-indicator-icon", in: Bundle.emerald, compatibleWith: nil)
         
         if expanded {
             return image?.rotate(radians: (3 * .pi)/2).withRenderingMode(.alwaysTemplate)
@@ -79,7 +79,7 @@ extension EmeraldPicker {
         guard let dataSource = self.dataSource else { return false }
         
         guard dataSource.pickerOptions(for: self).count < self.optionsThreshold else {
-            if let searchController = UIStoryboard(name: "SearchList", bundle: Bundle.basic)
+            if let searchController = UIStoryboard(name: "SearchList", bundle: Bundle.emerald)
                 .instantiateInitialViewController() as? EmeraldSearchList {
                     searchController.delegate = self
                     searchController.selectedOption = self.selectedOption

@@ -49,7 +49,7 @@ public class EmeraldCustomDateRangePicker: UIViewController {
     
     internal func setUpIcon() {
         let image = UIImage(named: "calendar-icon",
-                            in: Bundle.basic,
+                            in: Bundle.emerald,
                             compatibleWith: nil)!
             .withRenderingMode(.alwaysTemplate)
         

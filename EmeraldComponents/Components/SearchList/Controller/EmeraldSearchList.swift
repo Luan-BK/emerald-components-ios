@@ -31,7 +31,7 @@ public class EmeraldSearchList: UIViewController {
         
         self.searchBar.delegate = self
         self.searchBar.returnKeyType = .done
-        self.searchBar.placeholder = NSLocalizedString("SEARCH_BAR_PLACEHOLDER", bundle: Bundle.basic, comment: "")
+        self.searchBar.placeholder = NSLocalizedString("SEARCH_BAR_PLACEHOLDER", bundle: Bundle.emerald, comment: "")
         self.searchBar.autocorrectionType = .no
         // Removes searchBar borders
         self.searchBar.backgroundImage = UIImage()
