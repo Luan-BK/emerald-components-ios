@@ -45,7 +45,7 @@ class LabelTableViewController: UITableViewController {
     private let successLabel = "Success"
     private let infoLabel = "Info"
     
-    private let redColor = UIColor.Palette.State.error
+    private let errorColor = UIColor.Palette.State.error
     private let warningColor = UIColor.Palette.State.warning
     private let neutralColor = UIColor.Palette.Light.white4
     private let successColor = UIColor.Palette.State.success
@@ -64,7 +64,7 @@ class LabelTableViewController: UITableViewController {
     }
     
     internal func setupFillLabels() {
-        self.fillErrorLabel.configureFor(text: self.errorLabel, color: self.redColor, type: .fill, and: nil)
+        self.fillErrorLabel.configureFor(text: self.errorLabel, color: self.errorColor, type: .fill, and: nil)
         self.fillWarningLabel.configureFor(text: self.warningLabel, color: self.warningColor, type: .fill, and: nil)
         self.fillNeutralLabel.configureFor(text: self.neutralLabel, color: self.neutralColor, type: .fill, and: nil)
         self.fillSuccessLabel.configureFor(text: self.successLabel, color: self.successColor, type: .fill, and: nil)
@@ -72,7 +72,7 @@ class LabelTableViewController: UITableViewController {
     }
     
     internal func setupOutlineLabels() {
-        self.outlineErrorLabel.configureFor(text: self.errorLabel, color: self.redColor, type: .outline, and: nil)
+        self.outlineErrorLabel.configureFor(text: self.errorLabel, color: self.errorColor, type: .outline, and: nil)
         self.outlineWarningLabel.configureFor(text: self.warningLabel, color: self.warningColor, type: .outline, and: nil)
         self.outlineNeutralLabel.configureFor(text: self.neutralLabel, color: self.neutralColor, type: .outline, and: nil)
         self.outlineSuccessLabel.configureFor(text: self.successLabel, color: self.successColor, type: .outline, and: nil)
@@ -80,7 +80,7 @@ class LabelTableViewController: UITableViewController {
     }
     
     internal func setupTextLabels() {
-        self.textErrorLabel.configureFor(text: self.errorLabel, color: self.redColor, type: .image, and: nil)
+        self.textErrorLabel.configureFor(text: self.errorLabel, color: self.errorColor, type: .image, and: nil)
         self.textWarningLabel.configureFor(text: self.warningLabel, color: self.warningColor, type: .image, and: nil)
         self.textNeutralLabel.configureFor(text: self.neutralLabel, color: self.neutralColor, type: .image, and: nil)
         self.textSuccessLabel.configureFor(text: self.successLabel, color: self.successColor, type: .image, and: nil)
@@ -88,7 +88,7 @@ class LabelTableViewController: UITableViewController {
     }
     
     internal func setupImageLabels() {
-        self.imageErrorLabel.configureFor(text: self.errorLabel, color: self.redColor, type: .image, and: self.someIcon)
+        self.imageErrorLabel.configureFor(text: self.errorLabel, color: self.errorColor, type: .image, and: self.someIcon)
         self.imageWarningLabel.configureFor(text: self.warningLabel, color: self.warningColor, type: .image, and: self.someIcon)
         self.imageNeutralLabel.configureFor(text: self.neutralLabel, color: self.neutralColor, type: .image, and: self.someIcon)
         self.imageSuccessLabel.configureFor(text: self.successLabel, color: self.successColor, type: .image, and: self.someIcon)
