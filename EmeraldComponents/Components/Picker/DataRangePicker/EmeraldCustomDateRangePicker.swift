@@ -43,8 +43,8 @@ public class EmeraldCustomDateRangePicker: UIViewController {
     }
     
     internal func setUpLabelColorPickers() {
-        self.startDateLabel.textColor = UIColor.Palette.CommonState.focus
-        self.finalDateLabel.textColor = UIColor.Palette.CommonState.focus
+        self.startDateLabel.textColor = UIColor.Palette.State.focus
+        self.finalDateLabel.textColor = UIColor.Palette.State.focus
     }
     
     internal func setUpIcon() {
@@ -54,7 +54,7 @@ public class EmeraldCustomDateRangePicker: UIViewController {
             .withRenderingMode(.alwaysTemplate)
         
         self.iconImageView.image = image
-        self.iconImageView.tintColor = UIColor.Palette.CommonState.focus
+        self.iconImageView.tintColor = UIColor.Palette.State.focus
     }
     
     // MARK: - Button touches

@@ -105,7 +105,7 @@ extension UIColor {
             public static let black5 = UIColor(red: 66/255, green: 75/255, blue: 84/255, alpha: 1.0)
         }
         
-        public struct CommonState {
+        public struct State {
             /// #95c93d - 149, 201, 61
             public static let focus     = ThemeManager.getTheme()
             /// #ffffff - 0, 0, 0

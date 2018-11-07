@@ -204,11 +204,11 @@ public enum EmeraldButtonType: Int {
         case .fill:
             switch type {
             case .regular:
-                return UIColor.Palette.CommonState.focus
+                return UIColor.Palette.State.focus
             case .confirm:
-                return UIColor.Palette.CommonState.success
+                return UIColor.Palette.State.success
             case .delete:
-                return UIColor.Palette.CommonState.error
+                return UIColor.Palette.State.error
             case .neutral:
                 return UIColor.Palette.Light.white1
             case .disabled:
@@ -222,21 +222,21 @@ public enum EmeraldButtonType: Int {
         case .fill, .outline:
             switch type {
             case .regular:
-                return UIColor.Palette.CommonState.focus.cgColor
+                return UIColor.Palette.State.focus.cgColor
             case .confirm:
-                return UIColor.Palette.CommonState.success.cgColor
+                return UIColor.Palette.State.success.cgColor
             case .delete:
-                return UIColor.Palette.CommonState.error.cgColor
+                return UIColor.Palette.State.error.cgColor
             case .neutral:
                 return UIColor.Palette.Light.white4.cgColor
             case .disabled:
-                return UIColor.Palette.CommonState.clear.cgColor
+                return UIColor.Palette.State.clear.cgColor
             }
         case .plain:
             if type == .neutral {
                 return UIColor.Palette.Light.white4.cgColor
             } else {
-                return UIColor.Palette.CommonState.clear.cgColor
+                return UIColor.Palette.State.clear.cgColor
             }
         }
     }
@@ -255,11 +255,11 @@ public enum EmeraldButtonType: Int {
         case .outline, .plain:
             switch type {
             case .regular:
-                return UIColor.Palette.CommonState.focus
+                return UIColor.Palette.State.focus
             case .confirm:
-                return UIColor.Palette.CommonState.success
+                return UIColor.Palette.State.success
             case .delete:
-                return UIColor.Palette.CommonState.error
+                return UIColor.Palette.State.error
             case .neutral:
                 return UIColor.Palette.Dark.black4
             case .disabled:

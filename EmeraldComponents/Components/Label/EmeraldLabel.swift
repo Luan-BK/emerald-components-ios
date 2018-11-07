@@ -139,9 +139,9 @@ public class EmeraldLabel: UIView {
         case .fill:
             return color
         case .outline:
-            return UIColor.Palette.CommonState.clear
+            return UIColor.Palette.State.clear
         case .image:
-            return UIColor.Palette.CommonState.clear
+            return UIColor.Palette.State.clear
         }
     }
     
@@ -167,7 +167,7 @@ public class EmeraldLabel: UIView {
         case .outline:
             return color.cgColor
         case .image:
-            return UIColor.Palette.CommonState.clear.cgColor
+            return UIColor.Palette.State.clear.cgColor
         }
     }
     

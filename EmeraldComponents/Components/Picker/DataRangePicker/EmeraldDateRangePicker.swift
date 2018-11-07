@@ -80,7 +80,7 @@ public class EmeraldDateRangePicker: UITableViewController {
             .withRenderingMode(.alwaysTemplate)
         
         self.iconImageView.image = image
-        self.iconImageView.tintColor = UIColor.Palette.CommonState.focus
+        self.iconImageView.tintColor = UIColor.Palette.State.focus
     }
     
     override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {

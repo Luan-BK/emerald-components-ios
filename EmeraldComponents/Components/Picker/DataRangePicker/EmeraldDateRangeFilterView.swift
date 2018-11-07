@@ -54,7 +54,7 @@ public class EmeraldDateRangeFilterView: UIView {
             .withRenderingMode(.alwaysTemplate)
         
         self.imageView.image = calendarIcon
-        self.imageView.tintColor = UIColor.Palette.CommonState.focus
+        self.imageView.tintColor = UIColor.Palette.State.focus
     }
     
     @IBAction func filterButtonTouched() {
