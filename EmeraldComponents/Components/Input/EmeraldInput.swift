@@ -38,9 +38,6 @@ public protocol EmeraldInputDelegate: class {
     internal var maskHandler: MaskedTextFieldDelegate!
     internal var maskWasCompleted: Bool = false
     
-    // Theme
-    internal let themeManager = ThemeManager()
-    
     public weak var inputDelegate: EmeraldInputDelegate?
     
     // Lazy properties
@@ -324,7 +321,7 @@ public protocol EmeraldInputDelegate: class {
         case .disabled:
             return UIColor.Palette.Light.white3
         case .focus:
-            return themeManager.getTheme()
+            return ThemeManager.getTheme()
         default:
             return UIColor.Palette.Light.white4
         }

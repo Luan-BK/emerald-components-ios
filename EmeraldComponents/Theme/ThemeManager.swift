@@ -13,10 +13,10 @@ public struct ThemeManager {
     @available(*, deprecated, message: "Prefer to use `theme` property insted")
     internal static let currentThemeKey = "EmeraldComponentsTheme"
     
-    internal let defaults = UserDefaults.standard
+    internal static let defaults = UserDefaults.standard
     
     /// Key that'll be used to store and retrieave the custom color
-    internal let theme = "EmeraldComponentsThemeKey"
+    internal static let theme = "EmeraldComponentsThemeKey"
     
     @available(*, deprecated, message: "This method will be replaced for ThemeManager().getTheme()")
     public static func currentTheme() -> EmeraldTheme {
@@ -40,8 +40,8 @@ public struct ThemeManager {
     /// If no color was setted, so it'll use the default `Palette.Basic.primary` color.
     ///
     /// - Returns: Returns the stored color.
-    public func getTheme() -> UIColor {
-        guard let storedTheme = defaults.colorFor(key: self.theme) else {
+    public static func getTheme() -> UIColor {
+        guard let storedTheme = ThemeManager.defaults.colorFor(key: self.theme) else {
             return UIColor.Palette.Basic.primary
         }
         return storedTheme
@@ -50,8 +50,8 @@ public struct ThemeManager {
     /// Sets a default theme color to be used with some components.
     ///
     /// - Parameter theme: Color to be stored.
-    public func set(theme: UIColor) {
-        defaults.set(color: theme, forKey: self.theme)
+    public static func set(theme: UIColor) {
+        ThemeManager.defaults.set(color: theme, forKey: self.theme)
     }
     
 }

@@ -15,8 +15,7 @@ public enum EmeraldTheme: Int {
 extension EmeraldTheme {
     
     public var tintColor: UIColor {
-        let themeManager = ThemeManager()
-        return themeManager.getTheme()
+        return ThemeManager.getTheme()
     }
     
     public var barStyle: UIBarStyle {
@@ -24,7 +23,6 @@ extension EmeraldTheme {
     }
     
     public var buttonBackgroundColor: UIColor {
-        let themeManager = ThemeManager()
-        return themeManager.getTheme()
+        return ThemeManager.getTheme()
     }
 }

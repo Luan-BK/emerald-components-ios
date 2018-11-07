@@ -14,8 +14,7 @@ extension UIColor {
     public static func primaryColor(for theme: EmeraldTheme) -> UIColor {
         switch theme {
         case .stone:
-            let themeManager = ThemeManager()
-            return themeManager.getTheme()
+            return ThemeManager.getTheme()
         }
     }
     

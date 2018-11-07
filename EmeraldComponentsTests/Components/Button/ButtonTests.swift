@@ -13,8 +13,6 @@ class ButtonTests: XCTestCase {
     
     private var button: EmeraldButton!
     
-    private let themeManager = ThemeManager()
-    
     private let types: [EmeraldButtonType] = [.regular, .confirm, .delete, .neutral, .disabled]
     private let styles: [EmeraldButtonStyle] = [.fill, .outline, .plain]
     
@@ -171,7 +169,7 @@ class ButtonTests: XCTestCase {
                     }
                 case .fill:
                     switch type {
-                    case .regular: XCTAssertEqual(color, themeManager.getTheme())
+                    case .regular: XCTAssertEqual(color, ThemeManager.getTheme())
                     case .confirm: XCTAssertEqual(color, UIColor.Palette.Basic.success)
                     case .delete: XCTAssertEqual(color, UIColor.Palette.Basic.error)
                     case .neutral: XCTAssertEqual(color, UIColor.Palette.Light.white1)
@@ -190,7 +188,7 @@ class ButtonTests: XCTestCase {
                 switch style {
                 case .fill, .outline:
                     switch type {
-                    case .regular: XCTAssertEqual(color, themeManager.getTheme().cgColor)
+                    case .regular: XCTAssertEqual(color, ThemeManager.getTheme().cgColor)
                     case .confirm: XCTAssertEqual(color, UIColor.Palette.Basic.success.cgColor)
                     case .delete: XCTAssertEqual(color, UIColor.Palette.Basic.error.cgColor)
                     case .neutral: XCTAssertEqual(color, UIColor.Palette.Light.white4.cgColor)
@@ -221,7 +219,7 @@ class ButtonTests: XCTestCase {
                     }
                 case .outline, .plain:
                     switch type {
-                    case .regular: XCTAssertEqual(color, themeManager.getTheme())
+                    case .regular: XCTAssertEqual(color, ThemeManager.getTheme())
                     case .confirm: XCTAssertEqual(color, UIColor.Palette.Basic.success)
                     case .delete: XCTAssertEqual(color, UIColor.Palette.Basic.error)
                     case .neutral: XCTAssertEqual(color, UIColor.Palette.Dark.black4)

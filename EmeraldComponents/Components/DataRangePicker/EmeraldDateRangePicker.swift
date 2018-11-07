@@ -13,9 +13,7 @@ public protocol EmeraldDateRangePickerDelegate: class {
 }
 //EUIDateRangePicker
 public class EmeraldDateRangePicker: UITableViewController {
-    
-    private let themeManager = ThemeManager()
-    
+        
     public enum EmeraldDatePeriod: Int {
         case today
         case yesterday
@@ -119,7 +117,7 @@ public class EmeraldDateRangePicker: UITableViewController {
         
         if self.ranges[indexPath.row] == self.selectedPeriod {
             cell.textLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: .medium)
-            cell.textLabel?.textColor = themeManager.getTheme()
+            cell.textLabel?.textColor = ThemeManager.getTheme()
         } else {
             cell.textLabel?.font = UIFont.systemFont(ofSize: 14.0)
             cell.textLabel?.textColor = UIColor.Palette.Dark.black3
