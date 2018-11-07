@@ -45,14 +45,14 @@ class LabelTableViewController: UITableViewController {
     private let successLabel = "Success"
     private let infoLabel = "Info"
     
-    private let redColor = UIColor.Palette.CommonState.error
-    private let warningColor = UIColor.Palette.CommonState.warning
+    private let redColor = UIColor.Palette.State.error
+    private let warningColor = UIColor.Palette.State.warning
     private let neutralColor = UIColor.Palette.Light.white4
-    private let successColor = UIColor.Palette.CommonState.success
+    private let successColor = UIColor.Palette.State.success
     private let infoColor = UIColor(red: 128/255, green: 58/255, blue: 220/255, alpha: 1.0)
     
-    private var bulletIcon = UIImage(named: "payments-detail-others-icon", in: Bundle.basic, compatibleWith: nil)!
-    private var someIcon = UIImage(named: "button-edit-icon", in: Bundle.basic, compatibleWith: nil)!
+    private var bulletIcon = UIImage(named: "payments-detail-others-icon", in: Bundle.emerald, compatibleWith: nil)!
+    private var someIcon = UIImage(named: "button-edit-icon", in: Bundle.emerald, compatibleWith: nil)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
