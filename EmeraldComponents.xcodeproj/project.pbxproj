@@ -79,6 +79,7 @@
 		A270034720179EF1008FBB2E /* SlingComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = A270033920179EF1008FBB2E /* SlingComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2883B072190D76400864094 /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2883B092190D76400864094 /* SearchList.storyboard */; };
 		A2883B102190DB3500864094 /* WeekHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2883B0E2190DB3500864094 /* WeekHeader.xib */; };
+		A2883B1B219228F500864094 /* UserDefaults+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2883B1A219228F500864094 /* UserDefaults+UIColor.swift */; };
 		A28D839720815A6B0041457D /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28D839620815A6B0041457D /* HUD.swift */; };
 		A28D839B20851CD90041457D /* HUDHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28D839A20851CD90041457D /* HUDHelperTests.swift */; };
 		A28D839D208524E70041457D /* HUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28D839C208524E70041457D /* HUDHelper.swift */; };
@@ -187,6 +188,7 @@
 		A2883B0F2190DB3500864094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/WeekHeader.xib; sourceTree = "<group>"; };
 		A2883B112190DB3A00864094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WeekHeader.strings; sourceTree = "<group>"; };
 		A2883B122190DB3D00864094 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/WeekHeader.strings"; sourceTree = "<group>"; };
+		A2883B1A219228F500864094 /* UserDefaults+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+UIColor.swift"; sourceTree = "<group>"; };
 		A28D839620815A6B0041457D /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		A28D839A20851CD90041457D /* HUDHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDHelperTests.swift; sourceTree = "<group>"; };
 		A28D839C208524E70041457D /* HUDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDHelper.swift; sourceTree = "<group>"; };
@@ -726,6 +728,14 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		A2883B19219228DC00864094 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				A2883B1A219228F500864094 /* UserDefaults+UIColor.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		A28D839520815A470041457D /* HUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -774,15 +784,16 @@
 		A2C43C60201F4F7A0067AA7E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A2883AF72190BC3D00864094 /* UIVIew */,
-				A2883AF62190BC3B00864094 /* UIResponder */,
-				A2883AF52190BC0700864094 /* UIImage */,
 				A2883AF42190BC0600864094 /* Bundle */,
-				A2883AF32190BC0300864094 /* String */,
-				A2883AF12190BBBF00864094 /* Date */,
-				A2883AF02190BBB900864094 /* UINavigationController */,
 				A2883AEB2190BBB000864094 /* Calendar */,
+				A2883AF12190BBBF00864094 /* Date */,
+				A2883AF32190BC0300864094 /* String */,
 				A24C7AFA202374760019A85F /* UIColor */,
+				A2883AF52190BC0700864094 /* UIImage */,
+				A2883AF02190BBB900864094 /* UINavigationController */,
+				A2883AF62190BC3B00864094 /* UIResponder */,
+				A2883AF72190BC3D00864094 /* UIVIew */,
+				A2883B19219228DC00864094 /* UserDefaults */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1044,6 +1055,7 @@
 				A2690D05213D8141007ED6B1 /* EmeraldPicker+Protocols.swift in Sources */,
 				37E0102D20D182EC00FA6410 /* UIImage.swift in Sources */,
 				A24686032092631000D934BE /* CalendarCollectionCustomViewCell.swift in Sources */,
+				A2883B1B219228F500864094 /* UserDefaults+UIColor.swift in Sources */,
 				A28DDE5F20D1601400CC61C6 /* EmeraldSearchList.swift in Sources */,
 				37E1297920DC101100B45C5A /* Bundle.swift in Sources */,
 				37E1298F20DC5A1100B45C5A /* UIResponder.swift in Sources */,
