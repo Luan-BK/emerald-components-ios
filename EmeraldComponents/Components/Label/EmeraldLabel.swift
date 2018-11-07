@@ -91,11 +91,11 @@ public class EmeraldLabel: UIView {
     ///   - text: Label text to be displayed
     ///   - color: Label color to be displayed
     ///   - type: Label type to be displayed
-    public func configureFor(text: String? = nil,
+    public func configureFor(text: String,
                              color: UIColor? = nil,
                              type: EmeraldLabelType? = nil,
                              and icon: UIImage? = nil) {
-        self.text = text ?? self.text
+        self.text = text
         self.color = color ?? self.color
         self.type = type ?? self.type
         self.icon = icon ?? self.icon
