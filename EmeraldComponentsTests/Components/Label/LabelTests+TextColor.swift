@@ -109,7 +109,7 @@ extension LabelTests {
     
     func testTextColor_typeText_stateInfo() {
         // given
-        let text: UIColor = UIColor.Palette.secondary
+        let text: UIColor = UIColor.Palette.Basic.secondary
         // when
         let color = label.textColor(forState: .info, andType: .text)
         // then
@@ -156,7 +156,7 @@ extension LabelTests {
     
     func testTextColor_typeImage_stateInfo() {
         // given
-        let text: UIColor = UIColor.Palette.secondary
+        let text: UIColor = UIColor.Palette.Basic.secondary
         // when
         let color = label.textColor(forState: .info, andType: .image)
         // then

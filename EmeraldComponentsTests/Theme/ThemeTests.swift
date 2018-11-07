@@ -12,15 +12,16 @@ import XCTest
 class ThemeTests: XCTestCase {
     
     private var theme: EmeraldTheme!
+    private let themeManager = ThemeManager()
     
     func testTheme_Stone() {
         //given
         theme = EmeraldTheme.stone
         
         //then
-        validateTintColor(UIColor.primaryColor(for: ThemeManager.currentTheme()))
+        validateTintColor(themeManager.getTheme())
         validateBarStyle(.default)
-        validateButtonBackgroundColor(UIColor.primaryColor(for: ThemeManager.currentTheme()))
+        validateButtonBackgroundColor(themeManager.getTheme())
     }
     
     func validateTintColor(_ color: UIColor) {

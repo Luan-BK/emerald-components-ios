@@ -15,7 +15,6 @@
 		37653E9520602B7100EB415B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37653E9420602B7100EB415B /* UIView.swift */; };
 		3769F6E32093D376000DA1A0 /* OperationTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3769F6E22093D376000DA1A0 /* OperationTableViewCellTests.swift */; };
 		377381E420D9BDD2000B8C84 /* ButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377381E320D9BDD2000B8C84 /* ButtonTests.swift */; };
-		378F4D5C206C0BE800C52CEB /* Color+PalleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F4D5B206C0BE800C52CEB /* Color+PalleteTests.swift */; };
 		37AF650C20B8A16C00D90AE0 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF650A20B8A16C00D90AE0 /* LoadingTableViewCell.swift */; };
 		37AF650D20B8A16C00D90AE0 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37AF650B20B8A16C00D90AE0 /* LoadingTableViewCell.xib */; };
 		37B813152123450B003A8C8E /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B813142123450B003A8C8E /* UINavigationController.swift */; };
@@ -112,7 +111,6 @@
 		37653E9420602B7100EB415B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3769F6E22093D376000DA1A0 /* OperationTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTableViewCellTests.swift; sourceTree = "<group>"; };
 		377381E320D9BDD2000B8C84 /* ButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTests.swift; sourceTree = "<group>"; };
-		378F4D5B206C0BE800C52CEB /* Color+PalleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+PalleteTests.swift"; sourceTree = "<group>"; };
 		37AF650A20B8A16C00D90AE0 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		37AF650B20B8A16C00D90AE0 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
 		37B813142123450B003A8C8E /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
@@ -318,7 +316,6 @@
 		37EEED2C2124986300469F01 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A2883B042190D5FF00864094 /* UIColor */,
 				A2883B032190D5FD00864094 /* UINavigationController */,
 			);
 			path = Extensions;
@@ -720,14 +717,6 @@
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
-		A2883B042190D5FF00864094 /* UIColor */ = {
-			isa = PBXGroup;
-			children = (
-				378F4D5B206C0BE800C52CEB /* Color+PalleteTests.swift */,
-			);
-			path = UIColor;
-			sourceTree = "<group>";
-		};
 		A2883B19219228DC00864094 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -1091,7 +1080,6 @@
 				37C0461220BE0A560056A878 /* LoadingTableViewCellTests.swift in Sources */,
 				37EEED2B21248A6B00469F01 /* CustomDateRangePickerTests.swift in Sources */,
 				A28D839B20851CD90041457D /* HUDHelperTests.swift in Sources */,
-				378F4D5C206C0BE800C52CEB /* Color+PalleteTests.swift in Sources */,
 				3769F6E32093D376000DA1A0 /* OperationTableViewCellTests.swift in Sources */,
 				A21963F32180F4A40038450D /* LabelTests+BackgroundColor.swift in Sources */,
 				372395E620DD50FF0018BB46 /* Input+DelegateTests.swift in Sources */,
