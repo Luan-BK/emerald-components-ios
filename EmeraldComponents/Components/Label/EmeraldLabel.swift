@@ -14,8 +14,6 @@ public enum EmeraldLabelType: Int {
     case fill = 1
     /// It displays transparent background color and a border coloured according to the selected state.
     case outline
-    /// It displays a text with a bullet image. It's used to demonstrate minor priority.
-    case text
     /// It displays a text with an emerald assets. It's used to report data
     case image
 }
@@ -32,25 +30,29 @@ public class EmeraldLabel: UIView {
     @IBOutlet weak var iconImageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var textLabelLeadingConstraint: NSLayoutConstraint!
     
+    internal private(set) var icon: UIImage = UIImage(named: "icon-dot", in: Bundle.basic, compatibleWith: nil)! {
+        didSet {
+            self.labelConfigDidChange(text: self.text, color: self.color, type: self.type, and: self.icon)
+        }
+    }
+    
+    internal private(set) var text: String! {
+        didSet {
+            self.labelConfigDidChange(text: self.text, color: self.color, type: self.type, and: self.icon)
+        }
+    }
+    
     internal private(set) var type: EmeraldLabelType = .fill {
         didSet {
-            self.typeOrStyleDidChange(self.state, self.type)
+            self.labelConfigDidChange(text: self.text, color: self.color, type: self.type, and: self.icon)
         }
     }
 
-    internal private(set) var state: UIColor = UIColor.Palette.Light.white4 {
+    internal private(set) var color: UIColor = UIColor.Palette.Light.white4 {
         didSet {
-            self.typeOrStyleDidChange(self.state, self.type)
+            self.labelConfigDidChange(text: self.text, color: self.color, type: self.type, and: self.icon)
         }
     }
-    
-    // MARK: - Aux properties
-    
-    /// Used to set a default value for icon image
-    internal var auxIconLabel: String = "icon-dot"
-    
-    /// Used to set a default value for text label
-    internal var auxTextLabel: String = "Label"
     
     // MARK: - Init
 
@@ -83,28 +85,20 @@ public class EmeraldLabel: UIView {
     
     // MARK: - Public configuration
     
-    /// Sets the icon that will be displayed to the left of label.
-    ///
-    /// - Parameter name: The name of an image inside emerald project assets. You can't choose any image. Only emerald images
-    public func setIconFor(name: String) {
-        self.auxIconLabel = name
-    }
-    
-    /// Sets the text to be displayed by the EmeraldLabel.
-    ///
-    /// - Parameter Text: The text label name.
-    public func setLabelFor(text: String) {
-        self.auxTextLabel = text.uppercased()
-    }
-    
     /// Sets the status and type
     ///
     /// - Parameters:
+    ///   - text: Label text to be displayed
     ///   - color: Label color to be displayed
     ///   - type: Label type to be displayed
-    public func configureFor(color: UIColor? = nil, and type: EmeraldLabelType? = nil) {
-        self.state = color ?? self.state
+    public func configureFor(text: String? = nil,
+                             color: UIColor? = nil,
+                             type: EmeraldLabelType? = nil,
+                             and icon: UIImage? = nil) {
+        self.text = text ?? self.text
+        self.color = color ?? self.color
         self.type = type ?? self.type
+        self.icon = icon ?? self.icon
     }
     
     // MARK: - State changes
@@ -112,32 +106,32 @@ public class EmeraldLabel: UIView {
     /// The main method responsible to get the current state and type and set it to 'EmeraldLabel.xib' properties
     ///
     /// - Parameters:
-    ///   - state: Label state enum
+    ///   - color: Label configuration color
     ///   - type: Label type enum
-    internal func typeOrStyleDidChange(_ newState: UIColor, _ newType: EmeraldLabelType) {
-        self.textLabel.text = self.setTextLabel()
-        self.textLabel.backgroundColor = self.setBackgroundFor(color: newState, and: newType)
-        self.textLabel.textColor = self.setTextFor(color: newState, and: newType)
-        self.textLabel.tintColor = self.setTextFor(color: newState, and: newType)
-        self.textLabel.layer.borderColor = self.setBorderFor(color: newState, type: newType)
-        self.textLabel.layer.borderWidth = self.setBorderWidthFor(type: newType)
-        self.textLabel.textAlignment = self.setTextAlignmentFor(type: newType)
+    internal func labelConfigDidChange(text: String, color: UIColor, type: EmeraldLabelType, and icon: UIImage) {
+        self.textLabel.backgroundColor = self.setBackgroundFor(color: color, and: type)
+        self.textLabel.textColor = self.setTextFor(color: color, and: type)
+        self.textLabel.tintColor = self.setTextFor(color: color, and: type)
+        self.textLabel.layer.borderColor = self.setBorderFor(color: color, type: type)
+        self.textLabel.layer.borderWidth = self.setBorderWidthFor(type: type)
+        self.textLabel.textAlignment = self.setTextAlignmentFor(type: type)
         
-        let text = NSAttributedString(string: self.textLabel.text!, attributes: [NSAttributedStringKey.kern : 1.0])
-        self.textLabel.attributedText = text
+        self.iconImage.image = self.setTextIconFor(type: type, and: icon)
+        self.iconImage.tintColor = self.setTextFor(color: color, and: type)
         
-        self.iconImage.image = self.setTextIconFor(type: newType)
-        self.iconImage.tintColor = self.setTextFor(color: newState, and: newType)
+        self.setAttributedText()
         
-        self.setVisibilityConstraintsFor(type: newType)
+        self.setTextFor(label: text)
+        
+        self.setVisibilityConstraintsFor(type: type)
     }
 
     // MARK: - Aux methods
 
-    /// Returns the backgroundColor for a given type and state.
+    /// Returns the backgroundColor for a given type and color.
     ///
     /// - Parameters:
-    ///   - state: Label background color
+    ///   - color: Label background color
     ///   - type: Label type enum
     /// - Returns: Return label background color
     internal func setBackgroundFor(color: UIColor, and type: EmeraldLabelType) -> UIColor {
@@ -146,14 +140,12 @@ public class EmeraldLabel: UIView {
             return color
         case .outline:
             return UIColor.Palette.CommonState.clear
-        case .text:
-            return UIColor.Palette.CommonState.clear
         case .image:
             return UIColor.Palette.CommonState.clear
         }
     }
     
-    /// Returns the border width for a given state and type.
+    /// Returns the border width for a given color and type.
     ///
     /// - Parameters:
     ///   - type: Label type enum
@@ -162,7 +154,7 @@ public class EmeraldLabel: UIView {
         return type == .outline ? 1.0 : 0.0
     }
     
-    /// Returns the borderColor for a given state and type.
+    /// Returns the borderColor for a given color and type.
     ///
     /// - Parameters:
     ///   - color: Label border color
@@ -174,35 +166,29 @@ public class EmeraldLabel: UIView {
             return color.cgColor
         case .outline:
             return color.cgColor
-        case .text:
-            return UIColor.Palette.CommonState.clear.cgColor
         case .image:
             return UIColor.Palette.CommonState.clear.cgColor
         }
     }
     
-    /// Returns an image for a given state and type.
+    /// Returns an image for a given type.
     ///
-    /// The image for the type `.text` will always be a dot bullet icon.
-    /// This method returns `nil` if the image can't be found inside the Bundle.
+    /// This method returns `nil` if the icon can't be found inside the Bundle.
     ///
     /// - Parameters:
     ///   - type: Label type enum
+    ///   - icon: Icon to be displayed with the label
     /// - Returns: An UIImage representing the Label's icon or `nil` if no image could be created.
-    internal func setTextIconFor(type: EmeraldLabelType) -> UIImage? {
+    internal func setTextIconFor(type: EmeraldLabelType, and icon: UIImage) -> UIImage? {
         switch type {
-        case .text:
-            return UIImage(named: "icon-dot", in: Bundle.basic, compatibleWith: nil)!
-                .withRenderingMode(.alwaysTemplate)
         case .image:
-            return UIImage(named: auxIconLabel, in: Bundle.basic, compatibleWith: nil)!
-                .withRenderingMode(.alwaysTemplate)
+            return icon.withRenderingMode(.alwaysTemplate)
         default:
             return nil
         }
     }
     
-    /// Updates the Label's constraints for a given state and type.
+    /// Updates the Label's constraints for a given type.
     ///
     /// - Parameters:
     ///   - type: Label type enum
@@ -211,13 +197,13 @@ public class EmeraldLabel: UIView {
         case .fill, .outline:
             self.iconImageHeightConstraint.constant = 0.0
             self.textLabelLeadingConstraint.constant = 0.0
-        case .text, .image:
+        case .image:
             self.iconImageHeightConstraint.constant = 30.0
             self.textLabelLeadingConstraint.constant = 8.0
         }
     }
     
-    /// Returns a textColor for a given state and type.
+    /// Returns a textColor for a given color and type.
     ///
     /// - Parameters:
     ///   - color: Label text color
@@ -228,8 +214,6 @@ public class EmeraldLabel: UIView {
         case .fill:
             return UIColor.Palette.Light.white1
         case .outline:
-            return color
-        case .text:
             return color
         case .image:
             return color
@@ -245,17 +229,20 @@ public class EmeraldLabel: UIView {
         switch type {
         case .fill, .outline:
             return .center
-        case .text, .image:
+        case .image:
             return .left
         }
-        
     }
     
-    /// Sets the label text to be dipayed
-    ///
-    /// - Returns: Return an label text string setted by 'setLabel(text: String)' method
-    internal func setTextLabel() -> String {
-        return self.auxTextLabel
+    /// Sets the label text to be diplayed
+    internal func setTextFor(label: String) {
+        self.textLabel.text = label.uppercased()
+    }
+    
+    /// Sets kern to label text to be displayed
+    internal func setAttributedText() {
+        let attribute = NSAttributedString(string: self.textLabel.text!, attributes: [NSAttributedStringKey.kern : 1.0])
+        self.textLabel.attributedText = attribute
     }
     
 }
