@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        ThemeManager.applyTheme(.stone)
+        let primary = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 1.0)
+        ThemeManager.set(theme: primary)
         return true
     }
 
