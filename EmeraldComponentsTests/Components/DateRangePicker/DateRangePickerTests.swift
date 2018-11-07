@@ -17,7 +17,7 @@ class DateRangePickerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        self.viewController = UIStoryboard(name: "DateRangePicker", bundle: Bundle.basic).instantiateViewController(withIdentifier: "EmeraldDateRangePicker") as? EmeraldDateRangePicker
+        self.viewController = UIStoryboard(name: "DateRangePicker", bundle: Bundle.emerald).instantiateViewController(withIdentifier: "EmeraldDateRangePicker") as? EmeraldDateRangePicker
         self.viewController.delegate = self
         _ = self.viewController.view
         

@@ -15,7 +15,7 @@ extension LabelTests {
         // given
         let image: UIImage? = nil
         // when
-        let label = self.label.textIcon(forState: .error, andType: .fill)
+        let label = self.label.setTextIconFor(type: .fill, and: UIImage())
         // then
         XCTAssertEqual(image, label)
     }
@@ -24,17 +24,7 @@ extension LabelTests {
         // given
         let image: UIImage? = nil
         // when
-        let label = self.label.textIcon(forState: .error, andType: .outline)
-        // then
-        XCTAssertEqual(image, label)
-    }
-    
-    func testTextIcon_typeText() {
-        // given
-        let image: UIImage = UIImage(named: "icon-dot", in: Bundle.basic, compatibleWith: nil)!
-            .withRenderingMode(.alwaysTemplate)
-        // when
-        let label = self.label.textIcon(forState: .error, andType: .text)
+        let label = self.label.setTextIconFor(type: .outline, and: UIImage())
         // then
         XCTAssertEqual(image, label)
     }
@@ -42,14 +32,12 @@ extension LabelTests {
     func testTextIcon_typeImage() {
         // given
         let imageName = "icon-password-show"
-        let image: UIImage = UIImage(named: "icon-password-show", in: Bundle.basic, compatibleWith: nil)!
+        let image: UIImage = UIImage(named: imageName, in: Bundle.emerald, compatibleWith: nil)!
             .withRenderingMode(.alwaysTemplate)
         // when
-        self.label.setIcon(name: "icon-password-show")
-        let label = self.label.textIcon(forState: .error, andType: .image)
+        let label = self.label.setTextIconFor(type: .image, and: image)
         // then
         XCTAssertEqual(image, label!)
-        XCTAssertEqual(self.label.auxIconLabel, imageName)
     }
     
 }
