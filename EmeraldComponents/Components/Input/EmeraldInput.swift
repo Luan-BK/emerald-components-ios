@@ -313,15 +313,15 @@ public protocol EmeraldInputDelegate: class {
     internal func color(for state: EmeraldElementState) -> UIColor {
         switch state {
         case .error:
-            return UIColor.Palette.Basic.error
+            return UIColor.Palette.CommonState.error
         case .warning:
-            return UIColor.Palette.Basic.warning
+            return UIColor.Palette.CommonState.warning
         case .success:
-            return UIColor.Palette.Basic.success
+            return UIColor.Palette.CommonState.success
         case .disabled:
             return UIColor.Palette.Light.white3
         case .focus:
-            return ThemeManager.getTheme()
+            return UIColor.Palette.CommonState.focus
         default:
             return UIColor.Palette.Light.white4
         }

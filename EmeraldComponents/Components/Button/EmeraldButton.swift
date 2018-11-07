@@ -166,7 +166,6 @@ public enum EmeraldButtonType: Int {
     // MARK: - Background animation
     
     @objc internal func darkenBackground() {
-        
         switch self.style {
         case .outline, .plain:
             switch type {
@@ -192,7 +191,6 @@ public enum EmeraldButtonType: Int {
     // MARK: - Aux
     
     internal func backgroundColor(forType type: EmeraldButtonType, andStyle style: EmeraldButtonStyle) -> UIColor {
-        
         switch style {
         case .outline, .plain:
             switch type {
@@ -206,11 +204,11 @@ public enum EmeraldButtonType: Int {
         case .fill:
             switch type {
             case .regular:
-                return ThemeManager.getTheme()
+                return UIColor.Palette.CommonState.focus
             case .confirm:
-                return UIColor.Palette.Basic.success
+                return UIColor.Palette.CommonState.success
             case .delete:
-                return UIColor.Palette.Basic.error
+                return UIColor.Palette.CommonState.error
             case .neutral:
                 return UIColor.Palette.Light.white1
             case .disabled:
@@ -220,32 +218,30 @@ public enum EmeraldButtonType: Int {
     }
     
     internal func borderColor(forType type: EmeraldButtonType, andStyle style: EmeraldButtonStyle) -> CGColor {
-        
         switch style {
         case .fill, .outline:
             switch type {
             case .regular:
-                return ThemeManager.getTheme().cgColor
+                return UIColor.Palette.CommonState.focus.cgColor
             case .confirm:
-                return UIColor.Palette.Basic.success.cgColor
+                return UIColor.Palette.CommonState.success.cgColor
             case .delete:
-                return UIColor.Palette.Basic.error.cgColor
+                return UIColor.Palette.CommonState.error.cgColor
             case .neutral:
                 return UIColor.Palette.Light.white4.cgColor
             case .disabled:
-                return UIColor.clear.cgColor
+                return UIColor.Palette.CommonState.clear.cgColor
             }
         case .plain:
             if type == .neutral {
                 return UIColor.Palette.Light.white4.cgColor
             } else {
-                return UIColor.clear.cgColor
+                return UIColor.Palette.CommonState.clear.cgColor
             }
         }
     }
     
     internal func textColor(forType type: EmeraldButtonType, andStyle style: EmeraldButtonStyle) -> UIColor {
-        
         switch style {
         case .fill:
             switch type {
@@ -259,11 +255,11 @@ public enum EmeraldButtonType: Int {
         case .outline, .plain:
             switch type {
             case .regular:
-                return ThemeManager.getTheme()
+                return UIColor.Palette.CommonState.focus
             case .confirm:
-                return UIColor.Palette.Basic.success
+                return UIColor.Palette.CommonState.success
             case .delete:
-                return UIColor.Palette.Basic.error
+                return UIColor.Palette.CommonState.error
             case .neutral:
                 return UIColor.Palette.Dark.black4
             case .disabled:

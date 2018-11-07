@@ -105,16 +105,41 @@ extension UIColor {
             public static let black5 = UIColor(red: 66/255, green: 75/255, blue: 84/255, alpha: 1.0)
         }
         
-        public struct Basic {
+        public struct CommonState {
             /// #95c93d - 149, 201, 61
-            public static let primary   = UIColor(red: 149/255, green: 201/255, blue: 61/255, alpha: 1.0)
-            /// #8036dc - 128, 58, 220
-            public static let secondary = UIColor(red: 128/255, green: 58/255, blue: 220/255, alpha: 1.0)
-            /// #e74c3c - 231, 76, 60
-            public static let error     = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
+            public static let focus     = ThemeManager.getTheme()
+            /// #ffffff - 0, 0, 0
+            public static let clear     = UIColor.clear
+            /// #2ECC71 - 46, 204, 113
+            public static let success   = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0)
             /// #f9bf09 - 249, 191, 9
             public static let warning   = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
+            /// #e74c3c - 231, 76, 60
+            public static let error     = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
+        }
+        
+        internal struct DefaultState {
+            /// #C3C8D2 - 195, 200, 210
+            public static let disabled  = UIColor(red: 195/255, green: 200/255, blue: 210/255, alpha: 1.0)
+            /// #C3C8D2 - 195, 200, 210
+            public static let neutral   = UIColor(red: 195/255, green: 200/255, blue: 210/255, alpha: 1.0)
+        }
+        
+        public struct Basic {
+            /// #95c93d - 149, 201, 61
+            @available(*, deprecated, message: "Use UIColor.Palette.State.focus instead")
+            public static let primary   = UIColor(red: 149/255, green: 201/255, blue: 61/255, alpha: 1.0)
+            /// #8036dc - 128, 58, 220
+            @available(*, deprecated, message: "Use youy own color, it'll be removed")
+            public static let secondary = UIColor(red: 128/255, green: 58/255, blue: 220/255, alpha: 1.0)
+            /// #e74c3c - 231, 76, 60
+            @available(*, deprecated, message: "Use UIColor.Palette.State.error instead")
+            public static let error     = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
+            /// #f9bf09 - 249, 191, 9
+            @available(*, deprecated, message: "Use UIColor.Palette.State.warning instead")
+            public static let warning   = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
             /// #2ECC71 - 46, 204, 113
+            @available(*, deprecated, message: "Use UIColor.Palette.State.success instead")
             public static let success   = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0)
         }
         

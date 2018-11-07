@@ -159,13 +159,13 @@ public class EmeraldLabel: UIView {
         
         switch state {
         case .error:
-            return UIColor.Palette.Basic.error
+            return UIColor.Palette.CommonState.error
         case .warning:
-            return UIColor.Palette.Basic.warning
+            return UIColor.Palette.CommonState.warning
         case .neutral:
             return UIColor.Palette.Light.white4
         case .success:
-            return UIColor.Palette.Basic.success
+            return UIColor.Palette.CommonState.success
         case .info:
             return UIColor.Palette.Basic.secondary
         }
@@ -194,13 +194,13 @@ public class EmeraldLabel: UIView {
         
         switch state {
         case .error:
-            return UIColor.Palette.Basic.error.cgColor
+            return UIColor.Palette.CommonState.error.cgColor
         case .warning:
-            return UIColor.Palette.Basic.warning.cgColor
+            return UIColor.Palette.CommonState.warning.cgColor
         case .neutral:
             return UIColor.Palette.Light.white4.cgColor
         case .success:
-            return UIColor.Palette.Basic.success.cgColor
+            return UIColor.Palette.CommonState.success.cgColor
         case .info:
             return UIColor.Palette.Basic.secondary.cgColor
         }
@@ -255,13 +255,13 @@ public class EmeraldLabel: UIView {
         
         switch state {
         case .error:
-            return UIColor.Palette.Basic.error
+            return UIColor.Palette.CommonState.error
         case .warning:
-            return UIColor.Palette.Basic.warning
+            return UIColor.Palette.CommonState.warning
         case .neutral:
             return UIColor.Palette.Light.white4
         case .success:
-            return UIColor.Palette.Basic.success
+            return UIColor.Palette.CommonState.success
         case .info:
             return UIColor.Palette.Basic.secondary
         }
