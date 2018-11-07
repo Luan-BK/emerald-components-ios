@@ -281,7 +281,6 @@
 			isa = PBXGroup;
 			children = (
 				A2690D31213ED515007ED6B1 /* Button */,
-				A2690CED213D8092007ED6B1 /* DataRangePicker */,
 				A2883AEA2190BB0F00864094 /* Form */,
 				A28D839520815A470041457D /* HUD */,
 				A2690CFB213D811A007ED6B1 /* Input */,
@@ -442,8 +441,8 @@
 		A2690D02213D8141007ED6B1 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
-				A2690D03213D8141007ED6B1 /* EmeraldPicker+Protocols.swift */,
-				A2690D04213D8141007ED6B1 /* EmeraldPicker.swift */,
+				A2690CED213D8092007ED6B1 /* DataRangePicker */,
+				A2883B1C2193220E00864094 /* PickerView */,
 			);
 			path = Picker;
 			sourceTree = "<group>";
@@ -723,6 +722,15 @@
 				A2883B1A219228F500864094 /* UserDefaults+UIColor.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		A2883B1C2193220E00864094 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A2690D03213D8141007ED6B1 /* EmeraldPicker+Protocols.swift */,
+				A2690D04213D8141007ED6B1 /* EmeraldPicker.swift */,
+			);
+			path = PickerView;
 			sourceTree = "<group>";
 		};
 		A28D839520815A470041457D /* HUD */ = {

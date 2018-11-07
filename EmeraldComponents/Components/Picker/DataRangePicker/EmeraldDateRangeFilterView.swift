@@ -38,14 +38,23 @@ public class EmeraldDateRangeFilterView: UIView {
         let bundle = Bundle(for: type(of: self))
 
         bundle.loadNibNamed(String(describing: EmeraldDateRangeFilterView.self), owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.Palette.Light.white4.cgColor
+        addSubview(self.contentView)
+        self.contentView.frame = self.bounds
+        self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        self.contentView.layer.borderWidth = 1
+        self.contentView.layer.borderColor = UIColor.Palette.Light.white4.cgColor
         
-        let calendarIcon = UIImage(named: "payments-detail-calendar-icon", in: Bundle.basic, compatibleWith: nil)
+        self.setUpIcon()
+    }
+    
+    internal func setUpIcon() {
+        let calendarIcon = UIImage(named: "payments-detail-calendar-icon",
+                                   in: Bundle.basic,
+                                   compatibleWith: nil)!
+            .withRenderingMode(.alwaysTemplate)
+        
         self.imageView.image = calendarIcon
+        self.imageView.tintColor = UIColor.Palette.CommonState.focus
     }
     
     @IBAction func filterButtonTouched() {

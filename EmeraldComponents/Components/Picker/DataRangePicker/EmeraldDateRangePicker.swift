@@ -13,7 +13,9 @@ public protocol EmeraldDateRangePickerDelegate: class {
 }
 //EUIDateRangePicker
 public class EmeraldDateRangePicker: UITableViewController {
-        
+    
+    @IBOutlet weak var iconImageView: UIImageView!
+    
     public enum EmeraldDatePeriod: Int {
         case today
         case yesterday
@@ -67,6 +69,18 @@ public class EmeraldDateRangePicker: UITableViewController {
             self.navigationItem.largeTitleDisplayMode = .never
         }
         self.navigationItem.backBarButtonItem?.title = ""
+        
+        self.setUpIcon()
+    }
+    
+    internal func setUpIcon() {
+        let image = UIImage(named: "calendar-icon",
+                            in: Bundle.basic,
+                            compatibleWith: nil)!
+            .withRenderingMode(.alwaysTemplate)
+        
+        self.iconImageView.image = image
+        self.iconImageView.tintColor = UIColor.Palette.CommonState.focus
     }
     
     override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
