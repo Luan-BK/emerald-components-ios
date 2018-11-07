@@ -36,6 +36,7 @@ public enum EmeraldButtonType: Int {
     
     private let widthPadding: CGFloat = 48.0
     private let heightPadding: CGFloat = 12.0
+    private let themeManager = ThemeManager()
     
     internal private(set) var style: EmeraldButtonStyle = .fill {
         didSet {
@@ -206,7 +207,7 @@ public enum EmeraldButtonType: Int {
         case .fill:
             switch type {
             case .regular:
-                return UIColor.primaryColor(for: ThemeManager.currentTheme())
+                return themeManager.getTheme()
             case .confirm:
                 return UIColor.Palette.Basic.success
             case .delete:
@@ -225,7 +226,7 @@ public enum EmeraldButtonType: Int {
         case .fill, .outline:
             switch type {
             case .regular:
-                return UIColor.primaryColor(for: ThemeManager.currentTheme()).cgColor
+                return themeManager.getTheme().cgColor
             case .confirm:
                 return UIColor.Palette.Basic.success.cgColor
             case .delete:
@@ -259,7 +260,7 @@ public enum EmeraldButtonType: Int {
         case .outline, .plain:
             switch type {
             case .regular:
-                return UIColor.primaryColor(for: ThemeManager.currentTheme())
+                return themeManager.getTheme()
             case .confirm:
                 return UIColor.Palette.Basic.success
             case .delete:

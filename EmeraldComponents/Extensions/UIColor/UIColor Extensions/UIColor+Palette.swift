@@ -10,21 +10,14 @@ import UIKit
 
 extension UIColor {
     
+    @available(*, deprecated, message: "Use getTheme() method from ThemeManager class instead")
     public static func primaryColor(for theme: EmeraldTheme) -> UIColor {
         switch theme {
         case .stone:
-            return Palette.Basic.primary
+            let themeManager = ThemeManager()
+            return themeManager.getTheme()
         }
     }
-    
-    /* Background colors */
-    
-//    public class func primaryContentBackground(for colorTheme: CompanyTheme) -> UIColor {
-//        switch colorTheme {
-//        case .stone:        return Palette.Stone.keyAccount
-//        case .mundiPagg:    return Palette.MundiPagg.navy
-//        }
-//    }
     
     /* Background gray scale colors */
     
@@ -71,6 +64,7 @@ extension UIColor {
                 } else {
                     newB = max(min(bright + (percentage/100.0)*bright, 1.0), 0,0)
                 }
+                
                 return UIColor(hue: hue, saturation: sat, brightness: newB, alpha: alpha)
             } else {
                 let newS: CGFloat = min(max(sat - (percentage/100.0)*sat, 0.0), 1.0)

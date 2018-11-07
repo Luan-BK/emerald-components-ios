@@ -38,7 +38,7 @@ public class EmeraldPicker: EmeraldInput {
         
         self.inputField.inputView = picker
         self.inputField.tintColor = .clear
-        self.inputButton.tintColor = ThemeManager.currentTheme().tintColor
+        self.inputButton.tintColor = themeManager.getTheme()
     }
     
     public func startSelection() {

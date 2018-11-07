@@ -38,6 +38,9 @@ public protocol EmeraldInputDelegate: class {
     internal var maskHandler: MaskedTextFieldDelegate!
     internal var maskWasCompleted: Bool = false
     
+    // Theme
+    internal let themeManager = ThemeManager()
+    
     public weak var inputDelegate: EmeraldInputDelegate?
     
     // Lazy properties
@@ -241,27 +244,6 @@ public protocol EmeraldInputDelegate: class {
         }
     }
     
-    // MARK: - Mask
-    
-    internal func validateInput(for mask: EmeraldInputMask) -> Bool {
-        switch mask {
-        case .none:
-            return true
-        case .email:
-            // Use an RegEx for email validation only
-            return self.validateString(self.inputText, with: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")
-        case .password, .currency:
-            return !self.inputText.isEmpty
-        default:
-            return self.maskWasCompleted
-        }
-    }
-    
-    private func validateString(_ text: String, with regExString: String) -> Bool {
-        let predicate = NSPredicate(format:"SELF MATCHES %@", regExString)
-        return predicate.evaluate(with: text)
-    }
-    
     // MARK: - Aux
     
     internal func handleBottomText(for state: EmeraldElementState) {
@@ -342,7 +324,7 @@ public protocol EmeraldInputDelegate: class {
         case .disabled:
             return UIColor.Palette.Light.white3
         case .focus:
-            return UIColor.primaryColor(for: ThemeManager.currentTheme())
+            return themeManager.getTheme()
         default:
             return UIColor.Palette.Light.white4
         }
@@ -372,6 +354,30 @@ public protocol EmeraldInputDelegate: class {
     
     internal func toggleSecureText(_ show: Bool) {
         self.inputButton.setImage(UIImage.securePassword(show), for: .normal)
+    }
+    
+}
+
+// MARK: - Mask
+extension EmeraldInput {
+    
+    internal func validateInput(for mask: EmeraldInputMask) -> Bool {
+        switch mask {
+        case .none:
+            return true
+        case .email:
+            // Use an RegEx for email validation only
+            return self.validateString(self.inputText, with: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")
+        case .password, .currency:
+            return !self.inputText.isEmpty
+        default:
+            return self.maskWasCompleted
+        }
+    }
+    
+    private func validateString(_ text: String, with regExString: String) -> Bool {
+        let predicate = NSPredicate(format:"SELF MATCHES %@", regExString)
+        return predicate.evaluate(with: text)
     }
     
 }
