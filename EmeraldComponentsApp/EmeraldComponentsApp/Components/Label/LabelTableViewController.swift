@@ -39,6 +39,21 @@ class LabelTableViewController: UITableViewController {
     @IBOutlet weak var imageSuccessLabel: EmeraldLabel!
     @IBOutlet weak var imageInfoLabel: EmeraldLabel!
     
+    private let errorLabel = "Error"
+    private let warningLabel = "Warning"
+    private let neutralLabel = "Neutral"
+    private let successLabel = "Success"
+    private let infoLabel = "Info"
+    
+    private let redColor = UIColor.Palette.CommonState.error
+    private let warningColor = UIColor.Palette.CommonState.warning
+    private let neutralColor = UIColor.Palette.Light.white4
+    private let successColor = UIColor.Palette.CommonState.success
+    private let infoColor = UIColor(red: 128/255, green: 58/255, blue: 220/255, alpha: 1.0)
+    
+    private var bulletIcon = UIImage(named: "payments-detail-others-icon", in: Bundle.basic, compatibleWith: nil)!
+    private var someIcon = UIImage(named: "button-edit-icon", in: Bundle.basic, compatibleWith: nil)!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,77 +64,35 @@ class LabelTableViewController: UITableViewController {
     }
     
     internal func setupFillLabels() {
-        fillErrorLabel.setLabel(text: "Error")
-        fillErrorLabel.configure(state: .error, type: .fill)
-        
-        fillWarningLabel.setLabel(text: "Warning")
-        fillWarningLabel.configure(state: .warning, type: .fill)
-        
-        fillNeutralLabel.setLabel(text: "Neutral")
-        fillNeutralLabel.configure(state: .neutral, type: .fill)
-        
-        fillSuccessLabel.setLabel(text: "Success")
-        fillSuccessLabel.configure(state: .success, type: .fill)
-        
-        fillInfoLabel.setLabel(text: "Info")
-        fillInfoLabel.configure(state: .info, type: .fill)
-        
+        self.fillErrorLabel.configureFor(text: self.errorLabel, color: self.redColor, type: .fill, and: nil)
+        self.fillWarningLabel.configureFor(text: self.warningLabel, color: self.warningColor, type: .fill, and: nil)
+        self.fillNeutralLabel.configureFor(text: self.neutralLabel, color: self.neutralColor, type: .fill, and: nil)
+        self.fillSuccessLabel.configureFor(text: self.successLabel, color: self.successColor, type: .fill, and: nil)
+        self.fillInfoLabel.configureFor(text: self.infoLabel, color: self.infoColor, type: .fill, and: nil)
     }
     
     internal func setupOutlineLabels() {
-        outlineErrorLabel.setLabel(text: "Error")
-        outlineErrorLabel.configure(state: .error, type: .outline)
-        
-        outlineWarningLabel.setLabel(text: "Warning")
-        outlineWarningLabel.configure(state: .warning, type: .outline)
-        
-        outlineNeutralLabel.setLabel(text: "Neutral")
-        outlineNeutralLabel.configure(state: .neutral, type: .outline)
-        
-        outlineSuccessLabel.setLabel(text: "Success")
-        outlineSuccessLabel.configure(state: .success, type: .outline)
-        
-        outlineInfoLabel.setLabel(text: "Info")
-        outlineInfoLabel.configure(state: .info, type: .outline)
+        self.outlineErrorLabel.configureFor(text: self.errorLabel, color: self.redColor, type: .outline, and: nil)
+        self.outlineWarningLabel.configureFor(text: self.warningLabel, color: self.warningColor, type: .outline, and: nil)
+        self.outlineNeutralLabel.configureFor(text: self.neutralLabel, color: self.neutralColor, type: .outline, and: nil)
+        self.outlineSuccessLabel.configureFor(text: self.successLabel, color: self.successColor, type: .outline, and: nil)
+        self.outlineInfoLabel.configureFor(text: self.infoLabel, color: self.infoColor, type: .outline, and: nil)
     }
     
     internal func setupTextLabels() {
-        textErrorLabel.setLabel(text: "Error")
-        textErrorLabel.configure(state: .error, type: .text)
-        
-        textWarningLabel.setLabel(text: "Warning")
-        textWarningLabel.configure(state: .warning, type: .text)
-        
-        textNeutralLabel.setLabel(text: "Neutral")
-        textNeutralLabel.configure(state: .neutral, type: .text)
-        
-        textSuccessLabel.setLabel(text: "Success")
-        textSuccessLabel.configure(state: .success, type: .text)
-        
-        textInfoLabel.setLabel(text: "Info")
-        textInfoLabel.configure(state: .info, type: .text)
+        self.textErrorLabel.configureFor(text: self.errorLabel, color: self.redColor, type: .image, and: nil)
+        self.textWarningLabel.configureFor(text: self.warningLabel, color: self.warningColor, type: .image, and: nil)
+        self.textNeutralLabel.configureFor(text: self.neutralLabel, color: self.neutralColor, type: .image, and: nil)
+        self.textSuccessLabel.configureFor(text: self.successLabel, color: self.successColor, type: .image, and: nil)
+        self.textInfoLabel.configureFor(text: self.infoLabel, color: self.infoColor, type: .image, and: nil)
     }
     
     internal func setupImageLabels() {
-        imageErrorLabel.setLabel(text: "Error")
-        imageErrorLabel.setIcon(name: "button-edit-icon")
-        imageErrorLabel.configure(state: .error, type: .image)
-        
-        imageWarningLabel.setLabel(text: "Warning")
-        imageWarningLabel.setIcon(name: "button-edit-icon")
-        imageWarningLabel.configure(state: .warning, type: .image)
-        
-        imageNeutralLabel.setLabel(text: "Neutral")
-        imageNeutralLabel.setIcon(name: "button-edit-icon")
-        imageNeutralLabel.configure(state: .neutral, type: .image)
-        
-        imageSuccessLabel.setLabel(text: "Success")
-        imageSuccessLabel.setIcon(name: "button-edit-icon")
-        imageSuccessLabel.configure(state: .success, type: .image)
-        
-        imageInfoLabel.setLabel(text: "Info")
-        imageInfoLabel.setIcon(name: "button-edit-icon")
-        imageInfoLabel.configure(state: .info, type: .image)
+        self.imageErrorLabel.configureFor(text: self.errorLabel, color: self.redColor, type: .image, and: self.someIcon)
+        self.imageWarningLabel.configureFor(text: self.warningLabel, color: self.warningColor, type: .image, and: self.someIcon)
+        self.imageNeutralLabel.configureFor(text: self.neutralLabel, color: self.neutralColor, type: .image, and: self.someIcon)
+        self.imageSuccessLabel.configureFor(text: self.successLabel, color: self.successColor, type: .image, and: self.someIcon)
+        self.imageInfoLabel.configureFor(text: self.infoLabel, color: self.infoColor, type: .image, and: self.someIcon)
     }
     
 }
