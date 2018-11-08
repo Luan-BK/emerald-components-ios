@@ -79,13 +79,13 @@ public protocol EmeraldInputDelegate: class {
     
     internal private(set) var inputMask: EmeraldInputMask = .none {
         didSet {
-            maskDidChange(to: self.inputMask)
+            self.maskDidChange(to: self.inputMask)
         }
     }
     
     internal private(set) var state: EmeraldElementState = .regular {
         didSet {
-            stateDidChange(self.state)
+            self.stateDidChange(self.state)
         }
     }
     
@@ -179,8 +179,8 @@ public protocol EmeraldInputDelegate: class {
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
         
-        inputField.leftView = imageView
-        inputField.leftViewMode = image != nil ? .always : .never
+        self.inputField.leftView = imageView
+        self.inputField.leftViewMode = image != nil ? .always : .never
     }
     
     // MARK: - User interaction
@@ -195,7 +195,7 @@ public protocol EmeraldInputDelegate: class {
     }
     
     @IBAction internal func textChanged(_ sender: UITextField) {
-        guard let text = inputField.text else { return }
+        guard let text = self.inputField.text else { return }
         self.toggleTopLabel(text.isEmpty)
     }
     
@@ -232,34 +232,13 @@ public protocol EmeraldInputDelegate: class {
         default:
             let maskFormat = EmeraldInputMask.getMaskFormat(for: mask)
             
-            maskHandler = MaskedTextFieldDelegate(primaryFormat: maskFormat)
-            maskHandler.listener = self
-            maskHandler.autocomplete = true
+            self.maskHandler = MaskedTextFieldDelegate(primaryFormat: maskFormat)
+            self.maskHandler.listener = self
+            self.maskHandler.autocomplete = true
             
             self.inputField.delegate = maskHandler
             self.setKeyboardType(for: mask)
         }
-    }
-    
-    // MARK: - Mask
-    
-    internal func validateInput(for mask: EmeraldInputMask) -> Bool {
-        switch mask {
-        case .none:
-            return true
-        case .email:
-            // Use an RegEx for email validation only
-            return self.validateString(self.inputText, with: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")
-        case .password, .currency:
-            return !self.inputText.isEmpty
-        default:
-            return self.maskWasCompleted
-        }
-    }
-    
-    private func validateString(_ text: String, with regExString: String) -> Bool {
-        let predicate = NSPredicate(format:"SELF MATCHES %@", regExString)
-        return predicate.evaluate(with: text)
     }
     
     // MARK: - Aux
@@ -276,20 +255,20 @@ public protocol EmeraldInputDelegate: class {
     internal func toggleTopLabel(_ hidden: Bool) {
         switch hidden {
         case true:
-            topTextLabel.isHidden = true
+            self.topTextLabel.isHidden = true
         case false:
-            topTextLabel.isHidden = false
+            self.topTextLabel.isHidden = false
         }
     }
     
     internal func toggleBottomLabel(_ hidden: Bool) {
         switch hidden {
         case true:
-            bottomTextLabel.isHidden = true
-            lineViewBottomSpacing.constant = 0
+            self.bottomTextLabel.isHidden = true
+            self.lineViewBottomSpacing.constant = 0
         case false:
-            bottomTextLabel.isHidden = false
-            lineViewBottomSpacing.constant = 8
+            self.bottomTextLabel.isHidden = false
+            self.lineViewBottomSpacing.constant = 8
         }
     }
     
@@ -315,7 +294,7 @@ public protocol EmeraldInputDelegate: class {
             self.inputField.rightViewMode = .always
             self.inputButton.isUserInteractionEnabled = false
         default:
-            self.inputField.rightViewMode = showClear ? .whileEditing : .never
+            self.inputField.rightViewMode = self.showClear ? .whileEditing : .never
             self.inputButton.isUserInteractionEnabled = true
         }
     }
@@ -334,15 +313,15 @@ public protocol EmeraldInputDelegate: class {
     internal func color(for state: EmeraldElementState) -> UIColor {
         switch state {
         case .error:
-            return UIColor.Palette.Basic.error
+            return UIColor.Palette.State.error
         case .warning:
-            return UIColor.Palette.Basic.warning
+            return UIColor.Palette.State.warning
         case .success:
-            return UIColor.Palette.Basic.success
+            return UIColor.Palette.State.success
         case .disabled:
             return UIColor.Palette.Light.white3
         case .focus:
-            return UIColor.primaryColor(for: ThemeManager.currentTheme())
+            return UIColor.Palette.State.focus
         default:
             return UIColor.Palette.Light.white4
         }
@@ -372,6 +351,30 @@ public protocol EmeraldInputDelegate: class {
     
     internal func toggleSecureText(_ show: Bool) {
         self.inputButton.setImage(UIImage.securePassword(show), for: .normal)
+    }
+    
+}
+
+// MARK: - Mask
+extension EmeraldInput {
+    
+    internal func validateInput(for mask: EmeraldInputMask) -> Bool {
+        switch mask {
+        case .none:
+            return true
+        case .email:
+            // Use an RegEx for email validation only
+            return self.validateString(self.inputText, with: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")
+        case .password, .currency:
+            return !self.inputText.isEmpty
+        default:
+            return self.maskWasCompleted
+        }
+    }
+    
+    private func validateString(_ text: String, with regExString: String) -> Bool {
+        let predicate = NSPredicate(format:"SELF MATCHES %@", regExString)
+        return predicate.evaluate(with: text)
     }
     
 }

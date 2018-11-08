@@ -14,6 +14,8 @@ public protocol EmeraldDateRangePickerDelegate: class {
 //EUIDateRangePicker
 public class EmeraldDateRangePicker: UITableViewController {
     
+    @IBOutlet weak var iconImageView: UIImageView!
+    
     public enum EmeraldDatePeriod: Int {
         case today
         case yesterday
@@ -26,19 +28,19 @@ public class EmeraldDateRangePicker: UITableViewController {
         public var description: String {
             switch self {
             case .today:
-                return NSLocalizedString("DATE_PERIOD_TODAY", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_TODAY", bundle: Bundle.emerald, comment: "")
             case .yesterday:
-                return NSLocalizedString("DATE_PERIOD_YESTERDAY", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_YESTERDAY", bundle: Bundle.emerald, comment: "")
             case .last7Days:
-                return NSLocalizedString("DATE_PERIOD_LAST_7_DAYS", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_LAST_7_DAYS", bundle: Bundle.emerald, comment: "")
             case .last30Days:
-                return NSLocalizedString("DATE_PERIOD_LAST_30_DAYS", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_LAST_30_DAYS", bundle: Bundle.emerald, comment: "")
             case .thisMonth:
-                return NSLocalizedString("DATE_PERIOD_THIS_MONTH", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_THIS_MONTH", bundle: Bundle.emerald, comment: "")
             case .lastMonth:
-                return NSLocalizedString("DATE_PERIOD_LAST_MONTH", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_LAST_MONTH", bundle: Bundle.emerald, comment: "")
             case .custom:
-                return NSLocalizedString("DATE_PERIOD_CUSTOM", bundle: Bundle.basic, comment: "")
+                return NSLocalizedString("DATE_PERIOD_CUSTOM", bundle: Bundle.emerald, comment: "")
             }
         }
     }
@@ -67,6 +69,18 @@ public class EmeraldDateRangePicker: UITableViewController {
             self.navigationItem.largeTitleDisplayMode = .never
         }
         self.navigationItem.backBarButtonItem?.title = ""
+        
+        self.setUpIcon()
+    }
+    
+    internal func setUpIcon() {
+        let image = UIImage(named: "calendar-icon",
+                            in: Bundle.emerald,
+                            compatibleWith: nil)!
+            .withRenderingMode(.alwaysTemplate)
+        
+        self.iconImageView.image = image
+        self.iconImageView.tintColor = UIColor.Palette.State.focus
     }
     
     override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -117,7 +131,7 @@ public class EmeraldDateRangePicker: UITableViewController {
         
         if self.ranges[indexPath.row] == self.selectedPeriod {
             cell.textLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: .medium)
-            cell.textLabel?.textColor = UIColor.primaryColor(for: ThemeManager.currentTheme())
+            cell.textLabel?.textColor = ThemeManager.getThemeColor()
         } else {
             cell.textLabel?.font = UIFont.systemFont(ofSize: 14.0)
             cell.textLabel?.textColor = UIColor.Palette.Dark.black3

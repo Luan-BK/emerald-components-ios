@@ -25,16 +25,16 @@ public class EmeraldSearchList: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
-        searchBar.delegate = self
-        searchBar.returnKeyType = .done
-        searchBar.placeholder = NSLocalizedString("SEARCH_BAR_PLACEHOLDER", bundle: Bundle.basic, comment: "")
-        searchBar.autocorrectionType = .no
+        self.searchBar.delegate = self
+        self.searchBar.returnKeyType = .done
+        self.searchBar.placeholder = NSLocalizedString("SEARCH_BAR_PLACEHOLDER", bundle: Bundle.emerald, comment: "")
+        self.searchBar.autocorrectionType = .no
         // Removes searchBar borders
-        searchBar.backgroundImage = UIImage()
+        self.searchBar.backgroundImage = UIImage()
         
         self.filteredData = self.delegate?.dataList ?? []
     }
@@ -48,14 +48,14 @@ public class EmeraldSearchList: UIViewController {
 extension EmeraldSearchList: UITableViewDelegate, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredData?.count ?? 0
+        return self.filteredData?.count ?? 0
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = filteredData?[indexPath.row].identifier
+        cell.textLabel?.text = self.filteredData?[indexPath.row].identifier
         
-        if filteredData?[indexPath.row].identifier == self.selectedOption?.identifier {
+        if self.filteredData?[indexPath.row].identifier == self.selectedOption?.identifier {
             cell.accessoryType = .checkmark
         } else {
             cell.accessoryType = .none
@@ -83,13 +83,13 @@ extension EmeraldSearchList: UITableViewDelegate, UITableViewDataSource {
 extension EmeraldSearchList: UISearchBarDelegate {
     
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
         if searchText == "" {
             self.filteredData = self.delegate?.dataList
             self.searchBar.resignFirstResponder()
         } else {
             self.filteredData = self.delegate?.dataList.filter {
-                $0.identifier.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: nil).contains(searchText.lowercased())
+                $0.identifier.folding(options: [.diacriticInsensitive, .caseInsensitive],
+                                      locale: nil).contains(searchText.lowercased())
             }
         }
     }

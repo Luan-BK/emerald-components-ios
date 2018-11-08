@@ -13,12 +13,15 @@ class LabelTests: XCTestCase {
 
     internal var label: EmeraldLabel!
     
+    internal let neutralColor = UIColor.Palette.Light.white4
+    internal let clearColor = UIColor.Palette.State.clear
+    
     override func setUp() {
         super.setUp()
         let frame = CGRect(x: 0.0, y: 0.0, width: 140, height: 30)
         self.label = EmeraldLabel(frame: frame)
         
-        self.label.configure(state: .neutral, type: .outline)
+        self.label.configureFor(text: "Label", color: neutralColor, type: .outline, and: nil)
     }
 
     override func tearDown() {
@@ -77,12 +80,9 @@ class LabelTests: XCTestCase {
     
     func testText() {
         // given
-        let text = "New".uppercased()
-        // when
-        self.label.setLabel(text: "New")
-        let label = self.label.text()
+        let text = "New"
         // then
-        XCTAssertEqual(text, label)
+        XCTAssertNotNil(self.label.setTextFor(label: text))
     }
     
 }

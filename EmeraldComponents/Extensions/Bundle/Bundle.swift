@@ -10,7 +10,12 @@ import Foundation
 
 extension Bundle {
     
+    @available(*, deprecated, message: "Prefer uses Bundle.emerald instead")
     public static var basic: Bundle {
+        return Bundle(for: EmeraldView.self)
+    }
+    
+    public static var emerald: Bundle {
         return Bundle(for: EmeraldView.self)
     }
     

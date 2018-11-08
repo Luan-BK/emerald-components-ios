@@ -15,45 +15,9 @@ extension LabelTests {
     
     func testBackgroundColor_typeFill_stateError() {
         // given
-        let text: UIColor = UIColor.Palette.Basic.error
+        let text: UIColor = neutralColor
         // when
-        let color = label.backgroundColor(forState: .error, andType: .fill)
-        // then
-        XCTAssertEqual(text, color)
-    }
-    
-    func testBackgroundColor_typeFill_stateWarning() {
-        // given
-        let text: UIColor = UIColor.Palette.Basic.warning
-        // when
-        let color = label.backgroundColor(forState: .warning, andType: .fill)
-        // then
-        XCTAssertEqual(text, color)
-    }
-    
-    func testBackgroundColor_typeFill_stateNeutral() {
-        // given
-        let text: UIColor = UIColor.Palette.Light.white4
-        // when
-        let color = label.backgroundColor(forState: .neutral, andType: .fill)
-        // then
-        XCTAssertEqual(text, color)
-    }
-    
-    func testBackgroundColor_typeFill_stateSuccess() {
-        // given
-        let text: UIColor = UIColor.Palette.Basic.success
-        // when
-        let color = label.backgroundColor(forState: .success, andType: .fill)
-        // then
-        XCTAssertEqual(text, color)
-    }
-    
-    func testBackgroundColor_typeFill_stateInfo() {
-        // given
-        let text: UIColor = UIColor.Palette.purple
-        // when
-        let color = label.backgroundColor(forState: .info, andType: .fill)
+        let color = label.setBackgroundFor(color: neutralColor, and: .fill)
         // then
         XCTAssertEqual(text, color)
     }
@@ -62,20 +26,9 @@ extension LabelTests {
     
     func testBackgroundColor_typeOutline() {
         // given
-        let text: UIColor = UIColor.clear
+        let text: UIColor = clearColor
         // when
-        let color = label.backgroundColor(forState: .error, andType: .outline)
-        // then
-        XCTAssertEqual(text, color)
-    }
-    
-    // MARK: - Border text color
-    
-    func testBackgroundColor_typeText() {
-        // given
-        let text: UIColor = UIColor.clear
-        // when
-        let color = label.backgroundColor(forState: .error, andType: .text)
+        let color = label.setBackgroundFor(color: clearColor, and: .outline)
         // then
         XCTAssertEqual(text, color)
     }
@@ -84,9 +37,9 @@ extension LabelTests {
     
     func testBackgroundColor_typeImage() {
         // given
-        let text: UIColor = UIColor.clear
+        let text: UIColor = clearColor
         // when
-        let color = label.backgroundColor(forState: .error, andType: .image)
+        let color = label.setBackgroundFor(color: clearColor, and: .image)
         // then
         XCTAssertEqual(text, color)
     }

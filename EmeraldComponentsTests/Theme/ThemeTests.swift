@@ -18,9 +18,9 @@ class ThemeTests: XCTestCase {
         theme = EmeraldTheme.stone
         
         //then
-        validateTintColor(UIColor.primaryColor(for: ThemeManager.currentTheme()))
+        validateTintColor(ThemeManager.getThemeColor())
         validateBarStyle(.default)
-        validateButtonBackgroundColor(UIColor.primaryColor(for: ThemeManager.currentTheme()))
+        validateButtonBackgroundColor(ThemeManager.getThemeColor())
     }
     
     func validateTintColor(_ color: UIColor) {

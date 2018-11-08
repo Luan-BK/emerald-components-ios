@@ -149,7 +149,7 @@ class ButtonTests: XCTestCase {
         
         self.button.restoreBackground()
         
-        XCTAssertEqual(self.button.backgroundColor, UIColor.Palette.Basic.error)
+        XCTAssertEqual(self.button.backgroundColor, UIColor.Palette.State.error)
     }
     
     // MARK: - Aux
@@ -169,9 +169,9 @@ class ButtonTests: XCTestCase {
                     }
                 case .fill:
                     switch type {
-                    case .regular: XCTAssertEqual(color, UIColor.primaryColor(for: ThemeManager.currentTheme()))
-                    case .confirm: XCTAssertEqual(color, UIColor.Palette.Basic.success)
-                    case .delete: XCTAssertEqual(color, UIColor.Palette.Basic.error)
+                    case .regular: XCTAssertEqual(color, ThemeManager.getThemeColor())
+                    case .confirm: XCTAssertEqual(color, UIColor.Palette.State.success)
+                    case .delete: XCTAssertEqual(color, UIColor.Palette.State.error)
                     case .neutral: XCTAssertEqual(color, UIColor.Palette.Light.white1)
                     case .disabled: XCTAssertEqual(color, UIColor.Palette.Light.white2)
                     }
@@ -188,17 +188,17 @@ class ButtonTests: XCTestCase {
                 switch style {
                 case .fill, .outline:
                     switch type {
-                    case .regular: XCTAssertEqual(color, UIColor.primaryColor(for: ThemeManager.currentTheme()).cgColor)
-                    case .confirm: XCTAssertEqual(color, UIColor.Palette.Basic.success.cgColor)
-                    case .delete: XCTAssertEqual(color, UIColor.Palette.Basic.error.cgColor)
+                    case .regular: XCTAssertEqual(color, ThemeManager.getThemeColor().cgColor)
+                    case .confirm: XCTAssertEqual(color, UIColor.Palette.State.success.cgColor)
+                    case .delete: XCTAssertEqual(color, UIColor.Palette.State.error.cgColor)
                     case .neutral: XCTAssertEqual(color, UIColor.Palette.Light.white4.cgColor)
-                    case .disabled: XCTAssertEqual(color, UIColor.clear.cgColor)
+                    case .disabled: XCTAssertEqual(color, UIColor.Palette.State.clear.cgColor)
                     }
                 case .plain:
                     if type == .neutral {
                         XCTAssertEqual(color, UIColor.Palette.Light.white4.cgColor)
                     } else {
-                        XCTAssertEqual(color, UIColor.clear.cgColor)
+                        XCTAssertEqual(color, UIColor.Palette.State.clear.cgColor)
                     }
                 }
             }
@@ -219,9 +219,9 @@ class ButtonTests: XCTestCase {
                     }
                 case .outline, .plain:
                     switch type {
-                    case .regular: XCTAssertEqual(color, UIColor.primaryColor(for: ThemeManager.currentTheme()))
-                    case .confirm: XCTAssertEqual(color, UIColor.Palette.Basic.success)
-                    case .delete: XCTAssertEqual(color, UIColor.Palette.Basic.error)
+                    case .regular: XCTAssertEqual(color, ThemeManager.getThemeColor())
+                    case .confirm: XCTAssertEqual(color, UIColor.Palette.State.success)
+                    case .delete: XCTAssertEqual(color, UIColor.Palette.State.error)
                     case .neutral: XCTAssertEqual(color, UIColor.Palette.Dark.black4)
                     case .disabled: XCTAssertEqual(color, UIColor.Palette.Light.white4)
                     }

@@ -15,7 +15,7 @@ extension LabelTests {
         // given
         let text: CGFloat = 0.0
         // when
-        let width = label.borderWidth(forState: .error, andType: .fill)
+        let width = label.setBorderWidthFor(type: .fill)
         // then
         XCTAssertEqual(text, width)
     }
@@ -24,16 +24,7 @@ extension LabelTests {
         // given
         let text: CGFloat = 1.0
         // when
-        let width = label.borderWidth(forState: .error, andType: .outline)
-        // then
-        XCTAssertEqual(text, width)
-    }
-    
-    func testBorderWidth_typeText() {
-        // given
-        let text: CGFloat = 0.0
-        // when
-        let width = label.borderWidth(forState: .error, andType: .text)
+        let width = label.setBorderWidthFor(type: .outline)
         // then
         XCTAssertEqual(text, width)
     }
@@ -42,7 +33,7 @@ extension LabelTests {
         // given
         let text: CGFloat = 0.0
         // when
-        let width = label.borderWidth(forState: .error, andType: .image)
+        let width = label.setBorderWidthFor(type: .image)
         // then
         XCTAssertEqual(text, width)
     }

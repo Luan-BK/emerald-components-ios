@@ -15,7 +15,7 @@ extension LabelTests {
         // given
         let text: NSTextAlignment = .center
         // when
-        let align = label.textAlignment(forState: .success, andType: .fill)
+        let align = label.setTextAlignmentFor(type: .fill)
         // then
         XCTAssertEqual(text, align)
     }
@@ -24,16 +24,7 @@ extension LabelTests {
         // given
         let text: NSTextAlignment = .center
         // when
-        let align = label.textAlignment(forState: .success, andType: .outline)
-        // then
-        XCTAssertEqual(text, align)
-    }
-    
-    func testTextAlignment_typeText() {
-        // given
-        let text: NSTextAlignment = .left
-        // when
-        let align = label.textAlignment(forState: .success, andType: .text)
+        let align = label.setTextAlignmentFor(type: .outline)
         // then
         XCTAssertEqual(text, align)
     }
@@ -42,7 +33,7 @@ extension LabelTests {
         // given
         let text: NSTextAlignment = .left
         // when
-        let align = label.textAlignment(forState: .success, andType: .image)
+        let align = label.setTextAlignmentFor(type: .image)
         // then
         XCTAssertEqual(text, align)
     }

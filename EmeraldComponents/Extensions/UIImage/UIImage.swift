@@ -31,7 +31,7 @@ extension UIImage {
     }
     
     public static func inputImage(for state: EmeraldElementState) -> UIImage? {
-        let bundle = Bundle.basic
+        let bundle = Bundle.emerald
         
         switch state {
         case .error:
@@ -46,7 +46,7 @@ extension UIImage {
     }
     
     public static func securePassword(_ show: Bool) -> UIImage? {
-        let bundle = Bundle.basic
+        let bundle = Bundle.emerald
         
         if show {
             return UIImage(named: "icon-password-show", in: bundle, compatibleWith: nil)?
