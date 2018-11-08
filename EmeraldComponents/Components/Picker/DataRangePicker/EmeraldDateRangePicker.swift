@@ -131,7 +131,7 @@ public class EmeraldDateRangePicker: UITableViewController {
         
         if self.ranges[indexPath.row] == self.selectedPeriod {
             cell.textLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: .medium)
-            cell.textLabel?.textColor = ThemeManager.getTheme()
+            cell.textLabel?.textColor = ThemeManager.getThemeColor()
         } else {
             cell.textLabel?.font = UIFont.systemFont(ofSize: 14.0)
             cell.textLabel?.textColor = UIColor.Palette.Dark.black3

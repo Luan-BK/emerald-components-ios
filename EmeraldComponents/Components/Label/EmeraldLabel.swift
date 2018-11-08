@@ -135,14 +135,7 @@ public class EmeraldLabel: UIView {
     ///   - type: Label type enum
     /// - Returns: Return label background color
     internal func setBackgroundFor(color: UIColor, and type: EmeraldLabelType) -> UIColor {
-        switch type {
-        case .fill:
-            return color
-        case .outline:
-            return UIColor.Palette.State.clear
-        case .image:
-            return UIColor.Palette.State.clear
-        }
+         return type == .fill ? color : UIColor.Palette.State.clear
     }
     
     /// Returns the border width for a given color and type.
@@ -161,14 +154,7 @@ public class EmeraldLabel: UIView {
     ///   - type: Label type enum
     /// - Returns: A CGColor representing the borderColor.
     internal func setBorderFor(color: UIColor, type: EmeraldLabelType) -> CGColor {
-        switch type {
-        case .fill:
-            return color.cgColor
-        case .outline:
-            return color.cgColor
-        case .image:
-            return UIColor.Palette.State.clear.cgColor
-        }
+        return type == .image ? UIColor.Palette.State.clear.cgColor : color.cgColor
     }
     
     /// Returns an image for a given type.
@@ -180,12 +166,7 @@ public class EmeraldLabel: UIView {
     ///   - icon: Icon to be displayed with the label
     /// - Returns: An UIImage representing the Label's icon or `nil` if no image could be created.
     internal func setTextIconFor(type: EmeraldLabelType, and icon: UIImage) -> UIImage? {
-        switch type {
-        case .image:
-            return icon.withRenderingMode(.alwaysTemplate)
-        default:
-            return nil
-        }
+        return type == .image ? icon.withRenderingMode(.alwaysTemplate) : nil
     }
     
     /// Updates the Label's constraints for a given type.
@@ -210,14 +191,7 @@ public class EmeraldLabel: UIView {
     ///   - type: Label type enum
     /// - Returns: An UIColor representing the Label's textColor.
     internal func setTextFor(color: UIColor, and type: EmeraldLabelType) -> UIColor {
-        switch type {
-        case .fill:
-            return UIColor.Palette.Light.white1
-        case .outline:
-            return color
-        case .image:
-            return color
-        }
+        return type == .fill ? UIColor.Palette.Light.white1 : color
     }
     
     /// Sets an aligment to text according to label type
@@ -226,12 +200,7 @@ public class EmeraldLabel: UIView {
     ///   - type: Label type enum
     /// - Returns: A `NSTextAlignment` for the Label. 
     internal func setTextAlignmentFor(type: EmeraldLabelType) -> NSTextAlignment {
-        switch type {
-        case .fill, .outline:
-            return .center
-        case .image:
-            return .left
-        }
+        return type == .image ? .left : .center
     }
     
     /// Sets the label text to be diplayed
@@ -241,7 +210,8 @@ public class EmeraldLabel: UIView {
     
     /// Sets kern to label text to be displayed
     internal func setAttributedText() {
-        let attribute = NSAttributedString(string: self.textLabel.text!, attributes: [NSAttributedStringKey.kern : 1.0])
+        let attribute = NSAttributedString(string: self.textLabel.text!,
+                                           attributes: [NSAttributedStringKey.kern : 1.0])
         self.textLabel.attributedText = attribute
     }
     

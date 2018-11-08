@@ -40,7 +40,7 @@ public struct ThemeManager {
     /// If no color was setted, so it'll use the default `Palette.Basic.primary` color.
     ///
     /// - Returns: Returns the stored color.
-    public static func getTheme() -> UIColor {
+    public static func getThemeColor() -> UIColor {
         guard let storedTheme = ThemeManager.defaults.colorFor(key: self.theme) else {
             return UIColor.Palette.Basic.primary
         }

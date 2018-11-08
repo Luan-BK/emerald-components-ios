@@ -51,8 +51,7 @@ class LabelTableViewController: UITableViewController {
     private let successColor = UIColor.Palette.State.success
     private let infoColor = UIColor(red: 128/255, green: 58/255, blue: 220/255, alpha: 1.0)
     
-    private var bulletIcon = UIImage(named: "payments-detail-others-icon", in: Bundle.emerald, compatibleWith: nil)!
-    private var someIcon = UIImage(named: "button-edit-icon", in: Bundle.emerald, compatibleWith: nil)!
+    private var icon = UIImage(named: "button-edit-icon", in: Bundle.emerald, compatibleWith: nil)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,11 +87,11 @@ class LabelTableViewController: UITableViewController {
     }
     
     internal func setupImageLabels() {
-        self.imageErrorLabel.configureFor(text: self.errorLabel, color: self.errorColor, type: .image, and: self.someIcon)
-        self.imageWarningLabel.configureFor(text: self.warningLabel, color: self.warningColor, type: .image, and: self.someIcon)
-        self.imageNeutralLabel.configureFor(text: self.neutralLabel, color: self.neutralColor, type: .image, and: self.someIcon)
-        self.imageSuccessLabel.configureFor(text: self.successLabel, color: self.successColor, type: .image, and: self.someIcon)
-        self.imageInfoLabel.configureFor(text: self.infoLabel, color: self.infoColor, type: .image, and: self.someIcon)
+        self.imageErrorLabel.configureFor(text: self.errorLabel, color: self.errorColor, type: .image, and: self.icon)
+        self.imageWarningLabel.configureFor(text: self.warningLabel, color: self.warningColor, type: .image, and: self.icon)
+        self.imageNeutralLabel.configureFor(text: self.neutralLabel, color: self.neutralColor, type: .image, and: self.icon)
+        self.imageSuccessLabel.configureFor(text: self.successLabel, color: self.successColor, type: .image, and: self.icon)
+        self.imageInfoLabel.configureFor(text: self.infoLabel, color: self.infoColor, type: .image, and: self.icon)
     }
     
 }

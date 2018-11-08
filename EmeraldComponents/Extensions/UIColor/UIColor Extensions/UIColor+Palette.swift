@@ -14,7 +14,7 @@ extension UIColor {
     public static func primaryColor(for theme: EmeraldTheme) -> UIColor {
         switch theme {
         case .stone:
-            return ThemeManager.getTheme()
+            return ThemeManager.getThemeColor()
         }
     }
     
@@ -107,7 +107,7 @@ extension UIColor {
         
         public struct State {
             /// #95c93d - 149, 201, 61
-            public static let focus     = ThemeManager.getTheme()
+            public static let focus     = ThemeManager.getThemeColor()
             /// #ffffff - 0, 0, 0
             public static let clear     = UIColor.clear
             /// #2ECC71 - 46, 204, 113
