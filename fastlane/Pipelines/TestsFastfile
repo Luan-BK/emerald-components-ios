@@ -59,6 +59,7 @@ end
 
 desc "Run SonarQube analysis"
 lane :sonar_qube do
+    Dir.pwd
     sonar(
         sonar_url: "https://sonarcloud.io",
         sonar_login: ENV["SONARQUBE_TOKEN"],
