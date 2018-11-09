@@ -60,8 +60,8 @@ end
 desc "Run SonarQube analysis"
 lane :sonar do
     sonar(
-        sonar_url: "https://sonarcloud.io"
-        sonar_login: ENV["SONARQUBE_TOKEN"]
+        sonar_url: "https://sonarcloud.io",
+        sonar_login: ENV["SONARQUBE_TOKEN"],
         project_key: "emerald-components-ios",
         project_version: "v#{projet_version}",
         project_name: "emerald-components-ios",
