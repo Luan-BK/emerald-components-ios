@@ -52,3 +52,6 @@ fastlane/test_output
 ## Xcov
 xcov_output
 fastlane/xcov_report
+
+## SonarQube
+.scannerwork
