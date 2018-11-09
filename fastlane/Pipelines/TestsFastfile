@@ -8,7 +8,7 @@ lane :run_tests_pipeline do
     lint
     unit_tests
     coverage
-    sonar
+    sonar_qube
     screenshots
 end
 
@@ -58,7 +58,7 @@ lane :screenshots do
 end
 
 desc "Run SonarQube analysis"
-lane :sonar do
+lane :sonar_qube do
     sonar(
         sonar_url: "https://sonarcloud.io",
         sonar_login: ENV["SONARQUBE_TOKEN"],
