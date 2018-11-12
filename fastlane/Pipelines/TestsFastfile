@@ -68,9 +68,7 @@ lane :sonar_qube do
         project_name: "emerald-components-ios",
         sources_path: File.expand_path("."),
         source_encoding: "UTF-8",
-        sonar_runner_args: "-Dproject.settings=sonar-scanner.properties
-         -Dsonar.cfamily.build-wrapper-output.bypass=true
-         -Dsonar.organization=sling"
+        sonar_runner_args: "-Dproject.settings=sonar-scanner.properties -Dsonar.cfamily.build-wrapper-output.bypass=true -Dsonar.organization=sling"
     )
 end
 
