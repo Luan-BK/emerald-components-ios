@@ -48,7 +48,15 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+fastlane/sonarqube-generic-coverage.xml
 
 ## Xcov
 xcov_output
 fastlane/xcov_report
+
+## SonarQube
+.scannerwork
+sonarqube-generic-coverage.xml
+
+## DerivedData
+DerivedData/

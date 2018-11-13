@@ -1,3 +1,7 @@
+[![Build Status](https://app.bitrise.io/app/b0f586b20bb038c4/status.svg?token=WIURG6s4E7XEkm9GOGx3pA)](https://app.bitrise.io/app/b0f586b20bb038c4)
+[![Alert Status](https://sonarcloud.io/api/project_badges/measure?project=br.com.stoneco.EmeraldComponents&metric=alert_status)](https://sonarcloud.io/dashboard?id=br.com.stoneco.EmeraldComponents)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=br.com.stoneco.EmeraldComponents&metric=coverage)](https://sonarcloud.io/component_measures?id=br.com.stoneco.EmeraldComponents&metric=Coverage)
+
 # Emerald iOS Components
 
 The purpose of this project is to serve as UI Basic Component Application to StoneCo.
@@ -33,7 +37,7 @@ The lastest version of:
 
 ### Coverage
 
-We use [SonarQube](https://www.sonarqube.org) to provide us a vision of code quality code.
+We use [SonarQube](https://sonarcloud.io/dashboard?id=br.com.stoneco.EmeraldComponents) to provide us a vision of code quality.
 
 ### Linter
 

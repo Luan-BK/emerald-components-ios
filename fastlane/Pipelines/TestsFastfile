@@ -8,6 +8,8 @@ lane :run_tests_pipeline do
     lint
     unit_tests
     coverage
+    sonnar_coverage
+    sonar_scanner
     screenshots
 end
 
@@ -34,7 +36,8 @@ lane :unit_tests do
         scheme: "EmeraldComponents", 
         devices: ["iPhone 8", "iPhone X"],
         code_coverage: true,
-        clean: true
+        clean: true,
+        derived_data_path: "./DerivedData"
     )
 end
 
@@ -47,11 +50,26 @@ lane :coverage do
         exclude_targets: "JTAppleCalendar.framework, 
                           EmeraldComponentsApp.app,
                           InputMask.framework",
-        minimum_coverage_percentage: 80.0
+        minimum_coverage_percentage: 80.0,
+        derived_data_path: "./DerivedData"
     )
 end
 
 desc "Run UITests and get screenshots"
 lane :screenshots do
     capture_screenshots
+end
+
+desc "Convert xccov to xml"
+lane :sonnar_coverage do
+    sh "../xccov-to-sonarqube-generic.sh ../DerivedData/Logs/Test/*.xcresult/*_Test/action.xccovarchive/ > ../sonarqube-generic-coverage.xml"
+end
+
+
+desc "Run SonarQube analysis"
+lane :sonar_scanner do
+    sonar(
+        sonar_login: ENV["SONARQUBE_TOKEN"],
+        project_configuration_path: "sonar-project.properties"
+    )
 end
