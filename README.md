@@ -37,7 +37,7 @@ The lastest version of:
 
 ### Coverage
 
-We use [SonarQube](https://sonarcloud.io/dashboard?id=br.com.stoneco.EmeraldComponents) to provide us a vision of code quality code.
+We use [SonarQube](https://sonarcloud.io/dashboard?id=br.com.stoneco.EmeraldComponents) to provide us a vision of code quality.
 
 ### Linter
 
