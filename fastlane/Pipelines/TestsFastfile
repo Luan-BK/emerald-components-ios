@@ -62,9 +62,13 @@ end
 
 desc "Convert xccov to xml"
 lane :sonnar_coverage do
+    puts Dir.pwd
     sh "chmod +x ../xccov-to-sonarqube-generic.sh"
+    puts Dir.pwd
     sh "cd .."
+    puts Dir.pwd
     sh "xccov-to-sonarqube-generic.sh DerivedData/Logs/Test/*.xcresult/*_Test/action.xccovarchive/ > sonarqube-generic-coverage.xml"
+    puts Dir.pwd
 end
 
 
