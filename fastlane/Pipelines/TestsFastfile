@@ -8,7 +8,7 @@ lane :run_tests_pipeline do
     lint
     unit_tests
     coverage
-    sonar_qube
+    sonar_scanner
     screenshots
 end
 
@@ -58,17 +58,9 @@ lane :screenshots do
 end
 
 desc "Run SonarQube analysis"
-lane :sonar_qube do
-    Dir.pwd
+lane :sonar_scanner do
     sonar(
-        sonar_url: "https://sonarcloud.io",
-        sonar_login: ENV["SONARQUBE_TOKEN"],
-        project_key: "emerald-components-ios",
-        project_version: "v#{projet_version}",
-        project_name: "emerald-components-ios",
-        sources_path: File.expand_path("."),
-        source_encoding: "UTF-8",
-        sonar_runner_args: "-Dproject.settings=sonar-scanner.properties -Dsonar.cfamily.build-wrapper-output.bypass=true -Dsonar.organization=sling"
+        project_configuration_path: "sonar-project.properties"
     )
 end
 

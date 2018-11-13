@@ -45,9 +45,9 @@ Get coverage percentage, remove framework's coverage
 fastlane screenshots
 ```
 Run UITests and get screenshots
-### sonar_qube
+### sonar_scanner
 ```
-fastlane sonar_qube
+fastlane sonar_scanner
 ```
 Run SonarQube analysis
 ### run_deploy_pipeline
