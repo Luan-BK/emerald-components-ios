@@ -211,7 +211,7 @@ public class EmeraldLabel: UIView {
     /// Sets kern to label text to be displayed
     internal func setAttributedText() {
         let attribute = NSAttributedString(string: self.textLabel.text!,
-                                           attributes: [NSAttributedStringKey.kern : 1.0])
+                                           attributes: [NSAttributedString.Key.kern : 1.0])
         self.textLabel.attributedText = attribute
     }
     
