@@ -37,7 +37,7 @@ lane :unit_tests do
         devices: ["iPhone 8", "iPhone X"],
         code_coverage: true,
         clean: true,
-        derived_data_path: "./fastlane/DerivedData"
+        derived_data_path: "./DerivedData"
     )
 end
 
@@ -51,7 +51,7 @@ lane :coverage do
                           EmeraldComponentsApp.app,
                           InputMask.framework",
         minimum_coverage_percentage: 80.0,
-        derived_data_path: "./fastlane/DerivedData"
+        derived_data_path: "./DerivedData"
     )
 end
 
@@ -62,8 +62,8 @@ end
 
 desc "Convert xccov to xml"
 lane :sonnar_coverage do
-    sh "chmod +x xccov-to-sonarqube-generic.sh"
-    sh "./xccov-to-sonarqube-generic.sh ./DerivedData/Logs/Test/*.xcresult/*_Test/action.xccovarchive/ > ./sonarqube-generic-coverage.xml"
+    # sh "chmod +x xccov-to-sonarqube-generic.sh"
+    sh "xccov-to-sonarqube-generic.sh DerivedData/Logs/Test/*.xcresult/*_Test/action.xccovarchive/ > sonarqube-generic-coverage.xml"
 end
 
 
