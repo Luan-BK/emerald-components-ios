@@ -1,3 +1,6 @@
+[![Alert Status](https://sonarcloud.io/api/project_badges/measure?project=br.com.stoneco.EmeraldComponents&metric=alert_status)](https://sonarcloud.io/dashboard?id=br.com.stoneco.EmeraldComponents)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=br.com.stoneco.EmeraldComponents&metric=coverage)](https://sonarcloud.io/component_measures?id=br.com.stoneco.EmeraldComponents&metric=Coverage)
+
 # Emerald iOS Components
 
 The purpose of this project is to serve as UI Basic Component Application to StoneCo.
