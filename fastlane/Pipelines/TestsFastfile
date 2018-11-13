@@ -35,7 +35,8 @@ lane :unit_tests do
         scheme: "EmeraldComponents", 
         devices: ["iPhone 8", "iPhone X"],
         code_coverage: true,
-        clean: true
+        clean: true,
+        derived_data_path: "./DerivedData"
     )
 end
 
@@ -48,7 +49,8 @@ lane :coverage do
         exclude_targets: "JTAppleCalendar.framework, 
                           EmeraldComponentsApp.app,
                           InputMask.framework",
-        minimum_coverage_percentage: 80.0
+        minimum_coverage_percentage: 80.0,
+        derived_data_path: "./DerivedData"
     )
 end
 
