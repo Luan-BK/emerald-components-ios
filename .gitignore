@@ -55,7 +55,6 @@ fastlane/xcov_report
 
 ## SonarQube
 .scannerwork
-sonarqube-generic-coverage.xml
 
 ## DerivedData
 DerivedData/
