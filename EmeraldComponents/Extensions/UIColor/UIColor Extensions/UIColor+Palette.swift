@@ -81,28 +81,28 @@ extension UIColor {
         
         public struct Light {
             /// #FFFFFF - 255, 255, 255
-            public static let white1 = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+            public static let white1 = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
             /// #FAFAFC - 250, 250, 252
-            public static let white2 = UIColor(red: 250/255, green: 250/255, blue: 252/255, alpha: 1.0)
+            public static let white2 = UIColor(red: 250, green: 250, blue: 252, alpha: 1.0)
             /// #EBEBF0 - 235, 235, 240
-            public static let white3 = UIColor(red: 235/255, green: 235/255, blue: 240/255, alpha: 1.0)
+            public static let white3 = UIColor(red: 235, green: 235, blue: 240, alpha: 1.0)
             /// #C3C8D2 - 195, 200, 210
-            public static let white4 = UIColor(red: 195/255, green: 200/255, blue: 210/255, alpha: 1.0)
+            public static let white4 = UIColor(red: 195, green: 200, blue: 210, alpha: 1.0)
             /// #96A0AF - 150, 160, 175
-            public static let white5 = UIColor(red: 150/255, green: 160/255, blue: 175/255, alpha: 1.0)
+            public static let white5 = UIColor(red: 150, green: 160, blue: 175, alpha: 1.0)
         }
         
         public struct Dark {
             /// #0C1219 - 12, 18, 25
-            public static let black1 = UIColor(red: 12/255, green: 18/255, blue: 25/255, alpha: 1.0)
+            public static let black1 = UIColor(red: 12, green: 18, blue: 25, alpha: 1.0)
             /// #181C24 - 24, 28, 36
-            public static let black2 = UIColor(red: 24/255, green: 28/255, blue: 36/255, alpha: 1.0)
+            public static let black2 = UIColor(red: 24, green: 28, blue: 36, alpha: 1.0)
             /// #242932 - 36, 41, 50
-            public static let black3 = UIColor(red: 36/255, green: 41/255, blue: 50/255, alpha: 1.0)
+            public static let black3 = UIColor(red: 36, green: 41, blue: 50, alpha: 1.0)
             /// #2D3844 - 45, 56, 68
-            public static let black4 = UIColor(red: 45/255, green: 56/255, blue: 68/255, alpha: 1.0)
+            public static let black4 = UIColor(red: 45, green: 56, blue: 68, alpha: 1.0)
             /// #424B54 - 66, 75, 84
-            public static let black5 = UIColor(red: 66/255, green: 75/255, blue: 84/255, alpha: 1.0)
+            public static let black5 = UIColor(red: 66, green: 75, blue: 84, alpha: 1.0)
         }
         
         public struct State {
@@ -111,55 +111,55 @@ extension UIColor {
             /// #ffffff - 0, 0, 0
             public static let clear     = UIColor.clear
             /// #2ECC71 - 46, 204, 113
-            public static let success   = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0)
+            public static let success   = UIColor(red: 46, green: 204, blue: 113, alpha: 1.0)
             /// #f9bf09 - 249, 191, 9
-            public static let warning   = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
+            public static let warning   = UIColor(red: 249, green: 191, blue: 9, alpha: 1.0)
             /// #e74c3c - 231, 76, 60
-            public static let error     = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
+            public static let error     = UIColor(red: 231, green: 76, blue: 60, alpha: 1.0)
         }
         
         internal struct DefaultState {
             /// #C3C8D2 - 195, 200, 210
-            public static let disabled  = UIColor(red: 195/255, green: 200/255, blue: 210/255, alpha: 1.0)
+            public static let disabled  = UIColor(red: 195, green: 200, blue: 210, alpha: 1.0)
             /// #C3C8D2 - 195, 200, 210
-            public static let neutral   = UIColor(red: 195/255, green: 200/255, blue: 210/255, alpha: 1.0)
+            public static let neutral   = UIColor(red: 195, green: 200, blue: 210, alpha: 1.0)
         }
         
         public struct Basic {
             /// #95c93d - 149, 201, 61
             @available(*, deprecated, message: "Use UIColor.Palette.State.focus instead")
-            public static let primary   = UIColor(red: 149/255, green: 201/255, blue: 61/255, alpha: 1.0)
+            public static let primary   = UIColor(red: 149, green: 201, blue: 61, alpha: 1.0)
             /// #8036dc - 128, 58, 220
             @available(*, deprecated, message: "Use youy own color, it'll be removed")
-            public static let secondary = UIColor(red: 128/255, green: 58/255, blue: 220/255, alpha: 1.0)
+            public static let secondary = UIColor(red: 128, green: 58, blue: 220, alpha: 1.0)
             /// #e74c3c - 231, 76, 60
             @available(*, deprecated, message: "Use UIColor.Palette.State.error instead")
-            public static let error     = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
+            public static let error     = UIColor(red: 231, green: 76, blue: 60, alpha: 1.0)
             /// #f9bf09 - 249, 191, 9
             @available(*, deprecated, message: "Use UIColor.Palette.State.warning instead")
-            public static let warning   = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
+            public static let warning   = UIColor(red: 249, green: 191, blue: 9, alpha: 1.0)
             /// #2ECC71 - 46, 204, 113
             @available(*, deprecated, message: "Use UIColor.Palette.State.success instead")
-            public static let success   = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0)
+            public static let success   = UIColor(red: 46, green: 204, blue: 113, alpha: 1.0)
         }
         
         // Payment status
         public struct Payment {
             /// #F9BF09 - 249, 191, 9
             @available(*, deprecated, message: "Use UIColor.Palette.Basic.warning instead")
-            public static let pending   = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
+            public static let pending   = UIColor(red: 249, green: 191, blue: 9, alpha: 1.0)
             /// #B9C3CC - 185, 195, 104
             @available(*, deprecated, message: "Use UIColor.Palette.Light.white4 instead")
-            public static let scheduled = UIColor(red: 185/255, green: 195/255, blue: 204/255, alpha: 1.0)
+            public static let scheduled = UIColor(red: 185, green: 195, blue: 204, alpha: 1.0)
             /// #C7352E - 199, 53, 46
             @available(*, deprecated, message: "Use UIColor.Palette.Basic.error instead")
-            public static let rejected  = UIColor(red: 199/255, green: 53/255, blue: 46/255, alpha: 1.0)
+            public static let rejected  = UIColor(red: 199, green: 53, blue: 46, alpha: 1.0)
             /// #31CD65 - 49, 205, 101
             @available(*, deprecated, message: "Use UIColor.Palette.Basic.success instead")
-            public static let paid      = UIColor(red: 49/255, green: 205/255, blue: 101/255, alpha: 1.0)
+            public static let paid      = UIColor(red: 49, green: 205, blue: 101, alpha: 1.0)
             /// #B9C3CC - 185, 195, 204
             @available(*, deprecated, message: "Use UIColor.Palette.Light.white4 instead")
-            public static let other     = UIColor(red: 185/255, green: 195/255, blue: 204/255, alpha: 1.0)
+            public static let other     = UIColor(red: 185, green: 195, blue: 204, alpha: 1.0)
         }
         
     }
