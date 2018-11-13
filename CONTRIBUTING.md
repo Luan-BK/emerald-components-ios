@@ -53,19 +53,19 @@
 | `:robot:`             | :robot:             | when fastlane commit							|
 | `:art:`               | :art:               | when improving the format/structure of the code |
 | `:racehorse:`         | :racehorse:         | when improving performance                      |
-| `:memo:`              | :memo:              | when writing docs                               |
+| `:memo:`              | :memo:              | when working with documentation                 |
 | `:bug:`               | :bug:               | when fixing a bug                               |
 | `:fire:`              | :fire:              | when removing code or files                     |
-| `:green_heart:`       | :green_heart:       | when work with CI                               |
-| `:white_check_mark:`  | :white_check_mark:  | when work with tests                            |
+| `:green_heart:`       | :green_heart:       | when working with CI                            |
+| `:white_check_mark:`  | :white_check_mark:  | when working with tests                         |
 | `:lock:`              | :lock:              | when dealing with security                      |
 | `:arrow_up:`          | :arrow_up:          | when upgrading dependencies                     |
 | `:arrow_down:`        | :arrow_down:        | when downgrading dependencies                   |
-| `:shirt:`             | :shirt:             | when removing linter warnings                   |
-| `:bulb:`              | :bulb:              | new idea                                        |
-| `:construction:`      | :construction:      | work in progress                                |
-| `:heavy_plus_sign:`   | :heavy_plus_sign:   | when adding feature                             |
-| `:heavy_minus_sign:`  | :heavy_minus_sign:  | when removing feature                           |
+| `:shirt:`             | :shirt:             | when working with linter warnings               |
+| `:bulb:`              | :bulb:              | for new ideas                                   |
+| `:construction:`      | :construction:      | for working in progress                         |
+| `:heavy_plus_sign:`   | :heavy_plus_sign:   | when adding structs, classes, enums ...			|
+| `:heavy_minus_sign:`  | :heavy_minus_sign:  | when removing structs, classes, enums ...		|
 | `:facepunch:`         | :facepunch:         | when resolving conflicts                        |
 | `:hammer:`            | :hammer:            | when changing configuration files               |
 
