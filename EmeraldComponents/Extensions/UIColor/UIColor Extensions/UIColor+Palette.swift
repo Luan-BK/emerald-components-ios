@@ -81,7 +81,7 @@ extension UIColor {
         
         public struct Light {
             /// #FFFFFF - 255, 255, 255
-            public static let white1 = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+            public static let white1 = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
             /// #FAFAFC - 250, 250, 252
             public static let white2 = UIColor(red: 250/255, green: 250/255, blue: 252/255, alpha: 1.0)
             /// #EBEBF0 - 235, 235, 240

@@ -45,6 +45,16 @@ Get coverage percentage, remove framework's coverage
 fastlane screenshots
 ```
 Run UITests and get screenshots
+### sonnar_coverage
+```
+fastlane sonnar_coverage
+```
+Convert xccov to xml
+### sonar_scanner
+```
+fastlane sonar_scanner
+```
+Run SonarQube analysis
 ### run_deploy_pipeline
 ```
 fastlane run_deploy_pipeline
