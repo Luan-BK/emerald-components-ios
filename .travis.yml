@@ -18,8 +18,8 @@ before_install:
   # - brew install sonar-scanner
   - brew install swiftlint
 
-before_script:
-  - brew install sonar-scanner
+# before_script:
+#   - brew install sonar-scanner
 
 script:
   - fastlane run_tests_pipeline
