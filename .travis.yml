@@ -1,10 +1,17 @@
 language: swift
+
 osx_image: xcode10
-xcode_workspace: emerald-components-ios/EmeraldComponents.xcworkspace
+
+xcode_workspace: EmeraldComponents.xcworkspace
 xcode_scheme: EmeraldComponents
+
+before_script:
+  - brew update
+
 script:
   - fastlane run_tests_pipeline
-before_install:
-  - gem install cocoapods
-#   - brew install sonar-scanner
+
+# before_install:
+# - gem install cocoapods
+# - brew install sonar-scanner
 #   - brew install swiftlint

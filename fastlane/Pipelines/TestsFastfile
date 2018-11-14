@@ -73,16 +73,10 @@ lane :coverage do
     )
 end
 
-desc "Run UITests and get screenshots"
-lane :screenshots do
-    capture_screenshots
-end
-
 desc "Convert xccov to xml"
 lane :sonnar_coverage do
     sh "../xccov-to-sonarqube-generic.sh ../DerivedData/Logs/Test/*.xcresult/*_Test/action.xccovarchive/ > ../sonarqube-generic-coverage.xml"
 end
-
 
 desc "Run SonarQube analysis"
 lane :sonar_scanner do
@@ -90,4 +84,9 @@ lane :sonar_scanner do
         sonar_login: ENV["SONARQUBE_TOKEN"],
         project_configuration_path: "sonar-project.properties"
     )
+end
+
+desc "Run UITests and get screenshots"
+lane :screenshots do
+    capture_screenshots
 end
