@@ -5,13 +5,11 @@ osx_image: xcode10
 xcode_workspace: EmeraldComponents.xcworkspace
 xcode_scheme: EmeraldComponents
 
-before_script:
-  - brew update
+before_install:
+  - gem install cocoapods
+  - pod repo update
+  - brew install sonar-scanner
+  - brew install swiftlint
 
 script:
   - fastlane run_tests_pipeline
-
-# before_install:
-# - gem install cocoapods
-# - brew install sonar-scanner
-#   - brew install swiftlint
