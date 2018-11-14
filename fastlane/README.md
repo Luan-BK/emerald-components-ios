@@ -25,6 +25,16 @@ Run tests
 fastlane pod_install
 ```
 Install cocoapods dependencies
+### pod_install_framework
+```
+fastlane pod_install_framework
+```
+Install cocoapods dependencies to framework
+### pod_install_demo_app
+```
+fastlane pod_install_demo_app
+```
+Install cocoapods dependencies to demo app
 ### lint
 ```
 fastlane lint
@@ -40,11 +50,6 @@ Run Unit Tests
 fastlane coverage
 ```
 Get coverage percentage, remove framework's coverage
-### screenshots
-```
-fastlane screenshots
-```
-Run UITests and get screenshots
 ### sonnar_coverage
 ```
 fastlane sonnar_coverage
@@ -55,6 +60,11 @@ Convert xccov to xml
 fastlane sonar_scanner
 ```
 Run SonarQube analysis
+### screenshots
+```
+fastlane screenshots
+```
+Run UITests and get screenshots
 ### run_deploy_pipeline
 ```
 fastlane run_deploy_pipeline

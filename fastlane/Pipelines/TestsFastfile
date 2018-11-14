@@ -23,7 +23,6 @@ desc "Install cocoapods dependencies to framework"
 lane :pod_install_framework do
     cocoapods(
         podfile: "./EmeraldComponents",
-        repo_update: true,
         verbose: true
     )
 end
@@ -32,7 +31,6 @@ desc "Install cocoapods dependencies to demo app"
 lane :pod_install_demo_app do
     cocoapods(
         podfile: "./EmeraldComponentsApp/EmeraldComponentsApp",
-        repo_update: true,
         verbose: true
     )
 end
@@ -55,7 +53,7 @@ lane :unit_tests do
         devices: ["iPhone 8", "iPhone X"],
         code_coverage: true,
         clean: true,
-        derived_data_path: "./DerivedData"
+        disable_concurrent_testing: true
     )
 end
 
@@ -69,7 +67,7 @@ lane :coverage do
                           EmeraldComponentsApp.app,
                           InputMask.framework",
         minimum_coverage_percentage: 80.0,
-        derived_data_path: "./DerivedData"
+        derived_data_path: "./DerivedData/EmeraldComponents"
     )
 end
 
