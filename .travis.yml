@@ -1,0 +1,7 @@
+language: swift
+osx_image: xcode10
+script:
+  - fastlane run_tests_pipeline
+# before_install:
+#   - brew install sonar-scanner
+#   - brew install swiftlint
