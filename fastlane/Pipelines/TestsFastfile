@@ -80,7 +80,7 @@ end
 desc "Run SonarQube analysis"
 lane :sonar_scanner do
     sonar(
-        sonar_login: ENV["SONARQUBE_TOKEN"],
+        sonar_login: ENV["SONAR_TOKEN"],
         project_configuration_path: "sonar-project.properties"
     )
 end

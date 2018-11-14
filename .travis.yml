@@ -1,9 +1,16 @@
 language: swift
-
 osx_image: xcode10
 
 xcode_workspace: EmeraldComponents.xcworkspace
 xcode_scheme: EmeraldComponents
+
+dist: trusty
+
+addons:
+  sonarcloud:
+    organization: "sling"
+    token:
+      secure: ${SONAR_TOKEN}
 
 before_install:
   - gem install cocoapods
