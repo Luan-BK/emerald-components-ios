@@ -8,7 +8,7 @@ xcode_scheme: EmeraldComponents
 before_install:
   - gem install cocoapods
   - pod repo update
-  - brew install sonar-scanner
+  # - brew install sonar-scanner
   - brew install swiftlint
 
 script:
