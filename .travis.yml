@@ -1,0 +1,24 @@
+language: swift
+osx_image: xcode10
+
+xcode_workspace: EmeraldComponents.xcworkspace
+xcode_scheme: EmeraldComponents
+
+dist: trusty
+
+git:
+  depth: false
+
+addons:
+  sonarcloud:
+    organization: "sling"
+    token:
+      secure: ${SONAR_TOKEN}
+
+before_install:
+  - gem install cocoapods
+  - pod repo update
+  - brew install swiftlint
+
+script:
+  - fastlane run_tests_pipeline
