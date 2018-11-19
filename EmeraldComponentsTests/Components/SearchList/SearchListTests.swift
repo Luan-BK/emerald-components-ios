@@ -14,7 +14,7 @@ class SearchListTests: XCTestCase {
     private let expectationTimeout = 10.0
 
     internal var searchList: EmeraldSearchList!
-    internal let storyboard = UIStoryboard(name: "SearchList", bundle: Bundle.basic)
+    internal let storyboard = UIStoryboard(name: "SearchList", bundle: Bundle.emerald)
     
     internal var selectedExpectation: XCTestExpectation?
     internal var deselectedExpectation: XCTestExpectation?
