@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004531D421A3550F00DC4D4B /* DateRangePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004531D621A3550F00DC4D4B /* DateRangePicker.storyboard */; };
 		372395E620DD50FF0018BB46 /* Input+DelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372395E520DD50FF0018BB46 /* Input+DelegateTests.swift */; };
 		372395E820DD56AE0018BB46 /* PickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372395E720DD56AE0018BB46 /* PickerTests.swift */; };
 		372395EA20DD6A640018BB46 /* SearchListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372395E920DD6A640018BB46 /* SearchListTests.swift */; };
@@ -55,7 +56,6 @@
 		A21963F12180F3F70038450D /* LabelTests+BorderWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21963F02180F3F70038450D /* LabelTests+BorderWidth.swift */; };
 		A21963F32180F4A40038450D /* LabelTests+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21963F22180F4A40038450D /* LabelTests+BackgroundColor.swift */; };
 		A21D2A5020502EF8004CCA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21F0C46202B6FBE00C91077 /* Assets.xcassets */; };
-		A2360121216FE6E300200335 /* DateRangePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2360120216FE6E300200335 /* DateRangePicker.storyboard */; };
 		A24685E820912BBB00D934BE /* WeekHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24685E720912BBB00D934BE /* WeekHeader.swift */; };
 		A24686032092631000D934BE /* CalendarCollectionCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */; };
 		A24686042092631000D934BE /* CalendarCollectionCustomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */; };
@@ -102,6 +102,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		004531D521A3550F00DC4D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DateRangePicker.storyboard; sourceTree = "<group>"; };
+		004531D821A3551800DC4D4B /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/DateRangePicker.strings"; sourceTree = "<group>"; };
+		004531DA21A3553200DC4D4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DateRangePicker.strings; sourceTree = "<group>"; };
 		20427F1AF06EC50FB9A90A7A /* Pods-EmeraldComponentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmeraldComponentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmeraldComponentsTests/Pods-EmeraldComponentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		235F3C90FDBA9F2ED7E58FE0 /* Pods_EmeraldComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmeraldComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		372395E520DD50FF0018BB46 /* Input+DelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Input+DelegateTests.swift"; sourceTree = "<group>"; };
@@ -154,7 +157,6 @@
 		A21963F02180F3F70038450D /* LabelTests+BorderWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelTests+BorderWidth.swift"; sourceTree = "<group>"; };
 		A21963F22180F4A40038450D /* LabelTests+BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LabelTests+BackgroundColor.swift"; sourceTree = "<group>"; };
 		A21F0C46202B6FBE00C91077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A2360120216FE6E300200335 /* DateRangePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DateRangePicker.storyboard; sourceTree = "<group>"; };
 		A24685E720912BBB00D934BE /* WeekHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeader.swift; sourceTree = "<group>"; };
 		A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionCustomViewCell.swift; sourceTree = "<group>"; };
 		A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionCustomViewCell.xib; sourceTree = "<group>"; };
@@ -418,7 +420,7 @@
 		A2690CED213D8092007ED6B1 /* DataRangePicker */ = {
 			isa = PBXGroup;
 			children = (
-				A2360120216FE6E300200335 /* DateRangePicker.storyboard */,
+				004531D621A3550F00DC4D4B /* DateRangePicker.storyboard */,
 				A2690CEF213D8092007ED6B1 /* EmeraldCustomDateRangePicker.swift */,
 				A2690CF0213D8092007ED6B1 /* EmeraldDateRangePicker.swift */,
 				A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */,
@@ -921,7 +923,7 @@
 				A21D2A5020502EF8004CCA9A /* Assets.xcassets in Resources */,
 				A2554D3421597C14006F0C5D /* EmeraldDateRangeFilterView.xib in Resources */,
 				A24686042092631000D934BE /* CalendarCollectionCustomViewCell.xib in Resources */,
-				A2360121216FE6E300200335 /* DateRangePicker.storyboard in Resources */,
+				004531D421A3550F00DC4D4B /* DateRangePicker.storyboard in Resources */,
 				A2690C9C21370DEB007ED6B1 /* EmeraldOperationTableViewCell.xib in Resources */,
 				A2690D00213D811A007ED6B1 /* EmeraldInput.xib in Resources */,
 			);
@@ -1114,6 +1116,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		004531D621A3550F00DC4D4B /* DateRangePicker.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				004531D521A3550F00DC4D4B /* Base */,
+				004531D821A3551800DC4D4B /* pt-BR */,
+				004531DA21A3553200DC4D4B /* en */,
+			);
+			name = DateRangePicker.storyboard;
+			sourceTree = "<group>";
+		};
 		37BF7C0921222B4100A09737 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
