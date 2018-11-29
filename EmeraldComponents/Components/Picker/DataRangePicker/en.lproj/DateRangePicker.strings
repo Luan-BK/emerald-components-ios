@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Data final"; ObjectID = "3oJ-Wp-rKl"; */
+"3oJ-Wp-rKl.text" = "Final date";
+
+/* Class = "UILabel"; text = "Defina o período desejado"; ObjectID = "BrK-EE-1sI"; */
+"BrK-EE-1sI.text" = "Choose the desired period";
+
+/* Class = "UILabel"; text = "Data de início"; ObjectID = "FpN-J3-2Eo"; */
+"FpN-J3-2Eo.text" = "Initial date";
+
+/* Class = "UILabel"; text = "Escolha um período"; ObjectID = "SQV-xg-Bos"; */
+"SQV-xg-Bos.text" = "Choose a period";
+
+/* Class = "UILabel"; text = "00/00/0000"; ObjectID = "Sds-73-zOC"; */
+"Sds-73-zOC.text" = "00/00/0000";
+
+/* Class = "UIButton"; normalTitle = "Confirmar"; ObjectID = "afc-W2-VhI"; */
+"afc-W2-VhI.normalTitle" = "Confirm";
+
+/* Class = "UILabel"; text = "00/00/0000"; ObjectID = "ixS-kn-rx9"; */
+"ixS-kn-rx9.text" = "00/00/0000";
