@@ -80,8 +80,6 @@ end
 desc "Push files to origin"
 lane :push_to_origin do
     push_to_git_remote(
-        remote: "origin",
-        local_branch: "master",
         remote_branch: "master"
     )
 end
