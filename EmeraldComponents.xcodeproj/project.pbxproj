@@ -281,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				A2690D31213ED515007ED6B1 /* Button */,
+				A24765F921B9906700C8E241 /* Card */,
 				A2883AEA2190BB0F00864094 /* Form */,
 				A28D839520815A470041457D /* HUD */,
 				A2690CFB213D811A007ED6B1 /* Input */,
@@ -389,6 +390,13 @@
 				A2675756209779DF00F66181 /* List */,
 			);
 			path = Payments;
+			sourceTree = "<group>";
+		};
+		A24765F921B9906700C8E241 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		A24C7AFA202374760019A85F /* UIColor */ = {
