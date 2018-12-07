@@ -21,8 +21,18 @@ class CardViewController: UIViewController {
         
         self.contentView.delegate = self
         self.contentView.dataSource = self
+        
+//        let nib = UINib(nibName: "CustomCollectionViewCell", bundle: nil)
+//        self.contentView.register(nib, forCellWithReuseIdentifier: "customIdentifier")
     }
     
+    internal func retrieveXib() -> UICollectionViewCell {
+        let describing = String(describing: CustomCollectionViewCell.self)
+        let nib = Bundle.main.loadNibNamed(describing,
+                                            owner: self,
+                                            options: nil)?.first as! UICollectionViewCell
+        return nib
+    }
 
     /*
     // MARK: - Navigation
@@ -34,10 +44,6 @@ class CardViewController: UIViewController {
     }
     */
 
-}
-
-extension CardViewController {
-    
 }
 
 // MARK: - Collection delegate and datasource
@@ -64,6 +70,9 @@ extension CardViewController: UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier,
                                                       for: indexPath)
+        
+        cell.addSubview(retrieveXib())
+//        cell.addCustomSubview(view: UIView)
         
         return cell
     }
