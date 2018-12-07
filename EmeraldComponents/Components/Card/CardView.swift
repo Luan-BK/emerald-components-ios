@@ -49,5 +49,9 @@ public class CardView: UICollectionViewCell {
         self.customView.layer.shadowRadius = 12.0
         self.customView.backgroundColor = UIColor.Palette.Light.white1
     }
+    
+    public func addCustomSubview(view: UIView) {
+        self.content.addSubview(view)
+    }
 
 }
