@@ -25,15 +25,15 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSq-oI-MPg">
-                        <rect key="frame" x="16" y="16" width="291" height="246"/>
+                        <rect key="frame" x="8" y="16" width="307" height="246"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="sSq-oI-MPg" secondAttribute="trailing" constant="16" id="1Qt-9Z-XQQ"/>
+                <constraint firstAttribute="trailing" secondItem="sSq-oI-MPg" secondAttribute="trailing" constant="8" id="1Qt-9Z-XQQ"/>
                 <constraint firstAttribute="bottom" secondItem="sSq-oI-MPg" secondAttribute="bottom" constant="16" id="gmy-G7-J5Z"/>
-                <constraint firstItem="sSq-oI-MPg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="q33-Lc-4IH"/>
+                <constraint firstItem="sSq-oI-MPg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="q33-Lc-4IH"/>
                 <constraint firstItem="sSq-oI-MPg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="yXX-7K-mCQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

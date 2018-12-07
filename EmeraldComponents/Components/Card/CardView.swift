@@ -28,7 +28,10 @@ public class CardView: UICollectionViewCell {
     }
     
     private func xibSetup() {
-        Bundle.emerald.loadNibNamed(String(describing: CardView.self), owner: self, options: nil)
+        let name = String(describing: type(of: self))
+        Bundle.emerald.loadNibNamed(name,
+                                    owner: self,
+                                    options: nil)
         
         addSubview(self.content)
         
@@ -40,7 +43,6 @@ public class CardView: UICollectionViewCell {
     
     internal func setDefaultValues() {
         self.customView.layer.cornerRadius = 20
-        self.customView.layer.masksToBounds = false
         self.customView.layer.shadowColor = UIColor.gray.cgColor
         self.customView.layer.shadowOpacity = 0.18
         self.customView.layer.shadowOffset = CGSize.zero
