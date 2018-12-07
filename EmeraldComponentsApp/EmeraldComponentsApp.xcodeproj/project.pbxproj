@@ -35,6 +35,8 @@
 		A23E8AEE2149AA8A00933AC1 /* DateRangePickerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AED2149AA8A00933AC1 /* DateRangePickerViewUITests.swift */; };
 		A23E8AF32149AC5C00933AC1 /* DateRangePickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23E8AF22149AC5C00933AC1 /* DateRangePickerView.storyboard */; };
 		A23E8AF52149ACBC00933AC1 /* DateRangePickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AF42149ACBC00933AC1 /* DateRangePickerTableViewController.swift */; };
+		A247661221BACB8300C8E241 /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A247661121BACB8300C8E241 /* Card.storyboard */; };
+		A247661421BACBF100C8E241 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247661321BACBF100C8E241 /* CardCollectionViewController.swift */; };
 		A2C95318217E50C0000073E2 /* Label.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C95317217E50C0000073E2 /* Label.storyboard */; };
 		A2C9531E217F6E25000073E2 /* LabelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9531D217F6E25000073E2 /* LabelTableViewController.swift */; };
 		A2C9B4FB21471B1700634344 /* InputUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B4FA21471B1700634344 /* InputUITests.swift */; };
@@ -85,6 +87,8 @@
 		A23E8AED2149AA8A00933AC1 /* DateRangePickerViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePickerViewUITests.swift; sourceTree = "<group>"; };
 		A23E8AF22149AC5C00933AC1 /* DateRangePickerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateRangePickerView.storyboard; sourceTree = "<group>"; };
 		A23E8AF42149ACBC00933AC1 /* DateRangePickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePickerTableViewController.swift; sourceTree = "<group>"; };
+		A247661121BACB8300C8E241 /* Card.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Card.storyboard; sourceTree = "<group>"; };
+		A247661321BACBF100C8E241 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
 		A2C95317217E50C0000073E2 /* Label.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Label.storyboard; sourceTree = "<group>"; };
 		A2C9531D217F6E25000073E2 /* LabelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewController.swift; sourceTree = "<group>"; };
 		A2C9B4F821471B1700634344 /* EmeraldComponentsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmeraldComponentsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +258,7 @@
 		A23E8AF02149AB8C00933AC1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A24765FE21B9A8D200C8E241 /* Card */,
 				A23E8AF12149AC0500933AC1 /* DateRangePickerView */,
 				A2C95316217E5096000073E2 /* Label */,
 				A23413CE2147122A009DC2FC /* Buttons */,
@@ -270,6 +275,15 @@
 				A23E8AF42149ACBC00933AC1 /* DateRangePickerTableViewController.swift */,
 			);
 			path = DateRangePickerView;
+			sourceTree = "<group>";
+		};
+		A24765FE21B9A8D200C8E241 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				A247661121BACB8300C8E241 /* Card.storyboard */,
+				A247661321BACBF100C8E241 /* CardCollectionViewController.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		A2C95316217E5096000073E2 /* Label */ = {
@@ -427,6 +441,7 @@
 				A23413DC2147122A009DC2FC /* LaunchScreen.storyboard in Resources */,
 				A23413E82147122A009DC2FC /* PickerView.storyboard in Resources */,
 				A23413E62147122A009DC2FC /* Input.storyboard in Resources */,
+				A247661221BACB8300C8E241 /* Card.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +534,7 @@
 			files = (
 				A23413E52147122A009DC2FC /* InputTableViewController.swift in Sources */,
 				A23E8AF52149ACBC00933AC1 /* DateRangePickerTableViewController.swift in Sources */,
+				A247661421BACBF100C8E241 /* CardCollectionViewController.swift in Sources */,
 				A2C9531E217F6E25000073E2 /* LabelTableViewController.swift in Sources */,
 				A23413DE2147122A009DC2FC /* AppDelegate.swift in Sources */,
 				A23E8AE52148696F00933AC1 /* PickerData.swift in Sources */,
