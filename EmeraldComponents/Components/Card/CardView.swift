@@ -57,6 +57,9 @@ public class CardView: UICollectionViewCell {
     internal func constraint(view: UIView, width: CGFloat, height: CGFloat) {
         view.translatesAutoresizingMaskIntoConstraints = false
         
+        let trailingAndLeadingConstraint: CGFloat = 16.0
+        let topAndBottomConstraint: CGFloat = 32.0
+        
         let horizontal = NSLayoutConstraint(item: view,
                                             attribute: .centerX,
                                             relatedBy: .equal,
@@ -79,7 +82,7 @@ public class CardView: UICollectionViewCell {
                                        toItem: nil,
                                        attribute: .notAnAttribute,
                                        multiplier: 1,
-                                       constant: width)
+                                       constant: width - trailingAndLeadingConstraint)
         
         let height = NSLayoutConstraint(item: view,
                                         attribute: .height,
@@ -87,7 +90,7 @@ public class CardView: UICollectionViewCell {
                                         toItem: nil,
                                         attribute: .notAnAttribute,
                                         multiplier: 1,
-                                        constant: height)
+                                        constant: height - topAndBottomConstraint)
         
         self.customView.addConstraints([horizontal, vertical, width, height])
     }
