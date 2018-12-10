@@ -62,8 +62,8 @@ extension CardViewController: UICollectionViewDataSource {
                                                       for: indexPath) as! CardView
         let custom = CustomCollectionViewCell()
         cell.addCustomSubview(view: custom.loadFromNib(),
-                              width: cell.frame.size.width - 16,
-                              height: cell.frame.size.height - 32)
+                              width: cell.frame.size.width,
+                              height: cell.frame.size.height)
         return cell
     }
     
