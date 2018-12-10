@@ -10,8 +10,11 @@ import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
 
+    // MARK: - Properties
+    
+    @IBOutlet var content: UICollectionViewCell!
+    
     // MARK: - Init
-//    @IBOutlet var content: UICollectionViewCell!
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,15 +27,15 @@ class CustomCollectionViewCell: UICollectionViewCell {
     }
     
     private func xibSetup() {
-//        let name = String(describing: type(of: self))
-//        Bundle.main.loadNibNamed(name,
-//                                owner: self,
-//                                options: nil)
-//        
-//        addSubview(self.content)
-//        
-//        self.content.frame = self.bounds
-//        self.content.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        let name = String(describing: type(of: self))
+        Bundle.main.loadNibNamed(name,
+                                 owner: self,
+                                 options: nil)
+
+        addSubview(self.content)
+
+        self.content.frame = self.bounds
+        self.content.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 
 }

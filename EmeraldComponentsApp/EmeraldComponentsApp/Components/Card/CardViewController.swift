@@ -19,17 +19,10 @@ class CardViewController: UIViewController {
         super.viewDidLoad()
 
         self.contentView.backgroundColor = UIColor.Palette.Light.white3
+        self.view.backgroundColor = UIColor.Palette.Light.white3
         
         self.contentView.delegate = self
         self.contentView.dataSource = self
-    }
-    
-    internal func retrieveXib() -> UICollectionViewCell {
-        let describing = String(describing: CustomCollectionViewCell.self)
-        let nib = Bundle.main.loadNibNamed(describing,
-                                            owner: self,
-                                            options: nil)?.first as! UICollectionViewCell
-        return nib
     }
 
     /*
@@ -68,7 +61,8 @@ extension CardViewController: UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier,
                                                       for: indexPath) as! CardView
-        cell.addCustomSubview(view: retrieveXib())
+        let custom = CustomCollectionViewCell()
+        cell.addCustomSubview(view: custom.loadFromNib())
         return cell
     }
     
