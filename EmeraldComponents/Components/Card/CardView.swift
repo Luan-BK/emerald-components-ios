@@ -51,7 +51,7 @@ public class CardView: UICollectionViewCell {
     }
     
     public func addCustomSubview(view: UIView) {
-        self.content.addSubview(view)
+        self.customView.addSubview(view)
     }
 
 }

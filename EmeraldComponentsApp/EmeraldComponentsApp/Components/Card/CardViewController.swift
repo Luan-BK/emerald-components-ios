@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EmeraldComponents
 
 class CardViewController: UIViewController {
 
@@ -21,9 +22,6 @@ class CardViewController: UIViewController {
         
         self.contentView.delegate = self
         self.contentView.dataSource = self
-        
-//        let nib = UINib(nibName: "CustomCollectionViewCell", bundle: nil)
-//        self.contentView.register(nib, forCellWithReuseIdentifier: "customIdentifier")
     }
     
     internal func retrieveXib() -> UICollectionViewCell {
@@ -69,11 +67,8 @@ extension CardViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier,
-                                                      for: indexPath)
-        
-        cell.addSubview(retrieveXib())
-//        cell.addCustomSubview(view: UIView)
-        
+                                                      for: indexPath) as! CardView
+        cell.addCustomSubview(view: retrieveXib())
         return cell
     }
     
@@ -84,9 +79,7 @@ extension CardViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let bounds: CGRect = UIScreen.main.bounds
-        
         return CGSize(width: bounds.size.width - 32,
                       height: bounds.size.height / 2)
     }
