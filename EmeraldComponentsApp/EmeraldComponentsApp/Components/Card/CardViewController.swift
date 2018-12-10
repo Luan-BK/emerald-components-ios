@@ -41,7 +41,6 @@ class CardViewController: UIViewController {
 
 extension CardViewController: UICollectionViewDelegate {
     
-    // Sets right and left content view distance
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -62,7 +61,9 @@ extension CardViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier,
                                                       for: indexPath) as! CardView
         let custom = CustomCollectionViewCell()
-        cell.addCustomSubview(view: custom.loadFromNib())
+        cell.addCustomSubview(view: custom.loadFromNib(),
+                              width: cell.frame.size.width - 16,
+                              height: cell.frame.size.height - 32)
         return cell
     }
     
