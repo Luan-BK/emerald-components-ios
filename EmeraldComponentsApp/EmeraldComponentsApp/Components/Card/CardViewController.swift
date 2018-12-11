@@ -74,9 +74,14 @@ extension CardViewController: UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier,
                                                       for: indexPath) as! CardView
-        cell.addCustomSubview(view: customView[indexPath.row],
+        let view = customView[indexPath.row]
+        
+        cell.addCustomSubview(view: view,
                               width: cell.frame.size.width,
                               height: cell.frame.size.height)
+        cell.setPropertyTo(view: view, cornerRadius: 20.0)
+        cell.setPropertyTo(view: view, shadowRadius: 8.0)
+        
         return cell
     }
     
