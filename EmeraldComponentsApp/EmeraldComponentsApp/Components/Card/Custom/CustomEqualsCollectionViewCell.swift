@@ -1,5 +1,5 @@
 //
-//  CustomCollectionViewCell.swift
+//  CustomEqualsCollectionViewCell.swift
 //  EmeraldComponentsApp
 //
 //  Created by João Mendes | Stone on 07/12/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomCollectionViewCell: UICollectionViewCell {
+class CustomEqualsCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Properties
     
