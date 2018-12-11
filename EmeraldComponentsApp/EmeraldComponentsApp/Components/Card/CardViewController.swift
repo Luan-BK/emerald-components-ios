@@ -76,11 +76,12 @@ extension CardViewController: UICollectionViewDataSource {
                                                       for: indexPath) as! CardView
         let view = customView[indexPath.row]
         
-        cell.addCustomSubview(view: view,
-                              width: cell.frame.size.width,
-                              height: cell.frame.size.height)
-        cell.setPropertyTo(view: view, cornerRadius: 20.0)
-        cell.setPropertyTo(view: view, shadowRadius: 8.0)
+        cell.clipsToBounds = false
+        cell.addSuperViewTo(customView: view,
+                            width: cell.frame.size.width,
+                            height: cell.frame.size.height)
+        cell.setPropertyTo(view: view, cornerRadius: 10.0)
+        cell.setPropertyTo(view: view, shadowRadius: 18.0)
         
         return cell
     }

@@ -29,13 +29,13 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="wFP-36-cFB" customClass="CardView" customModule="EmeraldComponents">
-                                        <rect key="frame" x="0.0" y="98" width="343" height="343"/>
+                                        <rect key="frame" x="0.0" y="119.5" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="343"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
-                                        <size key="customSize" width="343" height="343"/>
+                                        <size key="customSize" width="300" height="300"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
