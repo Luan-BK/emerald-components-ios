@@ -12,16 +12,13 @@ public class CardView: UICollectionViewCell {
 
     // MARK: - Properties
     
-    @IBOutlet var content: UICollectionViewCell!
-    @IBOutlet weak var shadowView: UIView!
-    
-//    private var shadowView: UIView!
+    private var shadowView: UIView! = UIView()
     
     private let trailingAndLeadingConstraint: CGFloat = 16.0
-    private let topAndBottomConstraint: CGFloat = 32.0
+    private let topAndBottomConstraint: CGFloat = 16.0
     
-    private var cornerRadius: CGFloat = 20.0
-    private var shadowRadius: CGFloat = 8.0
+    private var cornerRadius: CGFloat = 10.0
+    private var shadowRadius: CGFloat = 5.0
     
     // MARK: - Init
     
@@ -29,14 +26,14 @@ public class CardView: UICollectionViewCell {
         super.init(frame: frame)
         
         self.loadNib()
-        self.xibSetup()
+        self.contentSetup()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.loadNib()
-        self.xibSetup()
+        self.contentSetup()
     }
 
     private func loadNib() {
@@ -45,20 +42,20 @@ public class CardView: UICollectionViewCell {
                                     owner: self,
                                     options: nil)
     }
-    
-    private func xibSetup() {
-        self.content.frame = self.bounds
-        self.content.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        
-        self.addSubview(self.content)
+
+    private func contentSetup() {
+        self.shadowView.frame = self.bounds
+        self.shadowView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+
+        self.addSubview(self.shadowView)
     }
     
     public override func layoutSubviews() {
         self.shadowView.backgroundColor = UIColor.clear
         self.shadowView.clipsToBounds = false
-        self.shadowView.layer.shadowColor = UIColor.gray.cgColor
-        self.shadowView.layer.shadowOpacity = 1
-        self.shadowView.layer.shadowOffset = CGSize.zero
+        self.shadowView.layer.shadowColor = UIColor.black.cgColor
+        self.shadowView.layer.shadowOpacity = 0.15
+        self.shadowView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         self.shadowView.layer.shadowRadius = self.shadowRadius
         self.shadowView.layer.cornerRadius = self.cornerRadius
     }
