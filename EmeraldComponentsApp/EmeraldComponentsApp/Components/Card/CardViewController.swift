@@ -11,9 +11,14 @@ import EmeraldComponents
 
 class CardViewController: UIViewController {
 
+    // MARK: - Properties
+    
     @IBOutlet weak var contentView: UICollectionView!
     
-    let reuseIdentifier: String = "Cell"
+    private let reuseIdentifier: String = "Cell"
+    public var customView: [UIView]! = [UIView()]
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +28,15 @@ class CardViewController: UIViewController {
         
         self.contentView.delegate = self
         self.contentView.dataSource = self
+        
+        self.instantiateCustomViews()
+    }
+    
+    public func instantiateCustomViews() {
+        let stoneCustomView = CustomStoneCollectionViewCell()
+        let equalsCustomView = CustomEqualsCollectionViewCell()
+        self.customView = [stoneCustomView.loadFromNib(),
+                           equalsCustomView.loadFromNib()]
     }
 
     /*
@@ -53,15 +67,14 @@ extension CardViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return self.customView.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier,
                                                       for: indexPath) as! CardView
-        let custom = CustomCollectionViewCell()
-        cell.addCustomSubview(view: custom.loadFromNib(),
+        cell.addCustomSubview(view: customView[indexPath.row],
                               width: cell.frame.size.width,
                               height: cell.frame.size.height)
         return cell
