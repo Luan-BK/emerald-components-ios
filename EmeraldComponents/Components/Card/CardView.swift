@@ -18,7 +18,7 @@ public class CardView: UICollectionViewCell {
     private let topAndBottomConstraint: CGFloat = 16.0
     
     private var cornerRadius: CGFloat = 10.0
-    private var shadowRadius: CGFloat = 5.0
+    private var shadowRadius: CGFloat = 18.0
     
     // MARK: - Init
     
@@ -54,8 +54,8 @@ public class CardView: UICollectionViewCell {
         self.shadowView.backgroundColor = UIColor.clear
         self.shadowView.clipsToBounds = false
         self.shadowView.layer.shadowColor = UIColor.black.cgColor
-        self.shadowView.layer.shadowOpacity = 0.15
-        self.shadowView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        self.shadowView.layer.shadowOpacity = 0.1
+        self.shadowView.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
         self.shadowView.layer.shadowRadius = self.shadowRadius
         self.shadowView.layer.cornerRadius = self.cornerRadius
     }
@@ -69,22 +69,27 @@ public class CardView: UICollectionViewCell {
     
     public func setPropertyTo(view: UIView, shadowRadius: CGFloat) {
         self.shadowRadius = shadowRadius
-        self.shadowView.layer.shadowRadius = self.shadowRadius
+        view.layer.shadowRadius = self.shadowRadius
     }
     
-    public func addCustomSubview(view: UIView, width: CGFloat, height: CGFloat) {
-        view.layer.cornerRadius = self.cornerRadius
-        
-        self.shadowView.addSubview(view)
-        self.setConstraintTo(view: view, with: width, and: height)
+    public func addSuperViewTo(customView: UIView, width: CGFloat, height: CGFloat) {
+        self.shadowView.addSubview(customView)
+        self.setConstraintTo(customView: customView, with: width, and: height)
+        self.setPropertiesTo(customView: customView)
     }
     
     // MARK: - Internal class methods
     
-    internal func setConstraintTo(view: UIView, with width: CGFloat, and height: CGFloat) {
-        view.translatesAutoresizingMaskIntoConstraints = false
+    internal func setPropertiesTo(customView: UIView) {
+        customView.layer.cornerRadius = self.cornerRadius
+        customView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    internal func setConstraintTo(customView: UIView,
+                                  with width: CGFloat,
+                                  and height: CGFloat) {
         
-        let horizontal = NSLayoutConstraint(item: view,
+        let horizontal = NSLayoutConstraint(item: customView,
                                             attribute: .centerX,
                                             relatedBy: .equal,
                                             toItem: self.shadowView,
@@ -92,7 +97,7 @@ public class CardView: UICollectionViewCell {
                                             multiplier: 1,
                                             constant: 0)
         
-        let vertical = NSLayoutConstraint(item: view,
+        let vertical = NSLayoutConstraint(item: customView,
                                           attribute: .centerY,
                                           relatedBy: .equal,
                                           toItem: self.shadowView,
@@ -100,7 +105,7 @@ public class CardView: UICollectionViewCell {
                                           multiplier: 1,
                                           constant: 0)
         
-        let width = NSLayoutConstraint(item: view,
+        let width = NSLayoutConstraint(item: customView,
                                        attribute: .width,
                                        relatedBy: .equal,
                                        toItem: nil,
@@ -108,7 +113,7 @@ public class CardView: UICollectionViewCell {
                                        multiplier: 1,
                                        constant: width - self.trailingAndLeadingConstraint)
         
-        let height = NSLayoutConstraint(item: view,
+        let height = NSLayoutConstraint(item: customView,
                                         attribute: .height,
                                         relatedBy: .equal,
                                         toItem: nil,
