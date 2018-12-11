@@ -40,13 +40,14 @@ public class CardView: UICollectionViewCell {
     }
     
     public override func layoutSubviews() {
-        self.customView.clipsToBounds = true
-        self.customView.backgroundColor = UIColor.Palette.Light.white1
-        self.customView.layer.cornerRadius = 20
-        self.customView.layer.shadowColor = UIColor.gray.cgColor
-        self.customView.layer.shadowOpacity = 0.18
-        self.customView.layer.shadowOffset = CGSize.zero
-        self.customView.layer.shadowRadius = 12.0
+        self.shadowView.backgroundColor = UIColor.clear
+        self.shadowView.clipsToBounds = false
+        self.shadowView.layer.shadowColor = UIColor.gray.cgColor
+        self.shadowView.layer.shadowOpacity = 1
+        self.shadowView.layer.shadowOffset = CGSize.zero
+        self.shadowView.layer.shadowRadius = self.shadowRadius
+        self.shadowView.layer.cornerRadius = self.cornerRadius
+    }
     }
     
     public func addCustomSubview(view: UIView, width: CGFloat, height: CGFloat) {

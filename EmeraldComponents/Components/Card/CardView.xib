@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="EmeraldComponents" customModuleProvider="target">
             <connections>
                 <outlet property="content" destination="gTV-IL-0wX" id="ggM-wS-fL5"/>
-                <outlet property="customView" destination="sSq-oI-MPg" id="g8o-JQ-zCM"/>
+                <outlet property="shadowView" destination="sSq-oI-MPg" id="dhl-Jj-Mlv"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
