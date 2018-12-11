@@ -15,6 +15,8 @@ public class CardView: UICollectionViewCell {
     @IBOutlet var content: UICollectionViewCell!
     @IBOutlet weak var shadowView: UIView!
     
+//    private var shadowView: UIView!
+    
     private let trailingAndLeadingConstraint: CGFloat = 16.0
     private let topAndBottomConstraint: CGFloat = 32.0
     
@@ -25,24 +27,30 @@ public class CardView: UICollectionViewCell {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.loadNib()
         self.xibSetup()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        self.loadNib()
         self.xibSetup()
     }
-    
-    private func xibSetup() {
+
+    private func loadNib() {
         let name = String(describing: type(of: self))
         Bundle.emerald.loadNibNamed(name,
                                     owner: self,
                                     options: nil)
-        
-        addSubview(self.content)
-        
+    }
+    
+    private func xibSetup() {
         self.content.frame = self.bounds
         self.content.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
+        self.addSubview(self.content)
     }
     
     public override func layoutSubviews() {
@@ -69,6 +77,7 @@ public class CardView: UICollectionViewCell {
     
     public func addCustomSubview(view: UIView, width: CGFloat, height: CGFloat) {
         view.layer.cornerRadius = self.cornerRadius
+        
         self.shadowView.addSubview(view)
         self.setConstraintTo(view: view, with: width, and: height)
     }
