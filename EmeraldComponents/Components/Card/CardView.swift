@@ -13,7 +13,13 @@ public class CardView: UICollectionViewCell {
     // MARK: - Properties
     
     @IBOutlet var content: UICollectionViewCell!
-    @IBOutlet weak var customView: UIView!
+    @IBOutlet weak var shadowView: UIView!
+    
+    private let trailingAndLeadingConstraint: CGFloat = 16.0
+    private let topAndBottomConstraint: CGFloat = 32.0
+    
+    private var cornerRadius: CGFloat = 20.0
+    private var shadowRadius: CGFloat = 8.0
     
     // MARK: - Init
     
@@ -48,23 +54,34 @@ public class CardView: UICollectionViewCell {
         self.shadowView.layer.shadowRadius = self.shadowRadius
         self.shadowView.layer.cornerRadius = self.cornerRadius
     }
+    
+    // MARK: - Public class methods
+    
+    public func setPropertyTo(view: UIView, cornerRadius: CGFloat) {
+        self.cornerRadius = cornerRadius
+        view.layer.cornerRadius = self.cornerRadius
+    }
+    
+    public func setPropertyTo(view: UIView, shadowRadius: CGFloat) {
+        self.shadowRadius = shadowRadius
+        self.shadowView.layer.shadowRadius = self.shadowRadius
     }
     
     public func addCustomSubview(view: UIView, width: CGFloat, height: CGFloat) {
-        self.customView.addSubview(view)
-        self.constraint(view: view, width: width, height: height)
+        view.layer.cornerRadius = self.cornerRadius
+        self.shadowView.addSubview(view)
+        self.setConstraintTo(view: view, with: width, and: height)
     }
     
-    internal func constraint(view: UIView, width: CGFloat, height: CGFloat) {
+    // MARK: - Internal class methods
+    
+    internal func setConstraintTo(view: UIView, with width: CGFloat, and height: CGFloat) {
         view.translatesAutoresizingMaskIntoConstraints = false
-        
-        let trailingAndLeadingConstraint: CGFloat = 16.0
-        let topAndBottomConstraint: CGFloat = 32.0
         
         let horizontal = NSLayoutConstraint(item: view,
                                             attribute: .centerX,
                                             relatedBy: .equal,
-                                            toItem: self.customView,
+                                            toItem: self.shadowView,
                                             attribute: .centerX,
                                             multiplier: 1,
                                             constant: 0)
@@ -72,7 +89,7 @@ public class CardView: UICollectionViewCell {
         let vertical = NSLayoutConstraint(item: view,
                                           attribute: .centerY,
                                           relatedBy: .equal,
-                                          toItem: self.customView,
+                                          toItem: self.shadowView,
                                           attribute: .centerY,
                                           multiplier: 1,
                                           constant: 0)
@@ -83,7 +100,7 @@ public class CardView: UICollectionViewCell {
                                        toItem: nil,
                                        attribute: .notAnAttribute,
                                        multiplier: 1,
-                                       constant: width - trailingAndLeadingConstraint)
+                                       constant: width - self.trailingAndLeadingConstraint)
         
         let height = NSLayoutConstraint(item: view,
                                         attribute: .height,
@@ -91,9 +108,9 @@ public class CardView: UICollectionViewCell {
                                         toItem: nil,
                                         attribute: .notAnAttribute,
                                         multiplier: 1,
-                                        constant: height - topAndBottomConstraint)
+                                        constant: height - self.topAndBottomConstraint)
         
-        self.customView.addConstraints([horizontal, vertical, width, height])
+        self.shadowView.addConstraints([horizontal, vertical, width, height])
     }
     
 }
