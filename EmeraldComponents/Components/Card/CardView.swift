@@ -25,22 +25,13 @@ public class CardView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.loadNib()
         self.contentSetup()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.loadNib()
         self.contentSetup()
-    }
-
-    private func loadNib() {
-        let name = String(describing: type(of: self))
-        Bundle.emerald.loadNibNamed(name,
-                                    owner: self,
-                                    options: nil)
     }
 
     private func contentSetup() {
@@ -60,7 +51,7 @@ public class CardView: UIView {
         self.shadowView.layer.cornerRadius = self.cornerRadius
     }
     
-    // MARK: - Public class methods
+    // MARK: - Public methods
     
     public func setPropertyTo(view: UIView, cornerRadius: CGFloat) {
         self.cornerRadius = cornerRadius
@@ -78,7 +69,7 @@ public class CardView: UIView {
         self.setPropertiesTo(customView: customView)
     }
     
-    // MARK: - Internal class methods
+    // MARK: - Internal methods
     
     internal func setPropertiesTo(customView: UIView) {
         customView.layer.cornerRadius = self.cornerRadius
