@@ -75,7 +75,6 @@ extension CardViewController: UICollectionViewDataSource {
                                                       for: indexPath) as! CardCollectionViewCell
         let view = customView[indexPath.row]
 
-        cell.clipsToBounds = false
         cell.addSuperViewTo(customView: view,
                             width: cell.frame.size.width,
                             height: cell.frame.size.height)

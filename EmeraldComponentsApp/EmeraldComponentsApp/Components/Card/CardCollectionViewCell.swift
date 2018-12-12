@@ -11,7 +11,11 @@ import EmeraldComponents
 
 class CardCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - Properties
+    
     var cardView: CardView! = CardView()
+    
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,9 +32,12 @@ class CardCollectionViewCell: UICollectionViewCell {
     internal func setup() {
         self.cardView.frame = self.bounds
         self.cardView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        self.clipsToBounds = false
         
         self.addSubview(self.cardView)
     }
+    
+    // MARK: - Internal methods
     
     internal func addSuperViewTo(customView: UIView,
                                  width: CGFloat,
