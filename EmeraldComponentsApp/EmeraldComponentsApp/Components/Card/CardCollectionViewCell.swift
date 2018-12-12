@@ -42,17 +42,17 @@ class CardCollectionViewCell: UICollectionViewCell {
     internal func addSuperviewTo(customView: UIView,
                                  width: CGFloat,
                                  height: CGFloat) {
-        cardView.addSuperviewTo(customView: customView,
-                                width: width,
-                                height: height)
+        self.cardView.addSuperviewTo(customView: customView,
+                                     width: width,
+                                     height: height)
     }
     
     internal func setPropertyTo(view: UIView, cornerRadius: CGFloat) {
-        cardView.setPropertyTo(view: view, cornerRadius: cornerRadius)
+        self.cardView.setPropertyTo(view: view, cornerRadius: cornerRadius)
     }
 
     internal func setPropertyTo(view: UIView, shadowRadius: CGFloat) {
-        cardView.setPropertyTo(view: view, shadowRadius: shadowRadius)
+        self.cardView.setPropertyTo(view: view, shadowRadius: shadowRadius)
     }
     
 }
