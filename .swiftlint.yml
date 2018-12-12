@@ -17,3 +17,9 @@ excluded:
   - fastlane
   - Pods
   - build
+
+identifier_name:
+  min_length: 1 # only warning
+  max_length: # warning and error
+    warning: 40
+    error: 50
