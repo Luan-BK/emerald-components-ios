@@ -18,7 +18,6 @@ public enum EmeraldInputMask {
     case cnpj
     case password
     case currency
-    // swiftlint:disable identifier_name
     case custom(mask: String)
     
     public static func getMaskFormat(for mask: EmeraldInputMask) -> String {
