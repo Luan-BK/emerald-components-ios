@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CardView: UICollectionViewCell {
+public class CardView: UIView {
 
     // MARK: - Properties
     
