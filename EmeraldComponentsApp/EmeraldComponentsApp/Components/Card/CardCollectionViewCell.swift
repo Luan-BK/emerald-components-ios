@@ -39,10 +39,10 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Internal methods
     
-    internal func addSuperViewTo(customView: UIView,
+    internal func addSuperviewTo(customView: UIView,
                                  width: CGFloat,
                                  height: CGFloat) {
-        cardView.addSuperViewTo(customView: customView,
+        cardView.addSuperviewTo(customView: customView,
                                 width: width,
                                 height: height)
     }

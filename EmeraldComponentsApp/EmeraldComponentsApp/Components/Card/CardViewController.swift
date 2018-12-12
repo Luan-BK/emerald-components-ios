@@ -75,7 +75,7 @@ extension CardViewController: UICollectionViewDataSource {
                                                       for: indexPath) as! CardCollectionViewCell
         let view = customView[indexPath.row]
 
-        cell.addSuperViewTo(customView: view,
+        cell.addSuperviewTo(customView: view,
                             width: cell.frame.size.width,
                             height: cell.frame.size.height)
         cell.setPropertyTo(view: view, cornerRadius: 10.0)
