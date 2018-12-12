@@ -105,6 +105,12 @@ extension UIColor {
             public static let black5 = UIColor(red: 66/255, green: 75/255, blue: 84/255, alpha: 1.0)
         }
         
+        public struct Main {
+            /// #0DB14B - 13, 177, 75
+            public static let primary   = UIColor(red: 13/255, green: 177/255, blue: 75/255, alpha: 1.0)
+            /// #803ADC - 128, 58, 220
+            public static let secondary = UIColor(red: 128/255, green: 58/255, blue: 220/255, alpha: 1.0)
+        }
         public struct State {
             /// #95c93d - 149, 201, 61
             public static let focus     = ThemeManager.getThemeColor()
