@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import EmeraldComponents
 
 class CardViewController: UIViewController {
 
@@ -73,9 +72,9 @@ extension CardViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier,
-                                                      for: indexPath) as! CardView
+                                                      for: indexPath) as! CardCollectionViewCell
         let view = customView[indexPath.row]
-        
+
         cell.clipsToBounds = false
         cell.addSuperViewTo(customView: view,
                             width: cell.frame.size.width,
