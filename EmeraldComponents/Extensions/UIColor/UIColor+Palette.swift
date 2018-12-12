@@ -10,28 +10,6 @@ import UIKit
 
 extension UIColor {
     
-    @available(*, deprecated, message: "Use getTheme() method from ThemeManager class instead")
-    public static func primaryColor(for theme: EmeraldTheme) -> UIColor {
-        switch theme {
-        case .stone:
-            return ThemeManager.getThemeColor()
-        }
-    }
-    
-    /* Background gray scale colors */
-    
-    @available(*, deprecated, message: "Use UIColor.Palette.Dark.black5 instead")
-    public static let veryDarkGrayScaleContentBackground: UIColor = Palette.Dark.black5
-    
-    @available(*, deprecated, message: "Use UIColor.Palette.Light.white5 instead")
-    public static let darkGrayScaleContentBackground: UIColor = Palette.Light.white5
-    
-    @available(*, deprecated, message: "Use UIColor.Palette.Light.white4 instead")
-    public static let lightGrayScaleContentBackground: UIColor = Palette.Light.white4
-    
-    @available(*, deprecated, message: "Use UIColor.Palette.Light.white3 instead")
-    public static let veryLighGrayScaleContentBackground: UIColor = Palette.Light.white3
-    
     // MARK: - Color modifiers
     
     /// Returns a lighter version of this UIColor.
@@ -129,43 +107,6 @@ extension UIColor {
             public static let disabled  = UIColor(red: 195/255, green: 200/255, blue: 210/255, alpha: 1.0)
             /// #C3C8D2 - 195, 200, 210
             public static let neutral   = UIColor(red: 195/255, green: 200/255, blue: 210/255, alpha: 1.0)
-        }
-        
-        public struct Basic {
-            /// #95c93d - 149, 201, 61
-            @available(*, deprecated, message: "Use UIColor.Palette.State.focus instead")
-            public static let primary   = UIColor(red: 149/255, green: 201/255, blue: 61/255, alpha: 1.0)
-            /// #8036dc - 128, 58, 220
-            @available(*, deprecated, message: "Use youy own color, it'll be removed")
-            public static let secondary = UIColor(red: 128/255, green: 58/255, blue: 220/255, alpha: 1.0)
-            /// #e74c3c - 231, 76, 60
-            @available(*, deprecated, message: "Use UIColor.Palette.State.error instead")
-            public static let error     = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
-            /// #f9bf09 - 249, 191, 9
-            @available(*, deprecated, message: "Use UIColor.Palette.State.warning instead")
-            public static let warning   = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
-            /// #2ECC71 - 46, 204, 113
-            @available(*, deprecated, message: "Use UIColor.Palette.State.success instead")
-            public static let success   = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0)
-        }
-        
-        // Payment status
-        public struct Payment {
-            /// #F9BF09 - 249, 191, 9
-            @available(*, deprecated, message: "Use UIColor.Palette.Basic.warning instead")
-            public static let pending   = UIColor(red: 249/255, green: 191/255, blue: 9/255, alpha: 1.0)
-            /// #B9C3CC - 185, 195, 104
-            @available(*, deprecated, message: "Use UIColor.Palette.Light.white4 instead")
-            public static let scheduled = UIColor(red: 185/255, green: 195/255, blue: 204/255, alpha: 1.0)
-            /// #C7352E - 199, 53, 46
-            @available(*, deprecated, message: "Use UIColor.Palette.Basic.error instead")
-            public static let rejected  = UIColor(red: 199/255, green: 53/255, blue: 46/255, alpha: 1.0)
-            /// #31CD65 - 49, 205, 101
-            @available(*, deprecated, message: "Use UIColor.Palette.Basic.success instead")
-            public static let paid      = UIColor(red: 49/255, green: 205/255, blue: 101/255, alpha: 1.0)
-            /// #B9C3CC - 185, 195, 204
-            @available(*, deprecated, message: "Use UIColor.Palette.Light.white4 instead")
-            public static let other     = UIColor(red: 185/255, green: 195/255, blue: 204/255, alpha: 1.0)
         }
         
     }
