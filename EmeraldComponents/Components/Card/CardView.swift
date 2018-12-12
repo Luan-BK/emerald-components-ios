@@ -12,13 +12,13 @@ public class CardView: UIView {
 
     // MARK: - Properties
     
-    private var shadowView: UIView! = UIView()
+    internal var shadowView: UIView! = UIView()
     
     private let trailingAndLeadingConstraint: CGFloat = 16.0
     private let topAndBottomConstraint: CGFloat = 16.0
     
-    private var cornerRadius: CGFloat = 10.0
-    private var shadowRadius: CGFloat = 18.0
+    internal var cornerRadius: CGFloat = 10.0
+    internal var shadowRadius: CGFloat = 18.0
     
     // MARK: - Init
     
@@ -35,13 +35,13 @@ public class CardView: UIView {
     }
 
     private func contentSetup() {
-        self.shadowView.frame = self.bounds
-        self.shadowView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-
+        self.setLayoutSubviews()
         self.addSubview(self.shadowView)
     }
     
-    public override func layoutSubviews() {
+    internal func setLayoutSubviews() {
+        self.shadowView.frame = self.bounds
+        self.shadowView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.shadowView.backgroundColor = UIColor.clear
         self.shadowView.clipsToBounds = false
         self.shadowView.layer.shadowColor = UIColor.black.cgColor
@@ -63,10 +63,14 @@ public class CardView: UIView {
         view.layer.shadowRadius = self.shadowRadius
     }
     
-    public func addSuperViewTo(customView: UIView, width: CGFloat, height: CGFloat) {
+    public func addSuperviewTo(customView: UIView,
+                               width: CGFloat,
+                               height: CGFloat) {
         self.shadowView.addSubview(customView)
-        self.setConstraintTo(customView: customView, with: width, and: height)
         self.setPropertiesTo(customView: customView)
+        self.setConstraintTo(customView: customView,
+                             with: width,
+                             and: height)
     }
     
     // MARK: - Internal methods
