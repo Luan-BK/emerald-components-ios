@@ -53,16 +53,32 @@ public class CardView: UIView {
     
     // MARK: - Public methods
     
+    /// Updates CardView cornerRadius
+    ///
+    /// - Parameters:
+    ///   - view: Custom view to be updated
+    ///   - cornerRadius: cornerRadius to be setted to custom view
     public func setPropertyTo(view: UIView, cornerRadius: CGFloat) {
         self.cornerRadius = cornerRadius
         view.layer.cornerRadius = self.cornerRadius
     }
     
+    /// Updates CardView shadowRadius
+    ///
+    /// - Parameters:
+    ///   - view: Custom view to be updated
+    ///   - shadowRadius: shadowRadius to be setted to custom view
     public func setPropertyTo(view: UIView, shadowRadius: CGFloat) {
         self.shadowRadius = shadowRadius
         view.layer.shadowRadius = self.shadowRadius
     }
     
+    /// Sets custom subview inside CardView
+    ///
+    /// - Parameters:
+    ///   - customView: Custom view to be setted inside superview
+    ///   - width: Custom view width constat
+    ///   - height: Custom view height constat
     public func addSuperviewTo(customView: UIView,
                                width: CGFloat,
                                height: CGFloat) {
@@ -75,11 +91,20 @@ public class CardView: UIView {
     
     // MARK: - Internal methods
     
+    /// Sets default properties to custom view
+    ///
+    /// - Parameter customView: Custom view
     internal func setPropertiesTo(customView: UIView) {
         customView.layer.cornerRadius = self.cornerRadius
         customView.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    /// Sets subview constraints to superview
+    ///
+    /// - Parameters:
+    ///   - customView: Custom view to be setted inside superview
+    ///   - width: Custom view width constat
+    ///   - height: Custom view height constat
     internal func setConstraintTo(customView: UIView,
                                   with width: CGFloat,
                                   and height: CGFloat) {
