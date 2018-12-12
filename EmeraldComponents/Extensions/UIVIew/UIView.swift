@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     
-    func loadFromNib<T: UIView>() -> T {
+    public func loadFromNib<T: UIView>() -> T {
         let selfType = type(of: self)
         let bundle = Bundle(for: selfType)
         let nibName = String(describing: selfType)
