@@ -11,7 +11,6 @@ lane :run_deploy_pipeline do
     increment_version
     pod_publish
     commit_changes
-    push_to_origin
 end
 
 desc "Cocoapods linter"
@@ -74,13 +73,6 @@ lane :commit_changes do
     git_commit(
         path: ["./CHANGELOG.md", "./EmeraldComponents.podspec"], 
         message: "🤖 Adds docs [skip ci]"
-    )
-end
-
-desc "Push files to origin"
-lane :push_to_origin do
-    push_to_git_remote(
-        remote_branch: "master"
     )
 end
 
