@@ -105,11 +105,6 @@ Push podfile
 fastlane commit_changes
 ```
 Commit files
-### push_to_origin
-```
-fastlane push_to_origin
-```
-Push files to origin
 ### projet_version
 ```
 fastlane projet_version
