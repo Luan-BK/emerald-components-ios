@@ -36,10 +36,7 @@
 		37D2642B20A0D1B8006BE83D /* EmeraldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2642A20A0D1B8006BE83D /* EmeraldView.swift */; };
 		37D2642D20A0D4AE006BE83D /* EmeraldTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2642C20A0D4AE006BE83D /* EmeraldTextField.swift */; };
 		37D2642F20A102B1006BE83D /* EmeraldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2642E20A102B1006BE83D /* EmeraldTableViewCell.swift */; };
-		37D2643220A1100E006BE83D /* ThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2643120A1100E006BE83D /* ThemeTests.swift */; };
-		37D2643420A11284006BE83D /* ThemeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2643320A11284006BE83D /* ThemeManagerTests.swift */; };
 		37D92CBF209CDFF700C0FD1A /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D92CBE209CDFF700C0FD1A /* ThemeManager.swift */; };
-		37D92CC1209CE3B700C0FD1A /* EmeraldTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D92CC0209CE3B700C0FD1A /* EmeraldTheme.swift */; };
 		37E0102D20D182EC00FA6410 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0102C20D182EB00FA6410 /* UIImage.swift */; };
 		37E1297920DC101100B45C5A /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E1297820DC101100B45C5A /* Bundle.swift */; };
 		37E1298F20DC5A1100B45C5A /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E1298E20DC5A1100B45C5A /* UIResponder.swift */; };
@@ -59,6 +56,8 @@
 		A24685E820912BBB00D934BE /* WeekHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24685E720912BBB00D934BE /* WeekHeader.swift */; };
 		A24686032092631000D934BE /* CalendarCollectionCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */; };
 		A24686042092631000D934BE /* CalendarCollectionCustomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */; };
+		A247660521B9ADAD00C8E241 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247660321B9ADAD00C8E241 /* CardView.swift */; };
+		A24C273321C1283700B65722 /* CardViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C273221C1283700B65722 /* CardViewTests.swift */; };
 		A250F7F52052F3500013C05D /* EmeraldComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A270033620179EF1008FBB2E /* EmeraldComponents.framework */; };
 		A2554D3321597C14006F0C5D /* EmeraldDateRangeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */; };
 		A2554D3421597C14006F0C5D /* EmeraldDateRangeFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */; };
@@ -136,10 +135,7 @@
 		37D2642A20A0D1B8006BE83D /* EmeraldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldView.swift; sourceTree = "<group>"; };
 		37D2642C20A0D4AE006BE83D /* EmeraldTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldTextField.swift; sourceTree = "<group>"; };
 		37D2642E20A102B1006BE83D /* EmeraldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldTableViewCell.swift; sourceTree = "<group>"; };
-		37D2643120A1100E006BE83D /* ThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTests.swift; sourceTree = "<group>"; };
-		37D2643320A11284006BE83D /* ThemeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerTests.swift; sourceTree = "<group>"; };
 		37D92CBE209CDFF700C0FD1A /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
-		37D92CC0209CE3B700C0FD1A /* EmeraldTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldTheme.swift; sourceTree = "<group>"; };
 		37E0102C20D182EB00FA6410 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		37E1297820DC101100B45C5A /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		37E1298E20DC5A1100B45C5A /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
@@ -160,6 +156,8 @@
 		A24685E720912BBB00D934BE /* WeekHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeader.swift; sourceTree = "<group>"; };
 		A24686012092631000D934BE /* CalendarCollectionCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionCustomViewCell.swift; sourceTree = "<group>"; };
 		A24686022092631000D934BE /* CalendarCollectionCustomViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionCustomViewCell.xib; sourceTree = "<group>"; };
+		A247660321B9ADAD00C8E241 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A24C273221C1283700B65722 /* CardViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewTests.swift; sourceTree = "<group>"; };
 		A2554D3121597C14006F0C5D /* EmeraldDateRangeFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmeraldDateRangeFilterView.swift; sourceTree = "<group>"; };
 		A2554D3221597C14006F0C5D /* EmeraldDateRangeFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmeraldDateRangeFilterView.xib; sourceTree = "<group>"; };
 		A2554D3521597EE2006F0C5D /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
@@ -236,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				A2883AFB2190D4B000864094 /* Button */,
+				A24C273121C1280A00B65722 /* Card */,
 				37B813222123890D003A8C8E /* DateRangePicker */,
 				A2883AFE2190D4D900864094 /* Form */,
 				A2BEDEED208550DD0047A127 /* HUD */,
@@ -281,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				A2690D31213ED515007ED6B1 /* Button */,
+				A24765F921B9906700C8E241 /* Card */,
 				A2883AEA2190BB0F00864094 /* Form */,
 				A28D839520815A470041457D /* HUD */,
 				A2690CFB213D811A007ED6B1 /* Input */,
@@ -294,20 +294,10 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		37D2643020A10FFC006BE83D /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				37D2643120A1100E006BE83D /* ThemeTests.swift */,
-				37D2643320A11284006BE83D /* ThemeManagerTests.swift */,
-			);
-			path = Theme;
-			sourceTree = "<group>";
-		};
 		37D92CBD209CDFD200C0FD1A /* Theme */ = {
 			isa = PBXGroup;
 			children = (
 				37D92CBE209CDFF700C0FD1A /* ThemeManager.swift */,
-				37D92CC0209CE3B700C0FD1A /* EmeraldTheme.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -391,10 +381,26 @@
 			path = Payments;
 			sourceTree = "<group>";
 		};
+		A24765F921B9906700C8E241 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				A247660321B9ADAD00C8E241 /* CardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		A24C273121C1280A00B65722 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				A24C273221C1283700B65722 /* CardViewTests.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		A24C7AFA202374760019A85F /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
-				A2C43C9E201F85A90067AA7E /* UIColor Extensions */,
+				A2C43C9F201F85BE0067AA7E /* UIColor+Palette.swift */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -506,7 +512,6 @@
 			children = (
 				A27003652017A8D8008FBB2E /* Info.plist */,
 				37EEED2C2124986300469F01 /* Extensions */,
-				37D2643020A10FFC006BE83D /* Theme */,
 				375B78C720D2F732005F9563 /* Components */,
 				378F4D58206C068400C52CEB /* Custom Views */,
 			);
@@ -797,14 +802,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A2C43C9E201F85A90067AA7E /* UIColor Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				A2C43C9F201F85BE0067AA7E /* UIColor+Palette.swift */,
-			);
-			path = "UIColor Extensions";
-			sourceTree = "<group>";
-		};
 		A2C95312217E410F000073E2 /* Label */ = {
 			isa = PBXGroup;
 			children = (
@@ -1042,9 +1039,9 @@
 				A2554D3321597C14006F0C5D /* EmeraldDateRangeFilterView.swift in Sources */,
 				A24685E820912BBB00D934BE /* WeekHeader.swift in Sources */,
 				37D2642D20A0D4AE006BE83D /* EmeraldTextField.swift in Sources */,
+				A247660521B9ADAD00C8E241 /* CardView.swift in Sources */,
 				A2690CF3213D8092007ED6B1 /* EmeraldDateRangePicker.swift in Sources */,
 				37BF7C0E212239A100A09737 /* Date.swift in Sources */,
-				37D92CC1209CE3B700C0FD1A /* EmeraldTheme.swift in Sources */,
 				37C2F97220A207DE001A9BCD /* PaymentListViewModel.swift in Sources */,
 				37D92CBF209CDFF700C0FD1A /* ThemeManager.swift in Sources */,
 				37AF650C20B8A16C00D90AE0 /* LoadingTableViewCell.swift in Sources */,
@@ -1076,11 +1073,9 @@
 			files = (
 				375B78C920D2F746005F9563 /* InputTests.swift in Sources */,
 				A21963E72180E6B30038450D /* LabelTests+TextColor.swift in Sources */,
-				37D2643220A1100E006BE83D /* ThemeTests.swift in Sources */,
 				37BDFD8620D4668500FE97A3 /* FormControllerTests.swift in Sources */,
 				372395E820DD56AE0018BB46 /* PickerTests.swift in Sources */,
 				37D2642220A0BA51006BE83D /* CalendarCollectionCustomViewCellTests.swift in Sources */,
-				37D2643420A11284006BE83D /* ThemeManagerTests.swift in Sources */,
 				A21963F12180F3F70038450D /* LabelTests+BorderWidth.swift in Sources */,
 				A21963ED2180EE0B0038450D /* LabelTests+Icon.swift in Sources */,
 				37EEED2E2124987E00469F01 /* UINavigationControllerTests.swift in Sources */,
@@ -1097,6 +1092,7 @@
 				A21963E52180D8C60038450D /* LabelTests.swift in Sources */,
 				A2690CAC213712E3007ED6B1 /* PaymentListTableCellTests.swift in Sources */,
 				A21963E92180E88F0038450D /* LabelTests+TextAlignment.swift in Sources */,
+				A24C273321C1283700B65722 /* CardViewTests.swift in Sources */,
 				A2554D3E215AA997006F0C5D /* DateRangeFilterViewTests.swift in Sources */,
 				37B813242123891D003A8C8E /* DateRangePickerTests.swift in Sources */,
 				A21963EF2180F25A0038450D /* LabelTests+ BorderColor.swift in Sources */,

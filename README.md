@@ -1,4 +1,3 @@
-[![Build Status](https://app.bitrise.io/app/b0f586b20bb038c4/status.svg?token=WIURG6s4E7XEkm9GOGx3pA)](https://app.bitrise.io/app/b0f586b20bb038c4)
 [![Alert Status](https://sonarcloud.io/api/project_badges/measure?project=br.com.stoneco.EmeraldComponents&metric=alert_status)](https://sonarcloud.io/dashboard?id=br.com.stoneco.EmeraldComponents)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=br.com.stoneco.EmeraldComponents&metric=coverage)](https://sonarcloud.io/component_measures?id=br.com.stoneco.EmeraldComponents&metric=Coverage)
 

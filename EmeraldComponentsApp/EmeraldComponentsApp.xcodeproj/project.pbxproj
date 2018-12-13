@@ -35,6 +35,15 @@
 		A23E8AEE2149AA8A00933AC1 /* DateRangePickerViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AED2149AA8A00933AC1 /* DateRangePickerViewUITests.swift */; };
 		A23E8AF32149AC5C00933AC1 /* DateRangePickerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23E8AF22149AC5C00933AC1 /* DateRangePickerView.storyboard */; };
 		A23E8AF52149ACBC00933AC1 /* DateRangePickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E8AF42149ACBC00933AC1 /* DateRangePickerTableViewController.swift */; };
+		A247661221BACB8300C8E241 /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A247661121BACB8300C8E241 /* Card.storyboard */; };
+		A247661821BAF5BE00C8E241 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247661721BAF5BE00C8E241 /* CardViewController.swift */; };
+		A247661C21BB0C0000C8E241 /* CustomStoneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247661A21BB0C0000C8E241 /* CustomStoneCollectionViewCell.swift */; };
+		A247661D21BB0C0000C8E241 /* CustomStoneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A247661B21BB0C0000C8E241 /* CustomStoneCollectionViewCell.xib */; };
+		A24C272621BFD1A600B65722 /* CustomEqualsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C272421BFD1A500B65722 /* CustomEqualsCollectionViewCell.swift */; };
+		A24C272721BFD1A600B65722 /* CustomEqualsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24C272521BFD1A500B65722 /* CustomEqualsCollectionViewCell.xib */; };
+		A24C273021C11D3B00B65722 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C272F21C11D3B00B65722 /* CardCollectionViewCell.swift */; };
+		A24C273621C1730A00B65722 /* CardViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C273521C1730A00B65722 /* CardViewUITests.swift */; };
+		A24765F821B8439100C8E241 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24765F721B8439100C8E241 /* ButtonsViewController.swift */; };
 		A2C95318217E50C0000073E2 /* Label.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C95317217E50C0000073E2 /* Label.storyboard */; };
 		A2C9531E217F6E25000073E2 /* LabelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9531D217F6E25000073E2 /* LabelTableViewController.swift */; };
 		A2C9B4FB21471B1700634344 /* InputUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B4FA21471B1700634344 /* InputUITests.swift */; };
@@ -85,6 +94,15 @@
 		A23E8AED2149AA8A00933AC1 /* DateRangePickerViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePickerViewUITests.swift; sourceTree = "<group>"; };
 		A23E8AF22149AC5C00933AC1 /* DateRangePickerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateRangePickerView.storyboard; sourceTree = "<group>"; };
 		A23E8AF42149ACBC00933AC1 /* DateRangePickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePickerTableViewController.swift; sourceTree = "<group>"; };
+		A247661121BACB8300C8E241 /* Card.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Card.storyboard; sourceTree = "<group>"; };
+		A247661721BAF5BE00C8E241 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		A247661A21BB0C0000C8E241 /* CustomStoneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStoneCollectionViewCell.swift; sourceTree = "<group>"; };
+		A247661B21BB0C0000C8E241 /* CustomStoneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomStoneCollectionViewCell.xib; sourceTree = "<group>"; };
+		A24C272421BFD1A500B65722 /* CustomEqualsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEqualsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A24C272521BFD1A500B65722 /* CustomEqualsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomEqualsCollectionViewCell.xib; sourceTree = "<group>"; };
+		A24C272F21C11D3B00B65722 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		A24C273521C1730A00B65722 /* CardViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewUITests.swift; sourceTree = "<group>"; };
+		A24765F721B8439100C8E241 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		A2C95317217E50C0000073E2 /* Label.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Label.storyboard; sourceTree = "<group>"; };
 		A2C9531D217F6E25000073E2 /* LabelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewController.swift; sourceTree = "<group>"; };
 		A2C9B4F821471B1700634344 /* EmeraldComponentsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmeraldComponentsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				A23413CF2147122A009DC2FC /* Buttons.storyboard */,
+				A24765F721B8439100C8E241 /* ButtonsViewController.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -201,6 +220,7 @@
 		A23E8AC42147F7BA00933AC1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A24C273421C172D000B65722 /* Card */,
 				A23E8AEC2149AA5900933AC1 /* DateRangePickerView */,
 				A23E8AC72148375700933AC1 /* Inputs */,
 				A21963F4218104EB0038450D /* Label */,
@@ -254,6 +274,7 @@
 		A23E8AF02149AB8C00933AC1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A24765FE21B9A8D200C8E241 /* Card */,
 				A23E8AF12149AC0500933AC1 /* DateRangePickerView */,
 				A2C95316217E5096000073E2 /* Label */,
 				A23413CE2147122A009DC2FC /* Buttons */,
@@ -270,6 +291,36 @@
 				A23E8AF42149ACBC00933AC1 /* DateRangePickerTableViewController.swift */,
 			);
 			path = DateRangePickerView;
+			sourceTree = "<group>";
+		};
+		A24765FE21B9A8D200C8E241 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				A247661921BB0BE000C8E241 /* Custom */,
+				A247661121BACB8300C8E241 /* Card.storyboard */,
+				A247661721BAF5BE00C8E241 /* CardViewController.swift */,
+				A24C272F21C11D3B00B65722 /* CardCollectionViewCell.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		A247661921BB0BE000C8E241 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				A24C272421BFD1A500B65722 /* CustomEqualsCollectionViewCell.swift */,
+				A24C272521BFD1A500B65722 /* CustomEqualsCollectionViewCell.xib */,
+				A247661A21BB0C0000C8E241 /* CustomStoneCollectionViewCell.swift */,
+				A247661B21BB0C0000C8E241 /* CustomStoneCollectionViewCell.xib */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		A24C273421C172D000B65722 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				A24C273521C1730A00B65722 /* CardViewUITests.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		A2C95316217E5096000073E2 /* Label */ = {
@@ -422,11 +473,14 @@
 				A23413E22147122A009DC2FC /* Buttons.storyboard in Resources */,
 				A23413E12147122A009DC2FC /* Main.storyboard in Resources */,
 				A23E8AF32149AC5C00933AC1 /* DateRangePickerView.storyboard in Resources */,
+				A247661D21BB0C0000C8E241 /* CustomStoneCollectionViewCell.xib in Resources */,
 				A2C95318217E50C0000073E2 /* Label.storyboard in Resources */,
 				A23413DB2147122A009DC2FC /* Assets.xcassets in Resources */,
 				A23413DC2147122A009DC2FC /* LaunchScreen.storyboard in Resources */,
 				A23413E82147122A009DC2FC /* PickerView.storyboard in Resources */,
 				A23413E62147122A009DC2FC /* Input.storyboard in Resources */,
+				A247661221BACB8300C8E241 /* Card.storyboard in Resources */,
+				A24C272721BFD1A600B65722 /* CustomEqualsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,11 +572,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A23413E52147122A009DC2FC /* InputTableViewController.swift in Sources */,
+				A247661C21BB0C0000C8E241 /* CustomStoneCollectionViewCell.swift in Sources */,
 				A23E8AF52149ACBC00933AC1 /* DateRangePickerTableViewController.swift in Sources */,
+				A24C273021C11D3B00B65722 /* CardCollectionViewCell.swift in Sources */,
 				A2C9531E217F6E25000073E2 /* LabelTableViewController.swift in Sources */,
 				A23413DE2147122A009DC2FC /* AppDelegate.swift in Sources */,
+				A247661821BAF5BE00C8E241 /* CardViewController.swift in Sources */,
+				A24765F821B8439100C8E241 /* ButtonsViewController.swift in Sources */,
 				A23E8AE52148696F00933AC1 /* PickerData.swift in Sources */,
 				A23413E02147122A009DC2FC /* MainViewController.swift in Sources */,
+				A24C272621BFD1A600B65722 /* CustomEqualsCollectionViewCell.swift in Sources */,
 				A23E8AE2214868C600933AC1 /* PickerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +602,7 @@
 				A23E8AD321484AE000933AC1 /* InputUITests+Currency.swift in Sources */,
 				A23E8ADC214863A500933AC1 /* PickerUITests.swift in Sources */,
 				A23E8ACB21483A5F00933AC1 /* InputUITests+CPF.swift in Sources */,
+				A24C273621C1730A00B65722 /* CardViewUITests.swift in Sources */,
 				A23E8AC92148377C00933AC1 /* InputUITests+CNPJ.swift in Sources */,
 				A2E64BBA21503DFF00FD1937 /* AttachmentHelper.swift in Sources */,
 				A23E8AD12148452900933AC1 /* InputUITests+Custom.swift in Sources */,
