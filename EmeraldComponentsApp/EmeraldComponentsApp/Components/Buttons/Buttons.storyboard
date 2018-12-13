@@ -61,7 +61,7 @@
                                                         <rect key="frame" x="0.0" y="96" width="300" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Aceitar">
-                                                            <color key="titleColor" red="1" green="0.16020881470000001" blue="0.20781502939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" red="1" green="0.16078431372549018" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
