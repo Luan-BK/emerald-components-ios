@@ -16,6 +16,7 @@
 		37653E9520602B7100EB415B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37653E9420602B7100EB415B /* UIView.swift */; };
 		3769F6E32093D376000DA1A0 /* OperationTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3769F6E22093D376000DA1A0 /* OperationTableViewCellTests.swift */; };
 		377381E420D9BDD2000B8C84 /* ButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377381E320D9BDD2000B8C84 /* ButtonTests.swift */; };
+		377D442A21D56F920012B675 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 377D442921D56F920012B675 /* CardView.xib */; };
 		37AF650C20B8A16C00D90AE0 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF650A20B8A16C00D90AE0 /* LoadingTableViewCell.swift */; };
 		37AF650D20B8A16C00D90AE0 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37AF650B20B8A16C00D90AE0 /* LoadingTableViewCell.xib */; };
 		37B813152123450B003A8C8E /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B813142123450B003A8C8E /* UINavigationController.swift */; };
@@ -114,6 +115,7 @@
 		37653E9420602B7100EB415B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3769F6E22093D376000DA1A0 /* OperationTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTableViewCellTests.swift; sourceTree = "<group>"; };
 		377381E320D9BDD2000B8C84 /* ButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTests.swift; sourceTree = "<group>"; };
+		377D442921D56F920012B675 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		37AF650A20B8A16C00D90AE0 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		37AF650B20B8A16C00D90AE0 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
 		37B813142123450B003A8C8E /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				A247660321B9ADAD00C8E241 /* CardView.swift */,
+				377D442921D56F920012B675 /* CardView.xib */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -913,6 +916,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37AF650D20B8A16C00D90AE0 /* LoadingTableViewCell.xib in Resources */,
+				377D442A21D56F920012B675 /* CardView.xib in Resources */,
 				A2883B102190DB3500864094 /* WeekHeader.xib in Resources */,
 				A2C9531A217E69FD000073E2 /* EmeraldLabel.xib in Resources */,
 				A2883B072190D76400864094 /* SearchList.storyboard in Resources */,
