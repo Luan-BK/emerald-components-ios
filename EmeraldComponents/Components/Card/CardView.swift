@@ -8,70 +8,115 @@
 
 import UIKit
 
+@IBDesignable
 public class CardView: UIView {
 
     // MARK: - Properties
     
-    internal var shadowView: UIView! = UIView()
+    @IBOutlet var contentView: UIView!
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var headerTitleLabel: UILabel!
+    
+    internal var containerView: UIView! = UIView()
     
     private let trailingAndLeadingConstraint: CGFloat = 16.0
     private let topAndBottomConstraint: CGFloat = 16.0
     
-    internal var cornerRadius: CGFloat = 10.0
-    internal var shadowRadius: CGFloat = 18.0
+    public enum TitleSize: Int {
+        case small = 0
+        case medium
+        case big
+        
+        var font: UIFont {
+            switch self {
+            case .small:
+                return UIFont.systemFont(ofSize: 16.0, weight: .bold)
+            case .medium:
+                return UIFont.systemFont(ofSize: 20.0, weight: .bold)
+            case .big:
+                return UIFont.systemFont(ofSize: 24.0, weight: .bold)
+            }
+        }
+    }
+    
+    @IBInspectable public var headerTitle: String {
+        get {
+            return self.headerTitleLabel.text ?? ""
+        }
+        set {
+            self.headerTitleLabel.text = newValue
+            self.headerView.isHidden = newValue.isEmpty
+        }
+    }
+    
+    @IBInspectable public var titleSize: Int = 1 {
+        didSet {
+            self.headerTitleLabel.font = (TitleSize(rawValue: titleSize) ?? .medium).font
+        }
+    }
+    
+    /// The radius to use for the card's rounded corners.
+    @IBInspectable public var cornerRadius: CGFloat = 10.0 {
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+            self.containerView.layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    /// The blur radius used on the card's shadow.
+    @IBInspectable public var shadowRadius: CGFloat = 18.0 {
+        didSet {
+            self.layer.shadowRadius = shadowRadius
+        }
+    }
     
     // MARK: - Init
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.contentSetup()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         self.contentSetup()
     }
 
     private func contentSetup() {
-        self.setLayoutSubviews()
-        self.addSubview(self.shadowView)
+        Bundle.emerald.loadNibNamed(String(describing: CardView.self), owner: self, options: nil)
+        
+        addSubview(self.contentView)
+        
+        self.contentView.frame = self.bounds
+        self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
+        self.setUpLayout()
     }
     
-    internal func setLayoutSubviews() {
-        self.shadowView.frame = self.bounds
-        self.shadowView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        self.shadowView.backgroundColor = UIColor.clear
-        self.shadowView.clipsToBounds = false
-        self.shadowView.layer.shadowColor = UIColor.black.cgColor
-        self.shadowView.layer.shadowOpacity = 0.1
-        self.shadowView.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
-        self.shadowView.layer.shadowRadius = self.shadowRadius
-        self.shadowView.layer.cornerRadius = self.cornerRadius
+    internal func setUpLayout() {
+        self.backgroundColor = .clear
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.1
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
+        self.layer.shadowRadius = self.shadowRadius
+        self.layer.cornerRadius = self.cornerRadius
+        
+        self.contentView.clipsToBounds = true
+        self.contentView.layer.cornerRadius = self.cornerRadius
+        self.contentView.frame = self.bounds
+        self.contentView.backgroundColor = UIColor.Palette.Light.white1
+
+//        self.contentView.addSubview(self.containerView)
+
+//        NSLayoutConstraint.activate([
+//            containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
+//            containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+//            containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+//            containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
+//            ])
     }
     
     // MARK: - Public methods
-    
-    /// Updates CardView cornerRadius
-    ///
-    /// - Parameters:
-    ///   - view: Custom view to be updated
-    ///   - cornerRadius: cornerRadius to be setted to custom view
-    public func setPropertyTo(view: UIView, cornerRadius: CGFloat) {
-        self.cornerRadius = cornerRadius
-        view.layer.cornerRadius = self.cornerRadius
-    }
-    
-    /// Updates CardView shadowRadius
-    ///
-    /// - Parameters:
-    ///   - view: Custom view to be updated
-    ///   - shadowRadius: shadowRadius to be setted to custom view
-    public func setPropertyTo(view: UIView, shadowRadius: CGFloat) {
-        self.shadowRadius = shadowRadius
-        view.layer.shadowRadius = self.shadowRadius
-    }
     
     /// Sets custom subview inside CardView
     ///
@@ -82,7 +127,7 @@ public class CardView: UIView {
     public func addSuperviewTo(customView: UIView,
                                width: CGFloat,
                                height: CGFloat) {
-        self.shadowView.addSubview(customView)
+        self.containerView.addSubview(customView)
         self.setPropertiesTo(customView: customView)
         self.setConstraintTo(customView: customView,
                              with: width,
@@ -112,7 +157,7 @@ public class CardView: UIView {
         let horizontal = NSLayoutConstraint(item: customView,
                                             attribute: .centerX,
                                             relatedBy: .equal,
-                                            toItem: self.shadowView,
+                                            toItem: self.containerView,
                                             attribute: .centerX,
                                             multiplier: 1,
                                             constant: 0)
@@ -120,7 +165,7 @@ public class CardView: UIView {
         let vertical = NSLayoutConstraint(item: customView,
                                           attribute: .centerY,
                                           relatedBy: .equal,
-                                          toItem: self.shadowView,
+                                          toItem: self.containerView,
                                           attribute: .centerY,
                                           multiplier: 1,
                                           constant: 0)
@@ -141,7 +186,7 @@ public class CardView: UIView {
                                         multiplier: 1,
                                         constant: height - self.topAndBottomConstraint)
         
-        self.shadowView.addConstraints([horizontal, vertical, width, height])
+        self.containerView.addConstraints([horizontal, vertical, width, height])
     }
     
 }
