@@ -10,20 +10,24 @@ import UIKit
 
 @IBDesignable
 public class CardView: UIView {
+    
+    private let margin: CGFloat = 24.0
 
     // MARK: - Properties
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerTitleLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
     
-    internal var containerView: UIView! = UIView()
+    // MARK: - Constraints
     
-    private let trailingAndLeadingConstraint: CGFloat = 16.0
-    private let topAndBottomConstraint: CGFloat = 16.0
+    @IBOutlet weak var rightMarginConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leftMarginConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomMarginConstraint: NSLayoutConstraint!
     
     public enum TitleSize: Int {
-        case small = 0
+        case small = 1
         case medium
         case big
         
@@ -39,6 +43,10 @@ public class CardView: UIView {
         }
     }
     
+    /// A title for the card's header.
+    ///
+    /// Setting an empty string for this property will
+    /// automatically hide the header title section.
     @IBInspectable public var headerTitle: String {
         get {
             return self.headerTitleLabel.text ?? ""
@@ -49,6 +57,7 @@ public class CardView: UIView {
         }
     }
     
+    /// The font size for the header title, if enabled.
     @IBInspectable public var titleSize: Int = 1 {
         didSet {
             self.headerTitleLabel.font = (TitleSize(rawValue: titleSize) ?? .medium).font
@@ -59,7 +68,7 @@ public class CardView: UIView {
     @IBInspectable public var cornerRadius: CGFloat = 10.0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
-            self.containerView.layer.cornerRadius = cornerRadius
+            self.contentView.layer.cornerRadius = cornerRadius
         }
     }
     
@@ -67,6 +76,25 @@ public class CardView: UIView {
     @IBInspectable public var shadowRadius: CGFloat = 18.0 {
         didSet {
             self.layer.shadowRadius = shadowRadius
+        }
+    }
+    
+    /// A boolean value that indicates if the side margins are enabled.
+    ///
+    /// Default value is `false`.
+    @IBInspectable var sideMarginsEnabled: Bool = false {
+        didSet {
+            rightMarginConstraint.constant = sideMarginsEnabled ? margin : 0.0
+            leftMarginConstraint.constant = sideMarginsEnabled ? margin : 0.0
+        }
+    }
+    
+    /// A boolean value that indicates if the bottom margin is enabled.
+    ///
+    /// Default value is `false`.
+    @IBInspectable var bottomMarginsEnabled: Bool = false {
+        didSet {
+            bottomMarginConstraint.constant = bottomMarginsEnabled ? margin : 0.0
         }
     }
     
@@ -83,8 +111,9 @@ public class CardView: UIView {
     }
 
     private func contentSetup() {
-        Bundle.emerald.loadNibNamed(String(describing: CardView.self), owner: self, options: nil)
+        guard self.contentView == nil else { return }
         
+        Bundle.emerald.loadNibNamed(String(describing: CardView.self), owner: self, options: nil)
         addSubview(self.contentView)
         
         self.contentView.frame = self.bounds
@@ -105,88 +134,64 @@ public class CardView: UIView {
         self.contentView.layer.cornerRadius = self.cornerRadius
         self.contentView.frame = self.bounds
         self.contentView.backgroundColor = UIColor.Palette.Light.white1
-
-//        self.contentView.addSubview(self.containerView)
-
-//        NSLayoutConstraint.activate([
-//            containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-//            containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-//            containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-//            containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
-//            ])
     }
     
     // MARK: - Public methods
     
-    /// Sets custom subview inside CardView
+    /// Adds a view to the card's container.
     ///
-    /// - Parameters:
-    ///   - customView: Custom view to be setted inside superview
-    ///   - width: Custom view width constat
-    ///   - height: Custom view height constat
-    public func addSuperviewTo(customView: UIView,
-                               width: CGFloat,
-                               height: CGFloat) {
-        self.containerView.addSubview(customView)
-        self.setPropertiesTo(customView: customView)
-        self.setConstraintTo(customView: customView,
-                             with: width,
-                             and: height)
+    /// The view will fill all of the card's container area.
+    public func embeddView(_ view: UIView) {
+        self.addSubview(view)
+        
+        NSLayoutConstraint.activate([
+            view.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor, constant: 0.0),
+            view.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor, constant: 0.0),
+            view.topAnchor.constraint(equalTo: self.containerView.topAnchor, constant: 0.0),
+            view.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor, constant: 0.0)
+            ])
     }
     
-    // MARK: - Internal methods
+    // MARK: - Layout override methods
     
-    /// Sets default properties to custom view
-    ///
-    /// - Parameter customView: Custom view
-    internal func setPropertiesTo(customView: UIView) {
-        customView.layer.cornerRadius = self.cornerRadius
-        customView.translatesAutoresizingMaskIntoConstraints = false
+    override public func addSubview(_ view: UIView) {
+        guard view != contentView else {
+            super.addSubview(view)
+            return
+        }
+        
+        if contentView == nil {
+            self.contentSetup()
+        }
+        
+        view.frame.origin = view.convert(self.frame.origin, to: self.containerView)
+        
+        self.containerView.addSubview(view)
     }
     
-    /// Sets subview constraints to superview
-    ///
-    /// - Parameters:
-    ///   - customView: Custom view to be setted inside superview
-    ///   - width: Custom view width constat
-    ///   - height: Custom view height constat
-    internal func setConstraintTo(customView: UIView,
-                                  with width: CGFloat,
-                                  and height: CGFloat) {
+    override public func addConstraint(_ constraint: NSLayoutConstraint) {
+        guard let first = (constraint.firstItem as? UIView),
+            let second = (constraint.secondItem as? UIView),
+            self.containerView.subviews.contains(first) || self.containerView.subviews.contains(second) else {
+                super.addConstraint(constraint)
+                return
+        }
         
-        let horizontal = NSLayoutConstraint(item: customView,
-                                            attribute: .centerX,
-                                            relatedBy: .equal,
-                                            toItem: self.containerView,
-                                            attribute: .centerX,
-                                            multiplier: 1,
-                                            constant: 0)
-        
-        let vertical = NSLayoutConstraint(item: customView,
-                                          attribute: .centerY,
-                                          relatedBy: .equal,
-                                          toItem: self.containerView,
-                                          attribute: .centerY,
-                                          multiplier: 1,
-                                          constant: 0)
-        
-        let width = NSLayoutConstraint(item: customView,
-                                       attribute: .width,
-                                       relatedBy: .equal,
-                                       toItem: nil,
-                                       attribute: .notAnAttribute,
-                                       multiplier: 1,
-                                       constant: width - self.trailingAndLeadingConstraint)
-        
-        let height = NSLayoutConstraint(item: customView,
-                                        attribute: .height,
-                                        relatedBy: .equal,
-                                        toItem: nil,
-                                        attribute: .notAnAttribute,
-                                        multiplier: 1,
-                                        constant: height - self.topAndBottomConstraint)
-        
-        self.containerView.addConstraints([horizontal, vertical, width, height])
+        super.addConstraint(self.getNewConstraint(constraint))
+    }
+    
+    // MARK: - Aux methods
+    
+    /// Returns a new constraint where the first and/or second itens are replaced by
+    /// the container view.
+    private func getNewConstraint(_ constraint: NSLayoutConstraint) -> NSLayoutConstraint {
+        return NSLayoutConstraint(item: constraint.firstItem as? UIView == self ? self.containerView : constraint.firstItem as Any,
+                                  attribute: constraint.firstAttribute,
+                                  relatedBy: constraint.relation,
+                                  toItem: constraint.secondItem as? UIView == self ? self.containerView : constraint.secondItem,
+                                  attribute: constraint.secondAttribute,
+                                  multiplier: constraint.multiplier,
+                                  constant: constraint.constant)
     }
     
 }
