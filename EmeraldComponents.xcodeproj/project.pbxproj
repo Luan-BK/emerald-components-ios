@@ -31,7 +31,6 @@
 		37C2A4F820939AF90098E876 /* EmeraldOperationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2A4F620939AF90098E876 /* EmeraldOperationTableViewCell.swift */; };
 		37C2A4FB2093A2B20098E876 /* EmeraldOperationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2A4FA2093A2B20098E876 /* EmeraldOperationCellViewModel.swift */; };
 		37C2F97220A207DE001A9BCD /* PaymentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C2F97120A207DE001A9BCD /* PaymentListViewModel.swift */; };
-		37D15A6521D547C600300960 /* TestSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D15A6421D547C600300960 /* TestSB.storyboard */; };
 		37D2642220A0BA51006BE83D /* CalendarCollectionCustomViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2642120A0BA51006BE83D /* CalendarCollectionCustomViewCellTests.swift */; };
 		37D2642620A0BFC6006BE83D /* WeekHeaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2642520A0BFC6006BE83D /* WeekHeaderTests.swift */; };
 		37D2642920A0D08E006BE83D /* EmeraldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2642820A0D08E006BE83D /* EmeraldButton.swift */; };
@@ -132,7 +131,6 @@
 		37C2A4F620939AF90098E876 /* EmeraldOperationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldOperationTableViewCell.swift; sourceTree = "<group>"; };
 		37C2A4FA2093A2B20098E876 /* EmeraldOperationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldOperationCellViewModel.swift; sourceTree = "<group>"; };
 		37C2F97120A207DE001A9BCD /* PaymentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListViewModel.swift; sourceTree = "<group>"; };
-		37D15A6421D547C600300960 /* TestSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestSB.storyboard; sourceTree = "<group>"; };
 		37D2642120A0BA51006BE83D /* CalendarCollectionCustomViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionCustomViewCellTests.swift; sourceTree = "<group>"; };
 		37D2642520A0BFC6006BE83D /* WeekHeaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeaderTests.swift; sourceTree = "<group>"; };
 		37D2642820A0D08E006BE83D /* EmeraldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmeraldButton.swift; sourceTree = "<group>"; };
@@ -390,7 +388,6 @@
 			children = (
 				A247660321B9ADAD00C8E241 /* CardView.swift */,
 				377D442921D56F920012B675 /* CardView.xib */,
-				37D15A6421D547C600300960 /* TestSB.storyboard */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -919,7 +916,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				37AF650D20B8A16C00D90AE0 /* LoadingTableViewCell.xib in Resources */,
-				37D15A6521D547C600300960 /* TestSB.storyboard in Resources */,
 				377D442A21D56F920012B675 /* CardView.xib in Resources */,
 				A2883B102190DB3500864094 /* WeekHeader.xib in Resources */,
 				A2C9531A217E69FD000073E2 /* EmeraldLabel.xib in Resources */,
