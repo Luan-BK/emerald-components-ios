@@ -10,151 +10,159 @@ import XCTest
 @testable import EmeraldComponents
 
 class CardViewTests: XCTestCase {
+    
+    private let expectedMargin: CGFloat = 24.0
 
     internal var cardView: CardView!
     
-    internal var frame: CGRect!
-    internal var view: UIView!
-    
     override func setUp() {
         super.setUp()
-        
-        self.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-        self.view = UIView(frame: frame)
         self.cardView = CardView()
     }
 
     override func tearDown() {
         self.cardView = nil
-        self.frame = nil
-        self.view = nil
-        
         super.tearDown()
     }
     
-    func testLayoutSubviews_frame() {
-        // given
-        let frame = self.cardView.shadowView.frame
-        let bounds = self.cardView.shadowView.bounds
-        // then
-        XCTAssertEqual(frame, bounds)
+    func testTitleSizeEnumFonts() {
+        XCTAssertEqual(CardView.TitleSize.small.font, UIFont.systemFont(ofSize: 16.0, weight: .bold))
+        XCTAssertEqual(CardView.TitleSize.medium.font, UIFont.systemFont(ofSize: 20.0, weight: .bold))
+        XCTAssertEqual(CardView.TitleSize.big.font, UIFont.systemFont(ofSize: 24.0, weight: .bold))
     }
     
-    func testLayoutSubviews_autoresizingMask() {
-        // given
-        let autoresizingMask: UIView.AutoresizingMask = [.flexibleHeight, .flexibleWidth]
-        // then
-        XCTAssertEqual(autoresizingMask,
-                       self.cardView.shadowView.autoresizingMask)
+    func testSetHeaderTitleNotEmpty() {
+        let emptyTitle = ""
+        
+        self.cardView.headerTitle = emptyTitle
+        
+        XCTAssertEqual(self.cardView.headerTitle, emptyTitle)
+        XCTAssertEqual(self.cardView.headerTitleLabel.text, emptyTitle)
+        XCTAssertTrue(self.cardView.headerView.isHidden)
     }
     
-    func testLayoutSubviews_backgroundColor() {
-        // given
-        let color = UIColor.clear
-        // then
-        XCTAssertEqual(color,
-                       self.cardView.shadowView.backgroundColor)
-    }
-
-    func testLayoutSubviews_clipsToBounds() {
-        // given
-        let clipsToBounds = false
-        // then
-        XCTAssertEqual(clipsToBounds,
-                       self.cardView.shadowView.clipsToBounds)
+    func testSetHeaderTitleEmpty() {
+        let title = "Some Header Title"
+        
+        self.cardView.headerTitle = title
+        
+        XCTAssertEqual(self.cardView.headerTitle, title)
+        XCTAssertEqual(self.cardView.headerTitleLabel.text, title)
+        XCTAssertFalse(self.cardView.headerView.isHidden)
     }
     
-    func testLayoutSubviews_shadowColor() {
-        // given
-        let shadowColor = UIColor.black.cgColor
-        // then
-        XCTAssertEqual(shadowColor,
-                       self.cardView.shadowView.layer.shadowColor)
+    func testSetTitleSizeAdapterWithValidInt() {
+        let validSizeInt = 2
+        
+        self.cardView.titleSizeAdapter = validSizeInt
+        
+        XCTAssertEqual(self.cardView.titleSize, CardView.TitleSize(rawValue: validSizeInt)!)
     }
     
-    func testLayoutSubviews_shadowOpacity() {
-        // given
-        let shadowOpacity: Float = 0.10000000149011612
-        // then
-        XCTAssertEqual(shadowOpacity,
-                       self.cardView.shadowView.layer.shadowOpacity)
+    func testSetTitleSizeAdapterWithInvalidInt() {
+        let invalidSizeInt = -200
+        
+        self.cardView.titleSizeAdapter = invalidSizeInt
+        
+        XCTAssertEqual(self.cardView.titleSize, CardView.TitleSize.medium)
     }
     
-    func testLayoutSubviews_shadowOffset() {
-        // given
-        let shadowOffset = CGSize(width: 0.0, height: 4.0)
-        // then
-        XCTAssertEqual(shadowOffset,
-                       self.cardView.shadowView.layer.shadowOffset)
+    func testSetTitleSize() {
+        let someSize = CardView.TitleSize.big
+        
+        self.cardView.titleSize = someSize
+        
+        XCTAssertEqual(self.cardView.headerTitleLabel.font, someSize.font)
     }
     
-    func testLayoutSubviews_shadowRadius() {
-        // given
-        let shadowRadius: CGFloat = 18.0
-        // then
-        XCTAssertEqual(shadowRadius,
-                       self.cardView.shadowView.layer.shadowRadius)
+    func testSetCornerRadius() {
+        let newCornerRadius: CGFloat = 20.0
+        
+        self.cardView.cornerRadius = newCornerRadius
+        
+        XCTAssertEqual(self.cardView.layer.cornerRadius, newCornerRadius)
+        XCTAssertEqual(self.cardView.contentView.layer.cornerRadius, newCornerRadius)
     }
     
-    func testLayoutSubviews_cornerRadius() {
-        // given
-        let cornerRadius: CGFloat = 10.0
-        // then
-        XCTAssertEqual(cornerRadius,
-                       self.cardView.shadowView.layer.cornerRadius)
+    func testSetShadowColor() {
+        let newShadowRadius: CGFloat = 5.0
+        
+        self.cardView.shadowRadius = newShadowRadius
+        
+        XCTAssertEqual(self.cardView.layer.shadowRadius, newShadowRadius)
     }
     
-    func testSetProperty_corderRadius() {
-        // given
-        let cornerRadius: CGFloat = 10.0
-        // when
-        self.cardView.setPropertyTo(view: self.view, cornerRadius: cornerRadius)
-        // then
-        XCTAssertEqual(cornerRadius, self.cardView.cornerRadius)
+    func testEnableSideMargins() {
+        self.cardView.sideMarginsEnabled = true
+        
+        XCTAssertEqual(self.cardView.rightMarginConstraint.constant, expectedMargin)
+        XCTAssertEqual(self.cardView.leftMarginConstraint.constant, expectedMargin)
     }
     
-    func testSetProperty_shadowRadius() {
-        // given
-        let shadowRadius: CGFloat = 10.0
-        // when
-        self.cardView.setPropertyTo(view: self.view, shadowRadius: shadowRadius)
-        // then
-        XCTAssertEqual(shadowRadius, self.cardView.shadowRadius)
+    func testDisableSideMargins() {
+        self.cardView.sideMarginsEnabled = false
+        
+        XCTAssertEqual(self.cardView.rightMarginConstraint.constant, 0.0)
+        XCTAssertEqual(self.cardView.leftMarginConstraint.constant, 0.0)
     }
     
-    func testAddSuperview() {
-        // given
-        // when
-        self.cardView.addSuperviewTo(customView: self.view,
-                                     width: frame.size.width,
-                                     height: frame.size.height)
-        // then
-        XCTAssertEqual(self.cardView.shadowView.subviews.first, self.view)
+    func testEnableTopMargin() {
+        self.cardView.topMarginEnabled = true
+        
+        XCTAssertEqual(self.cardView.topMarginConstraint.constant, expectedMargin)
     }
     
-    func testSetProperty_customView_corderRadius() {
-        // when
-        self.cardView.setPropertiesTo(customView: self.view)
-        // then
-        XCTAssertEqual(self.view.layer.cornerRadius,
-                       self.cardView.cornerRadius)
+    func testDisableTopMargin() {
+        self.cardView.topMarginEnabled = false
+        
+        XCTAssertEqual(self.cardView.topMarginConstraint.constant, 0.0)
     }
     
-    func testSetProperty_customView_autorezing() {
-        // when
-        self.cardView.setPropertiesTo(customView: self.view)
-        // then
-        XCTAssertEqual(self.view.translatesAutoresizingMaskIntoConstraints,
-                       false)
+    func testEnableBottomMargin() {
+        self.cardView.bottomMarginEnabled = true
+        
+        XCTAssertEqual(self.cardView.bottomMarginConstraint.constant, expectedMargin)
     }
     
-    func testSetConstraint_horizontal() {
-        // when
-        self.cardView.setConstraintTo(customView: self.view,
-                                      with: self.frame.size.width,
-                                      and: self.frame.size.height)
-        // then
-        XCTAssertEqual(self.cardView.shadowView.constraints.count, 4)
+    func testDisableBottomMargin() {
+        self.cardView.bottomMarginEnabled = false
+        
+        XCTAssertEqual(self.cardView.bottomMarginConstraint.constant, 0.0)
     }
     
+    func testSetUpLayout() {
+        self.cardView.setUpLayout()
+        
+        XCTAssertEqual(self.cardView.backgroundColor, .clear)
+        XCTAssertEqual(self.cardView.layer.shadowColor, UIColor.black.cgColor)
+        XCTAssertEqual(self.cardView.layer.shadowOpacity, 0.1)
+        XCTAssertEqual(self.cardView.layer.shadowOffset, CGSize(width: 0.0, height: 5.0))
+        XCTAssertEqual(self.cardView.layer.shadowRadius, self.cardView.shadowRadius)
+        XCTAssertEqual(self.cardView.layer.cornerRadius, self.cardView.cornerRadius)
+        
+        XCTAssertTrue(self.cardView.contentView.clipsToBounds)
+        XCTAssertEqual(self.cardView.contentView.layer.cornerRadius, self.cardView.cornerRadius)
+        XCTAssertEqual(self.cardView.contentView.frame, self.cardView.bounds)
+        XCTAssertEqual(self.cardView.contentView.backgroundColor, UIColor.Palette.Light.white1)
+        XCTAssertFalse(self.cardView.contentView.translatesAutoresizingMaskIntoConstraints)
+        
+        XCTAssertFalse(self.cardView.containerView.translatesAutoresizingMaskIntoConstraints)
+    }
+    
+    func testEmbedView() {
+        let viewToEmbed = UIView()
+        
+        self.cardView.embedView(viewToEmbed)
+        
+        XCTAssertTrue(self.cardView.containerView.subviews.contains(viewToEmbed))
+    }
+    
+    func testClearEmebeddedViews() {
+        let viewToBeCleared = UIView()
+        
+        self.cardView.embedView(viewToBeCleared)
+        self.cardView.clearEmbeddedViews()
+        
+        XCTAssertFalse(self.cardView.containerView.subviews.contains(viewToBeCleared))
+    }
 }
