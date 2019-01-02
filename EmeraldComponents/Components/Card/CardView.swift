@@ -22,9 +22,10 @@ public class CardView: UIView {
     
     // MARK: - Constraints
     
+    @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomMarginConstraint: NSLayoutConstraint!
     @IBOutlet weak var rightMarginConstraint: NSLayoutConstraint!
     @IBOutlet weak var leftMarginConstraint: NSLayoutConstraint!
-    @IBOutlet weak var bottomMarginConstraint: NSLayoutConstraint!
     
     public enum TitleSize: Int {
         case small = 1
@@ -89,12 +90,21 @@ public class CardView: UIView {
         }
     }
     
+    /// A boolean value that indicates if the top margin is enabled.
+    ///
+    /// Default value is `false`.
+    @IBInspectable var topMarginEnabled: Bool = false {
+        didSet {
+            topMarginConstraint.constant = topMarginEnabled ? margin : 0.0
+        }
+    }
+    
     /// A boolean value that indicates if the bottom margin is enabled.
     ///
     /// Default value is `false`.
-    @IBInspectable var bottomMarginsEnabled: Bool = false {
+    @IBInspectable var bottomMarginEnabled: Bool = false {
         didSet {
-            bottomMarginConstraint.constant = bottomMarginsEnabled ? margin : 0.0
+            bottomMarginConstraint.constant = bottomMarginEnabled ? margin : 0.0
         }
     }
     
@@ -115,9 +125,13 @@ public class CardView: UIView {
         
         Bundle.emerald.loadNibNamed(String(describing: CardView.self), owner: self, options: nil)
         addSubview(self.contentView)
-        
-        self.contentView.frame = self.bounds
-        self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+                
+        NSLayoutConstraint.activate([
+            self.contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
+            self.contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0.0),
+            self.contentView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
+            self.contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0.0)
+            ])
         
         self.setUpLayout()
     }
@@ -134,6 +148,9 @@ public class CardView: UIView {
         self.contentView.layer.cornerRadius = self.cornerRadius
         self.contentView.frame = self.bounds
         self.contentView.backgroundColor = UIColor.Palette.Light.white1
+        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.containerView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     // MARK: - Public methods
@@ -141,8 +158,8 @@ public class CardView: UIView {
     /// Adds a view to the card's container.
     ///
     /// The view will fill all of the card's container area.
-    public func embeddView(_ view: UIView) {
-        self.addSubview(view)
+    public func embedView(_ view: UIView) {
+        self.containerView.addSubview(view)
         
         NSLayoutConstraint.activate([
             view.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor, constant: 0.0),
@@ -152,46 +169,8 @@ public class CardView: UIView {
             ])
     }
     
-    // MARK: - Layout override methods
-    
-    override public func addSubview(_ view: UIView) {
-        guard view != contentView else {
-            super.addSubview(view)
-            return
-        }
-        
-        if contentView == nil {
-            self.contentSetup()
-        }
-        
-        view.frame.origin = view.convert(self.frame.origin, to: self.containerView)
-        
-        self.containerView.addSubview(view)
-    }
-    
-    override public func addConstraint(_ constraint: NSLayoutConstraint) {
-        guard let first = (constraint.firstItem as? UIView),
-            let second = (constraint.secondItem as? UIView),
-            self.containerView.subviews.contains(first) || self.containerView.subviews.contains(second) else {
-                super.addConstraint(constraint)
-                return
-        }
-        
-        super.addConstraint(self.getNewConstraint(constraint))
-    }
-    
-    // MARK: - Aux methods
-    
-    /// Returns a new constraint where the first and/or second itens are replaced by
-    /// the container view.
-    private func getNewConstraint(_ constraint: NSLayoutConstraint) -> NSLayoutConstraint {
-        return NSLayoutConstraint(item: constraint.firstItem as? UIView == self ? self.containerView : constraint.firstItem as Any,
-                                  attribute: constraint.firstAttribute,
-                                  relatedBy: constraint.relation,
-                                  toItem: constraint.secondItem as? UIView == self ? self.containerView : constraint.secondItem,
-                                  attribute: constraint.secondAttribute,
-                                  multiplier: constraint.multiplier,
-                                  constant: constraint.constant)
+    public func clearEmbeddedViews() {
+        self.containerView.subviews.forEach({ $0.removeFromSuperview() })
     }
     
 }
