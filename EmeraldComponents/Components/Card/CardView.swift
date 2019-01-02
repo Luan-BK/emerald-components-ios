@@ -58,10 +58,18 @@ public class CardView: UIView {
         }
     }
     
-    /// The font size for the header title, if enabled.
-    @IBInspectable public var titleSize: Int = 1 {
+    @IBInspectable var titleSizeAdapter: Int = 1 {
         didSet {
-            self.headerTitleLabel.font = (TitleSize(rawValue: titleSize) ?? .medium).font
+            self.titleSize = TitleSize(rawValue: titleSizeAdapter) ?? .medium
+        }
+    }
+    
+    /// The font size for the header title, if enabled.
+    ///
+    /// Default value is Medium.
+    public var titleSize: TitleSize = .medium {
+        didSet {
+            self.headerTitleLabel.font = titleSize.font
         }
     }
     
@@ -83,7 +91,7 @@ public class CardView: UIView {
     /// A boolean value that indicates if the side margins are enabled.
     ///
     /// Default value is `false`.
-    @IBInspectable var sideMarginsEnabled: Bool = false {
+    @IBInspectable public var sideMarginsEnabled: Bool = false {
         didSet {
             rightMarginConstraint.constant = sideMarginsEnabled ? margin : 0.0
             leftMarginConstraint.constant = sideMarginsEnabled ? margin : 0.0
@@ -93,7 +101,7 @@ public class CardView: UIView {
     /// A boolean value that indicates if the top margin is enabled.
     ///
     /// Default value is `false`.
-    @IBInspectable var topMarginEnabled: Bool = false {
+    @IBInspectable public var topMarginEnabled: Bool = false {
         didSet {
             topMarginConstraint.constant = topMarginEnabled ? margin : 0.0
         }
@@ -102,7 +110,7 @@ public class CardView: UIView {
     /// A boolean value that indicates if the bottom margin is enabled.
     ///
     /// Default value is `false`.
-    @IBInspectable var bottomMarginEnabled: Bool = false {
+    @IBInspectable public var bottomMarginEnabled: Bool = false {
         didSet {
             bottomMarginConstraint.constant = bottomMarginEnabled ? margin : 0.0
         }
