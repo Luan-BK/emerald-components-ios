@@ -1,5 +1,5 @@
 PODS:
-  - EmeraldComponents (0.1.7):
+  - EmeraldComponents (0.2.0):
     - InputMask
     - JTAppleCalendar
   - InputMask (4.0.2)
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: ".."
 
 SPEC CHECKSUMS:
-  EmeraldComponents: 6374b18d33b5e1c7ca0ccf6de9f17a2f8feb2e88
+  EmeraldComponents: 091d15fe2b8eb45018815124b66a426bbbd95aed
   InputMask: b9df7a44c044f59485b2d596661e6bd4334bddb4
   JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
 
-PODFILE CHECKSUM: 7dd2f04485c6b34592611564851b8a05a8682b1a
+PODFILE CHECKSUM: a425e8f7fbf08b358b2596c1593c7967c4c849a2
 
 COCOAPODS: 1.5.3
