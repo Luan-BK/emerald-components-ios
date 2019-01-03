@@ -28,7 +28,7 @@
                                                 <rect key="frame" x="40" y="24" width="240" height="240"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="240" id="etq-kh-ZN4"/>
+                                                    <constraint firstAttribute="height" priority="750" constant="240" id="etq-kh-ZN4"/>
                                                     <constraint firstAttribute="width" constant="240" id="i3N-kh-UmY"/>
                                                 </constraints>
                                             </view>
@@ -36,15 +36,18 @@
                                                 <rect key="frame" x="40" y="280" width="240" height="240"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="240" id="Jay-0G-ASb"/>
+                                                    <constraint firstAttribute="height" priority="750" constant="240" id="Jay-0G-ASb"/>
                                                     <constraint firstAttribute="width" constant="240" id="vDz-6m-td1"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topMarginEnabled" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="K1T-6G-T11" customClass="CardView" customModule="EmeraldComponents">
                                                 <rect key="frame" x="40" y="536" width="240" height="240"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="240" id="DxV-0r-k0S"/>
+                                                    <constraint firstAttribute="height" priority="750" constant="240" id="DxV-0r-k0S"/>
                                                     <constraint firstAttribute="width" constant="240" id="jdH-hW-VRy"/>
                                                 </constraints>
                                             </view>
@@ -52,7 +55,7 @@
                                                 <rect key="frame" x="40" y="792" width="240" height="240"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="240" id="08t-To-QZs"/>
+                                                    <constraint firstAttribute="height" priority="750" constant="240" id="08t-To-QZs"/>
                                                     <constraint firstAttribute="width" constant="240" id="fkf-Yg-vI1"/>
                                                 </constraints>
                                             </view>
@@ -61,14 +64,14 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="ZJF-St-9tw"/>
-                                                    <constraint firstAttribute="height" constant="240" id="k8q-Yh-PDU"/>
+                                                    <constraint firstAttribute="height" priority="750" constant="240" id="k8q-Yh-PDU"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Ukq-ed-HIN" customClass="CardView" customModule="EmeraldComponents">
                                                 <rect key="frame" x="40" y="1304" width="240" height="240"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="240" id="WYH-ci-SWw"/>
+                                                    <constraint firstAttribute="height" priority="750" constant="240" id="WYH-ci-SWw"/>
                                                     <constraint firstAttribute="width" constant="240" id="jIR-9H-nXC"/>
                                                 </constraints>
                                             </view>
@@ -115,12 +118,12 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1568"/>
                     <connections>
-                        <outlet property="bigTitleCard" destination="t78-5w-H6i" id="XPH-5l-UdR"/>
-                        <outlet property="mediumTitleCard" destination="K1T-6G-T11" id="PM4-PB-fh1"/>
+                        <outlet property="doubleLineTitleCard" destination="K1T-6G-T11" id="PM4-PB-fh1"/>
+                        <outlet property="manyLinesTitleCard" destination="t78-5w-H6i" id="XPH-5l-UdR"/>
                         <outlet property="noMarginsCard" destination="kF2-r6-eDV" id="9gA-u1-yto"/>
                         <outlet property="noSideMarginsCard" destination="Ukq-ed-HIN" id="KO7-Zr-LOH"/>
                         <outlet property="regularEmptyCard" destination="Vs5-U4-wYC" id="xkP-dn-GI2"/>
-                        <outlet property="smallTitleCard" destination="LQZ-GQ-1cZ" id="M6y-fp-xiN"/>
+                        <outlet property="singleLineTitleCard" destination="LQZ-GQ-1cZ" id="M6y-fp-xiN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uvi-pv-mVy" userLabel="First Responder" sceneMemberID="firstResponder"/>

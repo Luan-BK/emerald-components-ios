@@ -12,9 +12,9 @@ import EmeraldComponents
 class CardViewController: UIViewController {
 
     @IBOutlet weak var regularEmptyCard: CardView!
-    @IBOutlet weak var smallTitleCard: CardView!
-    @IBOutlet weak var mediumTitleCard: CardView!
-    @IBOutlet weak var bigTitleCard: CardView!
+    @IBOutlet weak var singleLineTitleCard: CardView!
+    @IBOutlet weak var doubleLineTitleCard: CardView!
+    @IBOutlet weak var manyLinesTitleCard: CardView!
     @IBOutlet weak var noMarginsCard: CardView!
     @IBOutlet weak var noSideMarginsCard: CardView!
     
@@ -27,6 +27,10 @@ class CardViewController: UIViewController {
         }
         
         views.forEach({
+            NSLayoutConstraint.activate([
+                $0.heightAnchor.constraint(equalToConstant: 200.0)
+                ])
+            
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.backgroundColor = randomColor()
         })
@@ -36,20 +40,17 @@ class CardViewController: UIViewController {
         self.regularEmptyCard.topMarginEnabled = true
         self.regularEmptyCard.embedView(views[0])
         
-        self.smallTitleCard.topMarginEnabled = true
-        self.smallTitleCard.headerTitle = "Small Title"
-        self.smallTitleCard.titleSize = .small
-        self.smallTitleCard.embedView(views[1])
+        self.singleLineTitleCard.topMarginEnabled = true
+        self.singleLineTitleCard.headerTitle = "One Title"
+        self.singleLineTitleCard.embedView(views[1])
         
-        self.mediumTitleCard.topMarginEnabled = true
-        self.mediumTitleCard.headerTitle = "Medium Title"
-        self.mediumTitleCard.titleSize = .medium
-        self.mediumTitleCard.embedView(views[2])
+        self.doubleLineTitleCard.topMarginEnabled = true
+        self.doubleLineTitleCard.headerTitle = "Two Titles,\none card 🃏"
+        self.doubleLineTitleCard.embedView(views[2])
         
-        self.bigTitleCard.topMarginEnabled = true
-        self.bigTitleCard.headerTitle = "Big Title"
-        self.bigTitleCard.titleSize = .big
-        self.bigTitleCard.embedView(views[3])
+        self.manyLinesTitleCard.topMarginEnabled = true
+        self.manyLinesTitleCard.headerTitle = "This is an example of a really big card title, which should never really be implemented by a sane person."
+        self.manyLinesTitleCard.embedView(views[3])
         
         self.noMarginsCard.embedView(views[4])
         
