@@ -19,6 +19,7 @@ before_install:
   - gem install cocoapods
   - pod repo update
   - brew install swiftlint
+  - brew install sonar-scanner
 
 script:
   - fastlane run_tests_pipeline
