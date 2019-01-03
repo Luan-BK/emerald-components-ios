@@ -27,23 +27,6 @@ public class CardView: UIView {
     @IBOutlet weak var rightMarginConstraint: NSLayoutConstraint!
     @IBOutlet weak var leftMarginConstraint: NSLayoutConstraint!
     
-    public enum TitleSize: Int {
-        case small = 1
-        case medium
-        case big
-        
-        var font: UIFont {
-            switch self {
-            case .small:
-                return UIFont.systemFont(ofSize: 16.0, weight: .bold)
-            case .medium:
-                return UIFont.systemFont(ofSize: 20.0, weight: .bold)
-            case .big:
-                return UIFont.systemFont(ofSize: 24.0, weight: .bold)
-            }
-        }
-    }
-    
     /// A title for the card's header.
     ///
     /// Setting an empty string for this property will
@@ -55,21 +38,6 @@ public class CardView: UIView {
         set {
             self.headerTitleLabel.text = newValue
             self.headerView.isHidden = newValue.isEmpty
-        }
-    }
-    
-    @IBInspectable var titleSizeAdapter: Int = 1 {
-        didSet {
-            self.titleSize = TitleSize(rawValue: titleSizeAdapter) ?? .medium
-        }
-    }
-    
-    /// The font size for the header title, if enabled.
-    ///
-    /// Default value is Medium.
-    public var titleSize: TitleSize = .medium {
-        didSet {
-            self.headerTitleLabel.font = titleSize.font
         }
     }
     
