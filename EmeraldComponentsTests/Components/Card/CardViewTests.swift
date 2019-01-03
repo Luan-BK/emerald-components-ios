@@ -25,12 +25,6 @@ class CardViewTests: XCTestCase {
         super.tearDown()
     }
     
-    func testTitleSizeEnumFonts() {
-        XCTAssertEqual(CardView.TitleSize.small.font, UIFont.systemFont(ofSize: 16.0, weight: .bold))
-        XCTAssertEqual(CardView.TitleSize.medium.font, UIFont.systemFont(ofSize: 20.0, weight: .bold))
-        XCTAssertEqual(CardView.TitleSize.big.font, UIFont.systemFont(ofSize: 24.0, weight: .bold))
-    }
-    
     func testSetHeaderTitleNotEmpty() {
         let emptyTitle = ""
         
@@ -38,7 +32,7 @@ class CardViewTests: XCTestCase {
         
         XCTAssertEqual(self.cardView.headerTitle, emptyTitle)
         XCTAssertEqual(self.cardView.headerTitleLabel.text, emptyTitle)
-        XCTAssertTrue(self.cardView.headerView.isHidden)
+        XCTAssertTrue(self.cardView.headerTitleLabel.isHidden)
     }
     
     func testSetHeaderTitleEmpty() {
@@ -48,31 +42,7 @@ class CardViewTests: XCTestCase {
         
         XCTAssertEqual(self.cardView.headerTitle, title)
         XCTAssertEqual(self.cardView.headerTitleLabel.text, title)
-        XCTAssertFalse(self.cardView.headerView.isHidden)
-    }
-    
-    func testSetTitleSizeAdapterWithValidInt() {
-        let validSizeInt = 2
-        
-        self.cardView.titleSizeAdapter = validSizeInt
-        
-        XCTAssertEqual(self.cardView.titleSize, CardView.TitleSize(rawValue: validSizeInt)!)
-    }
-    
-    func testSetTitleSizeAdapterWithInvalidInt() {
-        let invalidSizeInt = -200
-        
-        self.cardView.titleSizeAdapter = invalidSizeInt
-        
-        XCTAssertEqual(self.cardView.titleSize, CardView.TitleSize.medium)
-    }
-    
-    func testSetTitleSize() {
-        let someSize = CardView.TitleSize.big
-        
-        self.cardView.titleSize = someSize
-        
-        XCTAssertEqual(self.cardView.headerTitleLabel.font, someSize.font)
+        XCTAssertFalse(self.cardView.headerTitleLabel.isHidden)
     }
     
     func testSetCornerRadius() {
