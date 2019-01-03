@@ -15,7 +15,6 @@
                 <outlet property="containerView" destination="mDG-Ek-FZp" id="GcZ-n8-cff"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="eQU-AC-IPY"/>
                 <outlet property="headerTitleLabel" destination="gNv-zJ-e94" id="8pO-Z1-HM2"/>
-                <outlet property="headerView" destination="CkF-XD-0BQ" id="6a1-Hu-Kwj"/>
                 <outlet property="leftMarginConstraint" destination="8W8-X7-BTi" id="JCK-Ts-7zu"/>
                 <outlet property="rightMarginConstraint" destination="9Mb-Xr-zUK" id="KwS-w8-s3l"/>
                 <outlet property="topMarginConstraint" destination="7Sh-dA-QRZ" id="kMI-eP-ckV"/>
@@ -26,38 +25,33 @@
             <rect key="frame" x="0.0" y="0.0" width="325" height="216"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="CardViewStackView" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FSO-gv-dqy">
+                <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="CardViewStackView" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="FSO-gv-dqy">
                     <rect key="frame" x="0.0" y="0.0" width="325" height="216"/>
                     <subviews>
-                        <view hidden="YES" contentMode="scaleToFill" restorationIdentifier="CardViewHeaderView" translatesAutoresizingMaskIntoConstraints="NO" id="CkF-XD-0BQ" userLabel="Header View">
-                            <rect key="frame" x="0.0" y="0.0" width="325" height="48"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="CardViewHeaderLabel" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNv-zJ-e94">
-                                    <rect key="frame" x="24" y="0.0" width="277" height="0.0"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                    <color key="textColor" red="0.14117647059999999" green="0.16078431369999999" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="gNv-zJ-e94" firstAttribute="top" secondItem="CkF-XD-0BQ" secondAttribute="top" identifier="$CardHeaderTopMargin$" id="4d5-rb-rxx"/>
-                                <constraint firstAttribute="height" constant="48" identifier="$CardHeaderContainerHeight$" id="4zT-o3-bv3"/>
-                            </constraints>
-                        </view>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" restorationIdentifier="CardViewHeaderLabel" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNv-zJ-e94">
+                            <rect key="frame" x="24" y="0.0" width="277" height="0.0"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" red="0.14117647059999999" green="0.16078431369999999" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <view clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CardViewContainerView" translatesAutoresizingMaskIntoConstraints="NO" id="mDG-Ek-FZp">
                             <rect key="frame" x="0.0" y="0.0" width="325" height="216"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="mDG-Ek-FZp" secondAttribute="bottom" id="IuS-Uk-dP5"/>
+                        <constraint firstItem="mDG-Ek-FZp" firstAttribute="leading" secondItem="FSO-gv-dqy" secondAttribute="leading" id="Sk1-hH-prG"/>
+                        <constraint firstItem="gNv-zJ-e94" firstAttribute="leading" secondItem="FSO-gv-dqy" secondAttribute="leading" constant="24" id="TXz-WD-JBN"/>
+                        <constraint firstAttribute="trailing" secondItem="gNv-zJ-e94" secondAttribute="trailing" constant="24" id="bDj-VR-k5A"/>
+                        <constraint firstAttribute="trailing" secondItem="mDG-Ek-FZp" secondAttribute="trailing" id="suC-fu-lGC"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="gNv-zJ-e94" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" identifier="$CardHeaderLeadingMargin$" id="1oB-lp-YB6"/>
                 <constraint firstItem="FSO-gv-dqy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" identifier="$CardViewTopMargin$" id="7Sh-dA-QRZ"/>
                 <constraint firstAttribute="trailing" secondItem="FSO-gv-dqy" secondAttribute="trailing" identifier="$CardViewLeftMargin$" id="8W8-X7-BTi"/>
                 <constraint firstItem="FSO-gv-dqy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" identifier="$CardViewRightMargin$" id="9Mb-Xr-zUK"/>
-                <constraint firstAttribute="trailing" secondItem="gNv-zJ-e94" secondAttribute="trailing" constant="24" identifier="$CardHeaderTrailingMargin$" id="IZt-Ea-pZp"/>
                 <constraint firstAttribute="bottom" secondItem="FSO-gv-dqy" secondAttribute="bottom" identifier="$CardViewBottomMargin$" id="kDw-Ip-mM1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

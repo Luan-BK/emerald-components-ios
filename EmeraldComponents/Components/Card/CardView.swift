@@ -16,7 +16,6 @@ public class CardView: UIView {
     // MARK: - Properties
     
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerTitleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     
@@ -37,7 +36,7 @@ public class CardView: UIView {
         }
         set {
             self.headerTitleLabel.text = newValue
-            self.headerView.isHidden = newValue.isEmpty
+            self.headerTitleLabel.isHidden = newValue.isEmpty
         }
     }
     
