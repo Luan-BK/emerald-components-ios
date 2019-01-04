@@ -34,9 +34,13 @@ class CardViewUITests: XCTestCase {
         XCTContext.runActivity(named: "Get Cards") { _ in
             self.attachment.fullScreenshot("Card-1: Get first custom cardView cell")
             
-            app.collectionViews.cells.otherElements.cells
-                .otherElements.containing(.image, identifier:"icon-stone")
-                .element.swipeLeft()
+            app.scrollViews.children(matching: .other).element.swipeUp()
+            
+            let staticTexts = app.scrollViews.otherElements.staticTexts
+            
+            XCTAssertTrue(staticTexts["One Title"].exists)
+            XCTAssertTrue(staticTexts["Two Titles,\none card 🃏"].exists)
+            XCTAssertTrue(staticTexts["This is an example of a really big card title, which should never really be implemented by a sane person."].exists)
             
             self.attachment.fullScreenshot("Card-2: Get second custom cardView cell")
         }
