@@ -2,98 +2,68 @@
 //  CardViewController.swift
 //  EmeraldComponentsApp
 //
-//  Created by João Mendes | Stone on 07/12/18.
-//  Copyright © 2018 StoneCo. All rights reserved.
+//  Created by Luan Kalume | Stone on 02/01/19.
+//  Copyright © 2019 StoneCo. All rights reserved.
 //
 
 import UIKit
+import EmeraldComponents
 
 class CardViewController: UIViewController {
 
-    // MARK: - Properties
-    
-    @IBOutlet weak var contentView: UICollectionView!
-    
-    private let reuseIdentifier: String = "Cell"
-    public var customView: [UIView]! = [UIView()]
-    
-    // MARK: - Lifecycle
+    @IBOutlet weak var regularEmptyCard: CardView!
+    @IBOutlet weak var singleLineTitleCard: CardView!
+    @IBOutlet weak var doubleLineTitleCard: CardView!
+    @IBOutlet weak var manyLinesTitleCard: CardView!
+    @IBOutlet weak var noMarginsCard: CardView!
+    @IBOutlet weak var noSideMarginsCard: CardView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.contentView.backgroundColor = UIColor.Palette.Light.white3
-        self.view.backgroundColor = UIColor.Palette.Light.white3
         
-        self.contentView.delegate = self
-        self.contentView.dataSource = self
+        var views: [UIView] = []
+        for _ in 0..<6 {
+            views.append(UIView())
+        }
         
-        self.instantiateCustomViews()
-    }
-    
-    public func instantiateCustomViews() {
-        let stoneCustomView = CustomStoneCollectionViewCell()
-        let equalsCustomView = CustomEqualsCollectionViewCell()
-        self.customView = [stoneCustomView.loadFromNib(),
-                           equalsCustomView.loadFromNib()]
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-// MARK: - Collection delegate and datasource
-
-extension CardViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8);
-    }
-    
-}
-
-extension CardViewController: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        numberOfItemsInSection section: Int) -> Int {
-        return self.customView.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier,
-                                                      for: indexPath) as! CardCollectionViewCell
-        let view = customView[indexPath.row]
-
-        cell.addSuperviewTo(customView: view,
-                            width: cell.frame.size.width,
-                            height: cell.frame.size.height)
-        cell.setPropertyTo(view: view, cornerRadius: 10.0)
-        cell.setPropertyTo(view: view, shadowRadius: 18.0)
+        views.forEach({
+            NSLayoutConstraint.activate([
+                $0.heightAnchor.constraint(equalToConstant: 200.0)
+                ])
+            
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.backgroundColor = randomColor()
+        })
         
-        return cell
+        self.regularEmptyCard.sideMarginsEnabled = true
+        self.regularEmptyCard.bottomMarginEnabled = true
+        self.regularEmptyCard.topMarginEnabled = true
+        self.regularEmptyCard.embedView(views[0])
+        
+        self.singleLineTitleCard.topMarginEnabled = true
+        self.singleLineTitleCard.headerTitle = "One Title"
+        self.singleLineTitleCard.embedView(views[1])
+        
+        self.doubleLineTitleCard.topMarginEnabled = true
+        self.doubleLineTitleCard.headerTitle = "Two Titles,\none card 🃏"
+        self.doubleLineTitleCard.embedView(views[2])
+        
+        self.manyLinesTitleCard.topMarginEnabled = true
+        self.manyLinesTitleCard.headerTitle = "This is an example of a really big card title, which should never really be implemented by a sane person."
+        self.manyLinesTitleCard.embedView(views[3])
+        
+        self.noMarginsCard.embedView(views[4])
+        
+        self.noSideMarginsCard.sideMarginsEnabled = false
+        self.noSideMarginsCard.topMarginEnabled = true
+        self.noSideMarginsCard.bottomMarginEnabled = true
+        self.noSideMarginsCard.embedView(views[5])
     }
-    
-}
 
-extension CardViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let bounds: CGRect = UIScreen.main.bounds
-        return CGSize(width: bounds.size.width - 32,
-                      height: bounds.size.height / 2)
+    func randomColor() -> UIColor {
+        return UIColor.init(red: CGFloat(Int.random(in: 0...255))/255,
+                            green: CGFloat(Int.random(in: 0...255))/255,
+                            blue: CGFloat(Int.random(in: 0...255))/255,
+                            alpha: 1.0)
     }
-    
 }

@@ -20,7 +20,7 @@ public class HUD {
     public func show(_ view: UIView? = UIApplication.shared.keyWindow) -> UIView? {
         guard let view = view else { return nil }
         
-        let container = hudHelper.containerBackgroundView()
+        let container = hudHelper.containerBackgroundView(view)
         let blurView = hudHelper.blurEffectView(container)
         let activityIndicator = hudHelper.activityAnimating(blurView)
         
